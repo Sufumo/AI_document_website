@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="home">
+  <header class="home-header">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.description }}</p>
+  </header>
+  <nav class="doc-index">
+    {%- comment -%}
+      动态从 contents 目录生成文档目录：
+      - 单个 md 文件即单篇文档
+      - 一级目录名作为分组名称（如 Domestic_models、IDEs）
+      - 忽略任何包含 `/.` 的路径（如 .obsidian 等隐藏文件夹）
+    {%- endcomment -%}
+
+    {%- assign content_pages = site.pages
+        | where_exp: "p", "p.path contains 'contents/'"
+        | where_exp: "p", "p.path contains '.md'"
+    -%}
+
+    {%- assign content_pages = content_pages | sort: "path" -%}
+    {%- assign groups = content_pages
+        | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first"
+    -%}
+
+    {%- for group in groups -%}
+      {%- if group.name contains '.' -%}
+        {%- continue -%}
+      {%- endif -%}
+      <section class="doc-category">
+        {%- case group.name -%}
+          {%- when 'Agents' -%}{% assign cat_label = 'Agent 配置' %}
+          {%- when 'Apps' -%}{% assign cat_label = '应用使用' %}
+          {%- when 'Basic-tools' -%}{% assign cat_label = '基础工具' %}
+          {%- else -%}{% assign cat_label = group.name %}
+        {%- endcase -%}
+        <h2 class="category-title">{{ cat_label }}</h2>
+        <ul class="doc-list">
+          {%- assign pages = group.items | sort: "path" -%}
+          {%- for page in pages -%}
+            {%- if page.path contains '/.' -%}
+              {%- continue -%}
+            {%- endif -%}
+            <li>
+              <a href="{{ page.url | relative_url }}">
+                {{ page.title | default: page.name | split: '.' | first }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    {%- endfor -%}
+  </nav>
+</div>
