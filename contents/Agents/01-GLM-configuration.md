@@ -1,14 +1,12 @@
 ---
 layout: doc
-title: GLM 配置教程
+title: GLM Configuration Guide · GLM 配置教程
 ---
-
-## 阅前说明
 > Pre-reading Note
 >
 > Before using this GLM configuration guide, it is recommended to understand a few basic concepts and tools:
 >
-> - Know how to open a terminal on your system and run simple commands (you can review [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html) if needed).
+> - Know how to open a terminal on your system and run simple commands (you can review [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) if needed).
 >
 > With this background, following the steps to fetch API keys and edit configuration files in this guide will be much easier and less error-prone.
 >
@@ -17,7 +15,7 @@ title: GLM 配置教程
 >
 > 在阅读本篇 GLM 配置教程前，建议先了解以下基础内容：
 >
-> - 知道如何在自己的系统上打开终端并运行简单命令（如有需要，可先阅读 [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html)）。
+> - 知道如何在自己的系统上打开终端并运行简单命令（如有需要，可先阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)）。
 >
 > 具备以上基础后，按照本教程获取 API Key 并修改配置文件会更顺畅，也更不容易出错。
 
@@ -53,8 +51,15 @@ Click **Copy** to copy the API key.
 ## Step 2: Subscribe to GLM (Optional)
 ## 步骤二：订阅 GLM（可选）
 
-Subscribing to GLM increases your Claude Code usage quota and gives you access to GLM’s latest model, **GLM-5**. However, GLM currently limits the number of available subscriptions, so getting one may be difficult. You can still try other GLM models using the free quota (as of March 9, 2026). Detailed subscription steps have been moved to the appendix **GLM Coding Plan**, so you can skip this section for now and continue with API key setup.
-订阅 GLM 可以增加 Claude Code 的可用额度，并可使用 GLM 的最新模型 **GLM-5**。不过，由于 GLM 当前限制了订阅名额，申请订阅可能会有一定难度。即便如此，你仍可使用免费额度体验其他 GLM 模型（截至 2026 年 3 月 9 日）。详细的订阅步骤已移至附录 **GLM Coding Plan**，因此你也可以先跳过本节，直接继续使用 API Key 配置 GLM。
+Choose according to your needs:
+
+- **No Subscription**: You can use models such as **GLM-4.7** in Claude Code with only an API Key and the free quota (as of March 9, 2026). This option is suitable for users who want a simple test experience of Claude Code. You can skip this section and go directly to Step 3.
+- **GLM Coding Plan**: Suitable for advanced users who need to use **GLM-5** or require higher quotas in Claude Code. Subscription slots are limited. See the appendix for the operation steps: [GLM Coding Plan](/contents/Agents/01-GLM-configuration.html#glm-coding-plan-订阅说明).
+
+按需选择：
+
+- **不订阅**：仅用 API Key 与免费额度即可在 Claude Code 中使用 **GLM-4.7** 等模型（截至 2026 年 3 月 9 日），适合想要简单测试体验 Claude code 的用户。可跳过本节，直接进行步骤三。
+- **GLM Coding Plan**：适合需要在 Claude Code 中使用 **GLM-5** 或更高额度的深度用户，订阅名额有限。操作步骤见附录 [GLM Coding Plan](/contents/Agents/01-GLM-configuration.html#glm-coding-plan-订阅说明)。
 
 ## Step 3: Configure Claude Code with GLM
 ## 步骤三：配置 Claude Code（GLM）
@@ -218,6 +223,66 @@ You can also directly ask the agent which model it is using. As shown below, it 
 
 ![](./images/Pasted%20image%2020260310101707.png)
 
+### Launching Claude Code with `glm` or `glm5`
+### 使用 `glm` 或 `glm5` 启动 Claude Code
+
+If you want to launch Claude Code with the `glm` or `glm5` command, follow the steps below. Go to **Go → Home** to open your Home directory.
+若希望通过 `glm` 或 `glm5` 命令启动 Claude Code，请按以下步骤操作。依次点击 **Go → Home** 打开 Home 目录。
+
+![](./images/Pasted%20image%2020260303192106.png)
+
+Press `Command + Shift + .` to show hidden files, then open the **.claude** folder.
+使用 `Command + Shift + .` 显示隐藏文件，并打开 **.claude** 文件夹。
+
+![](./images/Pasted%20image%2020260303192303.png)
+
+Copy **settings.json** and rename the copy to **glm-settings.json**.
+将 **settings.json** 复制一份，并重命名为 **glm-settings.json**。
+
+![](./images/Pasted%20image%2020260310232459.png)
+
+Go back to the Home directory and open the **.zshrc** file.
+返回 Home 目录，打开 **.zshrc** 文件。
+
+![](./images/Pasted%20image%2020260310234055.png)
+
+Add the following line at the end of the file.
+在文件末尾添加以下命令。
+
+```bash
+alias glm="claude --settings ~/.claude/glm-settings.json"
+```
+
+**Note**: To use the `glm5` command instead, use the following alias:
+**注意**：若想使用 `glm5` 命令，可将上述命令改为：
+
+```bash
+alias glm5="claude --settings ~/.claude/glm-settings.json"
+```
+
+![](./images/Pasted%20image%2020260310232746.png)
+
+Use `Command + Space` to search for **Terminal** and open it.
+使用 `Command + 空格` 搜索 **Terminal** 并打开。
+
+![](./images/4.Claude%20code/file-20260113152908876%201.png)
+
+In Terminal, run `source .zshrc`.
+在 Terminal 中输入 `source .zshrc`。
+
+![](./images/Pasted%20image%2020260310233106.png)
+
+When the terminal prompt returns, the configuration is complete.
+待终端恢复可输入状态即表示配置完成。
+
+![](./images/Pasted%20image%2020260310233154.png)
+
+Run `glm` to launch Claude Code.
+输入 `glm` 即可启动 Claude Code。
+
+![](./images/Pasted%20image%2020260310233233.png)
+
+![](./images/Pasted%20image%2020260310233250.png)
 ## Appendix
 ## 附录
 

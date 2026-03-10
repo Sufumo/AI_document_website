@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Homebrew 安装与基础使用
+title: Homebrew Installation and Basics · Homebrew 安装与基础使用
 
 ---
 

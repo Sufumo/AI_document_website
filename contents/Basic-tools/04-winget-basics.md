@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: winget 基础
+title: winget Basics · winget 基础
 
 ---
 

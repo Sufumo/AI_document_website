@@ -31,9 +31,9 @@ layout: default
       {%- endif -%}
       <section class="doc-category">
         {%- case group.name -%}
-          {%- when 'Agents' -%}{% assign cat_label = 'Agent 配置' %}
-          {%- when 'Apps' -%}{% assign cat_label = '应用使用' %}
-          {%- when 'Basic-tools' -%}{% assign cat_label = '基础工具' %}
+          {%- when 'Agents' -%}{% assign cat_label = 'Agents · 智能体' %}
+          {%- when 'Apps' -%}{% assign cat_label = 'Apps · 应用' %}
+          {%- when 'Basic-tools' -%}{% assign cat_label = 'Basic-tools · 基础工具' %}
           {%- else -%}{% assign cat_label = group.name %}
         {%- endcase -%}
         <h2 class="category-title">{{ cat_label }}</h2>

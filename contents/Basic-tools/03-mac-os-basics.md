@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Mac 操作系统基础
+title: Mac OS Basics · Mac 操作系统基础
 
 ---
 

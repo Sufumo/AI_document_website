@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "cd7d4efcd6481094",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d83cd155942eb6f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0aa49de06e856e71",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Agents/02-KIMI-configuration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02-KIMI-configuration"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "00a4e6c3e444af7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "69d0e4591e001e56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5933f189f785379",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6fa1e326858926b0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a2f44a49c1120082",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3f89afa2332e503d",
+    "type": "split",
+    "children": [
+      {
+        "id": "109de30da425bc15",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06caf660ccca5d83",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Agents/02-KIMI-configuration.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 02-KIMI-configuration"
+            }
+          },
+          {
+            "id": "bc1c193de56f8941",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Agents/02-KIMI-configuration.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 02-KIMI-configuration"
+            }
+          },
+          {
+            "id": "1d9a4b22f6b918ad",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "11ac7ffca97d2a6e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "c57dc06a1a060051",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Agents/02-KIMI-configuration.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 02-KIMI-configuration"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "0aa49de06e856e71",
+  "lastOpenFiles": [
+    "Agents/images/Pasted image 20260310234456.png",
+    "Agents/images/Pasted image 20260310234351.png",
+    "Agents/images/Pasted image 20260310234238.png",
+    "Agents/01-GLM-configuration.md",
+    "Agents/images/Pasted image 20260310234055.png",
+    "Agents/02-KIMI-configuration.md",
+    "Agents/images/Pasted image 20260310233841.png",
+    "Agents/images/Pasted image 20260310233250.png",
+    "Agents/images/Pasted image 20260310233233.png",
+    "Agents/images/Pasted image 20260310233154.png",
+    "Agents/images/Pasted image 20260310233106.png",
+    "Agents/05-claude-code-workshop.md",
+    "Agents/04-claude-codel.md",
+    "Agents/images/Pasted image 20260310232746.png",
+    "Agents/images/Pasted image 20260310232459.png"
+  ]
+}

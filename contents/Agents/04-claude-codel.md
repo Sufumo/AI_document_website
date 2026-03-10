@@ -2,17 +2,15 @@
 
 layout: doc
 
-title: Claude Code 使用教程
+title: Claude Code Usage Guide · Claude Code 使用教程
 
 ---
-
-## 阅前说明
 > Pre-reading Note
 >
 > Before following this guide to install Claude Code on Windows (and optionally on macOS), it is recommended to complete the following basic tool documents:
 >
-> - Read [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html) (Terminal Basics) to learn how to open the terminal and understand the command prompt.
-> - Read [Basic-tools/04-winget-basics](/contents/Basic-tools/04-winget-basics.html) (winget Basics, for Windows users) to master basic winget search and install commands.
+> - Read [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) to learn how to open the terminal and understand the command prompt.
+> - Read [winget Basics](/contents/Basic-tools/04-winget-basics.html) (for Windows users) to master basic winget search and install commands.
 >
 > After completing these preparations, running the installation commands in this tutorial will be safer and easier to debug.
 >
@@ -21,8 +19,8 @@ title: Claude Code 使用教程
 >
 > 在按照本教程在 Windows（以及可选的 macOS）上安装 Claude Code 之前，建议先完成以下基础工具文档：
 >
-> - 阅读 [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html)（Terminal 基础），了解如何打开终端、识别命令提示符等。
-> - 阅读 [Basic-tools/04-winget-basics](/contents/Basic-tools/04-winget-basics.html)（winget 基础，适用于 Windows 用户），掌握 winget 搜索与安装软件的基本命令。
+> - 阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)，了解如何打开终端、识别命令提示符等。
+> - 阅读 [winget 基础](/contents/Basic-tools/04-winget-basics.html)（适用于 Windows 用户），掌握 winget 搜索与安装软件的基本命令。
 >
 > 完成以上准备后，再执行本教程中的安装命令会更安全，也更容易排查问题。
 

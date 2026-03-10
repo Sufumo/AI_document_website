@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Claude Code 实践任务
+title: Claude Code Workshop · Claude Code 实践任务
 
 ---
 
@@ -11,7 +11,7 @@ title: Claude Code 实践任务
 >
 > To complete all exercises in this Claude Code workshop smoothly, it is recommended that you:
 >
-> - Read [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html) (Terminal Basics) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
+> - Read [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
 > - Make sure Claude Code has already been installed and configured according to the installation guides.
 >
 > With these preparations, you can focus on the practice tasks themselves instead of basic environment issues.
@@ -21,7 +21,7 @@ title: Claude Code 实践任务
 >
 > 为了顺利完成本 Claude Code 工作坊中的所有练习，建议您：
 >
-> - 阅读 [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html)（Terminal 基础），熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
+> - 阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)，熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
 > - 确保已按安装/配置文档提前安装并配置好 Claude Code。
 >
 > 完成以上准备后，您就可以把精力集中在练习任务本身，而不是基础环境问题上。

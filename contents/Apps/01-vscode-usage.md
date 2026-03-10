@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: VSCode 使用指南
+title: VS Code Usage Guide · VSCode 使用指南
 ---
 
 > Pre-reading Note

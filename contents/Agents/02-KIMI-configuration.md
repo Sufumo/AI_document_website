@@ -1,14 +1,12 @@
 ---
 layout: doc
-title: KIMI 配置教程
+title: KIMI Configuration Guide · KIMI 配置教程
 ---
-
-## 阅前说明
 > Pre-reading Note
 >
 > Before using this KIMI configuration guide, it is recommended to:
 >
-> - Be familiar with opening a terminal and running simple commands (you can review [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html) if needed).
+> - Be familiar with opening a terminal and running simple commands (you can review [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) if needed).
 >
 > This will make it easier to follow the steps for obtaining an API key, setting environment variables, and launching Claude Code with KIMI.
 >
@@ -17,7 +15,7 @@ title: KIMI 配置教程
 >
 > 在阅读本篇 KIMI 配置教程前，建议您：
 >
-> - 熟悉如何打开终端并运行简单命令（如有需要，可先阅读 [Basic-tools/01-terminal-basics](/contents/Basic-tools/01-terminal-basics.html)）。
+> - 熟悉如何打开终端并运行简单命令（如有需要，可先阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)）。
 >
 > 具备这些基础后，按照本教程获取 API Key、配置环境变量并使用 KIMI 启动 Claude Code 会更加轻松。
 
@@ -52,8 +50,13 @@ Enter a name for the API key, select **default** for the project, then click **C
 ## Step 2: Top Up Your KIMI Account
 ## 步骤二：KIMI 账户充值
 
-In the left sidebar, go to **Financial** → **Account Top-up** (财务管理 → 账户充值). Choose an amount and complete the payment to add balance to your API key.
-在左侧栏进入 **财务管理** → **账户充值**，选择对应金额并完成支付，即可为 API Key 充值余额。
+**KIMI API keys require a paid balance; without top-up, the API cannot be used.**
+**KIMI 的 API Key 需账户有余额方可使用，未充值则无法调用接口。**
+
+- In the left sidebar: **Financial** → **Account Top-up** (财务管理 → 账户充值).
+- 在左侧栏进入 **财务管理** → **账户充值**。
+- Choose an amount, complete payment, and the balance will be available for your API key.
+- 选择金额并完成支付后，即可为该 API Key 使用余额。
 
 ![](./images/Pasted%20image%2020260306114112.png)
 
@@ -135,3 +138,73 @@ You can directly ask the agent which model it is using. As shown below, it is th
 你可以直接询问 agent 使用的是什么模型。如下所示，为 kimi-k2.5 模型。
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
+
+
+### Launching Claude Code with `kimi`
+### 使用 `kimi` 启动 Claude Code
+
+If you want to launch Claude Code with the `kimi` command, follow the steps below. Go to **Go → Home** to open your Home directory.
+若希望通过 `kimi` 命令启动 Claude Code，请按以下步骤操作。依次点击 **Go → Home** 打开 Home 目录。
+
+![](./images/Pasted%20image%2020260303192106.png)
+
+Press `Command + Shift + .` to show hidden files, then open the **.claude** folder.
+使用 `Command + Shift + .` 显示隐藏文件，并打开 **.claude** 文件夹。
+
+![](./images/Pasted%20image%2020260303192303.png)
+
+Copy **settings.json** and rename the copy to **kimi-settings.json**.
+将 **settings.json** 复制一份，并重命名为 **kimi-settings.json**。
+
+![](./images/Pasted%20image%2020260310234238.png)
+
+Open **kimi-settings.json** and paste the following content (replace the placeholder with your API key).
+打开 **kimi-settings.json**，填入以下内容（将 `replace with your api key` 替换为你的 API Key）。
+
+```json
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://api.moonshot.cn/anthropic/",
+    "ANTHROPIC_AUTH_TOKEN": "replace with your api key"
+  },
+  "hasCompletedOnboarding": true
+}
+```
+
+![](./images/Pasted%20image%2020260310234351.png)
+
+Go back to the Home directory and open the **.zshrc** file.
+返回 Home 目录，打开 **.zshrc** 文件。
+
+![](./images/Pasted%20image%2020260310234055.png)
+
+Add the following line at the end of the file.
+在文件末尾添加以下命令。
+
+```bash
+alias kimi="claude --settings ~/.claude/kimi-settings.json"
+```
+
+![](./images/Pasted%20image%2020260310233841.png)
+
+Use `Command + Space` to search for **Terminal** and open it.
+使用 `Command + 空格` 搜索 **Terminal** 并打开。
+
+![](./images/4.Claude%20code/file-20260113152908876%201.png)
+
+In Terminal, run `source .zshrc`.
+在 Terminal 中输入 `source .zshrc`。
+
+![](./images/Pasted%20image%2020260310233106.png)
+
+When the terminal prompt returns, the configuration is complete.
+待终端恢复可输入状态即表示配置完成。
+
+![](./images/Pasted%20image%2020260310233154.png)
+
+Run `kimi` to launch Claude Code.
+输入 `kimi` 即可启动 Claude Code。
+
+![](./images/Pasted%20image%2020260310234456.png)
+
+![](./images/Pasted%20image%2020260310233250.png)

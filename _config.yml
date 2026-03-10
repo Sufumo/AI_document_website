@@ -1,6 +1,6 @@
 # Jekyll 配置文件 - AI 文档网站
-title: AI 文档中心
-description: AI 配置与应用使用指南
+title: AI Tutorial Documentation
+description: AI 培训文档中心
 baseurl: ""
 url: ""
 lang: zh-CN

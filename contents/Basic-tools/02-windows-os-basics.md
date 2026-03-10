@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Windows 操作系统基础
+title: Windows OS Basics · Windows 操作系统基础
 
 ---
 

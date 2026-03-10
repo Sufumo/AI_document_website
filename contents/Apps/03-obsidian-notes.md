@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Obsidian使用指南
+title: Obsidian Usage Guide · Obsidian 使用指南
 
 ---
 

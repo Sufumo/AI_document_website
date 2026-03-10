@@ -2,7 +2,7 @@
 
 layout: doc
 
-title: Terminal 基础
+title: Terminal Basics · Terminal 基础
 
 ---
 
