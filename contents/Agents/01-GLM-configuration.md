@@ -23,6 +23,23 @@ title: GLM Configuration Guide · GLM 配置教程
 # GLM Configuration Guide
 # GLM 配置教程
 
+## How GLM in Claude Code differs from using a Claude account
+## GLM 接入 Claude Code 与直接使用 Claude 账号的区别
+
+Claude Code can work in two main ways:
+
+- **Sign in with a Claude account**: All requests go to Anthropic's own servers, and your limits and billing follow your Claude plan. This is the “default” experience if you already have a Claude account.
+- **Use a GLM API key inside Claude Code**: Claude Code becomes the interface, but the actual model and billing come from GLM. Your usage is counted against your GLM account and quota, not your Claude account.
+
+For beginners: if you already have a stable Claude account and mainly use English, you can keep using the built‑in Claude models and treat this guide as optional. If you do not have a Claude account, or you mainly work in Chinese and want a domestic provider with separate quota and better local support, configuring GLM as shown below is usually a better fit.
+
+Claude Code 大致有两种使用方式：
+
+- **使用 Claude 官网账号登录**：所有请求都走 Anthropic 官方服务器，额度和费用由你的 Claude 账号套餐决定，这是已经有 Claude 账号用户的「默认用法」。
+- **在 Claude Code 中配置 GLM API Key**：Claude Code 只是“操作界面”，真正提供算力与计费的是 GLM，使用量计入你的 GLM 账号和额度，而不是 Claude 账号。
+
+对于刚入门的用户：如果你已经有稳定可用的 Claude 账号，且主要以英文为主，可以继续使用内置的 Claude 模型，本教程可以作为选读内容。如果你没有 Claude 账号，或者主要在中文场景下使用、希望额度与账单统一在国内平台管理，那么按照本教程把 GLM 接入 Claude Code 往往更适合你。
+
 ![](./images/Pasted%20image%2020260310154428.png)
 
 ## Step 1: Get Your GLM API Key
@@ -67,8 +84,26 @@ Choose according to your needs:
 ### Method 1: Configure via the visual app
 ### 方法一：通过可视化 APP 配置
 
-After installing the app, double-click **AGENT_MANAGER.command** to open it.
-安装完成后，双击打开 **AGENT_MANAGER.command**。
+Right-click in a suitable folder and open **Terminal**.
+选择一个合适的文件夹，右键选择 **Terminal** 打开。
+
+![](images/Pasted%20image%2020260311005958.png)
+
+Copy the following command into Terminal and press Enter to run it.
+在终端复制以下指令并按下 Enter 执行。
+
+```
+wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip && \
+unzip agent_manager-main.zip && \
+cd agent_manager-main && \
+chmod +x install.sh && \
+./install.sh
+```
+
+![](images/Pasted%20image%2020260311010117.png)
+
+After installation completes, double-click the **AGENT_MANAGER.command** file in the selected folder (either `agent_manager-main` or `agent_manager`).
+安装完成后，双击打开选定目录下（`agent_manager-main` 或 `agent_manager`）中的 **AGENT_MANAGER.command** 文件。
 
 ![](./images/Pasted%20image%2020260306111847.png)
 
@@ -111,7 +146,7 @@ You can also directly ask the agent which model it is using. As shown below, it 
 ### Method 2: Install via the official GLM script
 ### 方法二：通过 GLM 官方脚本安装
 
-GLM provides a one-click install script. This method modifies Claude Code’s config directly, so switching to another API provider later is less convenient, and you may need to add or switch models manually. The advantage is a quick one-step setup, and usage is similar to the default Claude Code.
+GLM provides a one-click install script. This method modifies Claude Code's config directly, so switching to another API provider later is less convenient, and you may need to add or switch models manually. The advantage is a quick one-step setup, and usage is similar to the default Claude Code.
 GLM 官方提供一键安装脚本。该方法会直接修改 Claude Code 的配置文件，后续如需切换其他 API 供应商会较不便，且需手动添加或切换模型；优点是一键安装，使用方式与原生 Claude Code 类似。
 
 Press `Option + Space` to open search, type **Terminal**, and press Enter to open Terminal.
@@ -176,7 +211,7 @@ Open **settings.json** and edit it.
 
 ![](./images/Pasted%20image%2020260303192828.png)
 
-Claude Code’s internal model variables map to GLM models. The default mapping is:
+Claude Code's internal model variables map to GLM models. The default mapping is:
 Claude Code 内部模型环境变量与 GLM 模型对应关系如下，默认配置为：
 
 - `ANTHROPIC_DEFAULT_OPUS_MODEL`: `GLM-4.7`

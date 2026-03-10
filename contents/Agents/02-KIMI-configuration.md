@@ -23,6 +23,23 @@ title: KIMI Configuration Guide · KIMI 配置教程
 # KIMI Configuration Guide
 # KIMI 配置教程
 
+## How KIMI in Claude Code differs from using a Claude account
+## KIMI 接入 Claude Code 与直接使用 Claude 账号的区别
+
+Claude Code can work in two main ways:
+
+- **Sign in with a Claude account**: All requests go to Anthropic's servers, and your limits and billing follow your Claude plan. This is the easiest option if you already have a Claude account and only need the original Claude models.
+- **Use a KIMI API key inside Claude Code**: Claude Code is just the editor interface, while the actual model and billing come from KIMI. Your usage is counted against your KIMI balance, and you can use KIMI's models directly from inside Claude Code.
+
+For beginners: if you already have a Claude account and are satisfied with its models, you can simply keep using the built‑in Claude configuration and skip this guide. If you do not have a Claude account, or you prefer KIMI's Chinese capabilities and want all costs and quotas to be managed on the KIMI platform, following this guide to connect KIMI to Claude Code will be more suitable.
+
+Claude Code 大致有两种使用方式：
+
+- **使用 Claude 官网账号登录**：所有请求都走 Anthropic 官方服务器，额度和费用由 Claude 套餐决定；如果你已经有 Claude 账号且只需要原生 Claude 模型，这是最省事的方式。
+- **在 Claude Code 中配置 KIMI API Key**：Claude Code 只是「编辑器界面」，真正提供模型与计费的是 KIMI，使用量计入你的 KIMI 余额，可以在 Claude Code 中直接调用 KIMI 模型。
+
+对于刚入门的用户：如果你已经有 Claude 账号且对现有模型表现满意，那么继续使用内置配置即可，本教程可以暂时忽略。如果你没有 Claude 账号，或者更偏好 KIMI 在中文场景下的表现，并希望所有费用与额度都在 KIMI 平台统一管理，那么按照本教程将 KIMI 接入 Claude Code 会更适合你的使用习惯。
+
 ![](./images/Pasted%20image%2020260310143951.png)
 ## Step 1: Get Your KIMI API Key
 ## 步骤一：获取 KIMI 的通行密钥
@@ -66,8 +83,26 @@ Enter a name for the API key, select **default** for the project, then click **C
 ### Method 1: Configure via the visual app
 ### 方法一：通过可视化 APP 配置
 
-After installing the app, double-click **AGENT_MANAGER.command** to open it.
-安装完成后，双击打开 **AGENT_MANAGER.command**。
+Right-click in a suitable folder and open **Terminal**.
+选择一个合适的文件夹，右键选择 **Terminal** 打开。
+
+![](images/Pasted%20image%2020260311005958.png)
+
+Copy the following command into Terminal and press Enter to run it.
+在终端复制以下指令并按下 Enter 执行。
+
+```
+wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip && \
+unzip agent_manager-main.zip && \
+cd agent_manager-main && \
+chmod +x install.sh && \
+./install.sh
+```
+
+![](images/Pasted%20image%2020260311010117.png)
+
+After installation completes, double-click the **AGENT_MANAGER.command** file in the selected folder (either `agent_manager-main` or `agent_manager`).
+安装完成后，双击打开选定目录下（`agent_manager-main` 或 `agent_manager`）中的 **AGENT_MANAGER.command** 文件。
 
 ![](./images/Pasted%20image%2020260306111847.png)
 

@@ -232,7 +232,7 @@ You can also install extensions for specific file types (e.g. PDF, Office) to vi
 ### Introduction
 ### 引言
 
-Agents are built on general-purpose language models and do not ship with large knowledge bases or many built-in tools; their ability to handle images, audio, and other multimedia is limited. **Skills** and **MCP** (Model Context Protocol) extend the agent’s capabilities. The following sections explain both.
+Agents are built on general-purpose language models and do not ship with large knowledge bases or many built-in tools; their ability to handle images, audio, and other multimedia is limited. **Skills** and **MCP** (Model Context Protocol) extend the agent's capabilities. The following sections explain both.
 Agent 基于通用大语言模型设计，本身没有丰富的知识库与工具，对图片、音频等多媒体处理能力有限，因此需要 **Skills** 和 **MCP** 来扩展 Agent 的能力。以下分别说明两者。
 
 ### Skills
@@ -388,7 +388,7 @@ When the run completes, you will see the extracted structure and key sentences.
 Unlike Skills (which are mostly text prompts), **MCP** (Model Context Protocol) exposes pre-built tools that the agent can call. This reduces the need for the agent to write code from scratch and makes behavior more predictable.
 与主要由文字提词组成的 Skill 不同，**MCP**（Model Context Protocol）通过预置工具供 Agent 调用，减少从零编写代码的 token 消耗，并降低不确定性。
 
-As a user, you only need to install an MCP according to its developer’s instructions, then use Claude Code to view and call it.
+As a user, you only need to install an MCP according to its developer's instructions, then use Claude Code to view and call it.
 对用户而言，只需按 MCP 提供方的说明完成安装，即可在 Claude Code 中查看并调用。
 
 Open VS Code, then click **File → Open Folder** to switch to the folder you want to work on.

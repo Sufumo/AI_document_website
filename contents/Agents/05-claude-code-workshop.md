@@ -48,15 +48,15 @@ Before starting, ensure you have:
 
 **Windows**
 
-Right click to copy path.
-右键复制文件路径
+Right-click to copy the path.
+右键复制文件路径。
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919865.png)
 
 **Mac**
 
-Right click the file, press and hold option to copy the path.
-右键并按住 option 以复制路径。
+Right-click the file, then press and hold the Option key to copy the path.
+右键并按住 Option 键以复制路径。
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919864.png)
 ### Open in Terminal
@@ -79,13 +79,13 @@ Open the work folder in Terminal through right click the path bar.
 ### Usage Specifications
 ### 使用规范
 
-We strongly recommend not making modifications directly at the source file location to prevent Claude code errors. Instead, a new folder (such as Output) should be created to save the results.
-我们强烈建议不要在源文件位置直接进行修改，防止 Claude code 出错，应新建一个文件夹（如 Output）保存结果。
+We strongly recommend not making modifications directly in the source file location to prevent Claude Code errors. Instead, create a new folder (such as `Output`) to save the results.
+我们强烈建议不要在源文件位置直接进行修改，以防 Claude Code 出错；应新建一个文件夹（如 `Output`）保存结果。
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919850.png)
 
-In addition, the results output by Claude code should be carefully reviewed manually instead of fully accepting the results output or modified by Claude code.
-除此之外，应仔细人工审核 Claude code 输出的结果，而非完全接受 Claude code 输出或修改的结果。
+In addition, the results produced by Claude Code should be carefully reviewed manually, rather than fully accepting everything it outputs or modifies.
+除此之外，应仔细人工审核 Claude Code 输出的结果，而非完全接受 Claude Code 输出或修改的内容。
 
 ## Exercise 1: Batch Renaming (练习1：批量重命名)
 

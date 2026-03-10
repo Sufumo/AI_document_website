@@ -12,6 +12,7 @@ kramdown:
   input: GFM
   hard_wrap: true
   syntax_highlighter: rouge
+  smart_quotes: apos,apos,quot,quot
 
 # 插件 (GitHub Pages 支持)
 plugins:
