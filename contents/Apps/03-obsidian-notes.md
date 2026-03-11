@@ -1,22 +1,56 @@
 ---
-
 layout: doc
-
 title: Obsidian Usage Guide · Obsidian 使用指南
+---
+
+> **Before You Dive In**
+>
+> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) and [Homebrew Installation](/contents/Basic-tools/05-homebrew-install.html) first. Trust me, it's worth the 5-minute investment.
+>
+> **阅前说明**
+>
+> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html) 和 [Homebrew 安装](/contents/Basic-tools/05-homebrew-install.html)，绝对物超所值。
+
+
+# Obsidian Usage Guide
+**Obsidian 使用指南**
+
+## The Big Picture: Why Obsidian?
+**大局观：为什么选 Obsidian？**
+
+Here's the deal: Obsidian is your personal knowledge base that stores everything in plain Markdown files. Think of it as a "second brain" that you fully control:
+
+| Feature | What You Get | Why It Matters |
+|---------|--------------|----------------|
+| **Local-First** | All notes stored on your device | Your data, your rules |
+| **Markdown-Based** | Universal, future-proof format | Works with any text editor |
+| **Linking System** | Connect ideas like neurons | Build your knowledge network |
+| **Extensible** | Rich plugin ecosystem | Customize to your workflow |
+| **Free for Personal Use** | Core features are free | No subscription required |
+
+**Obsidian 是你的个人知识库，所有内容都以纯 Markdown 文件存储在你的设备上。相当于一个你完全掌控的「第二大脑」：**
+
+| 功能 | 你能得到什么 | 为什么重要 |
+|------|-------------|-----------|
+| **本地优先** | 所有笔记存储在你的设备上 | 你的数据，你做主 |
+| **基于 Markdown** | 通用、面向未来的格式 | 任何文本编辑器都能用 |
+| **链接系统** | 像神经元一样连接想法 | 构建你的知识网络 |
+| **可扩展** | 丰富的插件生态 | 自定义你的工作流 |
+| **个人使用免费** | 核心功能免费 | 无需订阅 |
 
 ---
 
-## Download and install Obsidian
-## 下载并安装 Obsidian
+## Part 1: Installing Obsidian
+**第一部分：Obsidian 安装**
 
-### Windows
-### Windows 系统
+### Windows Installation
+**Windows 安装**
 
-Open PowerShell (press `win + powershell` to search for and open PowerShell).
-打开 PowerShell（按 `win + powershell` 搜索并打开 PowerShell）。
+Press the `Win` key to search for PowerShell and open it.
+按下 `Win` 键搜索 PowerShell 并打开。
 
-**Note**: To avoid issues with insufficient permissions, it is recommended to select `Run as Administrator` to open PowerShell.
-**注**：为避免权限不足的问题，建议选择 `Run as Administrator` 打开 PowerShell。
+⚠️ **Note**: To avoid issues with insufficient permissions, it is recommended to select `Run as Administrator` to open PowerShell.
+⚠️ **注**：为避免权限不足的问题，建议选择 `Run as Administrator` 打开 PowerShell。
 
 ![](./images/3.Obsidian/file-20260113152854509.png)
 
@@ -37,11 +71,13 @@ Wait for the installation to finish.
 
 ![](./images/3.Obsidian/file-20260113152854507.png)
 
-### Mac
-### Mac 系统
+---
 
-Open your Terminal by using `command + space`.
-使用 `command + space` 打开您的命令行窗口（Terminal）。
+### Mac Installation
+**Mac 安装**
+
+Press `Command + Space` to search **Terminal** and open it.
+按 `Command + 空格` 搜索 **Terminal** 并打开。
 
 ![](./images/3.Obsidian/file-20260113152854500.png)
 
@@ -56,38 +92,46 @@ Wait for the installation to finish.
 ![](./images/3.Obsidian/file-20260113152854502.png)
 
 ---
-## Understanding Markdown Language
-## 理解 Markdown 语言
 
-### Why AI uses Markdown?
-### 为什么 AI 使用 Markdown？
+## Part 2: Understanding Markdown
+**第二部分：理解 Markdown**
 
-Markdown is a lightweight markup language with plain-text-formatting syntax. AI assistants like Claude use it because:
+### Why AI Uses Markdown
+**为什么 AI 使用 Markdown？**
+
+Here's the deal: Markdown is a lightweight markup language with plain-text-formatting syntax. AI assistants like Claude use it because:
 Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。像 Claude 这样的 AI 助手使用它是因为：
 
-- **Clear Structure**: It uses simple symbols to define headers, lists, and bold text, making the content easy for both humans and machines to read.
-- **结构清晰**：它使用简单的符号来定义标题、列表和加粗文本，使内容对人类和机器都易于阅读。
+| Reason | What It Means |
+|--------|---------------|
+| **Clear Structure** | Simple symbols define headers, lists, and bold text — easy for both humans and machines to read |
+| **Standard Format** | Universal standard that can be easily converted to PDF, Word, or HTML |
+| **Rich Content** | Supports images, tables, and even checkboxes — perfect for structured reports |
 
-- **Standard Format**: It is a universal standard that can be easily converted to other formats like PDF, Word, or HTML.
-- **标准格式**：它是一个通用标准，可以轻松转换为 PDF、Word 或 HTML 等其他格式。
+| 原因 | 意味着什么 |
+|------|-----------|
+| **结构清晰** | 使用简单的符号来定义标题、列表和加粗文本，使内容对人类和机器都易于阅读 |
+| **标准格式** | 通用标准，可以轻松转换为 PDF、Word 或 HTML 等其他格式 |
+| **内容丰富** | 支持图片、表格甚至复选框，非常适合结构化的研究报告 |
 
-- **Rich Content**: It supports images, tables, and even checkboxes, which is perfect for structured research reports.
-- **内容丰富**：它支持图片、表格甚至复选框，非常适合结构化的研究报告。
+---
 
-### Why trainees need to understand Markdown
-### 为什么学员需要理解 Markdown？
+### Why You Need to Understand Markdown
+**为什么你需要理解 Markdown**
 
 You don't need to know how to write it, but understanding its basic syntax will help you:
 你不需要学会如何编写它，但了解其基本语法将帮助你：
 
-- **Read AI Outputs**: Better understand the structure of the reports generated by Claude Code.
-- **阅读 AI 输出**：更好地理解 Claude Code 生成的报告结构。
+- ✅ **Read AI Outputs**: Better understand the structure of the reports generated by Claude Code
+  **阅读 AI 输出**：更好地理解 Claude Code 生成的报告结构
 
-- **Navigate Obsidian**: Know how your notes are organized and displayed.
-- **在 Obsidian 中导航**：了解你的笔记是如何组织和显示的。
+- ✅ **Navigate Obsidian**: Know how your notes are organized and displayed
+  **在 Obsidian 中导航**：了解你的笔记是如何组织和显示的
+
+---
 
 ### Basic Markdown Examples
-### Markdown 基础示例
+**Markdown 基础示例**
 
 Here is the content of the example file `Untitled.md` in its raw Markdown format, followed by an explanation of its elements:
 下面是示例文件 `Untitled.md` 的原始 Markdown 格式内容，以及对其元素的说明：
@@ -102,129 +146,157 @@ Here is the content of the example file `Untitled.md` in its raw Markdown format
 - [ ] 待办事项1
 - [x] 已完成事项1
 - [ ] 待办事项2
-- [ ] 
+- [ ]
 ![](./images/Untitled/file-20260114094822829.png)
 ```
 
-**Explanation of the elements (元素说明):**
-- **Headers (标题)**: `#`, `##`, and `###` represent level 1, 2, and 3 headers respectively.
-- **Headers (标题)**：`#`、`##` 和 `###` 分别代表一级、二级和三级标题。
+#### Element Explanation
+**元素说明**
 
-- **Italic and Bold (斜体与加粗)**: `*Text*` for italic, and `**Text**` for bold.
-- **斜体与加粗**：`*文本*` 表示斜体，`**文本**` 表示加粗。
+| Symbol | What It Creates | Example |
+|--------|-----------------|---------|
+| `#` | Level 1 header | `# Title` |
+| `##` | Level 2 header | `## Section` |
+| `###` | Level 3 header | `### Subsection` |
+| `*text*` | Italic text | *Ghana* |
+| `**text**` | Bold text | **Ghana** |
+| `-` | Bullet list item | `- Item` |
+| `- [ ]` | Unchecked checkbox | `- [ ] Todo` |
+| `- [x]` | Checked checkbox | `- [x] Done` |
+| `![](path)` | Image | `![](./image.png)` |
 
-- **Lists (列表)**: `-` followed by a space creates a bullet point.
-- **列表**：`-` 后接空格可创建无序列表点。
-
-- **Checkboxes (复选框)**: `- [ ]` creates an empty checkbox, and `- [x]` creates a completed one.
-- **复选框**：`- [ ]` 创建未完成的复选框，`- [x]` 创建已完成的复选框。
-
-- **Images (图片)**: `![](path)` is the syntax to display an image stored at a specific location.
-- **图片**：`![](路径)` 是显示存储在特定位置的图片的语法。
+| 符号 | 创建什么 | 示例 |
+|------|---------|------|
+| `#` | 一级标题 | `# 标题` |
+| `##` | 二级标题 | `## 章节` |
+| `###` | 三级标题 | `### 小节` |
+| `*文本*` | 斜体文本 | *加纳* |
+| `**文本**` | 加粗文本 | **加纳** |
+| `-` | 无序列表项 | `- 项目` |
+| `- [ ]` | 未完成的复选框 | `- [ ] 待办` |
+| `- [x]` | 已完成的复选框 | `- [x] 完成` |
+| `![](路径)` | 图片 | `![](./图片.png)` |
 
 ---
-### Choose a Vault Option
-### 选择库选项
+
+## Part 3: Setting Up Your Vault
+**第三部分：设置你的库**
+
+### Choosing a Vault Option
+**选择库选项**
 
 ![file-20260113152854493](./images/3.Obsidian/file-20260113152854493.png)
 
-Open the Obsidian, and you'll find **3 options**.
+Open Obsidian, and you'll find **3 options**.
 打开 Obsidian，你会看到 **3 个选项**。
 
-This is what Obsidian prompts you with "How to Get Started" when you launch it for the first time. Simply put, a **Vault** is your note library, which corresponds to **a local folder** where all Markdown (.md) files are stored. You can choose the appropriate usage method based on the following three scenarios:
-这是 Obsidian 在首次启动时的引导页面。简单来说，**Vault（库）** 是你的笔记仓库，对应于 **一个本地文件夹**，其中存放着所有的 Markdown (.md) 文件。你可以根据以下三种情况选择合适的启动模式：
+**What is a Vault?** Simply put, a **Vault** is your note library, which corresponds to **a local folder** where all Markdown (.md) files are stored. You can choose the appropriate usage method based on the following three scenarios:
+**什么是库？** 简单来说，**Vault（库）** 是你的笔记仓库，对应于 **一个本地文件夹**，其中存放着所有的 Markdown (.md) 文件。你可以根据以下三种情况选择合适的启动模式：
 
-- **Create new vault (创建新库)**
-	If you want to start from scratch, create a new note folder, and Obsidian will help you manage all your notes in that folder.
-	如果你想从零开始，创建一个新的笔记文件夹，Obsidian 会帮你在该文件夹中管理所有笔记。
-	
-- **Open folder as vault (将文件夹作为库打开)**
-	If you already have a folder with Markdown files and want to use it directly as your Obsidian note library.
-	如果你已经有一个包含 Markdown 文件的文件夹，并希望直接将其作为 Obsidian 的笔记库。
-	
-- **Open vault from Obsidian Sync (从 Obsidian Sync 打开库)**
-	If you have used Obsidian Sync (Obsidian's paid sync feature) on another device and now want to pull that synced note library down to your local machine.
-	如果你在其他设备上使用过 Obsidian Sync（Obsidian 的付费同步功能），现在想把同步的笔记库下载到本地。
-	
-	If you haven't subscribed to Sync, you can ignore this option.
-	如果你没有订阅 Sync，可以忽略此选项。
+| Option | Best For | What Happens |
+|--------|----------|--------------|
+| **Create new vault** | Starting from scratch | Creates a new folder for all your notes |
+| **Open folder as vault** | Already have Markdown files | Uses existing folder as your note library |
+| **Open vault from Obsidian Sync** | Paid sync users | Pulls synced library from Obsidian's cloud |
 
-**Notes**：Although Obsidian allows you to switch vaults via **File -> Open Vault**, it is better to use a single vault to take full advantage of its note-management capabilities. In addition, Obsidian cannot open a single md file by right-clicking, unlike the office series.
-**注意**：虽然 Obsidian 允许你通过 **File -> Open Vault** 切换库，但通常建议使用单一库，以便更好地利用其笔记管理功能。此外，Obsidian无法和 office 系列一样通过右键打开单一 md 文件。
+| 选项 | 适合谁 | 会发生什么 |
+|------|--------|-----------|
+| **创建新库** | 从零开始 | 创建一个新文件夹来存放所有笔记 |
+| **将文件夹作为库打开** | 已有 Markdown 文件 | 使用现有文件夹作为笔记库 |
+| **从 Obsidian Sync 打开库** | 付费同步用户 | 从 Obsidian 云端拉取同步的库 |
+
+**Quick decision guide:**
+- ✅ Want to start fresh? → **Create new vault**
+  想从零开始？→ **创建新库**
+
+- ✅ Already have notes in a folder? → **Open folder as vault"
+  已有笔记在文件夹里？→ **将文件夹作为库打开**
+
+- ✅ Using Obsidian Sync on another device? → **Open vault from Obsidian Sync**
+  在其他设备上使用 Obsidian Sync？→ **从 Obsidian Sync 打开库**
+
+⚠️ **Note**: Although Obsidian allows you to switch vaults via **File → Open Vault**, it's better to use a single vault to take full advantage of its note-management capabilities. Also, Obsidian cannot open a single .md file by right-clicking, unlike the Office suite.
+⚠️ **注意**：虽然 Obsidian 允许你通过 **File → Open Vault** 切换库，但通常建议使用单一库，以便更好地利用其笔记管理功能。此外，Obsidian 无法和 Office 系列一样通过右键打开单一 .md 文件。
 
 In this document, we'll use **Create new vault** as an example.
 在本文档中，我们将以 **Create new vault（创建新库）** 为例。
 
+---
 
-### Create a New Vault
-### 创建新库
+### Creating a New Vault
+**创建新库**
 
 ![file-20260113152854517](./images/3.Obsidian/file-20260113152854517.png)
 
 Enter a **Vault name** (e.g., "Obsidian"), click **Browse** to select a folder, and then click **Create**.
-输入一个 **Vault 名称**（例如 “Obsidian”），点击 **Browse** 选择文件夹，然后点击 **Create**。
+输入一个 **Vault 名称**（例如 "Obsidian"），点击 **Browse** 选择文件夹，然后点击 **Create**。
 
+---
 
-### View the Empty Vault
-### 查看空白库
+### Viewing the Empty Vault
+**查看空白库**
 
 ![file-20260113152854513](./images/3.Obsidian/file-20260113152854513.png)
 
 An empty vault will be created, as shown above.
 一个空白的库就会被创建，如上所示。
 
-
 ---
-## Creating Your First Note
-## 创建你的第一篇笔记
+
+## Part 4: Creating Your First Note
+**第四部分：创建你的第一篇笔记**
 
 ### Step 1: Click "New Note"
-### 第一步：点击 “New Note”
+**第一步：点击「New Note」**
 
 ![new note](./images/3.Obsidian/file-20260113152854490.png)
 
-Click the **New Note** Button at the top of the left sidebar(it shows "New note" when hovered).
-点击左侧边栏顶部的 **New Note（新建笔记）** 按钮（鼠标悬停时会显示 “New note”）。
+Click the **New Note** button at the top of the left sidebar (it shows "New note" when hovered).
+点击左侧边栏顶部的 **New Note（新建笔记）** 按钮（鼠标悬停时会显示 "New note"）。
 
+---
 
 ### Step 2: Enter the Note Name
-### 第二步：输入笔记名称
+**第二步：输入笔记名称**
 
 ![first note](./images/3.Obsidian/file-20260113152854496.png)
 
-Enter the Note Name
-输入笔记名称。
-
 The system will automatically fill in a file name, such as **"Untitled"**. You can change it to, for example, **"My First Note"**, and press Enter to confirm.
-系统会自动生成一个文件名，例如 **“Untitled”**。你可以修改这个标题，如 **“My First Note”**，然后按回车键确认。
+系统会自动生成一个文件名，例如 **"Untitled"**。你可以修改这个标题，如 **"My First Note"**，然后按回车键确认。
 
-**Note**: In Obsidian, the file you create is a **Markdown file** by default. As you type, Obsidian will automatically render the Markdown syntax to display a live preview of the formatted text.
-**提示**：在 Obsidian 中，你创建的文件默认是 **Markdown 文件**。当你输入内容时，Obsidian 会实时渲染 Markdown 语法并显示格式化的预览效果。
-
+💡 **Pro Tip**: In Obsidian, the file you create is a **Markdown file** by default. As you type, Obsidian will automatically render the Markdown syntax to display a live preview of the formatted text.
+💡 **小贴士**：在 Obsidian 中，你创建的文件默认是 **Markdown 文件**。当你输入内容时，Obsidian 会实时渲染 Markdown 语法并显示格式化的预览效果。
 
 ---
-## Import and Examples
-## 导入与示例
+
+## Part 5: Importing Notes
+**第五部分：导入笔记**
 
 ### Step 1: Import Notes
-### 第一步：导入笔记
+**第一步：导入笔记**
 
 ![file-20260113152854492](./images/3.Obsidian/file-20260113152854492.png)
 
 You can import a folder of notes into Obsidian by copying it into your designated vault folder.
 你可以通过将笔记文件夹复制到指定的 Vault 文件夹中，将其导入 Obsidian。
 
+---
 
 ### Step 2: Find the Imported Notes
-### 第二步：查找导入的笔记
+**第二步：查找导入的笔记**
 
 ![file-20260113152854510](./images/3.Obsidian/file-20260113152854510.png)
 
 You can then find it in Obsidian.
 然后你可以在 Obsidian 中找到它。
 
-## Pin vault to the taskbar
-## 将库固定到任务栏
+---
+
+## Part 6: Quick Access
+**第六部分：快速访问**
+
+### Pin Vault to the Taskbar
+**将库固定到任务栏**
 
 You can pin the Obsidian vault to the taskbar for quick access.
 你可以将 Obsidian 的 vault 固定到任务栏以便快速访问。
@@ -232,3 +304,39 @@ You can pin the Obsidian vault to the taskbar for quick access.
 ![](./images/3.Obsidian/file-20260113152854499.png)
 
 ![](./images/3.Obsidian/file-20260113152854498.png)
+
+---
+
+## Conclusion
+**总结**
+
+You're now ready to use Obsidian as your personal knowledge management tool:
+现在你已经准备好使用 Obsidian 作为你的个人知识管理工具了：
+
+1. **Install** Obsidian on your preferred platform
+   在你喜欢的平台上**安装** Obsidian
+
+2. **Understand** basic Markdown syntax
+   **理解**基本的 Markdown 语法
+
+3. **Create** your first vault and note
+   **创建**你的第一个库和笔记
+
+4. **Import** existing notes if you have them
+   如果有现有笔记，可以**导入**
+
+5. **Pin** Obsidian for quick access
+   **固定** Obsidian 以便快速访问
+
+**总结：**
+
+1. 在你喜欢的平台上**安装** Obsidian
+2. **理解**基本的 Markdown 语法
+3. **创建**你的第一个库和笔记
+4. 如果有现有笔记，可以**导入**
+5. **固定** Obsidian 以便快速访问
+
+---
+
+*Questions? Stuck somewhere? The Obsidian community is incredibly helpful. Or just explore the app — half the fun is discovering features yourself.*
+*有问题？卡住了？Obsidian 社区非常有帮助。或者直接探索这个应用——一半的乐趣在于自己发现新功能。*

@@ -3,121 +3,209 @@ layout: doc
 title: VS Code Usage Guide · VSCode 使用指南
 ---
 
-> Pre-reading Note
+> **Before You Dive In**
 >
-> Before reading this VS Code guide, it is recommended to complete the following basic tool documents:
+> This guide assumes you basic terminal and command line knowledge. If that sounds intimidating, take a quick detour to [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) and [Homebrew Installation](/contents/Basic-tools/05-homebrew-install.html) first. Trust me, it's worth the 5-minute investment.
 >
-> - Read [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) to become familiar with opening the terminal on macOS and entering basic commands.
-> - Read [Homebrew Installation and Basic Usage](/contents/Basic-tools/05-homebrew-install.html) to ensure that Homebrew is installed on your Mac.
+> **阅前说明**
 >
-> After completing these preparations, installing and using VS Code according to the steps in this tutorial will be much smoother.
-
-> 阅前说明
->
-> 在阅读本篇 VS Code 使用指南前，建议先完成以下基础工具文档：
->
-> - 阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)，熟悉在 Mac 上打开终端、输入命令等基本操作
-> - 阅读 [Homebrew 安装与基础使用](/contents/Basic-tools/05-homebrew-install.html)，确保已在 Mac 上安装好 Homebrew
->
-> 完成以上准备后，再按照本教程中的步骤安装和使用 VS Code 会更加顺畅。
+> 本教程假设你具备基本的终端和命令行知识。如果听起来有点慌，先花5分钟看看 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html) 和 [Homebrew 安装](/contents/Basic-tools/05-homebrew-install.html)，绝对物超所值。
 
 ![](./images/Pasted%20image%2020260310143657.png)
+
+---
+
+# VS Code Usage Guide
+**VSCode 使用指南**
+
+## The Big Picture: Why VS Code?
+**大局观：为什么选 VS Code？**
+
+Here's the deal: VS Code is your all-in-one code editor and document management tool. Think of it as a supercharged text editor with superpowers:
+
+| Feature | What You Get | Why It Matters |
+|---------|--------------|----------------|
+| **Multi-language Support** | Syntax highlighting for 100+ languages | Write code or docs in any format |
+| **Integrated Terminal** | Terminal inside the editor | No more window switching |
+| **Extension Ecosystem** | Thousands of free extensions | Customize to your heart's content |
+| **Git Integration** | Visual version control | See changes at a glance |
+| **AI Assistant** | Copilot and agent support | AI-powered coding partner |
+
+**VS Code 是你的全能代码编辑器和文档管理工具，相当于一个装备了超能力的文本编辑器：**
+
+| 功能 | 你能得到什么 | 为什么重要 |
+|------|-------------|-----------|
+| **多语言支持** | 100+ 语言的语法高亮 | 用任何格式写代码或文档 |
+| **集成终端** | 编辑器内置终端 | 不再需要切换窗口 |
+| **扩展生态** | 数千个免费扩展 | 随心所欲地自定义 |
+| **Git 集成** | 可视化版本控制 | 一眼看到所有变更 |
+| **AI 助手** | Copilot 和 Agent 支持 | AI 驱动的编程伙伴 |
+
+---
+
 ## Part 1: Installing VS Code
-## 第一部分：VS Code 安装
+**第一部分：VS Code 安装**
 
+### The Quick Way (Recommended ✨)
+**快速安装（推荐 ✨）**
 
-
-We recommend installing VS Code with the `brew` command. Press `Option + Space` to open the search bar, type **Terminal**, and press Enter to open Terminal.
-推荐使用 brew 命令一键安装 VS Code。使用 `Option + Space` 打开搜索界面，输入 **Terminal** 并按下 Enter 打开终端。
+Press `Option + Space` to open the search bar, type **Terminal**, and press Enter.
+按 `Option + Space` 打开搜索界面，输入 **Terminal** 并按下 Enter。
 
 ![](./images/Pasted%20image%2020260303190946.png)
 
-Type `brew install --cask visual-studio-code` and press Enter.
-在终端输入 `brew install --cask visual-studio-code` 并按下 Enter。
+Copy-paste this magic spell into Terminal and hit Enter:
+复制这段「魔法咒语」到终端，按下 Enter：
 
-> Command explanation:
->
-> `brew`: The main command for Homebrew, used to install software on Mac.
->
-> `install`: Tells Homebrew to install a package.
->
-> `--cask`: Tells Homebrew to install a graphical application (GUI), not a command-line-only tool.
->
-> `visual-studio-code`: The official package name for VS Code.
-
-> 命令解释：
->
-> `brew`：Homebrew 的主命令，用于在 Mac 上安装软件。
->
-> `install`：表示使用 brew 安装程序。
->
-> `--cask`：表示安装带图形界面的应用程序，而非仅命令行工具。
->
-> `visual-studio-code`：VS Code 的官方包名。
-
-**Note**: If Homebrew is not installed yet, please install [Homebrew](/contents/Basic-tools/05-homebrew-install.html) first before running the command above.
-**注**：若尚未安装 Homebrew，请先安装 [Homebrew](/contents/Basic-tools/05-homebrew-install.html) 后再执行上述命令。
+```bash
+brew install --cask visual-studio-code
+```
 
 ![](./images/Pasted%20image%2020260305170644.png)
+
+> **Command Explanation:**
+>
+> - `brew`: The main command for Homebrew, used to install software on Mac
+> - `install`: Tells Homebrew to install a package
+> - `--cask`: Tells Homebrew to install a graphical application (GUI), not a command-line-only tool
+> - `visual-studio-code`: The official package name for VS Code
+
+> **命令解释：**
+>
+> - `brew`：Homebrew 的主命令，用于在 Mac 上安装软件
+> - `install`：表示使用 brew 安装程序
+> - `--cask`：表示安装带图形界面的应用程序，而非仅命令行工具
+> - `visual-studio-code`：VS Code 的官方包名
+
+⚠️ **Note**: If Homebrew is not installed yet, please install [Homebrew](/contents/Basic-tools/05-homebrew-install.html) first.
+⚠️ **注**：若尚未安装 Homebrew，请先安装 [Homebrew](/contents/Basic-tools/05-homebrew-install.html)。
 
 Wait until the terminal prompt returns; the installation is then complete.
 等待终端恢复可输入状态即表示安装完成。
 
 ![](./images/Pasted%20image%2020260305171011.png)
 
-## Part 2: VS Code Basic Interface
-## 第二部分：VS Code 基本界面
+---
 
-The figure below shows the main areas of the VS Code interface; each area is described in more detail in the following sections.
-下图展示 VS Code 主界面的常用区域，下文会逐一介绍各模块。
+## Part 2: VS Code Interface Tour
+**第二部分：VS Code 界面导览**
+
+Here's what you're looking at when you first open VS Code:
+下面是你第一次打开 VS Code 时会看到的界面：
 
 ![](./images/Pasted%20image%2020260305171659.png)
 
-The left sidebar is the **Activity Bar**. You can show or hide it with the top-left button. It includes: File Explorer (similar to Finder), Global Search, Git source control, Extensions, and other tools.
-左侧为**活动栏**，可通过左上角按钮打开或收起，包含文件资源管理器（类似 Finder）、全局搜索、Git 源代码管理、扩展等工具。
+### The Left Sidebar (Activity Bar)
+**左侧边栏（活动栏）**
+
+**Why it matters**: This is your command center for navigating projects.
+**为什么重要**：这是你项目导航的指挥中心。
+
+The left sidebar is the **Activity Bar**. You can show or hide it with the top-left button. It includes:
+左侧为**活动栏**，可通过左上角按钮打开或收起，包含：
+
+| Icon | Tool | What It Does |
+|------|------|--------------|
+| 📁 | **File Explorer** | Browse and manage files (similar to Finder) |
+| 🔍 | **Search** | Find text across all files in your project |
+| 🔀 | **Source Control (Git)** | Track changes and manage versions |
+| 🧩 | **Extensions** | Install add-ons to enhance VS Code |
+
+| 图标 | 工具 | 作用 |
+|------|------|------|
+| 📁 | **文件资源管理器** | 浏览和管理文件（类似 Finder） |
+| 🔍 | **搜索** | 在项目所有文件中查找文本 |
+| 🔀 | **源代码管理（Git）** | 跟踪变更和管理版本 |
+| 🧩 | **扩展** | 安装附加组件增强 VS Code |
+
+---
+
+### Opening Your First Folder
+**打开你的第一个文件夹**
 
 Click **File → Open Folder** in the top menu and select a folder to open.
 依次点击顶部菜单 **File → Open Folder**，并选择要打开的目录。
 
 ![](./images/Pasted%20image%2020260305172317.png)
 
-The File Explorer shows the opened folder. You can click folders to expand or collapse them, and use the toolbar above the file tree to create files, create folders, or refresh.
-在文件资源管理器中会显示已打开的文件夹；可点击文件夹展开或收起，也可通过上方工具栏进行新建文件、新建文件夹、刷新等操作。
+The File Explorer shows the opened folder. You can:
+文件资源管理器中会显示已打开的文件夹，你可以：
 
-**Note**: By default, VS Code is best suited for plain-text files (e.g. `.txt`, `.md`, `.html`). Formats such as `.docx`, `.xlsx`, and `.ppt` usually require dedicated extensions or external applications.
-**注**：VS Code 默认更适合处理纯文本类文件（如 `.txt`、`.md`、`.html` 等）；`.docx`、`.xlsx`、`.ppt` 等格式通常仍需依赖专门扩展或外部应用。
+- ✅ Click folders to expand or collapse them
+  点击文件夹展开或收起
+
+- ✅ Use the toolbar to create files, create folders, or refresh
+  使用工具栏新建文件、新建文件夹、刷新
 
 ![](./images/Pasted%20image%2020260305173132.png)
+
+💡 **Pro Tip**: By default, VS Code is best suited for plain-text files (e.g. `.txt`, `.md`, `.html`). Formats such as `.docx`, `.xlsx`, and `.ppt` usually require dedicated extensions or external applications.
+💡 **小贴士**：VS Code 默认更适合处理纯文本类文件（如 `.txt`、`.md`、`.html` 等）；`.docx`、`.xlsx`、`.ppt` 等格式通常仍需依赖专门扩展或外部应用。
+
+---
+
+### The Search Panel
+**搜索面板**
 
 The **Search** panel finds text across all files in the opened folder and subfolders. Matches are highlighted; you can click a result to jump to that file.
 **搜索**栏可根据输入内容，在当前文件夹及所有子文件夹中查找匹配的文本；匹配处会高亮显示，点击左侧文件名可快速跳转。
 
 ![](./images/Pasted%20image%2020260305173548.png)
 
-The **Source Control** (Git) view provides a graphical interface for Git commands and helps you track changes. Click **Initialize Repository** to turn the current folder into a Git repository.
-**源代码管理**（Git）视图为 Git 命令提供图形界面，便于管理版本。点击 **Initialize Repository** 可将当前文件夹初始化为 Git 仓库。
+---
 
-**Note**: Only folders that have been initialized as a Git repository will show Git status and history.
-**注**：只有已初始化为 Git 的目录才会被 Git 跟踪和记录。
+### Git Source Control
+**Git 源代码管理**
+
+The **Source Control** (Git) view provides a graphical interface for Git commands and helps you track changes.
+**源代码管理**（Git）视图为 Git 命令提供图形界面，便于管理版本。
+
+Click **Initialize Repository** to turn the current folder into a Git repository.
+点击 **Initialize Repository** 可将当前文件夹初始化为 Git 仓库。
 
 ![](./images/Pasted%20image%2020260305173743.png)
 
-Git typically uses three states: **Changes** (working tree), **Staged changes**, and **Committed**. A typical workflow is: edit files (Changes) → stage (Staged changes) → commit (Committed). Use the **+** next to a file to stage it, then use the blue **Commit** button to create a commit.
-Git 一般包含三种状态：**更改**（工作区）、**暂存更改**、**已提交**。一次完整提交的流程是：更改 → 暂存更改 → 已提交。可通过文件旁的 **+** 将更改加入暂存区，再点击蓝色 **Commit** 按钮完成提交。
+⚠️ **Note**: Only folders that have been initialized as a Git repository will show Git status and history.
+⚠️ **注**：只有已初始化为 Git 的目录才会被 Git 跟踪和记录。
+
+#### Understanding Git Workflow
+**理解 Git 工作流**
+
+| Stage | What Happens | How to Do It |
+|-------|--------------|--------------|
+| **Changes** | Files modified but not yet staged | Edit your files |
+| **Staged Changes** | Files ready to be committed | Click the **+** next to a file |
+| **Committed** | Changes saved to Git history | Click the blue **Commit** button |
+
+| 阶段 | 发生了什么 | 如何操作 |
+|------|-----------|----------|
+| **更改** | 文件已修改但尚未暂存 | 编辑你的文件 |
+| **暂存更改** | 文件准备好提交 | 点击文件旁的 **+** |
+| **已提交** | 变更已保存到 Git 历史 | 点击蓝色 **Commit** 按钮 |
 
 ![](./images/Pasted%20image%2020260305175821.png)
+
+---
+
+### Extensions Marketplace
+**扩展市场**
 
 The **Extensions** view gives access to the extension marketplace. You can install extensions here to add new features to VS Code.
 **扩展**视图提供扩展市场，可在此安装扩展以增强 VS Code 功能。
 
 ![](./images/Pasted%20image%2020260305182927.png)
 
-For example, Markdown extensions such as **Markdown All in One** or **Md Editor** can render Markdown and provide a convenient preview.
-例如，安装 **Markdown All in One**、**Md Editor** 等 Markdown 扩展后，可以渲染 Markdown 语法并提供便捷预览。
+💡 **Pro Tip**: For example, Markdown extensions such as **Markdown All in One** or **Md Editor** can render Markdown and provide a convenient preview.
+💡 **小贴士**：例如，安装 **Markdown All in One**、**Md Editor** 等 Markdown 扩展后，可以渲染 Markdown 语法并提供便捷预览。
 
 ![](./images/Pasted%20image%2020260305183558.png)
 
 ![](./images/Pasted%20image%2020260305184231.png)
+
+---
+
+### Integrated Terminal
+**集成终端**
 
 Click the **Terminal** icon (near the top-right) to open the integrated terminal. This terminal starts in the current workspace folder, unlike a standalone Terminal app.
 点击右上角**终端**图标，可在 VS Code 内打开集成终端；该终端会自动将工作目录设为当前项目目录。
@@ -129,18 +217,33 @@ Use the **+** in the terminal panel to open additional terminal instances. The t
 
 ![](./images/Pasted%20image%2020260305184747.png)
 
+---
+
+### AI Assistant Panel
+**AI 助手面板**
+
 Click the **Copilot / Agent** icon (right side of the top bar) to open the AI assistant panel. The default is GitHub Copilot; you can type instructions for the agent to work in the current folder.
 点击右上角 **Copilot / Agent** 图标可打开 AI 助手面板，默认为 GitHub Copilot；在输入框中输入指令即可让 Agent 在当前目录下工作。
 
 ![](./images/Pasted%20image%2020260305190648.png)
+
+---
+
+### Command Palette
+**命令面板**
 
 The **Command Palette** lets you search for commands, settings, and extensions. It is especially useful for features that are not directly visible in the main UI.
 **命令面板** 可用于搜索命令、设置、扩展等内容，特别适合调用那些未直接显示在主界面上的功能。
 
 ![](./images/Pasted%20image%2020260305191241.png)
 
-## Part 3: Managing Documents in VS Code
-## 第三部分：VS Code 资料管理
+---
+
+## Part 3: Managing Documents
+**第三部分：文档管理**
+
+### Opening a Workspace
+**打开工作区**
 
 Open VS Code, then click **File → Open Folder** to switch to the folder you want to work on.
 打开 VS Code，依次点击 **File → Open Folder**，切换到需要处理文件的文件夹。
@@ -148,6 +251,14 @@ Open VS Code, then click **File → Open Folder** to switch to the folder you wa
 ![](./images/Pasted%20image%2020260309111111.png)
 
 ![](./images/Pasted%20image%2020260309120523.png)
+
+---
+
+### Creating Folders and Files
+**创建文件夹和文件**
+
+#### Create a New Folder
+**创建新文件夹**
 
 Use the toolbar on the right side of the folder name to create a new folder.
 可使用文件夹右侧的工具栏新建文件夹。
@@ -159,10 +270,16 @@ Type the folder name and press Enter.
 
 ![](./images/Pasted%20image%2020260309120817.png)
 
+#### Create a Subfolder
+**创建子文件夹**
+
 To create a subfolder inside an existing folder, select that folder first and then click the **New Folder** button.
 如果想在某个文件夹下新建子文件夹，先选中该文件夹，再点击 **New Folder** 按钮即可。
 
 ![](./images/Pasted%20image%2020260309121009.png)
+
+#### Create a New File
+**创建新文件**
 
 You can also create a new file from the same toolbar inside an existing folder.
 也可通过同一工具栏在子文件夹中新建文件。
@@ -177,10 +294,18 @@ New files are empty by default, so you need to type the file extension yourself,
 The empty file is now created successfully. Click the file in the sidebar to view or edit its contents.
 此时空文件已成功创建。点击侧边栏中的文件即可查看或编辑其内容。
 
-**Note**: VS Code can directly create plain-text files such as `.txt`, `.md`, and `.json`. Files like `.docx`, `.xlsx`, and `.ppt` should still be created with their corresponding applications.
-**注**：VS Code 可直接新建 `.txt`、`.md`、`.json` 等纯文本文件；`.docx`、`.xlsx`、`.ppt` 等格式仍建议通过对应应用程序创建。
-
 ![](./images/Pasted%20image%2020260309121254.png)
+
+💡 **Pro Tip**: VS Code can directly create plain-text files such as `.txt`, `.md`, and `.json`. Files like `.docx`, `.xlsx`, and `.ppt` should still be created with their corresponding applications.
+💡 **小贴士**：VS Code 可直接新建 `.txt`、`.md`、`.json` 等纯文本文件；`.docx`、`.xlsx`、`.ppt` 等格式仍建议通过对应应用程序创建。
+
+---
+
+### Renaming and Deleting
+**重命名和删除**
+
+#### Rename a File
+**重命名文件**
 
 To rename a file, right-click it and choose **Rename**. VS Code will then let you enter a new file name.
 如果想重命名文件，可右键选择 **Rename**，然后输入新的文件名。
@@ -189,15 +314,21 @@ To rename a file, right-click it and choose **Rename**. VS Code will then let yo
 
 ![](./images/Pasted%20image%2020260309121646.png)
 
-On Mac, you can also select a file and press Enter to rename it quickly.
-在 Mac 上，也可通过选中文件后按下 Enter 快速重命名文件。
+💡 **Pro Tip**: On Mac, you can also select a file and press Enter to rename it quickly.
+💡 **小贴士**：在 Mac 上，也可通过选中文件后按下 Enter 快速重命名文件。
 
 ![](./images/Pasted%20image%2020260309121736.png)
+
+#### Rename a Folder
+**重命名文件夹**
 
 Folders can be renamed in the same way, either by right-clicking or by pressing Enter after selecting them.
 文件夹同理，也可通过右键或选中后按下 Enter 进行重命名。
 
 ![](./images/Pasted%20image%2020260309121827.png)
+
+#### Delete Files or Folders
+**删除文件或文件夹**
 
 Right-click a file or folder and choose **Delete** to remove it.
 右键文件或文件夹并选择 **Delete** 即可删除对应内容。
@@ -205,6 +336,11 @@ Right-click a file or folder and choose **Delete** to remove it.
 ![](./images/Pasted%20image%2020260309121920.png)
 
 ![](./images/Pasted%20image%2020260309122005.png)
+
+---
+
+### Finding Files Quickly
+**快速查找文件**
 
 For large projects, use the **Search** feature to quickly find files by keyword. Type a keyword in the Search panel to see matching results across the project.
 在文件较多的项目中，可通过**搜索**功能按关键词快速定位资料；在搜索界面输入关键词即可在项目内跳转到对应内容。
@@ -221,25 +357,43 @@ Click a path segment to browse files in that folder.
 
 ![](./images/Pasted%20image%2020260306115349.png)
 
-You can also install extensions for specific file types (e.g. PDF, Office) to view or edit them inside VS Code. With the right extensions, VS Code can act as a versatile document viewer.
-此外，可安装各类文件格式对应的扩展（如 PDF、Office 等），在 VS Code 内阅读或编辑不同格式；善用扩展可将 VS Code 打造成多格式阅读与编辑环境。
+💡 **Pro Tip**: You can also install extensions for specific file types (e.g. PDF, Office) to view or edit them inside VS Code. With the right extensions, VS Code can act as a versatile document viewer.
+💡 **小贴士**：可安装各类文件格式对应的扩展（如 PDF、Office 等），在 VS Code 内阅读或编辑不同格式；善用扩展可将 VS Code 打造成多格式阅读与编辑环境。
 
 ![](./images/Pasted%20image%2020260306115638.png)
 
+---
+
 ## Part 4: Skills and MCP
-## 第四部分：Skills 和 MCP
+**第四部分：Skills 和 MCP**
 
-### Introduction
-### 引言
+### The Big Picture: Why Skills and MCP?
+**大局观：为什么需要 Skills 和 MCP？**
 
-Agents are built on general-purpose language models and do not ship with large knowledge bases or many built-in tools; their ability to handle images, audio, and other multimedia is limited. **Skills** and **MCP** (Model Context Protocol) extend the agent's capabilities. The following sections explain both.
-Agent 基于通用大语言模型设计，本身没有丰富的知识库与工具，对图片、音频等多媒体处理能力有限，因此需要 **Skills** 和 **MCP** 来扩展 Agent 的能力。以下分别说明两者。
+Here's the deal: Agents are built on general-purpose language models and do not ship with large knowledge bases or many built-in tools; their ability to handle images, audio, and other multimedia is limited. **Skills** and **MCP** (Model Context Protocol) extend the agent's capabilities.
 
-### Skills
-### Skills（技能）
+**Agent 基于通用大语言模型设计，本身没有丰富的知识库与工具，对图片、音频等多媒体处理能力有限，因此需要 Skills 和 MCP 来扩展 Agent 的能力。**
+
+| Extension Type | What It Is | How It Works |
+|----------------|------------|--------------|
+| **Skills** | Text-based prompt files | Guide the agent through specific tasks |
+| **MCP** | Pre-built tools and APIs | Provide direct tool access to the agent |
+
+| 扩展类型 | 是什么 | 如何工作 |
+|---------|--------|----------|
+| **Skills** | 基于文本的提示文件 | 引导 Agent 完成特定任务 |
+| **MCP** | 预构建的工具和 API | 为 Agent 提供直接的工具访问 |
+
+---
+
+### Skills: Your Task-Specific Guides
+**Skills：你的任务专属向导**
 
 In general, a **Skill** is made up of one or more prompt files that describe how to perform a specific task. After you describe what you need, the agent can find and use the right skill, or you can call a skill directly with **`/skill-name`**.
 一般而言，Skill 由一个或多个提词文件组成，对特定任务进行说明。用户描述需求后，Agent 会主动匹配并调用合适的 Skill；也可通过 **`/skill-name`** 主动调用指定 Skill。
+
+#### Finding Your Skills
+**找到你的 Skills**
 
 Claude Code looks for skills in the **.claude/skills** folder. Go to **Go → Home** to open your Home directory.
 Claude Code 的 Skills 存放在 **.claude/skills** 目录。依次点击 **Go → Home** 打开 Home 目录。
@@ -271,6 +425,9 @@ Opening **SKILL.md** shows the instructions. The example below is a skill that u
 
 ![](./images/Pasted%20image%2020260306002959.png)
 
+#### Using a Skill
+**使用 Skill**
+
 Open VS Code, then click **File → Open Folder** to switch to the folder you want to work on.
 打开 VS Code，依次点击 **File → Open Folder**，切换到需要处理文件的文件夹。
 
@@ -286,8 +443,8 @@ Click the shortcut button in the top-right corner to open a new terminal.
 Run the command that launches Claude Code.
 输入用于启动 Claude Code 的命令。
 
-**Note**: This tutorial uses the `glm` command to launch Claude Code. You can replace it with the command that is available in your own environment.
-**注**：本教程使用 `glm` 命令启动 Claude Code，你也可以根据自己的环境改用其他启动命令。
+⚠️ **Note**: This tutorial uses the `glm` command to launch Claude Code. You can replace it with the command that is available in your own environment.
+⚠️ **注**：本教程使用 `glm` 命令启动 Claude Code，你也可以根据自己的环境改用其他启动命令。
 
 ![](./images/Pasted%20image%2020260309111952.png)
 
@@ -319,8 +476,11 @@ You will then see that `test.md` appears in the workspace.
 此时可以看到 `test.md` 已显示在工作区中。
 
 ![](./images/Pasted%20image%2020260309114736.png)
-### Finding and installing new skills
-### 查找与安装新 Skill
+
+---
+
+### Finding and Installing New Skills
+**查找与安装新 Skill**
 
 You can use the **find-skills** skill to search for and install new skills with Claude Code.
 可通过 **find-skills** 这一 Skill，让 Claude Code 协助搜索并安装新的 Skill。
@@ -359,11 +519,11 @@ Choose one (e.g. the most downloaded) and ask Claude Code to install it, e.g.: *
 
 ![](./images/Pasted%20image%2020260306102840.png)
 
+💡 **Pro Tip**: Newly installed skills may not appear until you restart Claude Code.
+💡 **小贴士**：新安装的 Skill 可能需重启 Claude Code 后才会出现在列表中。
+
 After installation, open a new terminal session, close the old one if needed, and launch Claude Code again in the new terminal.
 安装完成后，可新建一个终端会话，必要时关闭原有终端，并在新终端中重新打开 Claude Code。
-
-**Note**: Newly installed skills may not appear until you restart Claude Code.
-**注**：新安装的 Skill 可能需重启 Claude Code 后才会出现在列表中。
 
 ![](./images/Pasted%20image%2020260309113352.png)
 
@@ -382,14 +542,19 @@ When the run completes, you will see the extracted structure and key sentences.
 
 ![](./images/Pasted%20image%2020260306104112.png)
 
-### MCP
-### MCP
+---
+
+### MCP: Your Pre-Built Tools
+**MCP：你的预构建工具**
 
 Unlike Skills (which are mostly text prompts), **MCP** (Model Context Protocol) exposes pre-built tools that the agent can call. This reduces the need for the agent to write code from scratch and makes behavior more predictable.
 与主要由文字提词组成的 Skill 不同，**MCP**（Model Context Protocol）通过预置工具供 Agent 调用，减少从零编写代码的 token 消耗，并降低不确定性。
 
 As a user, you only need to install an MCP according to its developer's instructions, then use Claude Code to view and call it.
 对用户而言，只需按 MCP 提供方的说明完成安装，即可在 Claude Code 中查看并调用。
+
+#### Using MCP in Claude Code
+**在 Claude Code 中使用 MCP**
 
 Open VS Code, then click **File → Open Folder** to switch to the folder you want to work on.
 打开 VS Code，依次点击 **File → Open Folder**，切换到需要处理文件的文件夹。
@@ -406,8 +571,8 @@ Click the shortcut button in the top-right corner to open a new terminal.
 Run the command that launches Claude Code.
 输入用于启动 Claude Code 的命令。
 
-**Note**: This tutorial uses the `glm` command to launch Claude Code. You can replace it with the command that is available in your own environment.
-**注**：本教程使用 `glm` 命令启动 Claude Code，你也可以根据自己的环境改用其他启动命令。
+⚠️ **Note**: This tutorial uses the `glm` command to launch Claude Code. You can replace it with the command that is available in your own environment.
+⚠️ **注**：本教程使用 `glm` 命令启动 Claude Code，你也可以根据自己的环境改用其他启动命令。
 
 ![](./images/Pasted%20image%2020260309115250.png)
 
@@ -453,3 +618,7 @@ After a short wait, the transcribed text will appear.
 
 ![](./images/Pasted%20image%2020260309115655.png)
 
+---
+
+*Questions? Stuck somewhere? The VS Code community is huge. Or just ask your favorite AI assistant — it's literally right there.*
+*有问题？卡住了？VS Code 社区很大。或者直接问你的 AI 助手 —— 它就在那。*

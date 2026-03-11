@@ -2,94 +2,121 @@
 layout: doc
 title: KIMI Configuration Guide · KIMI 配置教程
 ---
-> Pre-reading Note
->
-> Before using this KIMI configuration guide, it is recommended to:
->
-> - Be familiar with opening a terminal and running simple commands (you can review [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) if needed).
->
-> This will make it easier to follow the steps for obtaining an API key, setting environment variables, and launching Claude Code with KIMI.
->
 
-> 阅前说明
+> **Before You Dive In**
 >
-> 在阅读本篇 KIMI 配置教程前，建议您：
+> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](/contents/Basic-tools/01-terminal-basics.html) first. Trust me, it's worth the 5-minute investment.
 >
-> - 熟悉如何打开终端并运行简单命令（如有需要，可先阅读 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)）。
+> **阅前说明**
 >
-> 具备这些基础后，按照本教程获取 API Key、配置环境变量并使用 KIMI 启动 Claude Code 会更加轻松。
+> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](/contents/Basic-tools/01-terminal-basics.html)，绝对物超所值。
 
 
 # KIMI Configuration Guide
-# KIMI 配置教程
+**KIMI 配置教程**
 
-## How KIMI in Claude Code differs from using a Claude account
-## KIMI 接入 Claude Code 与直接使用 Claude 账号的区别
+## The Big Picture: Why KIMI in Claude Code?
+**大局观：为什么在 Claude Code 里用 KIMI？**
 
-Claude Code can work in two main ways:
+Here's the deal: Claude Code can run in two completely different modes:
 
-- **Sign in with a Claude account**: All requests go to Anthropic's servers, and your limits and billing follow your Claude plan. This is the easiest option if you already have a Claude account and only need the original Claude models.
-- **Use a KIMI API key inside Claude Code**: Claude Code is just the editor interface, while the actual model and billing come from KIMI. Your usage is counted against your KIMI balance, and you can use KIMI's models directly from inside Claude Code.
+| Mode | What Happens | Best For |
+|------|--------------|----------|
+| **Claude Account** | Requests → Anthropic servers. Billing → Your Claude plan. | Users with existing Claude subscriptions, mainly English workflows |
+| **KIMI API Key** | Claude Code is just the interface. The brain and billing come from KIMI. | Chinese users, Chinese-first workflows, separate quota management |
 
-For beginners: if you already have a Claude account and are satisfied with its models, you can simply keep using the built‑in Claude configuration and skip this guide. If you do not have a Claude account, or you prefer KIMI's Chinese capabilities and want all costs and quotas to be managed on the KIMI platform, following this guide to connect KIMI to Claude Code will be more suitable.
+**Quick decision guide:**
+- ✅ Already have a stable Claude account + work mostly in English? → Stick with Claude, this guide is optional reading.
+- ✅ No Claude account / Chinese-first workflow / want domestic billing? → Keep reading. KIMI is your new best friend.
 
-Claude Code 大致有两种使用方式：
+**一张图看懂两种模式：**
 
-- **使用 Claude 官网账号登录**：所有请求都走 Anthropic 官方服务器，额度和费用由 Claude 套餐决定；如果你已经有 Claude 账号且只需要原生 Claude 模型，这是最省事的方式。
-- **在 Claude Code 中配置 KIMI API Key**：Claude Code 只是「编辑器界面」，真正提供模型与计费的是 KIMI，使用量计入你的 KIMI 余额，可以在 Claude Code 中直接调用 KIMI 模型。
+| 模式 | 请求去哪 | 费用算谁头上 |
+|------|----------|--------------|
+| **Claude 账号登录** | Anthropic 官方服务器 | 你的 Claude 套餐 |
+| **KIMI API Key** | Claude Code 只是「壳」，真正干活的是 KIMI | 你的 KIMI 账户 |
 
-对于刚入门的用户：如果你已经有 Claude 账号且对现有模型表现满意，那么继续使用内置配置即可，本教程可以暂时忽略。如果你没有 Claude 账号，或者更偏好 KIMI 在中文场景下的表现，并希望所有费用与额度都在 KIMI 平台统一管理，那么按照本教程将 KIMI 接入 Claude Code 会更适合你的使用习惯。
+**快速决策：**
+- 已有稳定 Claude 账号 + 主要是英文场景 → 继续用 Claude 即可，本篇选读
+- 没有 Claude 账号 / 中文为主 / 想国内统一管理账单 → 继续往下看
 
 ![](./images/Pasted%20image%2020260310143951.png)
-## Step 1: Get Your KIMI API Key
-## 步骤一：获取 KIMI 的通行密钥
 
-Open [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys) and log in.
-打开 [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys) 并登录。
+---
+
+## Step 1: Get Your Golden Ticket (API Key)
+**步骤一：获取你的「入场券」**
+ 
+Every journey begins with a key. Here's how to get yours:
+ 
+🔗 Head to [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys)
+
+一切从一个 API Key 开始。获取方式如下：
+
+🔗 打开 [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys) 并登录。
 
 ![](./images/Pasted%20image%2020260303194555.png)
 
-Click **Create API Key** to create a new API key.
-点击 **新建 API Key** 创建一个新的 API Key。
+Click **Create API Key** (新建 API Key).
+点击 **新建 API Key**。
 
 ![](./images/Pasted%20image%2020260303194920.png)
 
-Enter a name for the API key, select **default** for the project, then click **Confirm** (确定).
-输入 API Key 的名称，项目选择 **default**，然后点击 **确定**。
+Give it a memorable name, select **default** for the project, then click **Confirm** (确定).
+起个能记住的名字，项目选择 **default**，然后点击 **确定**。
 
 ![](./images/Pasted%20image%2020260303195050.png)
 
-**Note**: The key is shown only once, so save it in a safe place immediately.
-**注**：密钥只会显示一次，请及时妥善保存。
+Click **Copy** and save this somewhere safe. **Important**: You won't be able to see it again!
+点击 **复制**，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
 
 ![](./images/Pasted%20image%2020260303195345.png)
 
-## Step 2: Top Up Your KIMI Account
-## 步骤二：KIMI 账户充值
+---
 
-**KIMI API keys require a paid balance; without top-up, the API cannot be used.**
-**KIMI 的 API Key 需账户有余额方可使用，未充值则无法调用接口。**
+## Step 2: Fuel Up Your Account
+**步骤二：给账户充点「燃料」**
 
-- In the left sidebar: **Financial** → **Account Top-up** (财务管理 → 账户充值).
-- 在左侧栏进入 **财务管理** → **账户充值**。
-- Choose an amount, complete payment, and the balance will be available for your API key.
-- 选择金额并完成支付后，即可为该 API Key 使用余额。
+Here's the thing: KIMI API keys need a paid balance to work. No balance, no magic.
+
+**KIMI 的 API Key 需要账户有余额才能用。没钱就没法干活。**
+
+| Sidebar Path | What to Do |
+|--------------|------------|
+| **Financial** → **Account Top-up** (财务管理 → 账户充值) | Choose an amount, complete payment, and you're ready to go |
+
+| 操作路径 | 要做什么 |
+|---------|---------|
+| **财务管理** → **账户充值** | 选择金额并完成支付，搞定 |
 
 ![](./images/Pasted%20image%2020260306114112.png)
 
-## Step 3: Configure Claude Code with KIMI
-## 步骤三：配置 Claude Code（KIMI）
+---
 
-### Method 1: Configure via the visual app
-### 方法一：通过可视化 APP 配置
+## Step 3: The Actual Setup (Pick Your Adventure)
+**步骤三：实际配置（选择你的路线）**
 
-Right-click in a suitable folder and open **Terminal**.
-选择一个合适的文件夹，右键选择 **Terminal** 打开。
+You have two paths forward. Choose wisely:
+你有两条路可以选，按你的需求来决定：
+
+| Method | Pros | Cons |
+|--------|------|------|
+| **Visual App** (Recommended) | Easy switching between providers, user-friendly | One extra setup step |
+| **Environment Variables** | One command, done | Harder to switch providers later |
+
+### Method 1: Visual setup tool (recommended ✨)
+**方法一：可视化配置工具（推荐 ✨）**
+
+**Why I recommend this**: You can easily switch between KIMI and other providers later. Flexibility = freedom.
+**为什么推荐这一种**：后续可以在 KIMI 和其他服务商之间自由切换，灵活性最高。
+
+Right-click in any folder → **Terminal**.
+找个文件夹，右键 → **Terminal**。
 
 ![](images/Pasted%20image%2020260311005958.png)
 
-Copy the following command into Terminal and press Enter to run it.
-在终端复制以下指令并按下 Enter 执行。
+Copy-paste this magic spell into Terminal and hit Enter:
+复制这段「魔法咒语」到终端，按下 Enter：
 
 ```
 wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip && \
@@ -101,46 +128,58 @@ chmod +x install.sh && \
 
 ![](images/Pasted%20image%2020260311010117.png)
 
-After installation completes, double-click the **AGENT_MANAGER.command** file in the selected folder (either `agent_manager-main` or `agent_manager`).
-安装完成后，双击打开选定目录下（`agent_manager-main` 或 `agent_manager`）中的 **AGENT_MANAGER.command** 文件。
+Once installed, find **AGENT_MANAGER.command** in the folder and double-click it.
+安装完成后，找到 **AGENT_MANAGER.command** 文件，双击运行。
 
 ![](./images/Pasted%20image%2020260306111847.png)
 
-Open the **KIMI** tab, enter your API Key, and then click **Install & configure**. Please refer to Step 1 if you still need to create an API key.
-点击 **KIMI** 选项卡，输入 API Key，然后点击 **Install & configure**。如果尚未获取 API Key，请先参照步骤一。
+Now for the moment of truth:
+1. Click the **KIMI** tab
+2. Paste your API Key
+3. Click **Install & configure**
+
+关键时刻到了：
+1. 点击 **KIMI** 选项卡
+2. 粘贴你的 API Key
+3. 点击 **Install & configure**
 
 ![](./images/Pasted%20image%2020260306114430.png)
 
-When you see that KIMI is configured successfully, the setup is complete.
-当界面显示 KIMI 已配置成功即表示完成。
+Success looks like this:
+成功长这样：
 
 ![](./images/Pasted%20image%2020260306114556.png)
 
-After configuration, you can run the `kimi` command in the terminal to launch Claude Code with KIMI.
-配置完成后，在终端输入 `kimi` 即可使用 KIMI 进入 Claude Code。
+Now just type `kimi` in terminal to launch Claude Code with KIMI. That's it. You're done.
+现在终端输入 `kimi` 就能用 KIMI 启动 Claude Code 了。搞定。
 
 ![](./images/Pasted%20image%2020260306114634.png)
 
-You can directly ask the agent which model it is using. As shown below, it is the kimi-k2.5 model.
-你可以直接询问 agent 使用的是什么模型。如下所示，为 kimi-k2.5 模型。
+💡 **Pro Tip**: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
+💡 **小贴士**：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 
-### Method 2: Configure via environment variables
-### 方法二：使用环境变量配置
+---
 
-Go to **Go → Home** to open your Home directory.
-依次点击 **Go → Home** 打开 Home 目录。
+### Method 2: Environment variables setup
+**方法二：环境变量配置**
+
+**The tradeoff**: Faster setup, but harder to switch providers later. Choose this if you're committed to KIMI.
+**取舍**：配置更快，但后续切换服务商较麻烦。适合确定只用 KIMI 的用户。
+
+Go to **Finder** → **Go** → **Home**.
+**访达** → **前往** → **个人**。
 
 ![](./images/Pasted%20image%2020260303192106.png)
 
-Press `Command + Shift + .` to show hidden files, then open the **.zshrc** file.
-使用 `Command + Shift + .` 显示隐藏文件，并打开 **.zshrc** 文件。
+Press `Command + Shift + .` to reveal hidden files, then open **.zshrc**.
+按 `Command + Shift + .` 显示隐藏文件，打开 **.zshrc**。
 
 ![](./images/Pasted%20image%2020260303200006.png)
 
-Paste the following lines at the end of **.zshrc**, and replace `your API KEY` with your actual KIMI API key. Please refer to Step 1 if you still need to create an API key.
-将下面两行复制到 **.zshrc** 文件末尾，并把 `your API KEY` 替换为你的实际 API Key。如果尚未获取 API Key，请先参照步骤一。
+Paste this at the end of **.zshrc**, and replace `your API KEY` with your actual KIMI API key:
+在文件末尾粘贴，把 `your API KEY` 换成你真正的 API Key：
 
 ```sh
 export ANTHROPIC_BASE_URL="https://api.moonshot.cn/anthropic/"
@@ -149,18 +188,18 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 ![](./images/Pasted%20image%2020260303200243.png)
 
-Save the file. Press `Option + Space` to open search, type **Terminal**, and press Enter to open Terminal.
-保存文件后，使用 `Option + Space` 打开搜索，输入 **Terminal** 并按下 Enter 打开终端。
+Save the file. Press `Option + Space` → type **Terminal** → Enter.
+保存文件。按 `Option + Space` → 输入 **Terminal** → 回车。
 
 ![](./images/Pasted%20image%2020260303190946.png)
 
-In Terminal, run `source .zshrc` so the new environment variables take effect. When the prompt returns, the variables are active.
-在终端输入 `source .zshrc` 使环境变量生效；当命令行恢复可输入状态即表示环境变量已生效。
+In Terminal, run `source .zshrc` to activate the new environment variables:
+在终端输入 `source .zshrc` 使环境变量生效：
 
 ![](./images/Pasted%20image%2020260303200438.png)
 
-Run `claude` and press Enter. When Claude Code shows **Detected a custom API Key in your environment**, click **Yes** to use it.
-在终端输入 `claude` 并按下 Enter；当 Claude Code 提示 **Detected a custom API Key in your environment** 时，点击 **Yes** 使 API Key 生效。
+Run `claude` and press Enter. When Claude Code shows **Detected a custom API Key in your environment**, click **Yes**.
+输入 `claude` 并按下 Enter；当 Claude Code 提示 **Detected a custom API Key in your environment** 时，点击 **Yes**。
 
 ![](./images/Pasted%20image%2020260303200736.png)
 
@@ -169,32 +208,36 @@ You can then use Claude Code as usual with KIMI.
 
 ![](./images/Pasted%20image%2020260303200846.png)
 
-You can directly ask the agent which model it is using. As shown below, it is the kimi-k2.5 model.
-你可以直接询问 agent 使用的是什么模型。如下所示，为 kimi-k2.5 模型。
+💡 **Pro Tip**: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
+💡 **小贴士**：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 
+---
 
-### Launching Claude Code with `kimi`
-### 使用 `kimi` 启动 Claude Code
+### Bonus: Create a `kimi` Launch Command
+**进阶：创建 `kimi` 启动命令**
 
-If you want to launch Claude Code with the `kimi` command, follow the steps below. Go to **Go → Home** to open your Home directory.
-若希望通过 `kimi` 命令启动 Claude Code，请按以下步骤操作。依次点击 **Go → Home** 打开 Home 目录。
+Want a quick-launch command? Here's how:
+想用 `kimi` 命令快速启动？操作如下：
+
+Go to **Finder** → **Go** → **Home**.
+**访达** → **前往** → **个人**。
 
 ![](./images/Pasted%20image%2020260303192106.png)
 
-Press `Command + Shift + .` to show hidden files, then open the **.claude** folder.
-使用 `Command + Shift + .` 显示隐藏文件，并打开 **.claude** 文件夹。
+Press `Command + Shift + .` to reveal hidden files, then open **.claude** folder.
+按 `Command + Shift + .` 显示隐藏文件，打开 **.claude** 文件夹。
 
 ![](./images/Pasted%20image%2020260303192303.png)
 
-Copy **settings.json** and rename the copy to **kimi-settings.json**.
-将 **settings.json** 复制一份，并重命名为 **kimi-settings.json**。
+Copy **settings.json** → rename to **kimi-settings.json**.
+复制 **settings.json** → 重命名为 **kimi-settings.json**。
 
 ![](./images/Pasted%20image%2020260310234238.png)
 
-Open **kimi-settings.json** and paste the following content (replace the placeholder with your API key).
-打开 **kimi-settings.json**，填入以下内容（将 `replace with your api key` 替换为你的 API Key）。
+Open **kimi-settings.json** and paste this content (replace the placeholder with your API key):
+打开 **kimi-settings.json**，填入以下内容（把 `replace with your api key` 换成你的 API Key）：
 
 ```json
 {
@@ -208,13 +251,13 @@ Open **kimi-settings.json** and paste the following content (replace the placeho
 
 ![](./images/Pasted%20image%2020260310234351.png)
 
-Go back to the Home directory and open the **.zshrc** file.
-返回 Home 目录，打开 **.zshrc** 文件。
+Go back to Home, open **.zshrc**.
+返回 Home 目录，打开 **.zshrc**。
 
 ![](./images/Pasted%20image%2020260310234055.png)
 
-Add the following line at the end of the file.
-在文件末尾添加以下命令。
+Add this line at the end:
+在文件末尾添加：
 
 ```bash
 alias kimi="claude --settings ~/.claude/kimi-settings.json"
@@ -222,13 +265,13 @@ alias kimi="claude --settings ~/.claude/kimi-settings.json"
 
 ![](./images/Pasted%20image%2020260310233841.png)
 
-Use `Command + Space` to search for **Terminal** and open it.
-使用 `Command + 空格` 搜索 **Terminal** 并打开。
+Press `Command + Space` → search **Terminal** → Enter.
+按 `Command + 空格` → 搜索 **Terminal** → 回车。
 
 ![](./images/4.Claude%20code/file-20260113152908876%201.png)
 
 In Terminal, run `source .zshrc`.
-在 Terminal 中输入 `source .zshrc`。
+在终端输入 `source .zshrc`。
 
 ![](./images/Pasted%20image%2020260310233106.png)
 
@@ -243,3 +286,26 @@ Run `kimi` to launch Claude Code.
 ![](./images/Pasted%20image%2020260310234456.png)
 
 ![](./images/Pasted%20image%2020260310233250.png)
+
+---
+
+## Conclusion
+
+1. **Get API Key** from [platform.moonshot.cn](https://platform.moonshot.cn/console/api-keys)
+2. **Top up** your account (KIMI requires a paid balance)
+3. **Setup**: Use visual app (`kimi` command) or environment variables (`claude` command)
+4. **Verify**: Ask the AI what model it's using
+5. **Done!** Start coding with your new AI pair programmer
+
+**总结**
+
+1. **获取 API Key**：去 [platform.moonshot.cn](https://platform.moonshot.cn/console/api-keys)
+2. **充值**：账户需要有余额才能使用
+3. **配置**：可视化工具（`kimi` 命令）或环境变量（`claude` 命令）
+4. **验证**：直接问 AI 用的是什么模型
+5. **完成！** 开始和你的 AI 结对编程吧
+
+---
+
+*Questions? Stuck somewhere? The KIMI community is pretty helpful. Or just ask Claude — it's literally right there.*
+*有问题？卡住了？KIMI 社区挺活跃的。或者直接问 Claude —— 它就在那。*
