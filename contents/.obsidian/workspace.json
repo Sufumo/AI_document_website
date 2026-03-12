@@ -11,14 +11,10 @@
             "id": "0aa49de06e856e71",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Agents/02-KIMI-configuration.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "02-KIMI-configuration"
+              "title": "New tab"
             }
           }
         ]
@@ -183,21 +179,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "0aa49de06e856e71",
+  "active": "c5933f189f785379",
   "lastOpenFiles": [
-    "Agents/01-GLM-configuration.md",
-    "Agents/images/Pasted image 20260311010117.png",
-    "Agents/images/Pasted image 20260311005958.png",
-    "Agents/images/Pasted image 20260311005854.png",
-    "Agents/02-KIMI-configuration.md",
-    "Agents/images/Pasted image 20260310234456.png",
-    "Agents/images/Pasted image 20260310234351.png",
-    "Agents/images/Pasted image 20260310234238.png",
-    "Agents/images/Pasted image 20260310234055.png",
-    "Agents/images/Pasted image 20260310233841.png",
-    "Agents/images/Pasted image 20260310233250.png",
-    "Agents/images/Pasted image 20260310233233.png",
-    "Agents/05-claude-code-workshop.md",
-    "Agents/04-claude-codel.md"
+    "Basic-tools/04-winget-basics/04-winget-basics_en.md",
+    "Basic-tools/04-winget-basics/04-winget-basics_cn copy.md",
+    "Basic-tools/03-mac-os-basics/03-mac-os-basics_en.md",
+    "Basic-tools/03-mac-os-basics/03-mac-os-basics_cn copy.md",
+    "Basic-tools/02-windows-os-basics/02-windows-os-basics_en.md",
+    "Basic-tools/05-homebrew-install/05-homebrew-install_en.md",
+    "Basic-tools/01-terminal-basics/01-terminal-basics_en.md",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image340.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image330.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image320.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image27.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image26.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit/image25.png",
+    "Basic-tools/05-homebrew-install/images/Toolkit",
+    "Basic-tools/05-homebrew-install/images",
+    "Basic-tools/05-homebrew-install/05-homebrew-install_cn.md",
+    "Basic-tools/05-homebrew-install",
+    "Basic-tools/04-winget-basics/images/Windows/file-20260109161753557.png",
+    "Basic-tools/04-winget-basics/images/Windows/file-20260109162641973.png",
+    "Basic-tools/04-winget-basics/images/Windows",
+    "Basic-tools/04-winget-basics/images",
+    "Basic-tools/04-winget-basics/04-winget-basics_cn.md",
+    "Basic-tools/04-winget-basics",
+    "Basic-tools/03-mac-os-basics/images/Mac/file-20260109145641593.png",
+    "Basic-tools/03-mac-os-basics/images/Mac/file-20260109145541008.png",
+    "Basic-tools/03-mac-os-basics/images/Mac",
+    "Basic-tools/03-mac-os-basics/images",
+    "Basic-tools/03-mac-os-basics/03-mac-os-basics_cn.md",
+    "Basic-tools/03-mac-os-basics",
+    "Basic-tools/02-windows-os-basics/images/Windows",
+    "Basic-tools/02-windows-os-basics/02-windows-os-basics_cn.md",
+    "Basic-tools/01-terminal-basics/01-terminal-basics_cn.md",
+    "Apps/03-obsidian-notes/03-obsidian-notes_en.md",
+    "Apps/03-obsidian-notes/03-obsidian-notes_cn.md",
+    "Apps/01-vscode-usage/01-vscode-usage_en.md",
+    "Apps/01-vscode-usage/01-vscode-usage_cn.md",
+    "Agents/05-claude-code-workshop/05-claude-code-workshop_en.md",
+    "Agents/05-claude-code-workshop/05-claude-code-workshop_cn.md",
+    "Agents/04-claude-codel/04-claude-codel_en.md",
+    "Agents/04-claude-codel/04-claude-codel_cn.md",
+    "Agents/02-KIMI-configuration/02-KIMI-configuration_cn.md",
+    "Agents/02-KIMI-configuration/02-KIMI-configuration_en.md",
+    "Agents/01-GLM-configuration/01-GLM-configuration_en.md",
+    "Agents/01-GLM-configuration/01-GLM-configuration_cn.md",
+    "Apps/01-vscode-usage/vscode-usage_en.md",
+    "Apps/01-vscode-usage/vscode-usage_cn.md"
   ]
 }

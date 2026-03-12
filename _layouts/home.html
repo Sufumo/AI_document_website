@@ -2,25 +2,28 @@
 layout: default
 ---
 
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.i18n[lang] | default: site.data.i18n.en -%}
+{%- assign content_pages = site.pages
+    | where_exp: "p", "p.path contains 'contents/'"
+    | where_exp: "p", "p.path contains '.md'"
+-%}
+{%- if lang == 'zh' -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_cn.md'" -%}
+{%- else -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_en.md'" -%}
+{%- endif -%}
+{%- assign content_pages = content_pages | sort: "path" -%}
+
 <div class="home">
   <header class="home-header">
-    <h1>{{ site.title }}</h1>
-    <p class="tagline">{{ site.description }}</p>
+    <h1>{{ t.site_title | default: site.title }}</h1>
+    <p class="tagline">{{ t.site_description | default: site.description }}</p>
   </header>
   <nav class="doc-index">
     {%- comment -%}
-      动态从 contents 目录生成文档目录：
-      - 单个 md 文件即单篇文档
-      - 一级目录名作为分组名称（如 Domestic_models、IDEs）
-      - 忽略任何包含 `/.` 的路径（如 .obsidian 等隐藏文件夹）
+      动态从 contents 目录生成文档目录，按当前语言过滤 _en / _cn
     {%- endcomment -%}
-
-    {%- assign content_pages = site.pages
-        | where_exp: "p", "p.path contains 'contents/'"
-        | where_exp: "p", "p.path contains '.md'"
-    -%}
-
-    {%- assign content_pages = content_pages | sort: "path" -%}
     {%- assign groups = content_pages
         | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first"
     -%}
@@ -30,12 +33,8 @@ layout: default
         {%- continue -%}
       {%- endif -%}
       <section class="doc-category">
-        {%- case group.name -%}
-          {%- when 'Agents' -%}{% assign cat_label = 'Agents · 智能体' %}
-          {%- when 'Apps' -%}{% assign cat_label = 'Apps · 应用' %}
-          {%- when 'Basic-tools' -%}{% assign cat_label = 'Basic-tools · 基础工具' %}
-          {%- else -%}{% assign cat_label = group.name %}
-        {%- endcase -%}
+        {%- assign cat_key = 'nav_group_' | append: group.name -%}
+        {%- assign cat_label = t[cat_key] | default: group.name -%}
         <h2 class="category-title">{{ cat_label }}</h2>
         <ul class="doc-list">
           {%- assign pages = group.items | sort: "path" -%}

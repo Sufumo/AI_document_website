@@ -2,27 +2,31 @@
 layout: default
 ---
 
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.i18n[lang] | default: site.data.i18n.en -%}
+{%- assign content_pages = site.pages
+    | where_exp: "p", "p.path contains 'contents/'"
+    | where_exp: "p", "p.path contains '.md'"
+-%}
+{%- if lang == 'zh' -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_cn.md'" -%}
+{%- else -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_en.md'" -%}
+{%- endif -%}
+{%- assign content_pages = content_pages | sort: "path" -%}
+{%- comment -%} 按 contents/ 下第一级目录分组，避免 contents 根被当作 group {%- endcomment -%}
+{%- assign groups = content_pages
+    | group_by_exp: "p", "p.path | remove_first: 'contents/' | split: '/' | first"
+-%}
+
 <article class="doc-article">
   <aside class="doc-nav">
-    <div class="doc-nav-title">文档索引</div>
-    {%- assign content_pages = site.pages
-        | where_exp: "p", "p.path contains 'contents/'"
-        | where_exp: "p", "p.path contains '.md'"
-    -%}
-    {%- assign content_pages = content_pages | sort: "path" -%}
-    {%- assign groups = content_pages
-        | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first"
-    -%}
-
+    <div class="doc-nav-title">{{ t.nav_doc_index }}</div>
     {%- for group in groups -%}
       {%- assign folder = group.name -%}
       {%- if folder contains '.' -%}{% continue %}{% endif -%}
-      {%- case folder -%}
-        {%- when 'Agents' -%}{% assign folder_label = 'Agents · 智能体' %}
-        {%- when 'Apps' -%}{% assign folder_label = 'Apps · 应用' %}
-        {%- when 'Basic-tools' -%}{% assign folder_label = 'Basic-tools · 基础工具' %}
-        {%- else -%}{% assign folder_label = folder %}
-      {%- endcase -%}
+      {%- assign t_key = 'nav_group_' | append: folder -%}
+      {%- assign folder_label = t[t_key] | default: folder -%}
 
       <details class="doc-nav-section"
                {% if page.path contains folder %}open{% endif %}>
@@ -33,7 +37,7 @@ layout: default
             {%- if p.path contains '/.' -%}{% continue %}{%- endif -%}
             <li>
               <a href="{{ p.url | relative_url }}"
-                 {% if p.url == page.url %}class="doc-nav-current"{% endif %}>
+                 {% if p.path == page.path %}class="doc-nav-current"{% endif %}>
                 {{ p.title | default: p.name | split: '.' | first }}
               </a>
             </li>

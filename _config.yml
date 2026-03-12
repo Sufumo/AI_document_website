@@ -1,8 +1,9 @@
 # Jekyll 配置文件 - AI 文档网站
 title: AI Tutorial Documentation
 description: AI 培训文档中心
-baseurl: ""
-url: ""
+# GitHub Pages 部署在子路径，必须设置 baseurl
+baseurl: "/AI_document_website"
+url: "https://sufumo.github.io"
 lang: zh-CN
 
 # 构建配置

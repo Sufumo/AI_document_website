@@ -78,11 +78,113 @@ body {
 .nav a {
   color: var(--text-secondary);
   text-decoration: none;
-  margin-left: 1.5rem;
 }
 
 .nav a:hover {
   color: var(--accent);
+}
+
+.nav.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.nav-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 0 !important;
+  border: None;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.nav-icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+/* 语言切换：图标按钮 + 下拉 */
+.lang-switcher {
+  position: relative;
+}
+
+.language-change-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: None;
+  border-radius: 8px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.language-change-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.language-change-btn[aria-expanded="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.icon-language {
+  flex-shrink: 0;
+}
+
+.language-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  z-index: 200;
+}
+
+.language-list[hidden] {
+  display: none;
+}
+
+.language-list-item {
+  margin: 0;
+}
+
+.language-list-link {
+  display: block;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.language-list-link:hover {
+  background: var(--bg-secondary);
+  color: var(--accent);
+}
+
+.language-list-link.active {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* Main */
@@ -242,9 +344,12 @@ body {
   display: block;
   color: var(--text-secondary);
   text-decoration: none;
-  padding: 0.15rem 0;
+  padding: 0.35rem 0.5rem;
+  margin-left: -0.35rem;
+  margin-right: -0.35rem;
+  padding-left: calc(0.4rem + 2px);
   border-left: 2px solid transparent;
-  padding-left: 0.4rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 
 .doc-nav-list a:hover {
@@ -252,9 +357,11 @@ body {
   border-left-color: var(--accent);
 }
 
-.doc-nav-current {
+/* 当前文章高亮：与项目 accent / blockquote 风格一致 */
+.doc-nav-list a.doc-nav-current {
   color: var(--accent);
-  border-left-color: var(--accent);
+  font-weight: 600;
+  background: var(--blockquote-bg);
 }
 
 .doc-content {
