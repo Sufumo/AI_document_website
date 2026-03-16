@@ -77,12 +77,10 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--text-primary);
   text-decoration: none;
-  letter-spacing: -0.02em;
 }
 
 .logo:hover {
@@ -93,12 +91,6 @@ body {
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
-}
-
-@media (max-width: 64rem) {
-  .logo-text {
-    display: none;
-  }
 }
 
 .nav.nav-icons {
