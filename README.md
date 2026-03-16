@@ -1,62 +1,45 @@
 # AI 文档中心
 
-基于 Jekyll 的文档博客网站，采用 Typora 风格渲染 Markdown，通过 GitHub Actions 自动部署到 GitHub Pages。
+基于 Hugo 的 AI 培训文档网站，支持中英文多语言切换。
+
+## 快速开始
+
+### 本地预览
+
+```bash
+hugo server
+```
+
+访问 http://localhost:1313
+
+### 构建发布
+
+```bash
+hugo --minify
+```
+
+输出在 `public/` 目录。
 
 ## 项目结构
 
 ```
-AI_document_website/
-├── _config.yml          # Jekyll 配置
-├── _layouts/
-│   ├── default.html     # 默认布局
-│   ├── doc.html         # 文档页布局（含侧边栏目录）
-│   └── home.html        # 首页布局
-├── assets/
-│   ├── css/style.css    # Typora 风格样式
-│   └── js/toc.js        # 自动目录生成
-├── index.md             # 首页
-├── contents/
-│   └── md-versions/     # 文档源文件
-│       ├── 01-agents-configuration/
-│       │   ├── 01-GLM-configuration.md
-│       │   ├── 02-KIMI-configuration.md
-│       │   └── assets/  # 图片资源
-│       └── 02-apps-usage/
-│           ├── 01-vscode-usage.md
-│           └── assets/
-├── .github/workflows/
-│   └── jekyll.yml       # CI/CD 工作流
-├── Gemfile
-└── .ruby-version
+├── config/           # Hugo 配置
+├── contents/         # 文档内容（index.zh.md / index.en.md）
+├── layouts/          # 模板
+├── static/           # 静态资源
+├── i18n/             # 多语言文案
+├── scripts/          # 工具脚本
+└── public/           # 构建输出（不提交 git）
 ```
 
 ## 添加新文档
 
-1. 在 `contents/md-versions/` 下创建或选择分类目录
-2. 添加 `.md` 文件，在开头加入 front matter：
-
-```yaml
----
-layout: doc
-title: 文档标题
----
-```
-
-3. 在 `_config.yml` 的 `doc_categories` 中注册新文档，以便在首页显示
-
-## 本地开发
-
-需要 Ruby 3.1+，建议使用 rbenv 或 rvm 管理 Ruby 版本。
-
-```bash
-bundle install
-bundle exec jekyll serve
-```
-
-访问 http://localhost:4000 预览。
+1. 在 `contents/` 下按分类创建目录（如 `Agents/新文档名/`）
+2. 添加 `index.zh.md` 和 `index.en.md`
+3. 重新构建
 
 ## 部署
 
 推送到 `main` 或 `master` 分支后，GitHub Actions 会自动构建并部署到 GitHub Pages。
 
-在仓库 Settings → Pages 中，将 Source 设置为 **GitHub Actions**。
+在仓库 **Settings → Pages** 中，将 Source 设置为 **GitHub Actions**。

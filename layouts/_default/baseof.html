@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ or .Site.Language.Lang .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="{{ .Site.Home.RelPermalink }}" class="logo">
+        <img src="{{ "logo.svg" | relURL }}" alt="" class="logo-icon" width="24" height="24">
+        <span class="logo-text">{{ .Site.Title }}</span>
+      </a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="{{ i18n "lang_switch" }}" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            {{ range .Site.Languages }}
+            {{ $lang := .Lang }}
+            {{ $url := "" }}
+            {{ if eq $lang $.Site.Language.Lang }}{{ $url = $.Permalink }}{{ else }}{{ range $.Translations }}{{ if eq .Lang $lang }}{{ $url = .Permalink }}{{ end }}{{ end }}{{ end }}
+            {{ if $url }}
+            <li class="language-list-item" role="none">
+              <a href="{{ $url }}" role="menuitem" class="language-list-link{{ if eq $lang $.Site.Language.Lang }} active{{ end }}">{{ .LanguageName }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+        {{ block "header_actions" . }}{{ end }}
+      </nav>
+    </header>
+    {{ block "mobile_drawer" . }}{{ end }}
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <p>&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "footer_made_by" }}</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+  {{ block "scripts" . }}{{ end }}
+</body>
+</html>

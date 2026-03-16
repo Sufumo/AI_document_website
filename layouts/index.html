@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div class="home">
+  <header class="home-header">
+    <h1>{{ .Title }}</h1>
+    <p class="tagline">{{ .Site.Params.description | default .Description }}</p>
+  </header>
+  <nav class="doc-index">
+    {{ $currentLang := .Site.Language.Lang }}
+    {{ range .Site.Sections }}
+    {{ $pages := .RegularPages }}
+    {{ if $pages }}
+    <section class="doc-category">
+      {{ $groupLabel := index $.Site.Params (printf "nav_group_%s" .Section) | default .Title }}
+      <h2 class="category-title">{{ $groupLabel }}</h2>
+      <ul class="doc-list">
+        {{ range $pages }}
+        {{ $p := . }}
+        {{ if .IsTranslated }}{{ range .Translations }}{{ if eq .Lang $currentLang }}{{ $p = . }}{{ end }}{{ end }}{{ end }}
+        <li><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+    {{ end }}
+  </nav>
+</div>
+{{ end }}

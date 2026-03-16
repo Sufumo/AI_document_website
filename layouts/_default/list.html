@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ $currentLang := .Site.Language.Lang }}
+<div class="home">
+  <header class="home-header">
+    <h1>{{ .Title }}</h1>
+  </header>
+  <nav class="doc-index">
+    {{ $pages := .RegularPages }}
+    {{ if $pages }}
+    <section class="doc-category">
+      <h2 class="category-title">{{ .Title }}</h2>
+      <ul class="doc-list">
+        {{ range $pages }}
+        {{ $p := . }}
+        {{ if .IsTranslated }}{{ range .Translations }}{{ if eq .Lang $currentLang }}{{ $p = . }}{{ end }}{{ end }}{{ end }}
+        <li><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  </nav>
+</div>
+{{ end }}

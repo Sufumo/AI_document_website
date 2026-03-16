@@ -1,0 +1,41 @@
+{{ define "header_actions" }}
+<button type="button" class="mobile-nav-btn" aria-label="{{ i18n "nav_doc_index" }}" id="mobile-nav-trigger">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
+{{ end }}
+
+{{ define "mobile_drawer" }}
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+<aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="{{ i18n "nav_doc_index" }}">
+  <div class="mobile-nav-header">
+    <h2 class="mobile-nav-title">{{ i18n "nav_doc_index" }}</h2>
+    <button type="button" class="mobile-nav-close" aria-label="{{ i18n "nav_close" }}" id="mobile-nav-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-content">
+    {{ partial "doc-nav-content" . }}
+  </div>
+</aside>
+{{ end }}
+
+{{ define "main" }}
+<article class="doc-article">
+  <aside class="doc-nav">
+    {{ partial "doc-nav-content" . }}
+  </aside>
+  <div class="doc-content">
+    {{ .Content }}
+  </div>
+  <aside class="doc-sidebar">
+    <div class="doc-toc-header">{{ i18n "toc_title" }}</div>
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="{{ "js/toc.js" | relURL }}" defer></script>
+<script src="{{ "js/callouts.js" | relURL }}" defer></script>
+<script src="{{ "js/doc-nav.js" | relURL }}" defer></script>
+<script src="{{ "js/mobile-nav.js" | relURL }}" defer></script>
+{{ end }}

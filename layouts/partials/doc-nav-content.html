@@ -1,0 +1,23 @@
+{{ $currentLang := .Site.Language.Lang }}
+<div class="doc-nav-search">
+  <input type="search" class="doc-nav-search-input" placeholder="{{ i18n "search_placeholder" }}" aria-label="{{ i18n "search_placeholder" }}">
+</div>
+<div class="doc-nav-title">{{ i18n "nav_doc_index" }}</div>
+{{ range .Site.Sections }}
+{{ $pages := .RegularPages }}
+{{ if $pages }}
+<details class="doc-nav-section" {{ if hasPrefix $.RelPermalink .RelPermalink }}open{{ end }}>
+  {{ $groupLabel := index $.Site.Params (printf "nav_group_%s" .Section) | default .Title }}
+  <summary class="doc-nav-summary">{{ $groupLabel }}</summary>
+  <ul class="doc-nav-list">
+    {{ range $pages }}
+    {{ $p := . }}
+    {{ if .IsTranslated }}{{ range .Translations }}{{ if eq .Lang $currentLang }}{{ $p = . }}{{ end }}{{ end }}{{ end }}
+    <li>
+      <a href="{{ $p.Permalink }}" {{ if eq $p.Permalink $.Permalink }}class="doc-nav-current"{{ end }}>{{ $p.Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</details>
+{{ end }}
+{{ end }}

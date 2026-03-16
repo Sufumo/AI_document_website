@@ -1,0 +1,61 @@
+# GitHub Pages 部署在子路径时使用 baseURL: "https://sufumo.github.io/AI_document_website/"
+baseURL: "https://sufumo.github.io/AI_document_website/"
+title: "AI Tutorial Documentation"
+description: "AI training documentation center"
+
+# 多语言配置
+defaultContentLanguage: zh
+languages:
+  zh:
+    languageName: 中文
+    weight: 1
+    params:
+      nav_group_agents: 智能体
+      nav_group_apps: 应用
+      nav_group_basic-tools: 基础工具
+  en:
+    languageName: English
+    weight: 2
+    params:
+      nav_group_agents: Agents
+      nav_group_apps: Apps
+      nav_group_basic-tools: Basic Tools
+
+contentDir: contents
+publishDir: public
+
+# 菜单配置
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 1
+    - name: 文档
+      url: /agents/
+      weight: 2
+
+# 分页
+pagination:
+  pagerSize: 20
+
+# 输出格式
+outputs:
+  home: [HTML, RSS]
+
+# Markdown 配置
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    noClasses: false
+
+# 禁用 taxonomies
+taxonomies: {}
+
+# 构建排除
+ignoreFiles:
+  - '\\.obsidian$'
+  - '\\.obsidian/.*'

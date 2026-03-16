@@ -1,9 +1,17 @@
-_site/
-.jekyll-cache/
-.bundle/
-vendor/
-*.gem
-*.rbc
+# Hugo
+public/
+content_build/
+
+# 系统
 .DS_Store
+
+# 编辑器 / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 其他
 references/
 backup/
+*.log
