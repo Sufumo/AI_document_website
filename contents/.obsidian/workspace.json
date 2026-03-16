@@ -11,10 +11,14 @@
             "id": "0aa49de06e856e71",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Agents/01-GLM-configuration/01-GLM-configuration_cn.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "01-GLM-configuration_cn"
             }
           }
         ]
@@ -179,8 +183,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "c5933f189f785379",
+  "active": "0aa49de06e856e71",
   "lastOpenFiles": [
+    "Agents/02-KIMI-configuration/images/Pasted image 20260316125916.png",
+    "Agents/02-KIMI-configuration/02-KIMI-configuration_cn.md",
+    "Agents/02-KIMI-configuration/images/Pasted image 20260316130945.png",
+    "Agents/01-GLM-configuration/01-GLM-configuration_cn.md",
+    "Agents/02-KIMI-configuration/02-KIMI-configuration_en.md",
+    "Agents/01-GLM-configuration/01-GLM-configuration_en.md",
+    "Agents/01-GLM-configuration/images/Pasted image 20260316125916.png",
+    "Agents/01-GLM-configuration/images/Pasted image 20260316120220.png",
+    "Agents/01-GLM-configuration/images/Pasted image 20260316120041.png",
+    "Agents/01-GLM-configuration/images/Pasted image 20260316113743.png",
+    "Agents/5.Claude Code Workshop.md",
     "Basic-tools/04-winget-basics/04-winget-basics_en.md",
     "Basic-tools/04-winget-basics/04-winget-basics_cn copy.md",
     "Basic-tools/03-mac-os-basics/03-mac-os-basics_en.md",
@@ -193,19 +208,14 @@
     "Basic-tools/05-homebrew-install/images/Toolkit/image320.png",
     "Basic-tools/05-homebrew-install/images/Toolkit/image27.png",
     "Basic-tools/05-homebrew-install/images/Toolkit/image26.png",
-    "Basic-tools/05-homebrew-install/images/Toolkit/image25.png",
     "Basic-tools/05-homebrew-install/images/Toolkit",
     "Basic-tools/05-homebrew-install/images",
     "Basic-tools/05-homebrew-install/05-homebrew-install_cn.md",
     "Basic-tools/05-homebrew-install",
-    "Basic-tools/04-winget-basics/images/Windows/file-20260109161753557.png",
-    "Basic-tools/04-winget-basics/images/Windows/file-20260109162641973.png",
     "Basic-tools/04-winget-basics/images/Windows",
     "Basic-tools/04-winget-basics/images",
     "Basic-tools/04-winget-basics/04-winget-basics_cn.md",
     "Basic-tools/04-winget-basics",
-    "Basic-tools/03-mac-os-basics/images/Mac/file-20260109145641593.png",
-    "Basic-tools/03-mac-os-basics/images/Mac/file-20260109145541008.png",
     "Basic-tools/03-mac-os-basics/images/Mac",
     "Basic-tools/03-mac-os-basics/images",
     "Basic-tools/03-mac-os-basics/03-mac-os-basics_cn.md",
@@ -220,12 +230,6 @@
     "Agents/05-claude-code-workshop/05-claude-code-workshop_en.md",
     "Agents/05-claude-code-workshop/05-claude-code-workshop_cn.md",
     "Agents/04-claude-codel/04-claude-codel_en.md",
-    "Agents/04-claude-codel/04-claude-codel_cn.md",
-    "Agents/02-KIMI-configuration/02-KIMI-configuration_cn.md",
-    "Agents/02-KIMI-configuration/02-KIMI-configuration_en.md",
-    "Agents/01-GLM-configuration/01-GLM-configuration_en.md",
-    "Agents/01-GLM-configuration/01-GLM-configuration_cn.md",
-    "Apps/01-vscode-usage/vscode-usage_en.md",
-    "Apps/01-vscode-usage/vscode-usage_cn.md"
+    "Agents/04-claude-codel/04-claude-codel_cn.md"
   ]
 }

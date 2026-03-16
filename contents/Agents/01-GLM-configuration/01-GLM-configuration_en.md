@@ -16,16 +16,64 @@ title: GLM Configuration Guide
 
 ## The Big Picture: Why GLM in Claude Code?
 
-Here's the deal: Claude Code can run in two completely different modes:
+**Picture this:**
 
-| Mode | What Happens | Best For |
-|------|--------------|----------|
-| **Claude Account** | Requests → Anthropic servers. Billing → Your Claude plan. | Users with existing Claude subscriptions, mainly English workflows |
-| **GLM API Key** | Claude Code is just the interface. The brain and billing come from GLM. | Chinese users, domestic billing, separate quota management |
+You download Claude Code, excited to have AI help you write code. You open it and discover — you need a Claude API to use it. You check the official site: subscription requires an international credit card, and there's the worry of account restrictions. Your enthusiasm takes a hit.
+
+**Don't panic. This is exactly when GLM steps in.**
+
+### First, Get One Thing Straight: Claude Code ≠ Claude
+
+Here's the key idea:
+
+**Claude Code is the "hands"; Claude/GLM is the "brain".**
+
+| Role | Represents | What It Does |
+|------|------------|--------------|
+| **Brain** | Claude, GLM | Understands you, thinks through solutions, makes decisions |
+| **Hands** | Claude Code | Writes code, edits files, runs commands |
+
+Claude Code's "hands" are flexible, but they **don't think on their own**. They need a "brain" to tell them what to do.
+
+**The key point: That brain can be Claude, or it can be GLM.**
+
+![](./images/Pasted%20image%2020260316125916.png)
+
+### Why Choose GLM?
+
+Three words: **Easy, efficient, affordable.**
+
+| Your Concern | Claude Option | GLM Option |
+|--------------|---------------|------------|
+| No international credit card | Subscription is hard | Multiple payment methods, top up directly |
+| Worried about account bans | High-frequency use carries risk | Chinese provider, stable |
+| Is performance enough? | Top-tier | Open-source #1, more than enough for daily dev |
+
+**In a nutshell:** No Claude account? GLM is a solid Plan B.
+
+### How Capable Is GLM?
+
+GLM-5 ranks **#1 among open-source models** in the [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2) complex decision-making benchmark (March 2026). GLM-4.7 comes in second.
+
+![](./images/Pasted%20image%2020260316120220.png)
+
+Even compared to top closed-source models, GLM-5 ranks 6th globally — right behind Claude, GPT, Gemini, and Grok. As a "brain," its intelligence is fully up to the task.
+
+![](./images/Pasted%20image%2020260316120041.png)
+
+### The AI Workflow Looks Like This
+
+```
+You describe what you need → Brain thinks → Hands write code → Done
+```
+
+That simple.
+
+---
 
 **Quick decision guide:**
-- Already have a stable Claude account → Stick with Claude, this guide is optional reading.
-- Don’t have a Claude account / Want to use GLM models → Keep reading. GLM is your new best friend.
+- ✅ Already have a stable Claude account → Keep using it, this guide is optional
+- ✅ No Claude / Want to try GLM → Keep reading and start configuring
 
 ![](./images/Pasted%20image%2020260310154428.png)
 
