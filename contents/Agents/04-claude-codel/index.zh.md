@@ -5,7 +5,7 @@ draft: false
 
 >[!TIP]
 >
-> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics/zh)，绝对物超所值。
+> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics)，绝对物超所值。
 
 
 # Claude Code 使用教程
@@ -14,7 +14,7 @@ draft: false
 
 ### 在 Windows 上安装 Claude Code
 
-⚠️ **注**：在安装 Claude Code 前请参照 [winget 基础](../../../Basic-tools/04-winget-basics/zh) 教程了解 winget 的使用方法。
+⚠️ **注**：在安装 Claude Code 前请参照 [winget 基础](../../../Basic-tools/04-winget-basics) 教程了解 winget 的使用方法。
 
 按下 `Win` 键搜索 PowerShell 并打开。
 
@@ -32,7 +32,7 @@ draft: false
 
 ### 在 Mac 上安装 Claude Code
 
-⚠️ **注**：在安装 Claude Code 前请参照 [Homebrew](../../../Basic-tools/05-homebrew-install/zh) 教程安装 Homebrew。
+⚠️ **注**：在安装 Claude Code 前请参照 [Homebrew](../../../Basic-tools/05-homebrew-install) 教程安装 Homebrew。
 
 按 `Command + 空格` 搜索 **Terminal** 并打开。
 

@@ -13,6 +13,7 @@ languages:
       nav_group_agents: 智能体
       nav_group_apps: 应用
       nav_group_basic-tools: 基础工具
+      nav_group_extensions: 扩展
   en:
     languageName: English
     weight: 2
@@ -20,6 +21,7 @@ languages:
       nav_group_agents: Agents
       nav_group_apps: Apps
       nav_group_basic-tools: Basic Tools
+      nav_group_extensions: Extensions
 
 contentDir: contents
 publishDir: public

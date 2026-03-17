@@ -5,7 +5,7 @@ draft: false
 
 >[!TIP]
 >
-> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics/en/) first. Trust me, it's worth the 5-minute investment.
+> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics) first. Trust me, it's worth the 5-minute investment.
 
 
 # Claude Code Usage Guide
@@ -14,7 +14,7 @@ draft: false
 
 ### Install Claude Code on Windows
 
-⚠️ **Note**: Before installing Claude Code, please follow the [winget Basics](../../../Basic-tools/04-winget-basics/en/) guide to learn how to use winget.
+⚠️ **Note**: Before installing Claude Code, please follow the [winget Basics](../../../Basic-tools/04-winget-basics) guide to learn how to use winget.
 
 Press the `Win` key to search for PowerShell and open it.
 
@@ -32,7 +32,7 @@ Wait for the installation to finish.
 
 ### Install Claude Code on Mac
 
-⚠️ **Note**: Before installing Claude Code, please follow the [Homebrew](../../../Basic-tools/05-homebrew-install/en/) guide to install Homebrew.
+⚠️ **Note**: Before installing Claude Code, please follow the [Homebrew](../../../Basic-tools/05-homebrew-install) guide to install Homebrew.
 
 Press `Command + Space` to search **Terminal** and open it.
 

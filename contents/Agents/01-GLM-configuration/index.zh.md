@@ -4,7 +4,7 @@ draft: false
 ---
 >[!TIP]
 >
-> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics/zh)，绝对物超所值。
+> 本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics)，绝对物超所值。
 
 # GLM 配置教程
 

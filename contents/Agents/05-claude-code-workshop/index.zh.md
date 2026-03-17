@@ -7,7 +7,7 @@ draft: false
 >
 > 为了顺利完成本 Claude Code 工作坊中的所有练习，建议您：
 >
-> - 阅读 [Terminal 基础](../../../Basic-tools/01-terminal-basics/zh)，熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
+> - 阅读 [Terminal 基础](../../../Basic-tools/01-terminal-basics)，熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
 > - 确保已按安装/配置文档提前安装并配置好 Claude Code。
 >
 > 完成以上准备后，您就可以把精力集中在练习任务本身，而不是基础环境问题上。
@@ -19,7 +19,7 @@ draft: false
 
 在开始之前，请确保您已具备：
 
-- ✅ Claude Code 已安装（安装说明请参见 [Claude Code 使用教程](../../../Agents/04-claude-codel/zh)）
+- ✅ Claude Code 已安装（安装说明请参见 [Claude Code 使用教程](../../../Agents/04-claude-codel)）
 - ✅ 基本了解如何使用 Claude Code（只需用自然语言描述您想要完成的任务即可）
 
 ---

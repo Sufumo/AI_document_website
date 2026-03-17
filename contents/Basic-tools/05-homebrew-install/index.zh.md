@@ -34,7 +34,7 @@ draft: false
 
 ![](./images/Toolkit/image26.png)
 
-如果你需要复习终端基础知识，先看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics/zh)。
+如果你需要复习终端基础知识，先看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics)。
 
 ---
 

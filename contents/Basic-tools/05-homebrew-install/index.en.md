@@ -34,7 +34,7 @@ Press `Command + Space`, type "Terminal", and hit Enter.
 
 ![](./images/Toolkit/image26.png)
 
-If you need a refresher on terminal basics, check out [Terminal Basics](../../../Basic-tools/01-terminal-basics/en/) first.
+If you need a refresher on terminal basics, check out [Terminal Basics](../../../Basic-tools/01-terminal-basics) first.
 
 ---
 

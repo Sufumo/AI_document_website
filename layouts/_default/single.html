@@ -28,6 +28,26 @@
   </aside>
   <div class="doc-content">
     {{ .Content }}
+    {{ if or (.Param "prev") (.Param "next") }}
+    <nav class="doc-nav-prev-next">
+      {{ with .Param "prev" }}
+      {{ with $.Site.GetPage . }}
+      <div class="doc-nav-prev">
+        <span class="doc-nav-prev-next-label">{{ i18n "nav_prev" }}</span>
+        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">{{ .Title }} »</a>
+      </div>
+      {{ end }}
+      {{ end }}
+      {{ with .Param "next" }}
+      {{ with $.Site.GetPage . }}
+      <div class="doc-nav-next">
+        <span class="doc-nav-prev-next-label">{{ i18n "nav_next" }}</span>
+        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">» {{ .Title }}</a>
+      </div>
+      {{ end }}
+      {{ end }}
+    </nav>
+    {{ end }}
   </div>
   <aside class="doc-sidebar">
     <div class="doc-toc-header">{{ i18n "toc_title" }}</div>

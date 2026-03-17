@@ -5,7 +5,7 @@ draft: false
 
 >[!TIP]
 >
-> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics/en/) and [Homebrew Installation](../../../Basic-tools/05-homebrew-install/en/) first. Trust me, it's worth the 5-minute investment.
+> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics) and [Homebrew Installation](../../../Basic-tools/05-homebrew-install) first. Trust me, it's worth the 5-minute investment.
 
 
 # Obsidian Usage Guide

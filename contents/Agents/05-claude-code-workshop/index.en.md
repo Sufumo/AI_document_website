@@ -7,7 +7,7 @@ draft: false
 >
 > To complete all exercises in this Claude Code workshop smoothly, it is recommended that you:
 >
-> - Read [Terminal Basics](../../../Basic-tools/01-terminal-basics/en/) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
+> - Read [Terminal Basics](../../../Basic-tools/01-terminal-basics) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
 > - Make sure Claude Code has already been installed and configured according to the installation guides.
 >
 > With these preparations, you can focus on the practice tasks themselves instead of basic environment issues.
@@ -19,7 +19,7 @@ draft: false
 
 Before starting, ensure you have:
 
-- ✅ Claude Code installed (see [Claude Code Usage Guide](../../../Agents/04-claude-codel/en/) for installation instructions)
+- ✅ Claude Code installed (see [Claude Code Usage Guide](../../../Agents/04-claude-codel) for installation instructions)
 - ✅ Basic understanding of how to use Claude Code (you can simply describe what you want in natural language)
 
 ---

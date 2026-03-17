@@ -5,7 +5,7 @@ draft: false
 
 >[!TIP]
 >
-> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics/en/) first. Trust me, it's worth the 5-minute investment.
+> This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to [Terminal Basics](../../../Basic-tools/01-terminal-basics) first. Trust me, it's worth the 5-minute investment.
 
 
 # GLM Configuration Guide

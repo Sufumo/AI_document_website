@@ -23,7 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (level > lastLevel) {
       const childUl = document.createElement('ul');
-      currentUl.lastElementChild.appendChild(childUl);
+      if (currentUl.lastElementChild) {
+        currentUl.lastElementChild.appendChild(childUl);
+      } else {
+        const wrapperLi = document.createElement('li');
+        wrapperLi.appendChild(childUl);
+        currentUl.appendChild(wrapperLi);
+      }
       currentUl = childUl;
     } else if (level < lastLevel) {
       for (let j = level; j < lastLevel; j++) {

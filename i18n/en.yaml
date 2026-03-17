@@ -1,6 +1,8 @@
 nav_home: Home
 nav_doc_index: Document Index
 nav_close: Close
+nav_prev: Previous
+nav_next: Next
 toc_title: On This Page
 search_placeholder: Search
 footer_made_by: made by Hugo
