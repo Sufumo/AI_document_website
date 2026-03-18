@@ -1,6 +1,8 @@
 ---
 title: KIMI 配置教程
 draft: false
+prev: Basic-tools/05-homebrew-install
+next: Agents/04-claude-codel
 ---
 
 >[!TIP]
@@ -153,7 +155,9 @@ chmod +x install.sh && \
 
 ![](./images/Pasted%20image%2020260306114634.png)
 
-💡 **小贴士**：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
+>[!TIP]
+>
+> 直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 
@@ -196,7 +200,9 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 ![](./images/Pasted%20image%2020260303200846.png)
 
-💡 **小贴士**：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
+>[!TIP]
+>
+> 直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 

@@ -1,6 +1,8 @@
 ---
 title: VS Code Usage Guide
 draft: false
+prev: Extensions/02-mcp
+next: Apps/03-obsidian-notes
 ---
 >[!TIP]
 >
@@ -49,7 +51,9 @@ brew install --cask visual-studio-code
 > - `--cask`: Install a GUI app (not command-line only)
 > - `visual-studio-code`: VS Code's package name
 
-⚠️ **Note**: If you don't have Homebrew yet, install [Homebrew](../../../Basic-tools/05-homebrew-install) first.
+>[!NOTE]
+>
+> If you don't have Homebrew yet, install [Homebrew](../../../Basic-tools/05-homebrew-install) first.
 
 When the terminal becomes responsive again and stops processing, installation is complete.
 
@@ -91,7 +95,9 @@ The Explorer will show the opened folder. You can:
 
 ![](./images/Pasted%20image%2020260305173132.png)
 
-💡 **Tip**: VS Code works best with plain text files (`.txt`, `.md`, `.html`); Word, Excel, and PowerPoint files usually need dedicated extensions or other apps.
+>[!TIP]
+>
+> VS Code works best with plain text files (`.txt`, `.md`, `.html`); Word, Excel, and PowerPoint files usually need dedicated extensions or other apps.
 
 ---
 
@@ -111,7 +117,9 @@ Click **Initialize Repository** to turn the current folder into a version-tracke
 
 ![](./images/Pasted%20image%2020260305173743.png)
 
-⚠️ **Note**: Only initialized folders will have their changes tracked.
+>[!NOTE]
+>
+> Only initialized folders will have their changes tracked.
 
 #### Basic Workflow
 
@@ -131,7 +139,9 @@ The **Extensions** view is the plugin store — install extensions here to add f
 
 ![](./images/Pasted%20image%2020260305182927.png)
 
-💡 **Tip**: Install **Markdown All in One**, **Md Editor**, or similar Markdown extensions to preview Markdown rendering without guessing the layout.
+>[!TIP]
+>
+> Install **Markdown All in One**, **Md Editor**, or similar Markdown extensions to preview Markdown rendering without guessing the layout.
 
 ![](./images/Pasted%20image%2020260305183558.png)
 
@@ -211,7 +221,9 @@ The empty file is now created. Click it in the sidebar to view or edit its conte
 
 ![](images/Pasted%20image%2020260317181848.png)
 
-💡 **Tip**: VS Code can create plain text files like `.txt`, `.md`, `.json` directly; Word, Excel, and PowerPoint files are best created in their respective apps.
+>[!TIP]
+>
+> VS Code can create plain text files like `.txt`, `.md`, `.json` directly; Word, Excel, and PowerPoint files are best created in their respective apps.
 
 ---
 
@@ -221,7 +233,9 @@ The empty file is now created. Click it in the sidebar to view or edit its conte
 
 To rename a file, right-click it and choose **Rename**, then enter the new name.
 
-💡 **Tip**: On Mac, you can also select a file and press Enter to rename it quickly.
+>[!TIP]
+>
+> On Mac, you can also select a file and press Enter to rename it quickly.
 
 ![](images/Pasted%20image%2020260317181926.png)
 
@@ -257,7 +271,9 @@ Click any level in the path to quickly browse files in that folder.
 
 ![](./images/Pasted%20image%2020260306115349.png)
 
-💡 **Tip**: Install extensions for PDF, Office, and other formats to view and edit them directly in VS Code — one app for many formats.
+>[!TIP]
+>
+> Install extensions for PDF, Office, and other formats to view and edit them directly in VS Code — one app for many formats.
 
 ![](./images/Pasted%20image%2020260306115638.png)
 
@@ -309,7 +325,8 @@ Type **`/file-conversion`** (the Skill's folder name) to invoke that Skill.
 
 For example, type **please convert this pdf file to md and place this md file in the current folder**, drag in a PDF file, and press Enter.
 
->[!Warning]
+>[!WARNING]
+>
 > file-conversion requires Alibaba Cloud paid services and an API Key. We recommend using another Skill for testing.
 
 ![](images/Pasted%20image%2020260317184235.png)

@@ -1,6 +1,8 @@
 ---
 title: Claude Code Usage Guide
 draft: false
+prev: Agents/01-GLM-configuration
+next: Extensions/01-skills
 ---
 
 >[!TIP]
@@ -14,7 +16,9 @@ draft: false
 
 ### Install Claude Code on Windows
 
-⚠️ **Note**: Before installing Claude Code, please follow the [winget Basics](../../../Basic-tools/04-winget-basics) guide to learn how to use winget.
+>[!NOTE]
+>
+> Before installing Claude Code, please follow the [winget Basics](../../../Basic-tools/04-winget-basics) guide to learn how to use winget.
 
 Press the `Win` key to search for PowerShell and open it.
 
@@ -32,7 +36,9 @@ Wait for the installation to finish.
 
 ### Install Claude Code on Mac
 
-⚠️ **Note**: Before installing Claude Code, please follow the [Homebrew](../../../Basic-tools/05-homebrew-install) guide to install Homebrew.
+>[!NOTE]
+>
+> Before installing Claude Code, please follow the [Homebrew](../../../Basic-tools/05-homebrew-install) guide to install Homebrew.
 
 Press `Command + Space` to search **Terminal** and open it.
 
@@ -138,7 +144,9 @@ Displays help menu for all available commands and shortcuts. The interactive fee
 
 Open `This PC → C: → Users → **Your user name** → .claude → settings.json`.
 
-> **Note**: **Your user name** is the login name of your computer and can be viewed by pressing the `win` key.
+>[!NOTE]
+>
+> **Your user name** is the login name of your computer and can be viewed by pressing the `win` key.
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919863.png)
 
@@ -218,7 +226,9 @@ Compress the context; When 20% of the space is left, it is recommended to use it
 
 ![](./images/Toolkit/image42.png)
 
-💡 **Pro Tip**: Generally speaking, Claude Code automatically compresses the context, so there's no need to actively compress it.
+>[!TIP]
+>
+> Generally speaking, Claude Code automatically compresses the context, so there's no need to actively compress it.
 
 ![](./images/Toolkit/image43.png)
 
@@ -262,7 +272,9 @@ This command can switch the large language model used by Claude Code.
 
 This command displays the **token** usage for the current session.
 
-💡 **Pro Tip**: Think of the **context window** as a sliding window: once the **token** limit is reached, the model automatically "pushes out" the earliest memories to make room. If Claude starts forgetting instructions or repeating issues that have already been addressed, it usually means the critical context has fallen out of range. In such cases, use **/compact** to streamline your context.
+>[!TIP]
+>
+> Think of the **context window** as a sliding window: once the **token** limit is reached, the model automatically "pushes out" the earliest memories to make room. If Claude starts forgetting instructions or repeating issues that have already been addressed, it usually means the critical context has fallen out of range. In such cases, use **/compact** to streamline your context.
 
 ![](./images/Toolkit/image48.png)
 
@@ -280,7 +292,9 @@ Reset session and clear context.
 
 Manage **MCP** Extensions: View installed tools and enable cross-platform integration.
 
-💡 **Pro Tip**: **MCP (Model Context Protocol)** serves as a unified bridge between AI models and external resources. It empowers Claude to interact directly with tools like **Context 7** (fetching latest docs), **Firecrawl** (web scraping), and **Playwright** (browser automation), providing seamless access to databases, local files, and GitHub repositories.
+>[!TIP]
+>
+> **MCP (Model Context Protocol)** serves as a unified bridge between AI models and external resources. It empowers Claude to interact directly with tools like **Context 7** (fetching latest docs), **Firecrawl** (web scraping), and **Playwright** (browser automation), providing seamless access to databases, local files, and GitHub repositories.
 
 ![](./images/Toolkit/image50.png)
 
@@ -298,7 +312,9 @@ Different sub-**agents** that can be set up handle different tasks, and each sub
 
 View your **token** usage statistics and account-level consumption information.
 
-💡 **Pro Tip**: Unlike **/context**, which shows token usage for the current session, **/usage** displays your overall account usage, including historical data and consumption across all sessions.
+>[!TIP]
+>
+> Unlike **/context**, which shows token usage for the current session, **/usage** displays your overall account usage, including historical data and consumption across all sessions.
 
 ![](./images/4.Claude%20code/file-20260113152908868.png)
 
@@ -319,7 +335,9 @@ Here's the deal: Beyond standard commands, Claude Code offers three special inpu
 
 **Bash mode**: Directly executes system commands (such as `!pwd`), does not consume AI **tokens**, is fast, and is suitable for file operations, Git management, package installation, etc.
 
-💡 **Pro Tip**: `pwd` is a Bash command that prints the full path of the current directory.
+>[!TIP]
+>
+> `pwd` is a Bash command that prints the full path of the current directory.
 
 ![](./images/Toolkit/image52.png)
 

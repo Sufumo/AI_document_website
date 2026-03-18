@@ -25,7 +25,9 @@ Remember how you used to install software? Go to a website, find the download bu
 
 **winget** (Windows Package Manager) is Microsoft's official package manager for Windows. It's like Homebrew for Mac, but built right into Windows. The software ecosystem is surprisingly rich — most popular programs are available.
 
-💡 **Pro Tip**: winget comes pre-installed on Windows 10 (version 1809+) and Windows 11. If you're on an older version, you might need to install it from the Microsoft Store first.
+>[!TIP]
+>
+> winget comes pre-installed on Windows 10 (version 1809+) and Windows 11. If you're on an older version, you might need to install it from the Microsoft Store first.
 
 ⚠️ **Note**: All programs installed via winget go to the default system location. If you need to install something to a specific drive (like D:), you'll need to use the traditional installer method for that program.
 
@@ -47,7 +49,9 @@ winget search python
 
 ![](./images/Windows/file-20260109161753557.png)
 
-💡 **Pro Tip**: Use the **ID** column for installation instead of the name. It's more precise and avoids confusion when multiple versions exist.
+>[!TIP]
+>
+> Use the **ID** column for installation instead of the name. It's more precise and avoids confusion when multiple versions exist.
 
 ---
 

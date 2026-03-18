@@ -11,10 +11,14 @@
             "id": "81a1de641a676858",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Apps/01-vscode-usage/index.zh.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "index.zh"
             }
           }
         ]
@@ -181,6 +185,11 @@
   },
   "active": "81a1de641a676858",
   "lastOpenFiles": [
+    "_index.en.md",
+    "_index.zh.md",
+    "Basic-tools/03-mac-os-basics/index.zh.md",
+    "Basic-tools/03-mac-os-basics/index.en.md",
+    "Apps/01-vscode-usage/index.en.md",
     "Extensions/02-mcp/index.zh.md",
     "Apps/01-vscode-usage/index.zh.md",
     "Apps/01-vscode-usage/images/Pasted image 20260317195424.png",
@@ -195,9 +204,7 @@
     "Apps/01-vscode-usage/images/Pasted image 20260317194423.png",
     "Extensions/01-skills/index.zh.md",
     "Extensions/02-mcp/images",
-    "Apps/01-vscode-usage/index.en.md",
     "Agents/01-GLM-configuration/index.zh.md",
-    "_index.en.md",
     "Extensions/01-skills/images",
     "Extensions/MCP.md",
     "Extensions/02-mcp",

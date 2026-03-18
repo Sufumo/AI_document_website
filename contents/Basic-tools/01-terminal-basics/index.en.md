@@ -1,6 +1,8 @@
 ---
 title: Terminal Basics
 draft: false
+prev: Basic-tools/03-mac-os-basics
+next: Basic-tools/05-homebrew-install
 ---
 
 # Terminal Basics
@@ -37,7 +39,9 @@ This title bar tells you:
 - **01-complete-macos-setup.sh**: The script file associated with the session
 - **.sh** means it's a shell script — something the terminal can execute
 
-💡 **Pro Tip**: The title doesn't mean the script is running — it just tells you what's associated with this window. Think of it like a file tab name.
+>[!TIP]
+>
+> The title doesn't mean the script is running — it just tells you what's associated with this window. Think of it like a file tab name.
 
 ---
 
@@ -93,7 +97,9 @@ Other paths you might encounter:
 | `$` | bash |
 | `#` | root/administrator |
 
-⚠️ **Warning**: If you ever see `#` as your prompt symbol, proceed with caution. You have full system access, which means you can accidentally break things.
+>[!WARNING]
+>
+> If you ever see `#` as your prompt symbol, proceed with caution. You have full system access, which means you can accidentally break things.
 
 **Putting It All Together:**
 
@@ -116,7 +122,9 @@ Now that you know what you're looking at, let's actually open one.
 
 Press the `Windows key` (or `Win`), type "PowerShell", and hit Enter.
 
-⚠️ **Important**: To avoid permission headaches later, I recommend selecting **Run as Administrator**. Future you will thank present you.
+>[!WARNING]
+>
+> To avoid permission headaches later, I recommend selecting **Run as Administrator**. Future you will thank present you.
 
 ![](./images/Windows/file-20260109160736263.png)
 
@@ -136,7 +144,9 @@ That's it. You're in.
 
 ![](./images/Toolkit/image270.png)
 
-💡 **Pro Tip**: On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.
+>[!TIP]
+>
+> On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.
 
 ---
 

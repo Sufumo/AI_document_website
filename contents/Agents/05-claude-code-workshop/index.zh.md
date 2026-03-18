@@ -1,14 +1,15 @@
 ---
 title: Claude Code 实践任务
 draft: false
+prev: Apps/03-obsidian-notes
 ---
 
 >[!TIP]
 >
 > 为了顺利完成本 Claude Code 工作坊中的所有练习，建议您：
 >
-> - 阅读 [Terminal 基础](../../../Basic-tools/01-terminal-basics)，熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
-> - 确保已按安装/配置文档提前安装并配置好 Claude Code。
+> 阅读 [Terminal 基础](../../../Basic-tools/01-terminal-basics)，熟悉在 macOS/Windows 中通过终端切换目录、运行命令。
+> 确保已按安装/配置文档提前安装并配置好 Claude Code。
 >
 > 完成以上准备后，您就可以把精力集中在练习任务本身，而不是基础环境问题上。
 
@@ -60,11 +61,15 @@ draft: false
 
 ### 使用规范
 
-⚠️ **重要警告**：我们强烈建议不要在源文件位置直接进行修改，以防 Claude Code 出错；应新建一个文件夹（如 `Output`）保存结果。
+>[!WARNING]
+>
+> 我们强烈建议不要在源文件位置直接进行修改，以防 Claude Code 出错；应新建一个文件夹（如 `Output`）保存结果。
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919850.png)
 
-💡 **小贴士**：应仔细人工审核 Claude Code 输出的结果，而非完全接受 Claude Code 输出或修改的内容。
+>[!TIP]
+>
+> 应仔细人工审核 Claude Code 输出的结果，而非完全接受 Claude Code 输出或修改的内容。
 
 ---
 
@@ -114,7 +119,9 @@ draft: false
 
 Claude Code 会自动创建脚本并执行。您只需等待。
 
-💡 **小贴士**：如果 Claude Code 请求确认，只需说"yes"或"继续"即可。
+>[!TIP]
+>
+> 如果 Claude Code 请求确认，只需说"yes"或"继续"即可。
 
 #### 步骤4：验证结果
 
@@ -342,7 +349,9 @@ Claude Code 会自动分割 PDF 文件。只需等待它完成。
 | **4. 网页抓取** | 描述您想要的内容，Claude Code 会提取它 |
 | **5. 文件操作** | 描述您想要如何分割文件，Claude Code 会分割它们 |
 
-💡 **核心要点**：通过完成这些练习，您将了解到您不需要自己编写代码——只需用自然语言描述您想要的内容，Claude Code 就会为您完成工作。
+>[!TIP]
+>
+> **核心要点**：通过完成这些练习，您将了解到您不需要自己编写代码——只需用自然语言描述您想要的内容，Claude Code 就会为您完成工作。
 
 ---
 

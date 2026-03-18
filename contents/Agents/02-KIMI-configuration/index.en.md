@@ -1,6 +1,8 @@
 ---
 title: KIMI Configuration Guide
 draft: false
+prev: Basic-tools/05-homebrew-install
+next: Agents/04-claude-codel
 ---
 
 >[!TIP]
@@ -153,7 +155,9 @@ Now just type `kimi` in terminal to launch Claude Code with KIMI. That's it. You
 
 ![](./images/Pasted%20image%2020260306114634.png)
 
-💡 **Pro Tip**: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
+>[!TIP]
+>
+> You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 
@@ -196,7 +200,9 @@ You can then use Claude Code as usual with KIMI.
 
 ![](./images/Pasted%20image%2020260303200846.png)
 
-💡 **Pro Tip**: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
+>[!TIP]
+>
+> You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
 
 ![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
 

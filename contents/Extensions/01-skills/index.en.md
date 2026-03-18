@@ -1,7 +1,7 @@
 ---
 title: Skills Introduction
 draft: false
-prev: Basic-tools/05-homebrew-install
+prev: Agents/04-claude-codel
 next: Extensions/02-mcp
 ---
 

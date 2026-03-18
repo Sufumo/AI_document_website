@@ -1,6 +1,8 @@
 ---
 title: Homebrew Installation & Basics
 draft: false
+prev: Basic-tools/01-terminal-basics
+next: Agents/01-GLM-configuration
 ---
 
 # Homebrew Installation & Basics
@@ -63,7 +65,9 @@ When prompted, enter your Mac login password.
 
 ![](./images/Toolkit/image320.png)
 
-⚠️ **Important**: As you type your password, **nothing will appear on screen** — no asterisks, no dots, nothing. This is a security feature, not a bug. Just type your password and press Enter.
+>[!WARNING]
+>
+> As you type your password, **nothing will appear on screen** — no asterisks, no dots, nothing. This is a security feature, not a bug. Just type your password and press Enter.
 
 Press Enter when done.
 
@@ -77,7 +81,9 @@ Homebrew will now download and install a bunch of stuff. This can take anywhere 
 
 ![](./images/Toolkit/image340.png)
 
-💡 **Pro Tip**: If the installation seems stuck, don't panic. It's probably just downloading something large. Give it time.
+>[!TIP]
+>
+> If the installation seems stuck, don't panic. It's probably just downloading something large. Give it time.
 
 ---
 

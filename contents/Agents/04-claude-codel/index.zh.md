@@ -1,6 +1,8 @@
 ---
 title: Claude Code 使用教程
 draft: false
+prev: Agents/01-GLM-configuration
+next: Extensions/01-skills
 ---
 
 >[!TIP]
@@ -14,7 +16,9 @@ draft: false
 
 ### 在 Windows 上安装 Claude Code
 
-⚠️ **注**：在安装 Claude Code 前请参照 [winget 基础](../../../Basic-tools/04-winget-basics) 教程了解 winget 的使用方法。
+>[!NOTE]
+>
+> 在安装 Claude Code 前请参照 [winget 基础](../../../Basic-tools/04-winget-basics) 教程了解 winget 的使用方法。
 
 按下 `Win` 键搜索 PowerShell 并打开。
 
@@ -32,7 +36,9 @@ draft: false
 
 ### 在 Mac 上安装 Claude Code
 
-⚠️ **注**：在安装 Claude Code 前请参照 [Homebrew](../../../Basic-tools/05-homebrew-install) 教程安装 Homebrew。
+>[!NOTE]
+>
+> 在安装 Claude Code 前请参照 [Homebrew](../../../Basic-tools/05-homebrew-install) 教程安装 Homebrew。
 
 按 `Command + 空格` 搜索 **Terminal** 并打开。
 
@@ -138,7 +144,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 打开 `This PC → C: → Users → **Your user name** → .claude → settings.json` 的路径。
 
-> **注**：**Your user name** 是您电脑的登录名，可通过 `win` 键查看。
+>[!NOTE]
+>
+> **Your user name** 是您电脑的登录名，可通过 `win` 键查看。
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919863.png)
 
@@ -218,7 +226,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 ![](./images/Toolkit/image42.png)
 
-💡 **小贴士**：一般而言，Claude Code会自动压缩上下文，因而不必要主动压缩上下文。
+>[!TIP]
+>
+> 一般而言，Claude Code 会自动压缩上下文，因而不必要主动压缩上下文。
 
 ![](./images/Toolkit/image43.png)
 
@@ -262,7 +272,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 该命令用于查看当前会话的 **Token** 统计。
 
-💡 **小贴士**：可以将 **上下文 Token 数**理解为一个滑动窗口：一旦达到上限，模型会挤掉最早的记忆来腾出空间。如果你发现 Claude 开始遗忘指令或重复已解决的问题，通常是因为关键上下文已超出窗口范围。此时，建议使用 **/compact** 命令来精简并压缩上下文。
+>[!TIP]
+>
+> 可以将 **上下文 Token 数**理解为一个滑动窗口：一旦达到上限，模型会挤掉最早的记忆来腾出空间。如果你发现 Claude 开始遗忘指令或重复已解决的问题，通常是因为关键上下文已超出窗口范围。此时，建议使用 **/compact** 命令来精简并压缩上下文。
 
 ![](./images/Toolkit/image48.png)
 
@@ -280,7 +292,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 管理 **MCP** 扩展工具；可查看已安装工具，使用格式为 "用 XX mcp 做 XX"。
 
-💡 **小贴士**：**MCP**为 AI 模型与外部数据、工具（如数据库、本地文件或 GitHub）之间搭建统一的连接桥梁。含 **Context 7**（取最新文档）、**Firecrawl**（网页内容抓取）、**Playwright**（浏览器自动化）等。
+>[!TIP]
+>
+> **MCP** 为 AI 模型与外部数据、工具（如数据库、本地文件或 GitHub）之间搭建统一的连接桥梁。含 **Context 7**（取最新文档）、**Firecrawl**（网页内容抓取）、**Playwright**（浏览器自动化）等。
 
 ![](./images/Toolkit/image50.png)
 
@@ -298,7 +312,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 查看您的 **Token** 使用统计和账户级别的消费信息。
 
-💡 **小贴士**：与 **/context**（显示当前会话的 Token 使用）不同，**/usage** 显示您的整体账户使用情况，包括历史数据和所有会话的消费统计。
+>[!TIP]
+>
+> 与 **/context**（显示当前会话的 Token 使用）不同，**/usage** 显示您的整体账户使用情况，包括历史数据和所有会话的消费统计。
 
 ![](./images/4.Claude%20code/file-20260113152908868.png)
 
@@ -319,7 +335,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 **Bash 模式**：直接执行系统命令（如 `!pwd`），不消耗 AI **Token**，速度快，适合文件操作、Git 管理、包安装等。
 
-💡 **小贴士**：`pwd` 为 Bash 命令，会打印当前目录的完整路径。
+>[!TIP]
+>
+> `pwd` 为 Bash 命令，会打印当前目录的完整路径。
 
 ![](./images/Toolkit/image52.png)
 

@@ -1,6 +1,8 @@
 ---
 title: GLM Configuration Guide
 draft: false
+prev: Basic-tools/05-homebrew-install
+next: Agents/04-claude-codel
 ---
 
 >[!TIP]
@@ -148,7 +150,9 @@ Now for the moment of truth:
 2. Select your model
 3. Click **Install & configure**
 
-⚠️ **Critical Warning**: Don't select `glm-5` unless you've subscribed! Your code will break and you'll be confused.
+>[!WARNING]
+>
+> Don't select `glm-5` unless you've subscribed! Your code will break and you'll be confused.
 
 ![](./images/Pasted%20image%2020260306113120.png)
 
@@ -166,7 +170,9 @@ Now just type `glm` in terminal to launch Claude Code with GLM. That's it. You'r
 
 ![](./images/Pasted%20image%2020260303193234.png)
 
-💡 **Pro Tip**: GLM-5 is like Claude Opus — powerful but expensive. Use it for complex tasks. For everyday stuff, GLM-4.7 is your friend. Also, peak hours (14:00-18:00 UTC+8) might feel slower.
+>[!TIP]
+>
+> GLM-5 is like Claude Opus — powerful but expensive. Use it for complex tasks. For everyday stuff, GLM-4.7 is your friend. Also, peak hours (14:00-18:00 UTC+8) might feel slower.
 
 You can also just ask the AI what model it's using:
 
@@ -196,7 +202,9 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 
 When prompted, paste your API Key and press Enter.
 
-⚠️ **Note**: The terminal might not show anything when you paste. That's normal. Don't paste twice.
+>[!NOTE]
+>
+> The terminal might not show anything when you paste. That's normal. Don't paste twice.
 
 ![](./images/Pasted%20image%2020260303191343.png)
 
@@ -252,7 +260,9 @@ Open **settings.json** in your favorite text editor.
 }
 ```
 
-⚠️ Replace `"your api key"` with your actual API key!
+>[!WARNING]
+>
+> Replace `"your api key"` with your actual API key!
 
 Save the file, restart Claude Code, run `/model` to verify.
 

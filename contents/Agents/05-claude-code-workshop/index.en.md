@@ -1,14 +1,15 @@
 ---
 title: Claude Code Workshop
 draft: false
+prev: Apps/03-obsidian-notes
 ---
 
 >[!TIP]
 >
 > To complete all exercises in this Claude Code workshop smoothly, it is recommended that you:
 >
-> - Read [Terminal Basics](../../../Basic-tools/01-terminal-basics) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
-> - Make sure Claude Code has already been installed and configured according to the installation guides.
+> Read [Terminal Basics](../../../Basic-tools/01-terminal-basics) so you are comfortable changing directories and running commands in a terminal on macOS/Windows.
+> Make sure Claude Code has already been installed and configured according to the installation guides.
 >
 > With these preparations, you can focus on the practice tasks themselves instead of basic environment issues.
 
@@ -60,11 +61,15 @@ Open the work folder in Terminal through right click the path bar.
 
 ### Usage Specifications
 
-⚠️ **Critical Warning**: We strongly recommend not making modifications directly in the source file location to prevent Claude Code errors. Instead, create a new folder (such as `Output`) to save the results.
+>[!WARNING]
+>
+> We strongly recommend not making modifications directly in the source file location to prevent Claude Code errors. Instead, create a new folder (such as `Output`) to save the results.
 
 ![](./images/5.Claude%20Code%20Workshop/file-20260113152919850.png)
 
-💡 **Pro Tip**: Always carefully review the results produced by Claude Code manually, rather than fully accepting everything it outputs or modifies.
+>[!TIP]
+>
+> Always carefully review the results produced by Claude Code manually, rather than fully accepting everything it outputs or modifies.
 
 ---
 
@@ -114,7 +119,9 @@ I have a folder called `sample_pdfs` that contains many folders with Chinese nam
 
 Claude Code will create a script and execute it automatically. You just need to wait.
 
-💡 **Pro Tip**: If Claude Code asks for confirmation, simply say "yes" or "proceed".
+>[!TIP]
+>
+> If Claude Code asks for confirmation, simply say "yes" or "proceed".
 
 #### Step 4: Verify the Results
 
@@ -342,7 +349,9 @@ Here's the deal: These 5 exercises demonstrate how to use Claude Code with simpl
 | **4. Web Scraping** | Describe what content you want, and Claude Code will extract it |
 | **5. File Manipulation** | Describe how you want to split files, and Claude Code will split them |
 
-💡 **Key Takeaway**: By completing these exercises, you'll learn that you don't need to write code yourself — you can simply describe what you want in natural language, and Claude Code will do the work for you.
+>[!TIP]
+>
+> **Key Takeaway**: By completing these exercises, you'll learn that you don't need to write code yourself — you can simply describe what you want in natural language, and Claude Code will do the work for you.
 
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: GLM 配置教程
 draft: false
+prev: Basic-tools/05-homebrew-install
+next: Agents/04-claude-codel
 ---
 >[!TIP]
 >
@@ -144,7 +146,9 @@ chmod +x install.sh && \
 2. 选择模型
 3. 点击 **Install & configure**
 
-⚠️ **重要警告**：没订阅千万别选 `glm-5`！选了会出问题，到时候别说我没提醒你。
+>[!WARNING]
+>
+> 没订阅千万别选 `glm-5`！选了会出问题，到时候别说我没提醒你。
 
 ![](./images/Pasted%20image%2020260306113120.png)
 
@@ -162,7 +166,9 @@ chmod +x install.sh && \
 
 ![](./images/Pasted%20image%2020260303193234.png)
 
-💡 **小贴士**：GLM-5 相当于 Claude Opus，强但费额度。复杂任务用它，日常任务用 GLM-4.7 省着点。另外高峰期（14:00-18:00 北京时间）可能会慢。
+>[!TIP]
+>
+> GLM-5 相当于 Claude Opus，强但费额度。复杂任务用它，日常任务用 GLM-4.7 省着点。另外高峰期（14:00-18:00 北京时间）可能会慢。
 
 直接问也行：
 
@@ -192,7 +198,9 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 
 提示时粘贴 API Key，按回车。
 
-⚠️ **注意**：粘贴时终端可能什么都不显示，这是正常的，别重复粘贴。
+>[!NOTE]
+>
+> 粘贴时终端可能什么都不显示，这是正常的，别重复粘贴。
 
 ![](./images/Pasted%20image%2020260303191343.png)
 
@@ -248,7 +256,9 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 }
 ```
 
-⚠️ 把 `"your api key"` 换成你真正的 API Key！
+>[!WARNING]
+>
+> 把 `"your api key"` 换成你真正的 API Key！
 
 保存，重启 Claude Code，运行 `/model` 验证。
 

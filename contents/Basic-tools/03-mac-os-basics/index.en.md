@@ -1,6 +1,7 @@
 ---
 title: Mac OS Basics
 draft: false
+next: Basic-tools/01-terminal-basics
 ---
 
 # Mac OS Basics
@@ -23,7 +24,9 @@ Press `Command + Space` and start typing. Spotlight searches apps, files, emails
 
 ![](./images/Mac/file-20260107123528095.png)
 
-💡 **Pro Tip**: Spotlight learns from your usage. The more you use it, the smarter it gets at predicting what you're looking for.
+>[!TIP]
+>
+> Spotlight learns from your usage. The more you use it, the smarter it gets at predicting what you're looking for.
 
 ---
 
@@ -57,7 +60,9 @@ Add **English** (or your preferred language) to "Preferred Languages" and drag i
 
 ### Show File Extensions & Hidden Files
 
-⚠️ **Critical for Developers**: By default, macOS hides file extensions and system files. When you're working with `.gitignore`, `.env`, `.zshrc`, you need to see these.
+>[!WARNING]
+>
+> **Critical for Developers**: By default, macOS hides file extensions and system files. When you're working with `.gitignore`, `.env`, `.zshrc`, you need to see these.
 
 **Show File Extensions:**
 
@@ -71,7 +76,9 @@ Add **English** (or your preferred language) to "Preferred Languages" and drag i
 
 Press `Command + Shift + .` to toggle hidden files visibility. Press it again to hide them.
 
-💡 **Pro Tip**: Files starting with a dot (like `.gitignore`) are hidden by default on Unix-based systems. This shortcut is your best friend.
+>[!TIP]
+>
+> Files starting with a dot (like `.gitignore`) are hidden by default on Unix-based systems. This shortcut is your best friend.
 
 ---
 
@@ -154,7 +161,9 @@ You can also customize other trackpad behaviors to match your preferences.
 
 ![](./images/Mac/file-20260107180237427.png)
 
-💡 **Pro Tip**: Spend 5 minutes in System Settings → Trackpad exploring all the gestures. Muscle memory will thank you later.
+>[!TIP]
+>
+> Spend 5 minutes in System Settings → Trackpad exploring all the gestures. Muscle memory will thank you later.
 
 ---
 

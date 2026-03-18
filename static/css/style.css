@@ -438,7 +438,6 @@ body {
   border-left: 0.25rem solid var(--blockquote-border);
   background: var(--blockquote-bg);
   border-radius: 0 0.5rem 0.5rem 0;
-  color: var(--text-secondary);
 }
 
 /* Obsidian 风格 Callout：Note / Tip / Warning */
@@ -545,7 +544,7 @@ body {
 
 /* Warning：浅橙黄背景 */
 .doc-content .callout-warning {
-  background: #fff8e6;
+  background: #ffece6;
 }
 
 .doc-content .callout-warning .callout-header {

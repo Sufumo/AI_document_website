@@ -1,6 +1,8 @@
 ---
 title: Obsidian Usage Guide
 draft: false
+prev: Apps/01-vscode-usage
+next: Agents/05-claude-code-workshop
 ---
 
 >[!TIP]
@@ -30,7 +32,9 @@ Here's the deal: Obsidian is your personal knowledge base that stores everything
 
 Press the `Win` key to search for PowerShell and open it.
 
-⚠️ **Note**: To avoid issues with insufficient permissions, it is recommended to select `Run as Administrator` to open PowerShell.
+>[!NOTE]
+>
+> To avoid issues with insufficient permissions, it is recommended to select `Run as Administrator` to open PowerShell.
 
 ![](./images/3.Obsidian/file-20260113152854509.png)
 
@@ -140,7 +144,9 @@ Open Obsidian, and you'll find **3 options**.
 - ✅ Already have notes in a folder? → **Open folder as vault"
 - ✅ Using Obsidian Sync on another device? → **Open vault from Obsidian Sync**
 
-⚠️ **Note**: Although Obsidian allows you to switch vaults via **File → Open Vault**, it's better to use a single vault to take full advantage of its note-management capabilities. Also, Obsidian cannot open a single .md file by right-clicking, unlike the Office suite.
+>[!NOTE]
+>
+> Although Obsidian allows you to switch vaults via **File → Open Vault**, it's better to use a single vault to take full advantage of its note-management capabilities. Also, Obsidian cannot open a single .md file by right-clicking, unlike the Office suite.
 
 In this document, we'll use **Create new vault** as an example.
 
@@ -178,7 +184,9 @@ The system will automatically fill in a file name, such as **"Untitled"**. You c
 
 ![first note](./images/3.Obsidian/file-20260113152854496.png)
 
-💡 **Pro Tip**: In Obsidian, the file you create is a **Markdown file** by default. As you type, Obsidian will automatically render the Markdown syntax to display a live preview of the formatted text.
+>[!TIP]
+>
+> In Obsidian, the file you create is a **Markdown file** by default. As you type, Obsidian will automatically render the Markdown syntax to display a live preview of the formatted text.
 
 ---
 

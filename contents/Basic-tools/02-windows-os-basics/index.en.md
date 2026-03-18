@@ -44,7 +44,9 @@ Type anything in the search box — a filename, a partial name, even content ins
 
 ![](./images/Windows/file-20260111123112848.png)
 
-💡 **Pro Tip**: Press `Ctrl + Space` (or your custom shortcut) to bring up Everything from anywhere. It's like having a search superpower.
+>[!TIP]
+>
+> Press `Ctrl + Space` (or your custom shortcut) to bring up Everything from anywhere. It's like having a search superpower.
 
 ---
 
@@ -82,7 +84,9 @@ Windows uses **File Explorer** for file management. Quick access: press `Win + E
 
 ### Show File Extensions & Hidden Files
 
-⚠️ **Critical for Developers**: By default, Windows hides file extensions (so `script.sh` appears as just `script`) and hides system files. This is a nightmare when you're working with config files like `.gitignore`, `.env`, or trying to distinguish `.json` from `.js`.
+>[!WARNING]
+>
+> **Critical for Developers**: By default, Windows hides file extensions (so `script.sh` appears as just `script`) and hides system files. This is a nightmare when you're working with config files like `.gitignore`, `.env`, or trying to distinguish `.json` from `.js`.
 
 Let's fix this:
 
@@ -101,7 +105,9 @@ Let's fix this:
 
 ![](./images/1.OS/file-20260113152828147.png)
 
-💡 **Pro Tip**: Now you'll see files like `.gitignore`, `.env`, and every file will show its true extension. Much better.
+>[!TIP]
+>
+> Now you'll see files like `.gitignore`, `.env`, and every file will show its true extension. Much better.
 
 ---
 
@@ -111,7 +117,9 @@ At the top of File Explorer, you'll see the path bar showing your current locati
 
 ![](./images/1.OS/file-20260113152828144.png)
 
-💡 **Pro Tip**: Right-click any folder in File Explorer and select **Open in Terminal** to launch a terminal already navigated to that location. Super handy for running scripts.
+>[!TIP]
+>
+> Right-click any folder in File Explorer and select **Open in Terminal** to launch a terminal already navigated to that location. Super handy for running scripts.
 
 ![](./images/1.OS/file-20260113152828146.png)
 

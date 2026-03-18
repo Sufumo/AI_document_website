@@ -2,6 +2,7 @@
 title: MCP Introduction
 draft: false
 prev: Extensions/01-skills
+next: Apps/01-vscode-usage
 ---
 
 # MCP Introduction
@@ -49,6 +50,7 @@ Below we use **qwen-ai** MCP as an example. It offers: text output, translation,
 For example, type **please convert this audio file to txt and save it to output folder** in Claude Code, then drag in an audio file.
 
 >[!NOTE]
+>
 > You can also type **please convert this audio file to txt and save it to output folder by qwen-ai MCP's audio_transcribe tools** to explicitly use a specific MCP tool.
 
 ![](./images/Pasted%20image%2020260309115436.png)

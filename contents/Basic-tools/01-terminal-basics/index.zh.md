@@ -1,6 +1,8 @@
 ---
 title: Terminal 基础
 draft: false
+prev: Basic-tools/03-mac-os-basics
+next: Basic-tools/05-homebrew-install
 ---
 
 # Terminal 基础
@@ -37,7 +39,9 @@ draft: false
 - **01-complete-macos-setup.sh**：当前关联的脚本文件名
 - **.sh** 表示这是一个 shell 脚本，终端可以执行它
 
-💡 **小贴士**：标题不代表脚本正在运行 —— 它只是告诉你这个窗口关联了什么。把它想象成文件标签名。
+>[!TIP]
+>
+> 标题不代表脚本正在运行 —— 它只是告诉你这个窗口关联了什么。把它想象成文件标签名。
 
 ---
 
@@ -93,7 +97,9 @@ draft: false
 | `$` | bash | bash |
 | `#` | root/administrator | 超级管理员 |
 
-⚠️ **警告**：如果你看到 `#` 作为提示符，请格外小心。你拥有完整的系统权限，意味着你可能不小心搞坏东西。
+>[!WARNING]
+>
+> 如果你看到 `#` 作为提示符，请格外小心。你拥有完整的系统权限，意味着你可能不小心搞坏东西。
 
 **组合起来理解：**
 
@@ -116,7 +122,9 @@ draft: false
 
 按 `Windows 键`（或 `Win`），输入 "PowerShell"，然后按回车。
 
-⚠️ **重要**：为了避免之后的权限问题，我建议选择 **以管理员身份运行**。未来的你会感谢现在的你。
+>[!WARNING]
+>
+> 为了避免之后的权限问题，我建议选择 **以管理员身份运行**。未来的你会感谢现在的你。
 
 ![](./images/Windows/file-20260109160736263.png)
 
@@ -136,8 +144,12 @@ draft: false
 
 ![](./images/Toolkit/image270.png)
 
-💡 **Pro Tip**: On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.
-💡 **小贴士**：在 Mac 上，你也可以右键点击任意文件夹，选择「在文件夹中新建终端」，这样打开的终端就已经在那个位置了。超级方便。
+>[!TIP]
+>
+> On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.
+>[!TIP]
+>
+> 在 Mac 上，你也可以右键点击任意文件夹，选择「在文件夹中新建终端」，这样打开的终端就已经在那个位置了。超级方便。
 
 ---
 

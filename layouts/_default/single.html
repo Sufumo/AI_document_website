@@ -34,7 +34,7 @@
       {{ with $.Site.GetPage . }}
       <div class="doc-nav-prev">
         <span class="doc-nav-prev-next-label">{{ i18n "nav_prev" }}</span>
-        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">{{ .Title }} »</a>
+        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">{{ .Title }}</a>
       </div>
       {{ end }}
       {{ end }}
@@ -42,7 +42,7 @@
       {{ with $.Site.GetPage . }}
       <div class="doc-nav-next">
         <span class="doc-nav-prev-next-label">{{ i18n "nav_next" }}</span>
-        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">» {{ .Title }}</a>
+        <a href="{{ .Permalink }}" class="doc-nav-prev-next-link">{{ .Title }}</a>
       </div>
       {{ end }}
       {{ end }}
