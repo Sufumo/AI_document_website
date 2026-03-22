@@ -1,8 +1,10 @@
 {{ $currentLang := .Site.Language.Lang }}
+<div class="doc-nav-brand">
+  <a href="{{ .Site.Home.RelPermalink }}" class="doc-nav-site-title">{{ .Site.Title }}</a>
+</div>
 <div class="doc-nav-search">
   <input type="search" class="doc-nav-search-input" placeholder="{{ i18n "search_placeholder" }}" aria-label="{{ i18n "search_placeholder" }}">
 </div>
-<div class="doc-nav-title">{{ i18n "nav_doc_index" }}</div>
 {{ range .Site.Sections }}
 {{ $pages := .RegularPages }}
 {{ if $pages }}
