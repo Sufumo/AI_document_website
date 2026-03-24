@@ -35,7 +35,7 @@ Claude Code's "hands" are flexible, but they **don't think on their own**. They 
 
 **The key point: That brain can be Claude, or it can be GLM.**
 
-![](./images/Pasted%20image%2020260316125916.png)
+![](images/01-GLM-configuration-20260316125916.jpg)
 
 ### Why Choose GLM?
 
@@ -53,11 +53,11 @@ Three words: **Easy, efficient, affordable.**
 
 GLM-5 ranks **#1 among open-source models** in the [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2) complex decision-making benchmark (March 2026). GLM-4.7 comes in second.
 
-![](./images/Pasted%20image%2020260316120220.png)
+![](images/01-GLM-configuration-20260316120220.jpg)
 
 Even compared to top closed-source models, GLM-5 ranks 6th globally — right behind Claude, GPT, Gemini, and Grok. As a "brain," its intelligence is fully up to the task.
 
-![](./images/Pasted%20image%2020260316120041.png)
+![](images/01-GLM-configuration-20260316120041.jpg)
 
 ### The AI Workflow Looks Like This
 
@@ -73,7 +73,7 @@ That simple.
 - ✅ Already have a stable Claude account → Keep using it, this guide is optional
 - ✅ No Claude / Want to try GLM → Keep reading and start configuring
 
-![](./images/Pasted%20image%2020260310154428.png)
+![](images/01-GLM-configuration-20260310154428.jpg)
 
 ---
 
@@ -83,19 +83,19 @@ Every journey begins with a key. Here's how to get yours:
 
 🔗 Head to [https://bigmodel.cn/usercenter/proj-mgmt/apikeys](https://bigmodel.cn/usercenter/proj-mgmt/apikeys)
 
-![](./images/Pasted%20image%2020260303185459.png)
+![](images/01-GLM-configuration-20260303185459.jpg)
 
 Click **Create a new API Key**.
 
-![](./images/Pasted%20image%2020260303185651.png)
+![](images/01-GLM-configuration-20260303185651.jpg)
 
 Give it a memorable name (like "claude-code-key" — future you will thank present you), then click **Yes**.
 
-![](./images/Pasted%20image%2020260303185744.png)
+![](images/01-GLM-configuration-20260303185744.jpg)
 
 Click **Copy** and save this somewhere safe. **Important**: You won't be able to see it again!
 
-![](./images/Pasted%20image%2020260303185954.png)
+![](images/01-GLM-configuration-20260303185954.jpg)
 
 ---
 
@@ -127,7 +127,7 @@ You have two paths forward. Choose wisely:
 
 Right-click in any folder → **Terminal**.
 
-![](images/Pasted%20image%2020260311005958.png)
+![](images/01-GLM-configuration-20260311005958.jpg)
 
 Copy-paste this magic spell into Terminal and hit Enter:
 
@@ -139,11 +139,11 @@ chmod +x install.sh && \
 ./install.sh
 ```
 
-![](images/Pasted%20image%2020260311010117.png)
+![](images/01-GLM-configuration-20260311010117.jpg)
 
 Once installed, find **AGENT_MANAGER.command** in the folder and double-click it.
 
-![](./images/Pasted%20image%2020260306111847.png)
+![](images/01-GLM-configuration-20260306111847.jpg)
 
 Now for the moment of truth:
 1. Paste your API Key
@@ -154,21 +154,21 @@ Now for the moment of truth:
 >
 > Don't select `glm-5` unless you've subscribed! Your code will break and you'll be confused.
 
-![](./images/Pasted%20image%2020260306113120.png)
+![](images/01-GLM-configuration-20260306113120.jpg)
 
 Success looks like this:
 
-![](./images/Pasted%20image%2020260306113321.png)
+![](images/01-GLM-configuration-20260306113321.jpg)
 
 Now just type `glm` in terminal to launch Claude Code with GLM. That's it. You're done.
 
-![](./images/Pasted%20image%2020260303152714.png)
+![](images/01-GLM-configuration-20260303152714.jpg)
 
 **Verification time**: Restart Claude Code, type `/model`. You should see **GLM-5** in the list.
 
-![](./images/Pasted%20image%2020260303193201.png)
+![](images/01-GLM-configuration-20260303193201.jpg)
 
-![](./images/Pasted%20image%2020260303193234.png)
+![](images/01-GLM-configuration-20260303193234.jpg)
 
 >[!TIP]
 >
@@ -176,7 +176,7 @@ Now just type `glm` in terminal to launch Claude Code with GLM. That's it. You'r
 
 You can also just ask the AI what model it's using:
 
-![](./images/Pasted%20image%2020260310101707.png)
+![](images/01-GLM-configuration-20260310101707.jpg)
 
 ---
 
@@ -186,7 +186,7 @@ You can also just ask the AI what model it's using:
 
 Press `Option + Space` → type **Terminal** → Enter.
 
-![](./images/Pasted%20image%2020260303190946.png)
+![](images/01-GLM-configuration-20260303190946.jpg)
 
 Copy-paste and run:
 
@@ -198,7 +198,7 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 > - `curl -O`: Downloads a file from the internet
 > - `bash`: Runs the downloaded script
 
-![](./images/Pasted%20image%2020260303191656.png)
+![](images/01-GLM-configuration-20260303191656.jpg)
 
 When prompted, paste your API Key and press Enter.
 
@@ -206,13 +206,13 @@ When prompted, paste your API Key and press Enter.
 >
 > The terminal might not show anything when you paste. That's normal. Don't paste twice.
 
-![](./images/Pasted%20image%2020260303191343.png)
+![](images/01-GLM-configuration-20260303191343.jpg)
 
 When the prompt returns, you're done. Type `claude` to start.
 
-![](./images/Pasted%20image%2020260303191816.png)
+![](images/01-GLM-configuration-20260303191816.jpg)
 
-![](./images/Pasted%20image%2020260303191919.png)
+![](images/01-GLM-configuration-20260303191919.jpg)
 
 ---
 
@@ -222,15 +222,15 @@ If you subscribed to GLM Coding Plan, here's how to unlock the big guns:
 
 **Finder** → **Go** → **Home**
 
-![](./images/Pasted%20image%2020260303192106.png)
+![](images/01-GLM-configuration-20260303192106.jpg)
 
 Press `Command + Shift + .` to reveal hidden files, then open **.claude** folder.
 
-![](./images/Pasted%20image%2020260303192303.png)
+![](images/01-GLM-configuration-20260303192303.jpg)
 
 Open **settings.json** in your favorite text editor.
 
-![](./images/Pasted%20image%2020260303192828.png)
+![](images/01-GLM-configuration-20260303192828.jpg)
 
 **The default mapping looks like this:**
 
@@ -266,7 +266,7 @@ Open **settings.json** in your favorite text editor.
 
 Save the file, restart Claude Code, run `/model` to verify.
 
-![](./images/Pasted%20image%2020260303192957.png)
+![](images/01-GLM-configuration-20260303192957.jpg)
 
 ---
 
@@ -276,11 +276,11 @@ Want quick-launch commands? Here's how:
 
 Copy **settings.json** → rename to **glm-settings.json**.
 
-![](./images/Pasted%20image%2020260310232459.png)
+![](images/01-GLM-configuration-20260310232459.jpg)
 
 Go back to Home, open **.zshrc**.
 
-![](./images/Pasted%20image%2020260310234055.png)
+![](images/01-GLM-configuration-20260310234055.jpg)
 
 Add this line at the end:
 
@@ -294,7 +294,7 @@ Or for `glm5`:
 alias glm5="claude --settings ~/.claude/glm-settings.json"
 ```
 
-![](./images/Pasted%20image%2020260310232746.png)
+![](images/01-GLM-configuration-20260310232746.jpg)
 
 Open a fresh Terminal and run:
 
@@ -302,15 +302,15 @@ Open a fresh Terminal and run:
 source .zshrc
 ```
 
-![](./images/Pasted%20image%2020260310233106.png)
+![](images/01-GLM-configuration-20260310233106.jpg)
 
-![](./images/Pasted%20image%2020260310233154.png)
+![](images/01-GLM-configuration-20260310233154.jpg)
 
 Now type `glm` (or `glm5`) and boom — Claude Code launches with GLM.
 
-![](./images/Pasted%20image%2020260310233233.png)
+![](images/01-GLM-configuration-20260310233233.jpg)
 
-![](./images/Pasted%20image%2020260310233250.png)
+![](images/01-GLM-configuration-20260310233250.jpg)
 
 ---
 
@@ -330,12 +330,12 @@ Now type `glm` (or `glm5`) and boom — Claude Code launches with GLM.
 
 Click **My Plan** to open the subscription page.
 
-![](./images/Pasted%20image%2020260306112528.png)
+![](images/01-GLM-configuration-20260306112528.jpg)
 
 Click **GLM Coding plan** to see your options.
 
-![](./images/Pasted%20image%2020260306112619.png)
+![](images/01-GLM-configuration-20260306112619.jpg)
 
 Subscribe here. Without subscription, you get free quota but **no GLM-5**.
 
-![](./images/Pasted%20image%2020260306112719.png)
+![](images/01-GLM-configuration-20260306112719.jpg)

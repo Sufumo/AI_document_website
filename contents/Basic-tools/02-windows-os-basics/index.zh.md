@@ -32,17 +32,17 @@ winget install voidtools.Everything
 > - `install`：要执行的动作
 > - `voidtools.Everything`：Everything 的唯一 ID（可通过 `winget search everything` 找到）
 
-![](./images/Windows/file-20260111122150310.png)
+![](images/02-windows-os-basics-20260111122150310.jpg)
 
 ### 步骤二：启动并搜索
 
 安装后，桌面上会出现 **Everything** 快捷方式。双击打开。
 
-![](./images/Windows/file-20260111122844126.png)
+![](images/02-windows-os-basics-20260111122844126.jpg)
 
 在搜索框输入任何内容 —— 文件名、部分名称，甚至文件内容（如果启用内容搜索）。结果立刻出现。
 
-![](./images/Windows/file-20260111123112848.png)
+![](images/02-windows-os-basics-20260111123112848.jpg)
 
 >[!TIP]
 >
@@ -58,19 +58,19 @@ winget install voidtools.Everything
 
 按 `Win`，输入 "settings"，然后按回车。
 
-![](./images/1.OS/file-20260113152828153.png)
+![](images/02-windows-os-basics-20260113152828153.jpg)
 
 ### 步骤二：进入语言设置
 
 依次点击 **Time & language** → **Language & region**。
 
-![](./images/1.OS/file-20260113152828152.png)
+![](images/02-windows-os-basics-20260113152828152.jpg)
 
 ### 步骤三：添加或更改语言
 
 在这里你可以添加新语言并将你喜欢的设为默认。Windows 会下载语言包，在你注销并重新登录后生效。
 
-![](./images/1.OS/file-20260113152828151.png)
+![](images/02-windows-os-basics-20260113152828151.jpg)
 
 ---
 
@@ -92,18 +92,18 @@ Windows 使用**文件资源管理器**进行文件管理。快速访问：按 `
 
 #### 步骤一：打开文件资源管理器，点击右上角的 **...** 图标，选择 **Options**。
 
-![](./images/1.OS/file-20260113152828149.png)
+![](images/02-windows-os-basics-20260113152828149.jpg)
 
 #### 步骤二：切换到 **View** 标签。进行以下更改：
 
 - ✅ 勾选 **Show hidden files, folders, and drives**
 - ❌ 取消勾选 **Hide extensions for known file types**
 
-![](./images/1.OS/file-20260113152828148.png)
+![](images/02-windows-os-basics-20260113152828148.jpg)
 
 #### 步骤三：点击 **Apply** → **OK**。
 
-![](./images/1.OS/file-20260113152828147.png)
+![](images/02-windows-os-basics-20260113152828147.jpg)
 
 >[!TIP]
 >
@@ -115,13 +115,13 @@ Windows 使用**文件资源管理器**进行文件管理。快速访问：按 `
 
 在文件资源管理器顶部，你会看到显示当前位置的路径栏。点击路径中的任何文件夹可以立即跳转。
 
-![](./images/1.OS/file-20260113152828144.png)
+![](images/02-windows-os-basics-20260113152828144.jpg)
 
 >[!TIP]
 >
 > 在文件资源管理器中右键点击任何文件夹，选择 **Open in Terminal** 可以启动一个已经导航到该位置的终端。运行脚本时超级方便。
 
-![](./images/1.OS/file-20260113152828146.png)
+![](images/02-windows-os-basics-20260113152828146.jpg)
 
 ---
 
@@ -136,12 +136,12 @@ Windows 使用**文件资源管理器**进行文件管理。快速访问：按 `
 - **Pin to Start** → 添加到开始菜单磁贴
 - **Pin to taskbar** → 添加到底部任务栏，一键访问
 
-![](./images/1.OS/file-20260113152828142.png)
+![](images/02-windows-os-basics-20260113152828142.jpg)
 
 Now press `Win` again — you'll see your pinned apps ready to launch.
 再按一次 `Win` —— 你会看到固定的应用随时可以启动。
 
-![](./images/Windows/file-20260111123743239.png)
+![](images/02-windows-os-basics-20260111123743239.jpg)
 
 | 位置 | 最适合 |
 |------|--------|

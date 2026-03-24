@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Apps/01-vscode-usage/index.zh.md",
+                "file": "Basic-tools/01-terminal-basics/index.en.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index.zh"
+              "title": "index.en"
             }
           }
         ]
@@ -164,12 +164,25 @@
               "icon": "lucide-list",
               "title": "Outline of index.zh"
             }
+          },
+          {
+            "id": "062f3eae31e85ff2",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Basic-tools/01-terminal-basics/index.en.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for index.en"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -185,38 +198,43 @@
   },
   "active": "81a1de641a676858",
   "lastOpenFiles": [
-    "Basic-tools/06-git-basis/index.zh.md",
-    "Apps/01-vscode-usage/index.en.md",
+    "Basic-tools/01-terminal-basics/index.zh.md",
+    "Basic-tools/01-terminal-basics/index.en.md",
+    "Extensions/01-skills/images/tmpi74gachi.jpg",
+    "Extensions/01-skills/images/tmpd_g1xm0v.jpg",
+    "Extensions/01-skills/images/tmpxlmkoy14.jpg",
+    "Extensions/01-skills/images/tmpgjbtudnm.jpg",
+    "Extensions/01-skills/images/tmpl1u3i190.jpg",
+    "Extensions/01-skills/images/tmplpjimcf1.jpg",
+    "Basic-tools/06-git-basis/images/tmpl2i64stq.jpg",
+    "Basic-tools/06-git-basis/images/tmp42tn_f87.jpg",
+    "Basic-tools/06-git-basis/images/tmpbyh9de5y.jpg",
+    "Basic-tools/06-git-basis/images/tmp6qu3ez63.jpg",
     "Apps/01-vscode-usage/index.zh.md",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319181926.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319181858.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319181844.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319181647.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319180634.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319175956.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319174701.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319174529.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319174158.png",
-    "Basic-tools/06-git-basis/images/Pasted image 20260319174033.png",
+    "Apps/01-vscode-usage/index.en.md",
+    "Basic-tools/05-homebrew-install/images/Toolkit",
+    "Basic-tools/04-winget-basics/images/Windows",
+    "Basic-tools/03-mac-os-basics/images/Mac",
+    "Basic-tools/02-windows-os-basics/images/Windows",
+    "Basic-tools/02-windows-os-basics/images/1.OS",
+    "Basic-tools/01-terminal-basics/images/Windows",
+    "Basic-tools/01-terminal-basics/images/Toolkit",
+    "Basic-tools/01-terminal-basics/images/Terminal",
+    "Basic-tools/01-terminal-basics/images/1.OS",
+    "Apps/03-obsidian-notes/images/3.Obsidian",
+    "Basic-tools/06-git-basis/index.zh.md",
     "Basic-tools/06-git-basis/index.en.md",
-    "Basic-tools/06-git-basis/images",
     "_index.en.md",
     "_index.zh.md",
     "Basic-tools/03-mac-os-basics/index.zh.md",
     "Basic-tools/03-mac-os-basics/index.en.md",
     "Extensions/02-mcp/index.zh.md",
     "Extensions/01-skills/index.zh.md",
-    "Extensions/02-mcp/images",
     "Agents/01-GLM-configuration/index.zh.md",
-    "Extensions/01-skills/images",
     "Extensions/MCP.md",
-    "Extensions/02-mcp",
     "Extensions/01-skills/index.en.md",
     "Extensions/01-skills/skills.md",
     "Extensions/01-skills/Skills.md",
-    "Extensions/01-skills",
-    "Extensions/Skills.md",
-    "Extensions",
-    "Basic-tools/01-terminal-basics/index.en.md"
+    "Extensions/Skills.md"
   ]
 }

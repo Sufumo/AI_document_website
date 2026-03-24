@@ -47,7 +47,7 @@ winget search python
 > - Searches the winget repository for anything matching "python"
 > - Returns a list with names, IDs, versions, and sources
 
-![](./images/Windows/file-20260109161753557.png)
+![](images/04-winget-basics-20260109161753557.jpg)
 
 >[!TIP]
 >
@@ -68,7 +68,7 @@ winget install Python.Python.3.12
 > - Runs the installation silently (no clicking through wizards)
 > - Handles dependencies if needed
 
-![](./images/Windows/file-20260109162641973.png)
+![](images/04-winget-basics-20260109162641973.jpg)
 
 That's it. Python is now installed on your system.
 

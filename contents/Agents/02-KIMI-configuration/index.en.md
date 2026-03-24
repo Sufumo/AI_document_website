@@ -35,7 +35,7 @@ Claude Code's "hands" are flexible, but they **don't think on their own**. They 
 
 **The key point: That brain can be Claude, or it can be KIMI.**
 
-![](./images/Pasted%20image%2020260316125916.png)
+![](images/02-KIMI-configuration-20260316125916.jpg)
 
 ### Why Choose KIMI?
 
@@ -53,7 +53,7 @@ Three words: **Easy, efficient, affordable.**
 
 KIMI k2.5 ranks **#3 among open-source models** in the [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2) complex decision-making benchmark (March 2026). As a "brain," its intelligence is fully up to the task.
 
-![](./images/Pasted%20image%2020260316130945.png)
+![](images/02-KIMI-configuration-20260316130945.jpg)
 
 ### The AI Workflow Looks Like This
 
@@ -69,7 +69,7 @@ That simple.
 - ✅ Already have a stable Claude account → Keep using it, this guide is optional
 - ✅ No Claude / Want to try KIMI → Keep reading and start configuring
 
-![](./images/Pasted%20image%2020260310143951.png)
+![](images/02-KIMI-configuration-20260310143951.jpg)
 
 ---
 
@@ -79,19 +79,19 @@ Every journey begins with a key. Here's how to get yours:
 
 🔗 Head to [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys)
 
-![](./images/Pasted%20image%2020260303194555.png)
+![](images/02-KIMI-configuration-20260303194555.jpg)
 
 Click **Create API Key**.
 
-![](./images/Pasted%20image%2020260303194920.png)
+![](images/02-KIMI-configuration-20260303194920.jpg)
 
 Give it a memorable name, select **default** for the project, then click **Confirm**.
 
-![](./images/Pasted%20image%2020260303195050.png)
+![](images/02-KIMI-configuration-20260303195050.jpg)
 
 Click **Copy** and save this somewhere safe. **Important**: You won't be able to see it again!
 
-![](./images/Pasted%20image%2020260303195345.png)
+![](images/02-KIMI-configuration-20260303195345.jpg)
 
 ---
 
@@ -103,7 +103,7 @@ Here's the thing: KIMI API keys need a paid balance to work. No balance, no magi
 |--------------|------------|
 | **Financial** → **Account Top-up** | Choose an amount, complete payment, and you're ready to go |
 
-![](./images/Pasted%20image%2020260306114112.png)
+![](images/02-KIMI-configuration-20260306114112.jpg)
 
 ---
 
@@ -122,7 +122,7 @@ You have two paths forward. Choose wisely:
 
 Right-click in any folder → **Terminal**.
 
-![](images/Pasted%20image%2020260311005958.png)
+![](images/02-KIMI-configuration-20260311005958.jpg)
 
 Copy-paste this magic spell into Terminal and hit Enter:
 
@@ -134,32 +134,32 @@ chmod +x install.sh && \
 ./install.sh
 ```
 
-![](images/Pasted%20image%2020260311010117.png)
+![](images/02-KIMI-configuration-20260311010117.jpg)
 
 Once installed, find **AGENT_MANAGER.command** in the folder and double-click it.
 
-![](./images/Pasted%20image%2020260306111847.png)
+![](images/02-KIMI-configuration-20260306111847.jpg)
 
 Now for the moment of truth:
 1. Click the **KIMI** tab
 2. Paste your API Key
 3. Click **Install & configure**
 
-![](./images/Pasted%20image%2020260306114430.png)
+![](images/02-KIMI-configuration-20260306114430.jpg)
 
 Success looks like this:
 
-![](./images/Pasted%20image%2020260306114556.png)
+![](images/02-KIMI-configuration-20260306114556.jpg)
 
 Now just type `kimi` in terminal to launch Claude Code with KIMI. That's it. You're done.
 
-![](./images/Pasted%20image%2020260306114634.png)
+![](images/02-KIMI-configuration-20260306114634.jpg)
 
 >[!TIP]
 >
 > You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
 
-![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
+![](images/fcb0a0365799f8680cbf2116e80f73ce.jpg)
 
 ---
 
@@ -169,11 +169,11 @@ Now just type `kimi` in terminal to launch Claude Code with KIMI. That's it. You
 
 Go to **Finder** → **Go** → **Home**.
 
-![](./images/Pasted%20image%2020260303192106.png)
+![](images/02-KIMI-configuration-20260303192106.jpg)
 
 Press `Command + Shift + .` to reveal hidden files, then open **.zshrc**.
 
-![](./images/Pasted%20image%2020260303200006.png)
+![](images/02-KIMI-configuration-20260303200006.jpg)
 
 Paste this at the end of **.zshrc**, and replace `your API KEY` with your actual KIMI API key:
 
@@ -182,29 +182,29 @@ export ANTHROPIC_BASE_URL="https://api.moonshot.cn/anthropic/"
 export ANTHROPIC_API_KEY="your API KEY"
 ```
 
-![](./images/Pasted%20image%2020260303200243.png)
+![](images/02-KIMI-configuration-20260303200243.jpg)
 
 Save the file. Press `Option + Space` → type **Terminal** → Enter.
 
-![](./images/Pasted%20image%2020260303190946.png)
+![](images/02-KIMI-configuration-20260303190946.jpg)
 
 In Terminal, run `source .zshrc` to activate the new environment variables:
 
-![](./images/Pasted%20image%2020260303200438.png)
+![](images/02-KIMI-configuration-20260303200438.jpg)
 
 Run `claude` and press Enter. When Claude Code shows **Detected a custom API Key in your environment**, click **Yes**.
 
-![](./images/Pasted%20image%2020260303200736.png)
+![](images/02-KIMI-configuration-20260303200736.jpg)
 
 You can then use Claude Code as usual with KIMI.
 
-![](./images/Pasted%20image%2020260303200846.png)
+![](images/02-KIMI-configuration-20260303200846.jpg)
 
 >[!TIP]
 >
 > You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.
 
-![](./images/fcb0a0365799f8680cbf2116e80f73ce.png)
+![](images/fcb0a0365799f8680cbf2116e80f73ce.jpg)
 
 ---
 
@@ -214,15 +214,15 @@ Want a quick-launch command? Here's how:
 
 Go to **Finder** → **Go** → **Home**.
 
-![](./images/Pasted%20image%2020260303192106.png)
+![](images/02-KIMI-configuration-20260303192106.jpg)
 
 Press `Command + Shift + .` to reveal hidden files, then open **.claude** folder.
 
-![](./images/Pasted%20image%2020260303192303.png)
+![](images/02-KIMI-configuration-20260303192303.jpg)
 
 Copy **settings.json** → rename to **kimi-settings.json**.
 
-![](./images/Pasted%20image%2020260310234238.png)
+![](images/02-KIMI-configuration-20260310234238.jpg)
 
 Open **kimi-settings.json** and paste this content (replace the placeholder with your API key):
 
@@ -236,11 +236,11 @@ Open **kimi-settings.json** and paste this content (replace the placeholder with
 }
 ```
 
-![](./images/Pasted%20image%2020260310234351.png)
+![](images/02-KIMI-configuration-20260310234351.jpg)
 
 Go back to Home, open **.zshrc**.
 
-![](./images/Pasted%20image%2020260310234055.png)
+![](images/02-KIMI-configuration-20260310234055.jpg)
 
 Add this line at the end:
 
@@ -248,25 +248,25 @@ Add this line at the end:
 alias kimi="claude --settings ~/.claude/kimi-settings.json"
 ```
 
-![](./images/Pasted%20image%2020260310233841.png)
+![](images/02-KIMI-configuration-20260310233841.jpg)
 
 Press `Command + Space` → search **Terminal** → Enter.
 
-![](./images/4.Claude%20code/file-20260113152908876%201.png)
+![](images/02-KIMI-configuration-20260113152908876-1.jpg)
 
 In Terminal, run `source .zshrc`.
 
-![](./images/Pasted%20image%2020260310233106.png)
+![](images/02-KIMI-configuration-20260310233106.jpg)
 
 When the terminal prompt returns, the configuration is complete.
 
-![](./images/Pasted%20image%2020260310233154.png)
+![](images/02-KIMI-configuration-20260310233154.jpg)
 
 Run `kimi` to launch Claude Code.
 
-![](./images/Pasted%20image%2020260310234456.png)
+![](images/02-KIMI-configuration-20260310234456.jpg)
 
-![](./images/Pasted%20image%2020260310233250.png)
+![](images/02-KIMI-configuration-20260310233250.jpg)
 
 ---
 

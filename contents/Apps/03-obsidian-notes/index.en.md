@@ -36,22 +36,22 @@ Press the `Win` key to search for PowerShell and open it.
 >
 > To avoid issues with insufficient permissions, it is recommended to select `Run as Administrator` to open PowerShell.
 
-![](./images/3.Obsidian/file-20260113152854509.png)
+![](images/03-obsidian-notes-20260113152854509.jpg)
 
 Type `winget search obsidian` in the PowerShell and press Enter.
 在 PowerShell 输入 `winget search obsidian` 并按下回车。
 
-![](./images/3.Obsidian/file-20260113152854501%201.png)
+![](images/03-obsidian-notes-20260113152854501-1.jpg)
 
 Type `winget install Obsidian.Obsidian` in the command line and press Enter to install Obsidian.
 
-![](./images/3.Obsidian/file-20260113152854501.png)
+![](images/03-obsidian-notes-20260113152854501.jpg)
 
 Wait for the installation to finish.
 
-![](./images/3.Obsidian/file-20260113152854507%201.png)
+![](images/03-obsidian-notes-20260113152854507-1.jpg)
 
-![](./images/3.Obsidian/file-20260113152854507.png)
+![](images/03-obsidian-notes-20260113152854507.jpg)
 
 ---
 
@@ -59,15 +59,15 @@ Wait for the installation to finish.
 
 Press `Command + Space` to search **Terminal** and open it.
 
-![](./images/3.Obsidian/file-20260113152854500.png)
+![](images/03-obsidian-notes-20260113152854500.jpg)
 
-![](./images/3.Obsidian/file-20260113152854503.png)
+![](images/03-obsidian-notes-20260113152854503.jpg)
 
 Type `brew install obsidian` in the terminal and press Enter.
 
 Wait for the installation to finish.
 
-![](./images/3.Obsidian/file-20260113152854502.png)
+![](images/03-obsidian-notes-20260113152854502.jpg)
 ---
 
 ## Part 2: Understanding Markdown
@@ -129,7 +129,7 @@ Here is the content of the example file `Untitled.md` in its raw Markdown format
 
 Open Obsidian, and you'll find **3 options**.
 
-![file-20260113152854493](./images/3.Obsidian/file-20260113152854493.png)
+![file-20260113152854493](images/03-obsidian-notes-20260113152854493.jpg)
 
 **What is a Vault?** Simply put, a **Vault** is your note library, which corresponds to **a local folder** where all Markdown (.md) files are stored. You can choose the appropriate usage method based on the following three scenarios:
 
@@ -156,7 +156,7 @@ In this document, we'll use **Create new vault** as an example.
 
 Enter a **Vault name** (e.g., "Obsidian"), click **Browse** to select a folder, and then click **Create**.
 
-![file-20260113152854517](./images/3.Obsidian/file-20260113152854517.png)
+![file-20260113152854517](images/03-obsidian-notes-20260113152854517.jpg)
 
 ---
 
@@ -164,7 +164,7 @@ Enter a **Vault name** (e.g., "Obsidian"), click **Browse** to select a folder, 
 
 An empty vault will be created, as shown above.
 
-![file-20260113152854513](./images/3.Obsidian/file-20260113152854513.png)
+![file-20260113152854513](images/03-obsidian-notes-20260113152854513.jpg)
 
 ---
 
@@ -174,7 +174,7 @@ An empty vault will be created, as shown above.
 
 Click the **New Note** button at the top of the left sidebar (it shows "New note" when hovered).
 
-![new note](./images/3.Obsidian/file-20260113152854490.png)
+![new note](images/03-obsidian-notes-20260113152854490.jpg)
 
 ---
 
@@ -182,7 +182,7 @@ Click the **New Note** button at the top of the left sidebar (it shows "New note
 
 The system will automatically fill in a file name, such as **"Untitled"**. You can change it to, for example, **"My First Note"**, and press Enter to confirm.
 
-![first note](./images/3.Obsidian/file-20260113152854496.png)
+![first note](images/03-obsidian-notes-20260113152854496.jpg)
 
 >[!TIP]
 >
@@ -196,7 +196,7 @@ The system will automatically fill in a file name, such as **"Untitled"**. You c
 
 You can import a folder of notes into Obsidian by copying it into your designated vault folder.
 
-![file-20260113152854492](./images/3.Obsidian/file-20260113152854492.png)
+![file-20260113152854492](images/03-obsidian-notes-20260113152854492.jpg)
 
 ---
 
@@ -204,7 +204,7 @@ You can import a folder of notes into Obsidian by copying it into your designate
 
 You can then find it in Obsidian.
 
-![file-20260113152854510](./images/3.Obsidian/file-20260113152854510.png)
+![file-20260113152854510](images/03-obsidian-notes-20260113152854510.jpg)
 
 ---
 
@@ -214,9 +214,9 @@ You can then find it in Obsidian.
 
 You can pin the Obsidian vault to the taskbar for quick access.
 
-![](./images/3.Obsidian/file-20260113152854499.png)
+![](images/03-obsidian-notes-20260113152854499.jpg)
 
-![](./images/3.Obsidian/file-20260113152854498.png)
+![](images/03-obsidian-notes-20260113152854498.jpg)
 
 ---
 

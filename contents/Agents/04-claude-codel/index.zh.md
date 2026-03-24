@@ -22,15 +22,15 @@ next: Extensions/01-skills
 
 按下 `Win` 键搜索 PowerShell 并打开。
 
-![](./images/4.Claude%20code/file-20260113152908875.png)
+![](images/04-claude-codel-20260113152908875.jpg)
 
 在命令行输入 `winget install Anthropic.ClaudeCode` 并按下回车安装 Claude Code。
 
-![](./images/4.Claude%20code/file-20260113152908873.png)
+![](images/04-claude-codel-20260113152908873.jpg)
 
 等待安装完成。
 
-![](./images/4.Claude%20code/file-20260113152908869.png)
+![](images/04-claude-codel-20260113152908869.jpg)
 
 ---
 
@@ -42,13 +42,13 @@ next: Extensions/01-skills
 
 按 `Command + 空格` 搜索 **Terminal** 并打开。
 
-![](./images/4.Claude%20code/file-20260113152908876%201.png)
+![](images/04-claude-codel-20260113152908876-1.jpg)
 
 在打开的窗口中输入 `brew install --cask claude-code` 并按下 `Enter`，等待安装完成即可成功安装 Claude Code。
 
-![](./images/4.Claude%20code/file-20260120130522281.png)
+![](images/04-claude-codel-20260120130522281.jpg)
 
-![](./images/4.Claude%20code/file-20260120130739744.png)
+![](images/04-claude-codel-20260120130739744.jpg)
 
 > **命令解释：**
 >
@@ -63,11 +63,11 @@ next: Extensions/01-skills
 
 在终端输入 `claude` 即可打开 Claude Code 的窗口。
 
-![](./images/Toolkit/image36.png)
+![](images/image36.jpg)
 
 下面是对 Claude Code 窗口元素的简单介绍。在后续章节中，我们会详细介绍它们。
 
-![](./images/4.Claude%20code/file-20260113152908866.png)
+![](images/04-claude-codel-20260113152908866.jpg)
 
 ---
 
@@ -92,7 +92,7 @@ next: Extensions/01-skills
 - ✅ 信任Claude的操作且希望提高效率
 - ✅ 自动化工作流程
 
-![](./images/Toolkit/image38.png)
+![](images/image38.jpg)
 
 ---
 
@@ -106,7 +106,7 @@ Claude 会先制定完整计划，经你批准后再执行。它提供了一个 
 - ✅ 希望在执行前审查整体方案
 - ✅ 重要或风险较高的任务
 
-![](./images/Toolkit/image39.png)
+![](images/image39.jpg)
 
 ---
 
@@ -120,7 +120,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 - ✅ 信任Claude的代码修改
 - ✅ 减少交互中断
 
-![](./images/Toolkit/image40.png)
+![](images/image40.jpg)
 
 ---
 
@@ -134,7 +134,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 - ✅ 忘记特定命令时
 - ✅ 探索功能和提高效率
 
-![](./images/Toolkit/image41.png)
+![](images/image41.jpg)
 
 ---
 
@@ -148,9 +148,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 >
 > **Your user name** 是您电脑的登录名，可通过 `win` 键查看。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919863.png)
+![](images/04-claude-codel-20260113152919863.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919861.png)
+![](images/04-claude-codel-20260113152919861.jpg)
 
 添加以下字段到 settings.json 文件中：
 
@@ -167,11 +167,11 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 > - `"defaultMode"`：默认模式
 > - `"bypassPermissions"`：将该模式添加为 Claude Code 启动默认模式
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919858.png)
+![](images/04-claude-codel-20260113152919858.jpg)
 
 重新启动 Claude Code, 可以发现 `bypass permissions` 模式已被打开。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919854.png)
+![](images/04-claude-codel-20260113152919854.jpg)
 
 ---
 
@@ -179,7 +179,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 打开 `Home → .claude → settings.json` 的路径。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919853.png)
+![](images/04-claude-codel-20260113152919853.jpg)
 
 添加以下字段到 settings.json 文件中：
 
@@ -196,11 +196,11 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 > - `"defaultMode"`：默认模式
 > - `"bypassPermissions"`：将该模式添加为 Claude Code 启动默认模式
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919858.png)
+![](images/04-claude-codel-20260113152919858.jpg)
 
 重新启动 Claude Code, 可以发现 `bypass permissions` 模式已被打开。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919854.png)
+![](images/04-claude-codel-20260113152919854.jpg)
 
 ---
 
@@ -224,13 +224,13 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 压缩上下文；当空间剩 20% 时建议主动使用，提升上下文利用效率。
 
-![](./images/Toolkit/image42.png)
+![](images/image42.jpg)
 
 >[!TIP]
 >
 > 一般而言，Claude Code 会自动压缩上下文，因而不必要主动压缩上下文。
 
-![](./images/Toolkit/image43.png)
+![](images/image43.jpg)
 
 ---
 
@@ -238,9 +238,9 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 导出聊天记录；可将记录再发给 AI 参考。
 
-![](./images/Toolkit/image44.png)
+![](images/image44.jpg)
 
-![](./images/Toolkit/image45.png)
+![](images/image45.jpg)
 
 ---
 
@@ -248,7 +248,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 该命令能调出Claude Code的配置窗口，修改默认配置。
 
-![](./images/Toolkit/image46.png)
+![](images/image46.jpg)
 
 ---
 
@@ -264,7 +264,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 | **Opus 4.5** | 最强大的模型，处理复杂工作 | 系统设计、复杂算法、关键项目 |
 | **Haiku 4.5** | 最快速的模型，快速响应 | 快速查询、简单脚本、语法检查 |
 
-![](./images/Toolkit/image47.png)
+![](images/image47.jpg)
 
 ---
 
@@ -276,7 +276,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 >
 > 可以将 **上下文 Token 数**理解为一个滑动窗口：一旦达到上限，模型会挤掉最早的记忆来腾出空间。如果你发现 Claude 开始遗忘指令或重复已解决的问题，通常是因为关键上下文已超出窗口范围。此时，建议使用 **/compact** 命令来精简并压缩上下文。
 
-![](./images/Toolkit/image48.png)
+![](images/image48.jpg)
 
 ---
 
@@ -284,7 +284,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 重置会话并清空上下文。
 
-![](./images/Toolkit/image49.png)
+![](images/image49.jpg)
 
 ---
 
@@ -296,7 +296,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 >
 > **MCP** 为 AI 模型与外部数据、工具（如数据库、本地文件或 GitHub）之间搭建统一的连接桥梁。含 **Context 7**（取最新文档）、**Firecrawl**（网页内容抓取）、**Playwright**（浏览器自动化）等。
 
-![](./images/Toolkit/image50.png)
+![](images/image50.jpg)
 
 ---
 
@@ -304,7 +304,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 可设置的不同子 **Agent**，处理不同任务，每个子 **Agent** 有独立上下文。
 
-![](./images/Toolkit/image51.png)
+![](images/image51.jpg)
 
 ---
 
@@ -316,7 +316,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 >
 > 与 **/context**（显示当前会话的 Token 使用）不同，**/usage** 显示您的整体账户使用情况，包括历史数据和所有会话的消费统计。
 
-![](./images/4.Claude%20code/file-20260113152908868.png)
+![](images/04-claude-codel-20260113152908868.jpg)
 
 ---
 
@@ -339,7 +339,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 >
 > `pwd` 为 Bash 命令，会打印当前目录的完整路径。
 
-![](./images/Toolkit/image52.png)
+![](images/image52.jpg)
 
 ---
 
@@ -347,7 +347,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 **命令模式**：用于调用 Claude 内置功能（如 `/clear` 清空上下文、`/model` 切换 AI 模型、`/cost` 查看 **Token** 消耗），是工具的核心操作入口。
 
-![](./images/Toolkit/image53.png)
+![](images/image53.jpg)
 
 ---
 
@@ -355,7 +355,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 **文件路径模式**：用于快速引用项目中的文件或目录（如 `@.zshrc`），方便 AI 定位代码文件进行分析或修改。
 
-![Graphical user interface, text AI-generated content may be ncorrect.](./images/Toolkit/image54.png)
+![Graphical user interface, text AI-generated content may be ncorrect.](images/image54.jpg)
 
 ---
 
@@ -363,7 +363,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 **后台模式**：让任务在后台执行，适合长时间运行的操作。但该模式需要访问 <https://claude.ai/code> 完成 Claude Code 的设置，并配置远程执行环境，让 Claude Code 能够在云端运行代码，才能使用该模式，否则会报以下的错误：
 
-![](./images/Toolkit/image55.png)
+![](images/image55.jpg)
 
 ---
 
@@ -394,7 +394,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 
 在家目录的 **`~/.claude/commands`** 文件夹中创建一个作为提词的可重复使用 Markdown 文件，文件名即为命令名称，然后即可在 Claude Code 中快速调用。该命令会复用 Markdown 中的提词，在当前工作目录完成任务。使用方式与 3.4.1 节一致，使用 **`/ + 命令`** 的语法进行调用。
 
-![](./images/Toolkit/image56.png)
+![](images/image56.jpg)
 
 ---
 
@@ -408,7 +408,7 @@ Claude的文件修改自动应用，无需逐个确认。该模式假设 **AI** 
 给我创建一个slash command，命名为`/memo`，这个command的作用是为当前项目创建一个memo记录进度和成果，便于重新开启对话时能在任务断开的地方继续进行。产出物是一个`memo.md`。
 ```
 
-![](./images/Toolkit/image57.png)
+![](images/image57.jpg)
 
 ---
 

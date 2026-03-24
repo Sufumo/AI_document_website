@@ -24,7 +24,7 @@ Imagine if the Mac App Store lived in your terminal — no clicking, no dragging
 
 Head over to the official Homebrew website: [https://brew.sh](https://brew.sh/)
 
-![](./images/Toolkit/image25.png)
+![](images/image25.jpg)
 
 You'll see a prominent installation command on the homepage. This is your golden ticket. Click the copy button to grab it.
 
@@ -34,7 +34,7 @@ You'll see a prominent installation command on the homepage. This is your golden
 
 Press `Command + Space`, type "Terminal", and hit Enter.
 
-![](./images/Toolkit/image26.png)
+![](images/image26.jpg)
 
 If you need a refresher on terminal basics, check out [Terminal Basics](../../../Basic-tools/01-terminal-basics) first.
 
@@ -53,7 +53,7 @@ Copy and paste this entire command into your terminal:
 > - `/bin/bash -c`: Runs that script using Bash
 > - The script handles everything else — downloading, installing, configuring
 
-![](./images/Toolkit/image27.png)
+![](images/image27.jpg)
 
 Press Enter and let the magic happen.
 
@@ -63,7 +63,7 @@ Press Enter and let the magic happen.
 
 When prompted, enter your Mac login password.
 
-![](./images/Toolkit/image320.png)
+![](images/image320.jpg)
 
 >[!WARNING]
 >
@@ -71,7 +71,7 @@ When prompted, enter your Mac login password.
 
 Press Enter when done.
 
-![](./images/Toolkit/image330.png)
+![](images/image330.jpg)
 
 ---
 
@@ -79,7 +79,7 @@ Press Enter when done.
 
 Homebrew will now download and install a bunch of stuff. This can take anywhere from a few minutes to longer depending on your internet connection. Go grab a coffee, stretch your legs, or contemplate the meaning of life.
 
-![](./images/Toolkit/image340.png)
+![](images/image340.jpg)
 
 >[!TIP]
 >

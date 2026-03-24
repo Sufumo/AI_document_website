@@ -7,157 +7,120 @@ next: Basic-tools/05-homebrew-install
 
 # Terminal Basics
 
-## What Even Is a Terminal?
+**What exactly is a terminal?**
 
-Think of a terminal as a direct hotline to your computer's brain. While you're used to clicking icons and dragging windows, the terminal lets you type commands that your computer executes immediately. No clicking, no menus — just you and your machine, having a conversation.
+A terminal is your computer’s “direct line of communication.” You’re used to clicking icons and dragging windows, but the Terminal lets you type commands directly, and your computer executes them immediately. No clicks, no menus—just you and your computer, communicating directly.
 
-Why does this matter? Because tools like Claude Code live in the terminal. If you want to use AI to help you code, you'll need to make friends with this black (or white) window first.
+Why is this important? Because tools like Claude Code live right inside the Terminal. If you want to use AI to help you write code, you’ll need to get comfortable with this black (or white) window first.
 
 ---
 
-## The Anatomy of Your Terminal Window
+## How to Open the Terminal
 
-Before you start typing commands, let's understand what you're looking at. The terminal might look intimidating at first — all that text, no buttons — but it's actually quite logical once you know the pieces.
+### Mac: Summoning the Terminal
 
-### Title Bar: What's This Window Up To?
+Press `Command + Space`, type “Terminal”, then hit Enter.
 
-#### Windows
+![](images/image260.jpg)
 
-**Windows PowerShell Example**: The title bar shows "Windows PowerShell" or "Administrator: Windows PowerShell".
+It’s that simple. You’re in.
 
-![](./images/1.OS/file-20260113152828141.png)
+
+>[!TIP]
+>
+> On a Mac, you can also right-click any folder and select “Open Terminal in This Folder.” This way, the terminal opens right where you are. Super convenient.
+
+
+![](images/image270.jpg)
+
+
+Now that you know what you’re looking at, let’s open a terminal.
+
+### Windows: Open PowerShell
+
+Press the `Windows key` (or `Win`), type “PowerShell”, then press Enter.
+
+>[!WARNING]
+>
+> To avoid permission issues later on, I recommend selecting **Run as administrator**. Your future self will thank you for it.
+
+![](images/01-terminal-basics-20260109160736263.jpg)
+
+Wait for the window to appear. When you see “Administrator” in the title bar, you’ll know you’re in administrator mode.
+
+![](images/01-terminal-basics-20260109161032035.jpg)
+## Anatomy of a Terminal Window
+
+Before you start typing commands, let’s figure out what you’re looking at. The terminal might seem a bit intimidating at first glance—it’s all text, no buttons—but once you understand the different parts, it actually makes a lot of sense.
+
+### Title Bar: What Is This Window For?
 
 #### Mac
 
 **Mac Terminal Example**: **ruby -- 01-complete-macos-setup.sh**
 
-![](./images/Terminal/image3.png)
+The title bar tells you:
 
-This title bar tells you:
-
-- **ruby**: The name of your current terminal session
-- **01-complete-macos-setup.sh**: The script file associated with the session
-- **.sh** means it's a shell script — something the terminal can execute
+- **ruby**: The name of the current terminal session
+- **01-complete-macos-setup.sh**: The name of the currently associated script file
+- **.sh** indicates that this is a shell script, which the terminal can execute
 
 >[!TIP]
 >
-> The title doesn't mean the script is running — it just tells you what's associated with this window. Think of it like a file tab name.
+> The title does not mean the script is running — it simply tells you what this window is associated with. Think of it as a file label.
 
----
+![](images/image3.jpg)
+#### Windows
 
-### The Command Prompt: Your "Ready, Set, Go" Signal
+**Windows PowerShell Example**: The title bar displays “Windows PowerShell” or “Administrator: Windows PowerShell”.
 
-This line is **critical**. It tells you the system is ready for your command. Let's break it down by operating system.
+![](images/01-terminal-basics-20260113152828141.jpg)
+### Command Prompt: Your “Ready, Set, Go” Signal
 
-#### Windows Command Prompt
-
-![](./images/1.OS/file-20260113152828140.png)
-
-| Symbol | What It Means | Why Care |
-|--------|---------------|----------|
-| **PS** | You're in PowerShell | Different from old-school CMD |
-| **C:\Windows\System32** | Your current folder | Commands happen here |
-| **>** | System is ready | Go ahead, type something |
-
-**Putting It All Together:**
-
-- Where am I working? → `C:\Windows\System32`
-- Is the system ready? → `>` (yes!)
-- Where will my typing appear? → Right after `>`, at the blinking cursor
-
----
+This line is **absolutely crucial**. It tells you the system is ready to receive your commands. Let’s break it down by operating system.
 
 #### Mac Command Prompt
 
-![](./images/Terminal/image5.png)
-
-| Symbol | What It Means | Why Care |
-|--------|---------------|----------|
-| **selenagupSelena** | Your username | Who's logged in |
+| Symbol | Meaning | Why It Matters |
+|------|------|------------|
+| **User** | Your username | Who is currently logged in |
 | **~** | Home directory | Your personal folder |
-| **%** | Ready for input | Type away! |
+| **%** | Ready for input | Go ahead! |
 
-**The `~` Symbol Explained:**
+The tilde `~` is a shortcut to your home directory. Instead of typing `/Users/your-name`, you just see `~`. Clean and simple.
+![](images/image5.jpg)
 
-The tilde `~` is a shortcut for your home directory. Instead of typing `/Users/yourname`, you just see `~`. Clean and simple.
+**Putting it all together:**
 
-Other paths you might encounter:
-
-| Path | What It Is |
-|------|------------|
-| `~/Desktop` | Your desktop |
-| `~/Documents` | Your documents |
-| `/usr/local/bin` | System programs |
-
-**The Prompt Symbol:**
-
-| Symbol | Shell Type |
-|--------|------------|
-| `%` | zsh (default on modern macOS) |
-| `$` | bash |
-| `#` | root/administrator |
-
->[!WARNING]
->
-> If you ever see `#` as your prompt symbol, proceed with caution. You have full system access, which means you can accidentally break things.
-
-**Putting It All Together:**
-
-![](./images/Terminal/image6.png)
-
-- Who's operating? → `selenagupSelena` (that's you!)
-- Where am I? → `~` (home sweet home)
+- Who’s in control? → `User` (that’s you!)
+- Who’s doing this? → `~` (Home, sweet home)
 - Is the system ready? → `%`
-- Where do I type? → Blinking cursor, right here
+- Where do I type? → The blinking cursor—right here
 
-![](./images/Terminal/image7.png)
+![](images/image6.jpg)
+#### Windows Command Prompt
 
----
+| Symbol | Meaning | Why it matters |
+|------|------|------------|
+| **PS** | You are in PowerShell | Unlike the old-style CMD |
+| **C:\Windows\System32** | The folder you are currently in | Commands will be executed here |
+| **>** | The system is ready | Go ahead, type something |
 
-## How to Open Terminal
+**Putting it all together:**
 
-Now that you know what you're looking at, let's actually open one.
+- Where am I now? → `C:\Windows\System32`
+- Is the system ready? → `>` (Yes!)
+- Where will my input appear? → After `>`, at the blinking cursor
 
-### Windows: Getting PowerShell
+![](images/01-terminal-basics-20260113152828140.jpg)
+**Summary**
 
-Press the `Windows key` (or `Win`), type "PowerShell", and hit Enter.
-
->[!WARNING]
->
-> To avoid permission headaches later, I recommend selecting **Run as Administrator**. Future you will thank present you.
-
-![](./images/Windows/file-20260109160736263.png)
-
-Wait for the window to appear. You'll know you're in admin mode when you see "Administrator" in the title bar.
-
-![](./images/Windows/file-20260109161032035.png)
-
----
-
-### Mac: Summoning Terminal
-
-Press `Command + Space`, type "Terminal", and hit Enter.
-
-![](./images/Toolkit/image260.png)
-
-That's it. You're in.
-
-![](./images/Toolkit/image270.png)
-
->[!TIP]
->
-> On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.
-
----
-
-## Summary
-
-1. **Terminal** = direct text-based communication with your computer
-2. **Command prompt** = the "I'm ready" signal (look for `>`, `%`, or `$`)
-3. **Windows**: Open PowerShell as Administrator
-4. **Mac**: `Command + Space` → "Terminal"
+1. **Terminal** = Text-based communication directly with your computer
+2. **Mac**: `Command + Space` → “Terminal”
+3. **Windows**: Open PowerShell as an administrator
+4. **Command Prompt** = The signal that says “I'm ready” (look for `>`, `%`, or `$`)
 5. **You're ready** to use command-line tools like Claude Code!
 
 ---
 
-*Still nervous? Don't worry. The best way to learn the terminal is to use it. Every command you run makes you a little more comfortable. You've got this.*
+*Still nervous? Don’t worry. The best way to learn the terminal is to use it. Every time you run a command, you’ll feel a little more comfortable. You’ve got this.*

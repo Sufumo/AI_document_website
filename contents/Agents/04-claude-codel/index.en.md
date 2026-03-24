@@ -22,15 +22,15 @@ next: Extensions/01-skills
 
 Press the `Win` key to search for PowerShell and open it.
 
-![](./images/4.Claude%20code/file-20260113152908875.png)
+![](images/04-claude-codel-20260113152908875.jpg)
 
 Type `winget install Anthropic.ClaudeCode` in the command line and press Enter to install Claude Code.
 
-![](./images/4.Claude%20code/file-20260113152908873.png)
+![](images/04-claude-codel-20260113152908873.jpg)
 
 Wait for the installation to finish.
 
-![](./images/4.Claude%20code/file-20260113152908869.png)
+![](images/04-claude-codel-20260113152908869.jpg)
 
 ---
 
@@ -42,13 +42,13 @@ Wait for the installation to finish.
 
 Press `Command + Space` to search **Terminal** and open it.
 
-![](./images/4.Claude%20code/file-20260113152908876%201.png)
+![](images/04-claude-codel-20260113152908876-1.jpg)
 
 Type `brew install --cask claude-code` in the window and press `Enter`. When the process finishes, Claude Code will be installed.
 
-![](./images/4.Claude%20code/file-20260120130522281.png)
+![](images/04-claude-codel-20260120130522281.jpg)
 
-![](./images/4.Claude%20code/file-20260120130739744.png)
+![](images/04-claude-codel-20260120130739744.jpg)
 
 > **Command Explanation:**
 >
@@ -63,11 +63,11 @@ Type `brew install --cask claude-code` in the window and press `Enter`. When the
 
 Type `claude` in the terminal and you can open the Claude Code window.
 
-![](./images/Toolkit/image36.png)
+![](images/image36.jpg)
 
 Here's a simple introduction to the Claude Code window's elements. In the following sections, we'll introduce them in detail.
 
-![](./images/4.Claude%20code/file-20260113152908866.png)
+![](images/04-claude-codel-20260113152908866.jpg)
 
 ---
 
@@ -92,7 +92,7 @@ Allows Claude to execute commands directly without confirmation each time. It br
 - ✅ Trust Claude's actions and want to improve efficiency
 - ✅ Automated workflows
 
-![](./images/Toolkit/image38.png)
+![](images/image38.jpg)
 
 ---
 
@@ -106,7 +106,7 @@ Claude creates a complete plan first, then executes after your approval. It offe
 - ✅ Review the overall approach before execution
 - ✅ Important or high-risk tasks
 
-![](./images/Toolkit/image39.png)
+![](images/image39.jpg)
 
 ---
 
@@ -120,7 +120,7 @@ Claude's file modifications are automatically applied without individual confirm
 - ✅ Trust Claude's code changes
 - ✅ Reducing interaction interruptions
 
-![](./images/Toolkit/image40.png)
+![](images/image40.jpg)
 
 ---
 
@@ -134,7 +134,7 @@ Displays help menu for all available commands and shortcuts. The interactive fee
 - ✅ Forget specific commands
 - ✅ Exploring features and improving efficiency
 
-![](./images/Toolkit/image41.png)
+![](images/image41.jpg)
 
 ---
 
@@ -148,9 +148,9 @@ Open `This PC → C: → Users → **Your user name** → .claude → settings.j
 >
 > **Your user name** is the login name of your computer and can be viewed by pressing the `win` key.
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919863.png)
+![](images/04-claude-codel-20260113152919863.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919861.png)
+![](images/04-claude-codel-20260113152919861.jpg)
 
 Add the following fields to the settings.json file:
 
@@ -167,11 +167,11 @@ Add the following fields to the settings.json file:
 > - `"defaultMode"`: Default mode setting
 > - `"bypassPermissions"`: Set bypass permissions mode as default
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919858.png)
+![](images/04-claude-codel-20260113152919858.jpg)
 
 Restart Claude Code and you will find that the `bypass permissions` mode has been turned on.
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919854.png)
+![](images/04-claude-codel-20260113152919854.jpg)
 
 ---
 
@@ -179,7 +179,7 @@ Restart Claude Code and you will find that the `bypass permissions` mode has bee
 
 Open `Home → .claude → settings.json`.
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919853.png)
+![](images/04-claude-codel-20260113152919853.jpg)
 
 Add the following fields to the settings.json file:
 
@@ -196,11 +196,11 @@ Add the following fields to the settings.json file:
 > - `"defaultMode"`: Default mode setting
 > - `"bypassPermissions"`: Set bypass permissions mode as default
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919858.png)
+![](images/04-claude-codel-20260113152919858.jpg)
 
 Restart Claude Code and you will find that the `bypass permissions` mode has been turned on.
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919854.png)
+![](images/04-claude-codel-20260113152919854.jpg)
 
 ---
 
@@ -224,13 +224,13 @@ Beyond standard web-based LLM interactions, Claude Code provides specialized com
 
 Compress the context; When 20% of the space is left, it is recommended to use it proactively to enhance the efficiency of context utilization.
 
-![](./images/Toolkit/image42.png)
+![](images/image42.jpg)
 
 >[!TIP]
 >
 > Generally speaking, Claude Code automatically compresses the context, so there's no need to actively compress it.
 
-![](./images/Toolkit/image43.png)
+![](images/image43.jpg)
 
 ---
 
@@ -238,9 +238,9 @@ Compress the context; When 20% of the space is left, it is recommended to use it
 
 Export chat records; The records can be sent back to the AI for reference.
 
-![](./images/Toolkit/image44.png)
+![](images/image44.jpg)
 
-![](./images/Toolkit/image45.png)
+![](images/image45.jpg)
 
 ---
 
@@ -248,7 +248,7 @@ Export chat records; The records can be sent back to the AI for reference.
 
 This command can bring up the configuration window of Claude Code and modify the default configuration.
 
-![](./images/Toolkit/image46.png)
+![](images/image46.jpg)
 
 ---
 
@@ -264,7 +264,7 @@ This command can switch the large language model used by Claude Code.
 | **Opus 4.5** | Most capable model for complex work | System design, complex algorithms, critical projects |
 | **Haiku 4.5** | Fastest model for quick answers | Quick queries, simple scripts, syntax checks |
 
-![](./images/Toolkit/image47.png)
+![](images/image47.jpg)
 
 ---
 
@@ -276,7 +276,7 @@ This command displays the **token** usage for the current session.
 >
 > Think of the **context window** as a sliding window: once the **token** limit is reached, the model automatically "pushes out" the earliest memories to make room. If Claude starts forgetting instructions or repeating issues that have already been addressed, it usually means the critical context has fallen out of range. In such cases, use **/compact** to streamline your context.
 
-![](./images/Toolkit/image48.png)
+![](images/image48.jpg)
 
 ---
 
@@ -284,7 +284,7 @@ This command displays the **token** usage for the current session.
 
 Reset session and clear context.
 
-![](./images/Toolkit/image49.png)
+![](images/image49.jpg)
 
 ---
 
@@ -296,7 +296,7 @@ Manage **MCP** Extensions: View installed tools and enable cross-platform integr
 >
 > **MCP (Model Context Protocol)** serves as a unified bridge between AI models and external resources. It empowers Claude to interact directly with tools like **Context 7** (fetching latest docs), **Firecrawl** (web scraping), and **Playwright** (browser automation), providing seamless access to databases, local files, and GitHub repositories.
 
-![](./images/Toolkit/image50.png)
+![](images/image50.jpg)
 
 ---
 
@@ -304,7 +304,7 @@ Manage **MCP** Extensions: View installed tools and enable cross-platform integr
 
 Different sub-**agents** that can be set up handle different tasks, and each sub-**agent** has an independent context.
 
-![](./images/Toolkit/image51.png)
+![](images/image51.jpg)
 
 ---
 
@@ -316,7 +316,7 @@ View your **token** usage statistics and account-level consumption information.
 >
 > Unlike **/context**, which shows token usage for the current session, **/usage** displays your overall account usage, including historical data and consumption across all sessions.
 
-![](./images/4.Claude%20code/file-20260113152908868.png)
+![](images/04-claude-codel-20260113152908868.jpg)
 
 ---
 
@@ -339,7 +339,7 @@ Here's the deal: Beyond standard commands, Claude Code offers three special inpu
 >
 > `pwd` is a Bash command that prints the full path of the current directory.
 
-![](./images/Toolkit/image52.png)
+![](images/image52.jpg)
 
 ---
 
@@ -347,7 +347,7 @@ Here's the deal: Beyond standard commands, Claude Code offers three special inpu
 
 **Command mode**: Calls Claude's built-in functions (such as `/clear` to clear context, `/model` to switch AI models, `/cost` to view **token** consumption). This is the core entry point for operating the tool.
 
-![](./images/Toolkit/image53.png)
+![](images/image53.jpg)
 
 ---
 
@@ -355,7 +355,7 @@ Here's the deal: Beyond standard commands, Claude Code offers three special inpu
 
 **File path mode**: Quickly reference files/directories in the project (such as `@.zshrc`), helping the AI locate code files for analysis or modification.
 
-![Graphical user interface, text AI-generated content may be ncorrect.](./images/Toolkit/image54.png)
+![Graphical user interface, text AI-generated content may be ncorrect.](images/image54.jpg)
 
 ---
 
@@ -363,7 +363,7 @@ Here's the deal: Beyond standard commands, Claude Code offers three special inpu
 
 **Background mode**: Execute tasks in the background, suitable for long-running operations. However, to use this mode, you need to access <https://claude.ai/code> to set up Claude Code and configure the remote execution environment so that Claude Code can run code in the cloud. Otherwise, the following error will be reported:
 
-![](./images/Toolkit/image55.png)
+![](images/image55.jpg)
 
 ---
 
@@ -394,7 +394,7 @@ Here's the deal: Claude Code lets you create reusable custom commands. Think of 
 
 Create a reusable Markdown file as a prompt in the **`~/.claude/commands`** folder. The file name is the command name, and then it can be quickly invoked in Claude Code. This command will reuse the prompt text in the Markdown file and complete the task in the current working directory. The usage is consistent with Section 3.4.1 and is invoked using the **`/ + command`** syntax.
 
-![](./images/Toolkit/image56.png)
+![](images/image56.jpg)
 
 ---
 
@@ -408,7 +408,7 @@ Alternatively, commands can also be added by directly asking Claude Code to gene
 Create a slash command for me and name it `/memo`. The function of this command is to create a memo for the current project to record the progress and results, so that when restarting the conversation, it can continue at the point where the task was disconnected. The output is a `memo.md`.
 ```
 
-![](./images/Toolkit/image57.png)
+![](images/image57.jpg)
 
 ---
 

@@ -32,17 +32,17 @@ winget install voidtools.Everything
 > - `install`: The action to perform
 > - `voidtools.Everything`: The unique ID for Everything (found via `winget search everything`)
 
-![](./images/Windows/file-20260111122150310.png)
+![](images/02-windows-os-basics-20260111122150310.jpg)
 
 ### Step 2: Launch and Search
 
 After installation, you'll find an **Everything** shortcut on your desktop. Double-click to open it.
 
-![](./images/Windows/file-20260111122844126.png)
+![](images/02-windows-os-basics-20260111122844126.jpg)
 
 Type anything in the search box — a filename, a partial name, even content inside files (if you enable content search). Results appear instantly.
 
-![](./images/Windows/file-20260111123112848.png)
+![](images/02-windows-os-basics-20260111123112848.jpg)
 
 >[!TIP]
 >
@@ -58,19 +58,19 @@ If your Windows is in Chinese and you want to switch to English (or vice versa),
 
 Press `Win`, type "settings", and hit Enter.
 
-![](./images/1.OS/file-20260113152828153.png)
+![](images/02-windows-os-basics-20260113152828153.jpg)
 
 ### Step 2: Navigate to Language Settings
 
 Go to **Time & language** → **Language & region**.
 
-![](./images/1.OS/file-20260113152828152.png)
+![](images/02-windows-os-basics-20260113152828152.jpg)
 
 ### Step 3: Add or Change Language
 
 Here you can add new languages and set your preferred one as default. Windows will download the language pack and apply it after you sign out and back in.
 
-![](./images/1.OS/file-20260113152828151.png)
+![](images/02-windows-os-basics-20260113152828151.jpg)
 
 ---
 
@@ -92,18 +92,18 @@ Let's fix this:
 
 **Step 1**: Open File Explorer, click the **...** icon in the top-right corner, and select **Options**.
 
-![](./images/1.OS/file-20260113152828149.png)
+![](images/02-windows-os-basics-20260113152828149.jpg)
 
 **Step 2**: Switch to the **View** tab. Make these changes:
 
 - ✅ Check **Show hidden files, folders, and drives**
 - ❌ Uncheck **Hide extensions for known file types**
 
-![](./images/1.OS/file-20260113152828148.png)
+![](images/02-windows-os-basics-20260113152828148.jpg)
 
 **Step 3**: Click **Apply** → **OK**.
 
-![](./images/1.OS/file-20260113152828147.png)
+![](images/02-windows-os-basics-20260113152828147.jpg)
 
 >[!TIP]
 >
@@ -115,13 +115,13 @@ Let's fix this:
 
 At the top of File Explorer, you'll see the path bar showing your current location. Click any folder in the path to jump there instantly.
 
-![](./images/1.OS/file-20260113152828144.png)
+![](images/02-windows-os-basics-20260113152828144.jpg)
 
 >[!TIP]
 >
 > Right-click any folder in File Explorer and select **Open in Terminal** to launch a terminal already navigated to that location. Super handy for running scripts.
 
-![](./images/1.OS/file-20260113152828146.png)
+![](images/02-windows-os-basics-20260113152828146.jpg)
 
 ---
 
@@ -136,11 +136,11 @@ Press `Win`, search for an app (like Everything), then:
 - **Pin to Start** → Adds it to your Start menu tiles
 - **Pin to taskbar** → Adds it to your bottom taskbar for one-click access
 
-![](./images/1.OS/file-20260113152828142.png)
+![](images/02-windows-os-basics-20260113152828142.jpg)
 
 Now press `Win` again — you'll see your pinned apps ready to launch.
 
-![](./images/Windows/file-20260111123743239.png)
+![](images/02-windows-os-basics-20260111123743239.jpg)
 
 | Location | Best For |
 |----------|----------|

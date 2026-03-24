@@ -24,7 +24,7 @@ next: Agents/01-GLM-configuration
 
 打开 Homebrew 官网：[https://brew.sh](https://brew.sh/)
 
-![](./images/Toolkit/image25.png)
+![](images/image25.jpg)
 
 首页上有一个醒目的安装命令。这是你的入场券。点击复制按钮把它复制下来。
 
@@ -34,7 +34,7 @@ next: Agents/01-GLM-configuration
 
 按 `Command + 空格`，输入 "Terminal"，然后按回车。
 
-![](./images/Toolkit/image26.png)
+![](images/image26.jpg)
 
 如果你需要复习终端基础知识，先看看 [Terminal 基础](../../../Basic-tools/01-terminal-basics)。
 
@@ -53,7 +53,7 @@ next: Agents/01-GLM-configuration
 > - `/bin/bash -c`：用 Bash 运行那个脚本
 > - 脚本会处理剩下的一切 —— 下载、安装、配置
 
-![](./images/Toolkit/image27.png)
+![](images/image27.jpg)
 
 按下回车，让魔法开始。
 
@@ -63,7 +63,7 @@ next: Agents/01-GLM-configuration
 
 当提示时，输入你的 Mac 登录密码。
 
-![](./images/Toolkit/image320.png)
+![](images/image320.jpg)
 
 >[!WARNING]
 >
@@ -71,7 +71,7 @@ next: Agents/01-GLM-configuration
 
 输完后按回车。
 
-![](./images/Toolkit/image330.png)
+![](images/image330.jpg)
 
 ---
 
@@ -79,7 +79,7 @@ next: Agents/01-GLM-configuration
 
 Homebrew 现在会下载和安装一堆东西。这可能需要几分钟到更长时间，取决于你的网络连接。去倒杯咖啡，活动活动腿脚，或者思考一下人生的意义。
 
-![](./images/Toolkit/image340.png)
+![](images/image340.jpg)
 
 >[!TIP]
 >

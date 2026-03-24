@@ -20,9 +20,9 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 按 `Command + 空格` 开始输入。Spotlight 可以搜索应用、文件、邮件、联系人，甚至可以做计算和货币换算。
 
-![](./images/Mac/file-20260107123351255.png)
+![](images/03-mac-os-basics-20260107123351255.jpg)
 
-![](./images/Mac/file-20260107123528095.png)
+![](images/03-mac-os-basics-20260107123528095.jpg)
 
 >[!TIP]
 >
@@ -38,13 +38,13 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 进入 **System Settings（系统设置）** → **General（通用）** → **Language & Region（语言与区域）**。
 
-![](./images/Mac/file-20260106175129911.png)
+![](images/03-mac-os-basics-20260106175129911.jpg)
 
 ### 步骤二：添加并优先你的语言
 
 将 **English**（或你偏好的语言）添加到"Preferred Languages"，并拖到顶部。macOS 会在重启或注销后更新。
 
-![](./images/Mac/file-20260106175220146.png)
+![](images/03-mac-os-basics-20260106175220146.jpg)
 
 ---
 
@@ -54,7 +54,7 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 **Finder** 是 macOS 文件管理的核心。点击 Dock 中的笑脸图标（默认在左下角）打开它。
 
-![](./images/Mac/file-20260106180402157.png)
+![](images/03-mac-os-basics-20260106180402157.jpg)
 
 ---
 
@@ -70,7 +70,7 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 2. 点击 **Advanced（高级）** → 勾选 **Show all filename extensions**
 
-![](./images/Mac/file-20260106180156222.png)
+![](images/03-mac-os-basics-20260106180156222.jpg)
 
 #### 显示隐藏文件：
 
@@ -88,17 +88,17 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 **步骤一**：在 Finder 中，进入 **View** → **Show Path Bar**
 
-![](./images/Mac/file-20260107163525369.png)
+![](images/03-mac-os-basics-20260107163525369.jpg)
 
 现在你会在每个 Finder 窗口底部看到当前位置。
 
 **步骤二**：右键点击路径栏中的任意位置，在该位置打开终端
 
-![](./images/Mac/file-20260109145541008.png)
+![](images/03-mac-os-basics-20260109145541008.jpg)
 
 选择 **Open in Terminal**，你就可以运行命令了。
 
-![](./images/Mac/file-20260109145641593.png)
+![](images/03-mac-os-basics-20260109145641593.jpg)
 
 ---
 
@@ -106,11 +106,11 @@ macOS 自带 **Spotlight 搜索** —— 而且它真的很好用。不需要安
 
 **压缩**：右键点击任何文件或文件夹 → 选择 **Compress "..."** → 创建一个 `.zip` 文件
 
-![](./images/Mac/file-20260106180748623.png)
+![](images/03-mac-os-basics-20260106180748623.jpg)
 
 **解压**：双击任何 `.zip` 文件 —— macOS 原生支持
 
-![](./images/Mac/file-20260107121928478.png)
+![](images/03-mac-os-basics-20260107121928478.jpg)
 
 不需要额外的软件。它就是能用。
 
@@ -124,7 +124,7 @@ Dock 是黄金地段。杂乱的 Dock 意味着杂乱的工作流。以下是如
 
 右键点击（或双指点击）任何 Dock 图标 → **Options** → **Remove from Dock**
 
-![](./images/Mac/file-20260106175556075.png)
+![](images/03-mac-os-basics-20260106175556075.jpg)
 
 | 保留什么 | 移除什么 |
 |----------|----------|
@@ -144,11 +144,11 @@ Mac 触控板是业界最好的。让我们让它变得更好。
 
 进入 **System Settings** → **Trackpad（触控板）** → 开启 **Tap to click（轻点点按）**
 
-![](./images/Mac/file-20260107122542163.png)
+![](images/03-mac-os-basics-20260107122542163.jpg)
 
 你也可以根据自己的习惯自定义其他触控板行为。
 
-![](./images/Mac/file-20260107124740080.png)
+![](images/03-mac-os-basics-20260107124740080.jpg)
 
 ### 自定义手势
 
@@ -157,9 +157,9 @@ Mac 触控板是业界最好的。让我们让它变得更好。
 | **Look up & data detectors** | 快速查字典 | 三指轻点单词 |
 | **Secondary click** | 右键功能 | 双指点按或点击角落 |
 
-![](./images/Mac/file-20260107180059440.png)
+![](images/03-mac-os-basics-20260107180059440.jpg)
 
-![](./images/Mac/file-20260107180237427.png)
+![](images/03-mac-os-basics-20260107180237427.jpg)
 
 >[!TIP]
 >
@@ -177,17 +177,17 @@ Mac 触控板是业界最好的。让我们让它变得更好。
 
 #### 步骤一：从控制中心打开 AirDrop（屏幕右上角）
 
-![](./images/Mac/file-20260107175549496.png)
+![](images/03-mac-os-basics-20260107175549496.jpg)
 
 #### 步骤二：在任意应用中，点击 **Share** 按钮，选择 **AirDrop**
 
-![](./images/Mac/file-20260106180901363.png)
+![](images/03-mac-os-basics-20260106180901363.jpg)
 
-![](./images/Mac/file-20260107171018286.png)
+![](images/03-mac-os-basics-20260107171018286.jpg)
 
 #### 步骤三：从附近的设备列表中选择接收者
 
-![](./images/Mac/file-20260107171354103.png)
+![](images/03-mac-os-basics-20260107171354103.jpg)
 
 ### 找到你的 Mac 名称
 
@@ -195,9 +195,9 @@ Mac 触控板是业界最好的。让我们让它变得更好。
 
 点击 **Apple 菜单** → **About This Mac** → **More Info**
 
-![](./images/Mac/file-20260107175634492.png)
+![](images/03-mac-os-basics-20260107175634492.jpg)
 
-![](./images/Mac/file-20260107175752932.png)
+![](images/03-mac-os-basics-20260107175752932.jpg)
 
 你的 Mac 名称会显示在这里。这就是别人给你 AirDrop 时会看到的名称。
 

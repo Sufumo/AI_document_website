@@ -49,7 +49,7 @@ winget search python
 > - 在 winget 仓库中搜索所有匹配 "python" 的内容
 > - 返回一个列表，包含名称、ID、版本和来源
 
-![](./images/Windows/file-20260109161753557.png)
+![](images/04-winget-basics-20260109161753557.jpg)
 
 >[!TIP]
 >
@@ -70,7 +70,7 @@ winget install Python.Python.3.12
 > - 静默安装（不用点击向导）
 > - 如果需要的话，处理依赖关系
 
-![](./images/Windows/file-20260109162641973.png)
+![](images/04-winget-basics-20260109162641973.jpg)
 
 就这样。Python 已经安装到你的系统上了。
 

@@ -12,7 +12,7 @@ Visual Studio Code is essentially a workspace for viewing, editing, and managing
 
 From this perspective, VS Code can be understood as a tool that integrates file browsing, searching, and text editing, allowing you to search for, view, and modify files all within the same interface. At the same time, its capabilities can be continuously expanded by installing extensions. For example, tools like Claude Code can be used directly within VS Code, enabling you to perform development and AI-assisted tasks within the same environment.
 
-![](./images/Pasted%20image%2020260310143657.png)
+![](images/01-vscode-usage-20260310143657.jpg)
 
 ---
 
@@ -27,7 +27,7 @@ From this perspective, VS Code can be understood as a tool that integrates file 
 
 Press `Option + Space` to open the search bar, type **Terminal**, and then press Enter.
 
-![](./images/Pasted%20image%2020260303190946.png)
+![](images/01-vscode-usage-20260303190946.jpg)
 
 Copy the following “magic spell” into the terminal and press Enter:
 
@@ -35,7 +35,7 @@ Copy the following “magic spell” into the terminal and press Enter:
 brew install --cask visual-studio-code
 ```
 
-![](./images/Pasted%20image%2020260305170644.png)
+![](images/01-vscode-usage-20260305170644.jpg)
 
 > **Command Explanation:**
 >
@@ -50,7 +50,7 @@ brew install --cask visual-studio-code
 
 When the terminal returns to a state where you can type, the installation is complete.
 
-![](./images/Pasted%20image%2020260305171011.png)
+![](images/01-vscode-usage-20260305171011.jpg)
 
 ---
 
@@ -58,7 +58,7 @@ When the terminal returns to a state where you can type, the installation is com
 
 When you open VS Code for the first time, you will typically see the following interface:
 
-![](./images/Pasted%20image%2020260305171659.png)
+![](images/01-vscode-usage-20260305171659.jpg)
 
 ### Left Sidebar (Activity Panel)
 
@@ -79,14 +79,14 @@ On the left is the **Activity Panel**. Click the button in the top-left corner t
 
 Click **File → Open Folder** in the top menu, then select the target directory.
 
-![](./images/Pasted%20image%2020260305172317.png)
+![](images/01-vscode-usage-20260305172317.jpg)
 
 Once opened, you can do the following in the Explorer:
 
 - ✅ Click a folder to expand or collapse it
 - ✅ Use the toolbar to create new files, create new folders, or refresh the view
 
-![](./images/Pasted%20image%2020260305173132.png)
+![](images/01-vscode-usage-20260305173132.jpg)
 
 >[!TIP]
 >
@@ -98,7 +98,7 @@ Once opened, you can do the following in the Explorer:
 
 The **Search** bar searches for matching text throughout the entire project (including subfolders); results are highlighted, and you can quickly navigate to them by clicking the filename on the left.
 
-![](./images/Pasted%20image%2020260305173548.png)
+![](images/01-vscode-usage-20260305173548.jpg)
 
 ---
 
@@ -116,7 +116,7 @@ Click **Initialize Repository** to initialize the current folder as a version-co
 >
 > Git will only start tracking the change history of this folder after initialization is complete.
 
-![](./images/Pasted%20image%2020260305173743.png)
+![](images/01-vscode-usage-20260305173743.jpg)
 #### Basic Workflow (3 Steps)
 
 | Stage | Meaning | What You Do |
@@ -125,7 +125,7 @@ Click **Initialize Repository** to initialize the current folder as a version-co
 | **Ready to Commit** | Select the changes to save | Click the **+** next to the file |
 | **Saved** | Changes have been written to version history | Click the blue **Commit** button |
 
-![](./images/Pasted%20image%2020260305175821.png)
+![](images/01-vscode-usage-20260305175821.jpg)
 
 ---
 
@@ -133,15 +133,15 @@ Click **Initialize Repository** to initialize the current folder as a version-co
 
 The **Extensions** view is the plugin marketplace, where you can add new capabilities to VS Code.
 
-![](./images/Pasted%20image%2020260305182927.png)
+![](images/01-vscode-usage-20260305182927.jpg)
 
 >[!TIP]
 >
 > After installing plugins like **Markdown All in One** or **Md Editor**, you can preview Markdown formatting directly with WYSIWYG layout.
 
-![](./images/Pasted%20image%2020260305183558.png)
+![](images/01-vscode-usage-20260305183558.jpg)
 
-![](./images/Pasted%20image%2020260305184231.png)
+![](images/01-vscode-usage-20260305184231.jpg)
 
 ---
 
@@ -149,11 +149,11 @@ The **Extensions** view is the plugin marketplace, where you can add new capabil
 
 Click the **Terminal** icon in the top-right corner to open a terminal within VS Code, which will automatically navigate to the current project directory.
 
-![](./images/Pasted%20image%2020260305184535.png)
+![](images/01-vscode-usage-20260305184535.jpg)
 
 Click the **+** in the terminal panel to create multiple terminals; use the dropdown menu in the bottom-right corner to switch between and manage open terminals.
 
-![](./images/Pasted%20image%2020260305184747.png)
+![](images/01-vscode-usage-20260305184747.jpg)
 
 ---
 
@@ -161,7 +161,7 @@ Click the **+** in the terminal panel to create multiple terminals; use the drop
 
 Click the **Copilot / Agent** icon in the top-right corner to open the AI Assistant (GitHub Copilot by default). After entering a command in the input field, the Agent will perform the relevant task in the current directory.
 
-![](./images/Pasted%20image%2020260305190648.png)
+![](images/01-vscode-usage-20260305190648.jpg)
 
 ---
 
@@ -169,7 +169,7 @@ Click the **Copilot / Agent** icon in the top-right corner to open the AI Assist
 
 The **Command Palette** can be used to access commands, settings, extensions, and other features. Many functions not directly displayed on the main interface can be quickly found here.
 
-![](./images/Pasted%20image%2020260305191241.png)
+![](images/01-vscode-usage-20260305191241.jpg)
 
 ---
 
@@ -214,9 +214,9 @@ It doesn’t need to be complicated from the start, but **having a structure is 
 
 After opening VS Code, click **File → Open Folder** to navigate to the directory containing the files you want to work on.
 
-![](./images/Pasted%20image%2020260309111111.png)
+![](images/01-vscode-usage-20260309111111.jpg)
 
-![](images/Pasted%20image%2020260317181317.png)
+![](images/01-vscode-usage-20260317181317.jpg)
 
 ---
 
@@ -226,31 +226,31 @@ After opening VS Code, click **File → Open Folder** to navigate to the directo
 
 You can create a new folder using the button in the toolbar to the right of the folder.
 
-![](images/Pasted%20image%2020260317181528.png)
+![](images/01-vscode-usage-20260317181528.jpg)
 
 Enter a folder name and press Enter.
 
-![](images/Pasted%20image%2020260317181612.png)
+![](images/01-vscode-usage-20260317181612.jpg)
 
 #### Creating a Subfolder
 
 To create a subfolder within an existing folder, first select that folder, then click **New Folder**.
 
-![](images/Pasted%20image%2020260317181655.png)
+![](images/01-vscode-usage-20260317181655.jpg)
 
 #### Creating a New File
 
 You can also create a new file directly within a folder using the toolbar.
 
-![](images/Pasted%20image%2020260317181733.png)
+![](images/01-vscode-usage-20260317181733.jpg)
 
 The new file is empty by default; you must manually enter a file extension, such as `test.md`.
 
-![](images/Pasted%20image%2020260317181755.png)
+![](images/01-vscode-usage-20260317181755.jpg)
 
 Once created, click the file in the sidebar to view or edit its contents.
 
-![](images/Pasted%20image%2020260317181848.png)
+![](images/01-vscode-usage-20260317181848.jpg)
 
 >[!TIP]
 >
@@ -268,23 +268,23 @@ Right-click the file and select **Rename**, then enter the new filename.
 >
 > On Mac, you can also select the file first and then press Enter to rename it quickly.
 
-![](images/Pasted%20image%2020260317181926.png)
+![](images/01-vscode-usage-20260317181926.jpg)
 
-![](images/Pasted%20image%2020260317181938.png)
+![](images/01-vscode-usage-20260317181938.jpg)
 
 #### Renaming Folders
 
 The process for folders is the same: right-click to rename, or select the folder and press Enter.
 
-![](images/Pasted%20image%2020260317182048.png)
+![](images/01-vscode-usage-20260317182048.jpg)
 
 #### Deleting Files or Folders
 
 Right-click the file or folder and select **Delete** to remove it.
 
-![](images/Pasted%20image%2020260317182150.png)
+![](images/01-vscode-usage-20260317182150.jpg)
 
-![](images/Pasted%20image%2020260317182210.png)
+![](images/01-vscode-usage-20260317182210.jpg)
 
 ---
 
@@ -292,29 +292,29 @@ Right-click the file or folder and select **Delete** to remove it.
 
 When there are many project files, you can use **Search** to quickly locate content by keyword.
 
-![](./images/Pasted%20image%2020260306115131.png)
+![](images/01-vscode-usage-20260306115131.jpg)
 
 The file path is displayed above the editor.
 
-![](./images/Pasted%20image%2020260306115255.png)
+![](images/01-vscode-usage-20260306115255.jpg)
 
 Click any directory level in the path to quickly browse the files within that directory.
 
-![](./images/Pasted%20image%2020260306115349.png)
+![](images/01-vscode-usage-20260306115349.jpg)
 
 >[!TIP]
 >
 > After installing plugins for formats like PDF and Office, you can view or edit more file types directly within VS Code, reducing the need to switch between applications.
 
-![](./images/Pasted%20image%2020260306115638.png)
+![](images/01-vscode-usage-20260306115638.jpg)
 
 Type “claude” in the extension search bar to find and install the Claude Code for VS Code plugin.
 
-![](images/Pasted%20image%2020260317182540.png)
+![](images/01-vscode-usage-20260317182540.jpg)
 
 Click the icon in the top-right corner to open the Claude Code dialog window for more convenient use.
 
-![](images/Pasted%20image%2020260317182749.png)
+![](images/01-vscode-usage-20260317182749.jpg)
 
 
 ---
@@ -342,17 +342,17 @@ If you have already followed the [GLM Configuration Tutorial](../../../Agents/01
 
 Open VS Code, click **File → Open Folder**, and navigate to the target folder.
 
-![](./images/Pasted%20image%2020260309111111.png)
+![](images/01-vscode-usage-20260309111111.jpg)
 
-![](./images/Pasted%20image%2020260309111611.png)
+![](images/01-vscode-usage-20260309111611.jpg)
 
 Click the shortcut button in the top-right corner to open the Claude Code plugin dialog.
 
-![](images/Pasted%20image%2020260317183955.png)
+![](images/01-vscode-usage-20260317183955.jpg)
 
 Enter **`/file-conversion`** (the folder name for this Skill) to invoke it.
 
-![](images/Pasted%20image%2020260317184133.png)
+![](images/01-vscode-usage-20260317184133.jpg)
 
 For example, enter **please convert this PDF file to MD and place this MD file in the current folder**, then drag and drop the PDF and press Enter.
 
@@ -360,11 +360,11 @@ For example, enter **please convert this PDF file to MD and place this MD file i
 >
 > `file-conversion` requires a paid Alibaba Cloud service and an API key. We recommend testing with other Skills first.
 
-![](images/Pasted%20image%2020260317184235.png)
+![](images/01-vscode-usage-20260317184235.jpg)
 
 Once the task is complete, you will see the converted Markdown file in your workspace.
 
-![](images/Pasted%20image%2020260317185208.png)
+![](images/01-vscode-usage-20260317185208.jpg)
 
 ---
 
@@ -378,39 +378,39 @@ Simply follow the MCP provider’s instructions to complete installation and con
 
 Open VS Code, click **File → Open Folder**, and navigate to the target folder.
 
-![](./images/Pasted%20image%2020260309111111.png)
+![](images/01-vscode-usage-20260309111111.jpg)
 
-![](./images/Pasted%20image%2020260309115212.png)
+![](images/01-vscode-usage-20260309115212.jpg)
 
 Click the Claude Code icon in the top-right corner to open the extensions panel.
 
-![](images/Pasted%20image%2020260317194356.png)
+![](images/01-vscode-usage-20260317194356.jpg)
 
 Type **`/mcp`** to view the currently available MCP services.
 
-![](images/Pasted%20image%2020260317194423.png)
+![](images/01-vscode-usage-20260317194423.jpg)
 
-![](images/Pasted%20image%2020260317194437.png)
+![](images/01-vscode-usage-20260317194437.jpg)
 
 Click any MCP to view detailed information.
 
-![](images/Pasted%20image%2020260317194559.png)
+![](images/01-vscode-usage-20260317194559.jpg)
 
 Click **View tools** to see all tools provided by that MCP.
 
 For example, the **qwen-ai** MCP supports text output, translation, OCR, image understanding, web image search, web scraping, audio-to-text conversion, video understanding, and other capabilities, significantly expanding the Agent’s scope of work.
 
-![](images/Pasted%20image%2020260317194620.png)
+![](images/01-vscode-usage-20260317194620.jpg)
 
-![](images/Pasted%20image%2020260317194714.png)
+![](images/01-vscode-usage-20260317194714.jpg)
 
 For example, in Claude Code, enter **please convert this audio file to txt and save it to output folder**, then drag and drop the audio file.
 
-![](images/Pasted%20image%2020260317195139.png)
+![](images/01-vscode-usage-20260317195139.jpg)
 
 Wait a moment, and the audio content will be converted to text.
 
-![](images/Pasted%20image%2020260317195424.png)
+![](images/01-vscode-usage-20260317195424.jpg)
 
 ---
 

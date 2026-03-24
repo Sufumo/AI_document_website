@@ -33,13 +33,13 @@ prev: Apps/03-obsidian-notes
 
 右键复制文件路径。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919865.png)
+![](images/05-claude-code-workshop-20260113152919865.jpg)
 
 **Mac**
 
 右键并按住 Option 键以复制路径。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919864.png)
+![](images/05-claude-code-workshop-20260113152919864.jpg)
 
 ---
 
@@ -49,13 +49,13 @@ prev: Apps/03-obsidian-notes
 
 通过右键在 Terminal 中打开工作文件夹。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919867.png)
+![](images/05-claude-code-workshop-20260113152919867.jpg)
 
 **Mac**
 
 通过右键路径栏在 Terminal 中打开工作文件夹。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919866.png)
+![](images/05-claude-code-workshop-20260113152919866.jpg)
 
 ---
 
@@ -65,7 +65,7 @@ prev: Apps/03-obsidian-notes
 >
 > 我们强烈建议不要在源文件位置直接进行修改，以防 Claude Code 出错；应新建一个文件夹（如 `Output`）保存结果。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919850.png)
+![](images/05-claude-code-workshop-20260113152919850.jpg)
 
 >[!TIP]
 >
@@ -99,9 +99,9 @@ prev: Apps/03-obsidian-notes
 
 打开 Claude Code 并告诉它您要在哪里工作。
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919894.png)
+![](images/05-claude-code-workshop-20260113152919894.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919893.png)
+![](images/05-claude-code-workshop-20260113152919893.jpg)
 
 #### 步骤2：提词
 
@@ -113,7 +113,7 @@ prev: Apps/03-obsidian-notes
 我有一个名为 `sample_pdfs` 的文件夹，里面包含许多中文名称的文件夹。我想将所有文件夹重命名为新格式。新名称应该是：DOC-NSE 后跟4位数字（如 0001、0002、0003...），然后是短横线，然后是原来的中文名称。例如，如果原来的文件夹叫"新结构经济学"，新名称应该是"DOC-NSE-0001-新结构经济学"。请将所有文件夹从 `sample_pdfs` 复制到名为 `expected_results` 的新文件夹中，使用新名称，按原来的中文名称字母顺序排序。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919892.png)
+![](images/05-claude-code-workshop-20260113152919892.jpg)
 
 #### 步骤3：让 Claude Code 完成任务
 
@@ -133,7 +133,7 @@ Claude Code 会自动创建脚本并执行。您只需等待。
 请向我展示 `expected_results` 文件夹中的前5个文件夹，以验证重命名是否正确。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919890%201.png)
+![](images/05-claude-code-workshop-20260113152919890-1.jpg)
 
 ---
 
@@ -161,9 +161,9 @@ Claude Code 会自动创建脚本并执行。您只需等待。
 
 #### 步骤1：导航到目录
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919890.png)
+![](images/05-claude-code-workshop-20260113152919890.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919889.png)
+![](images/05-claude-code-workshop-20260113152919889.jpg)
 
 #### 步骤2：提词
 
@@ -175,7 +175,7 @@ Claude Code 会自动创建脚本并执行。您只需等待。
 我在 `sample_pdf` 文件夹中有一个 PDF 文件。文件名是"0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf"。我想从这个 PDF 文件中提取所有文本内容，并将其保存为 Markdown 文件（扩展名为 .md）。新文件应与 PDF 同名，但扩展名是 .md 而不是 .pdf。请将其保存在名为 `expected_result` 的文件夹中。从 PDF 的所有页面中提取所有文本。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919888.png)
+![](images/05-claude-code-workshop-20260113152919888.jpg)
 
 #### 步骤3：等待完成
 
@@ -207,9 +207,9 @@ Claude Code 会自动安装任何必要的工具并从 PDF 中提取文本。只
 
 #### 步骤1：导航到目录
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919887.png)
+![](images/05-claude-code-workshop-20260113152919887.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919886%201.png)
+![](images/05-claude-code-workshop-20260113152919886-1.jpg)
 
 #### 步骤2：提词
 
@@ -225,7 +225,7 @@ Claude Code 会自动安装任何必要的工具并从 PDF 中提取文本。只
 两个文件应与原始 PDF 同名，但扩展名不同（.md 和 .docx）。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919886.png)
+![](images/05-claude-code-workshop-20260113152919886.jpg)
 
 #### 步骤3：等待完成
 
@@ -257,9 +257,9 @@ Claude Code 会自动处理所有转换。只需等待它完成。
 
 #### 步骤1：导航到目录
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919885.png)
+![](images/05-claude-code-workshop-20260113152919885.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919884.png)
+![](images/05-claude-code-workshop-20260113152919884.jpg)
 
 #### 步骤2：提词
 
@@ -271,7 +271,7 @@ Claude Code 会自动处理所有转换。只需等待它完成。
 这个文件夹中有几个 HTML 文件（以 .html 结尾的文件）。我想将每个 HTML 文件转换为 Markdown 文件（.md 格式）。对于每个 HTML 文件，创建一个新的 Markdown 文件，名称相同，但扩展名是 .md 而不是 .html。从每个 HTML 文件中提取主要内容并转换为 Markdown 格式。将 Markdown 文件保存在与 HTML 文件相同的文件夹中。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919879.png)
+![](images/05-claude-code-workshop-20260113152919879.jpg)
 
 #### 步骤3：等待完成
 
@@ -303,9 +303,9 @@ Claude Code 会自动处理所有 HTML 文件并将它们转换为 Markdown。
 
 #### 步骤1：导航到目录
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919883.png)
+![](images/05-claude-code-workshop-20260113152919883.jpg)
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919881.png)
+![](images/05-claude-code-workshop-20260113152919881.jpg)
 
 #### 步骤2：提词
 
@@ -317,7 +317,7 @@ Claude Code 会自动处理所有 HTML 文件并将它们转换为 Markdown。
 我在 `sample_pdfs` 文件夹中有一个大型 PDF 文件。文件名是"DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf"。我想将这个 PDF 文件分割为多个较小的 PDF 文件。每个较小的文件应包含 50 页。通过在原文件名（.pdf 扩展名之前）添加"_part1"、"_part2"、"_part3"等来命名分割的文件。例如，第一部分应命名为"DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy_part1.pdf"。将所有分割的文件保存在名为 `expected_result` 的文件夹中。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919874.png)
+![](images/05-claude-code-workshop-20260113152919874.jpg)
 
 #### 步骤3：等待完成
 
@@ -333,7 +333,7 @@ Claude Code 会自动分割 PDF 文件。只需等待它完成。
 请向我展示 `expected_result` 文件夹中的所有分割 PDF 文件，以验证分割是否正确。
 ```
 
-![](./images/5.Claude%20Code%20Workshop/file-20260113152919871.png)
+![](images/05-claude-code-workshop-20260113152919871.jpg)
 
 ---
 
