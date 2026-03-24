@@ -1,59 +1,28 @@
+/**
+ * 右侧目录由 Hugo .TableOfContents 在编译时生成；此处仅做滚动时高亮当前章节。
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const content = document.querySelector('.doc-content');
-  const toc = document.getElementById('toc');
+  const toc = document.getElementById('TableOfContents');
   if (!content || !toc) return;
 
-  const headings = content.querySelectorAll('h2, h3, h4');
+  const headings = content.querySelectorAll('h2[id], h3[id], h4[id]');
   if (headings.length === 0) return;
 
-  const ul = document.createElement('ul');
-  let currentUl = ul;
-  let lastLevel = 2;
-
-  headings.forEach((h, i) => {
-    const level = parseInt(h.tagName.charAt(1));
-    const id = h.id || 'heading-' + i;
-    h.id = id;
-
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = '#' + id;
-    a.textContent = h.textContent.trim();
-    li.appendChild(a);
-
-    if (level > lastLevel) {
-      const childUl = document.createElement('ul');
-      if (currentUl.lastElementChild) {
-        currentUl.lastElementChild.appendChild(childUl);
-      } else {
-        const wrapperLi = document.createElement('li');
-        wrapperLi.appendChild(childUl);
-        currentUl.appendChild(wrapperLi);
-      }
-      currentUl = childUl;
-    } else if (level < lastLevel) {
-      for (let j = level; j < lastLevel; j++) {
-        currentUl = currentUl.parentElement.closest('ul') || ul;
-      }
-    }
-    currentUl.appendChild(li);
-    lastLevel = level;
-  });
-
-  toc.appendChild(ul);
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        toc.querySelectorAll('a').forEach(a => {
-          a.classList.remove('active');
-          if (a.getAttribute('href') === '#' + entry.target.id) {
-            a.classList.add('active');
-          }
-        });
-      }
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var id = entry.target.id;
+      toc.querySelectorAll('a').forEach(function(a) {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + id) {
+          a.classList.add('active');
+        }
+      });
     });
   }, { rootMargin: '-80px 0px -60% 0px' });
 
-  headings.forEach(h => observer.observe(h));
+  headings.forEach(function(h) {
+    observer.observe(h);
+  });
 });

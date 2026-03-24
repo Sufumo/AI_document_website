@@ -1,7 +1,10 @@
 /* 文档站风格（对齐 GitBook / Docusaurus 类布局：白底、细边框、蓝链、侧栏目录） */
 :root {
-  /* 1rem = 15px（见 html）；正文与 h1–h4 同档 */
+  /* 1rem = 15px（见 html）；h1>h2>h3 递减；h4 与正文同 base */
   --font-size-base: 1rem;
+  --font-size-h1: 1.6rem; /* 24px */
+  --font-size-h2: 1.4rem; /* 21px */
+  --font-size-h3: 1.2rem; /* 18px */
   --font-size-sm: 0.8667rem; /* ~13px */
   --font-size-xs: 0.8rem; /* 12px */
 
@@ -17,9 +20,9 @@
   --blockquote-bg: #f9fafb;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-  --content-width: 45%;
-  --sidebar-width: 25%;
   --nav-sidebar-width: 20%;
+  --content-width: 60%;
+  --sidebar-width: 20%;
   --toc-active-bg: rgba(53, 120, 229, 0.08);
 }
 
@@ -182,7 +185,7 @@ body {
 }
 
 .home-header h1 {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-h1);
   font-weight: 600;
   margin: 0 0 0.5rem;
   letter-spacing: -0.03em;
@@ -375,7 +378,7 @@ body {
 }
 
 .doc-content h1 {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-h1);
   font-weight: 700;
   margin: 0 0 1.25rem;
   padding-bottom: 0.75rem;
@@ -384,7 +387,7 @@ body {
 }
 
 .doc-content h2 {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-h2);
   font-weight: 700;
   margin: 2.25rem 0 1rem;
   padding-bottom: 0.5rem;
@@ -393,7 +396,7 @@ body {
 }
 
 .doc-content h3 {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-h3);
   font-weight: 600;
   margin: 1.75rem 0 0.65rem;
 }
@@ -592,6 +595,30 @@ body {
   }
 }
 
+/* GitHub 风格 [!IMPORTANT] / [!CAUTION]：复用 Note / Warning 色系 */
+.doc-content .callout-important {
+  border-color: #c7d8f0;
+  border-left: 4px solid #3578e5;
+  background: #f5f8fd;
+}
+.doc-content .callout-important .callout-header {
+  color: #1a56b8;
+}
+.doc-content .callout-important .callout-icon {
+  color: #3578e5;
+}
+.doc-content .callout-caution {
+  border-color: #f0c9a8;
+  border-left: 4px solid #e8590c;
+  background: #fff8f0;
+}
+.doc-content .callout-caution .callout-header {
+  color: #c2410c;
+}
+.doc-content .callout-caution .callout-icon {
+  color: #ea580c;
+}
+
 .doc-content ul, .doc-content ol {
   margin: 0 0 1rem;
   padding-left: 1.5rem;
@@ -674,34 +701,34 @@ body {
   letter-spacing: 0.06em;
 }
 
-.doc-toc ul {
+.doc-sidebar #TableOfContents ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.doc-toc > ul {
+.doc-sidebar #TableOfContents > ul {
   border-left: 1px solid var(--border);
 }
 
-.doc-toc ul ul {
+.doc-sidebar #TableOfContents ul ul {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
 }
 
-.doc-toc ul ul > li > a {
+.doc-sidebar #TableOfContents ul ul > li > a {
   padding-left: 0.85rem;
 }
 
-.doc-toc ul ul ul {
+.doc-sidebar #TableOfContents ul ul ul {
   padding-left: 0.65rem;
 }
 
-.doc-toc li {
+.doc-sidebar #TableOfContents li {
   margin: 0.15rem 0;
 }
 
-.doc-toc a {
+.doc-sidebar #TableOfContents a {
   color: var(--text-secondary);
   text-decoration: none;
   display: block;
@@ -712,11 +739,11 @@ body {
   line-height: 1.45;
 }
 
-.doc-toc a:hover {
+.doc-sidebar #TableOfContents a:hover {
   color: var(--accent);
 }
 
-.doc-toc a.active {
+.doc-sidebar #TableOfContents a.active {
   color: var(--accent);
   border-left-color: var(--accent);
   font-weight: 600;

@@ -51,11 +51,10 @@
   </div>
   <aside class="doc-sidebar">
     <div class="doc-toc-header">{{ i18n "toc_title" }}</div>
-    <nav class="doc-toc" id="toc"></nav>
+    {{ .TableOfContents }}
   </aside>
 </article>
 <script src="{{ "js/toc.js" | relURL }}" defer></script>
-<script src="{{ "js/callouts.js" | relURL }}" defer></script>
 <script src="{{ "js/doc-nav.js" | relURL }}" defer></script>
 <script src="{{ "js/mobile-nav.js" | relURL }}" defer></script>
 {{ end }}

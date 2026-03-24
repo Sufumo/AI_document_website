@@ -1,0 +1,27 @@
+{{ if eq .Type "alert" }}
+  {{ $icons := dict
+    "note" "📝"
+    "tip" "💡"
+    "warning" "⚠️"
+    "important" "ℹ️"
+    "caution" "⚠️"
+  }}
+  {{ $icon := index $icons .AlertType | default "💡" }}
+  <blockquote class="callout callout-{{ .AlertType }}">
+    <div class="callout-header">
+      <span class="callout-icon">{{ $icon }}</span>
+      <span class="callout-label">
+        {{ with .AlertTitle }}
+          {{ . | safeHTML }}
+        {{ else }}
+          {{ i18n .AlertType }}
+        {{ end }}
+      </span>
+    </div>
+    {{ .Text }}
+  </blockquote>
+{{ else }}
+  <blockquote>
+    {{ .Text }}
+  </blockquote>
+{{ end }}

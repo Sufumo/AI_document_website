@@ -1,38 +1,31 @@
 ---
-title: VS Code Getting Started Guide
+title: A Gentle Introduction to VSCode
 draft: false
 prev: Extensions/02-mcp
 next: Apps/03-obsidian-notes
 ---
->[!TIP]
->
-> This guide assumes you already have basic terminal and command-line skills. If not, we recommend spending 5 minutes on [Terminal Basics](../../../Basic-tools/01-terminal-basics) and [Homebrew Installation](../../../Basic-tools/05-homebrew-install); the rest will be much easier.
+# Introduction to VSCode
+
+## What is VSCode? Why is VSCode recommended?
+
+Visual Studio Code is essentially a workspace for viewing, editing, and managing files on your computer—not where the files are actually stored. Think of your computer as a room where all your files are neatly stored in a filing cabinet; VS Code is more like a desk. When you open it, you simply take out the files you need and lay them out on the desk to work on them. Any changes you make on the desk—such as editing, saving, or deleting—directly affect the original files in the filing cabinet.
+
+From this perspective, VS Code can be understood as a tool that integrates file browsing, searching, and text editing, allowing you to search for, view, and modify files all within the same interface. At the same time, its capabilities can be continuously expanded by installing extensions. For example, tools like Claude Code can be used directly within VS Code, enabling you to perform development and AI-assisted tasks within the same environment.
 
 ![](./images/Pasted%20image%2020260310143657.png)
 
 ---
 
-# VS Code Getting Started Guide
-
-## Why Choose VS Code?
-
-**VS Code is an all-in-one tool for both coding and document management—like a “notebook with superpowers”:**
-
-| Feature | What You Get | Why It Matters |
-|---------|--------------|----------------|
-| **Multi-language support** | Syntax highlighting for 100+ languages | Comfortable for code and docs |
-| **Built-in terminal** | Open a terminal inside the editor | No need to switch windows constantly |
-| **Extension marketplace** | A huge library of free extensions | Extend as you need |
-| **Version control** | Visual view of file changes | See where changes come from |
-| **AI assistant** | Copilot and Agent | Let AI help you get work done |
-
----
-
 ## Part 1: Installing VS Code
 
-### Quick Install (Recommended ✨)
+### Quick Installation (Recommended ✨)
 
-Press `Option + Space` to open Spotlight, type **Terminal**, then press Enter.
+>[!TIP]
+>
+> This section assumes you already have basic terminal and command-line skills. If you’re not familiar with these, we recommend spending 5 minutes reading [Terminal Basics](../../../Basic-tools/01-terminal-basics) and [Homebrew Installation](../../../Basic-tools/05-homebrew-install) first—it will make the rest of the process much easier.
+
+
+Press `Option + Space` to open the search bar, type **Terminal**, and then press Enter.
 
 ![](./images/Pasted%20image%2020260303190946.png)
 
@@ -44,107 +37,107 @@ brew install --cask visual-studio-code
 
 ![](./images/Pasted%20image%2020260305170644.png)
 
-> **What the command does:**
+> **Command Explanation:**
 >
-> - `brew`: Homebrew, the common package manager on macOS
-> - `install`: Run the installation
-> - `--cask`: Install a graphical application
+> - `brew`: Homebrew, the standard package manager for macOS
+> - `install`: Executes the installation
+> - `--cask`: Installs applications with a graphical user interface
 > - `visual-studio-code`: The package name for VS Code
 
 >[!NOTE]
 >
-> If you don’t have Homebrew yet, complete [Homebrew Installation](../../../Basic-tools/05-homebrew-install) first.
+> If you haven’t installed Homebrew yet, please complete the [Homebrew installation](../../../Basic-tools/05-homebrew-install) first.
 
-When the terminal is ready for input again, the installation is complete.
+When the terminal returns to a state where you can type, the installation is complete.
 
 ![](./images/Pasted%20image%2020260305171011.png)
 
 ---
 
-## Part 2: VS Code Interface Tour
+## Part 2: VS Code Interface Overview
 
-When you open VS Code for the first time, you’ll usually see this:
+When you open VS Code for the first time, you will typically see the following interface:
 
 ![](./images/Pasted%20image%2020260305171659.png)
 
-### Left Sidebar (Activity Bar)
+### Left Sidebar (Activity Panel)
 
-**Why it matters:** This is your project “control center.”
+**Why it matters**: This is your project’s “control center.”
 
-On the left is the **Activity Bar**. Use the icon at the top left to expand or collapse it. Main entries:
+On the left is the **Activity Panel**. Click the button in the top-left corner to expand or collapse it. Common shortcuts are as follows:
 
-| Icon | Tool | What It’s For |
-|------|------|----------------|
-| 📁 | **Explorer** | Browse and manage files (like Finder) |
-| 🔍 | **Search** | Search across the whole project |
-| 🔀 | **Source Control** | View changes and manage history |
-| 🧩 | **Extensions** | Install extensions to add features |
+| Icon | Tool | Main Purpose |
+|------|------|------|
+| 📁 | **Files** | Browse and manage files (similar to Finder) |
+| 🔍 | **Search** | Search for content across the entire project |
+| 🔀 | **Version Control** | View changes and manage history |
+| 🧩 | **Extensions** | Install plugins to enhance functionality |
 
 ---
 
 ### Open Your First Folder
 
-From the top menu, choose **File → Open Folder** and select your target folder.
+Click **File → Open Folder** in the top menu, then select the target directory.
 
 ![](./images/Pasted%20image%2020260305172317.png)
 
-After opening, in the Explorer you can:
+Once opened, you can do the following in the Explorer:
 
-- ✅ Click folders to expand or collapse them
-- ✅ Use the toolbar to create new files, new folders, or refresh the view
+- ✅ Click a folder to expand or collapse it
+- ✅ Use the toolbar to create new files, create new folders, or refresh the view
 
 ![](./images/Pasted%20image%2020260305173132.png)
 
 >[!TIP]
 >
-> VS Code works best with plain text files (e.g. `.txt`, `.md`, `.html`). For Word, Excel, PowerPoint, and similar formats you’ll usually need extensions or other apps.
+> VS Code is better suited for handling plain text files (such as `.txt`, `.md`, `.html`); formats like Word, Excel, and PPT typically require plugins or external applications.
 
 ---
 
 ### Search Panel
 
-The **Search** bar looks for matching text across the whole project (including subfolders). Results are highlighted; click a file name on the left to jump to it.
+The **Search** bar searches for matching text throughout the entire project (including subfolders); results are highlighted, and you can quickly navigate to them by clicking the filename on the left.
 
 ![](./images/Pasted%20image%2020260305173548.png)
 
 ---
 
-### Source Control (Git)
+### Version Control (Git)
 
 >[!TIP]
 >
-> If you’re new to Git, we recommend spending about 10 minutes on the [Git Beginner Hands-on Guide](../../../Basic-tools/06-git-basis). That guide is more systematic; this section will then be easier to follow.
+> If you're not yet familiar with Git, we recommend spending 10 minutes reading the [Git Practical Getting Started Guide](../../../Basic-tools/06-git-basis). That guide is more systematic, making it easier to get started here.
 
-The **Source Control** view gives you a graphical way to manage changes so you don’t have to memorize many commands at once.
+The **Version Control** view provides a graphical interface that lets you manage changes more intuitively, so you don’t have to memorize a bunch of commands right away.
 
-Click **Initialize Repository** to turn the current folder into a version-tracked repository.
+Click **Initialize Repository** to initialize the current folder as a version-controlled repository.
 
 >[!NOTE]
 >
-> Git only starts recording this folder’s history after initialization.
+> Git will only start tracking the change history of this folder after initialization is complete.
 
 ![](./images/Pasted%20image%2020260305173743.png)
-#### Basic workflow (3 steps)
+#### Basic Workflow (3 Steps)
 
 | Stage | Meaning | What You Do |
-|-------|---------|-------------|
-| **Changes** | Files are modified but not yet part of a commit | Edit files as usual |
-| **Staged** | Choose which changes to include in this commit | Click the **+** next to the file |
-| **Committed** | Changes are saved in version history | Click the blue **Commit** button |
+|------|---------- -|----------|
+| **Changes** | File has been modified but not yet committed | Edit the file as usual |
+| **Ready to Commit** | Select the changes to save | Click the **+** next to the file |
+| **Saved** | Changes have been written to version history | Click the blue **Commit** button |
 
 ![](./images/Pasted%20image%2020260305175821.png)
 
 ---
 
-### Extensions Marketplace
+### Extensions Market
 
-The **Extensions** view is the marketplace for add-ons. Use it to give VS Code new capabilities.
+The **Extensions** view is the plugin marketplace, where you can add new capabilities to VS Code.
 
 ![](./images/Pasted%20image%2020260305182927.png)
 
 >[!TIP]
 >
-> After installing extensions like **Markdown All in One** or **Md Editor**, you can preview Markdown in the editor and see formatting as you type.
+> After installing plugins like **Markdown All in One** or **Md Editor**, you can preview Markdown formatting directly with WYSIWYG layout.
 
 ![](./images/Pasted%20image%2020260305183558.png)
 
@@ -154,11 +147,11 @@ The **Extensions** view is the marketplace for add-ons. Use it to give VS Code n
 
 ### Built-in Terminal
 
-Click the **Terminal** icon in the top-right to open a terminal inside VS Code; it opens in your current project folder.
+Click the **Terminal** icon in the top-right corner to open a terminal within VS Code, which will automatically navigate to the current project directory.
 
 ![](./images/Pasted%20image%2020260305184535.png)
 
-Click **+** in the terminal panel to open more terminals. Use the dropdown in the bottom-right to switch or manage open terminals.
+Click the **+** in the terminal panel to create multiple terminals; use the dropdown menu in the bottom-right corner to switch between and manage open terminals.
 
 ![](./images/Pasted%20image%2020260305184747.png)
 
@@ -166,25 +159,60 @@ Click **+** in the terminal panel to open more terminals. Use the dropdown in th
 
 ### AI Assistant
 
-Click the **Copilot / Agent** icon in the top-right to open the AI assistant (GitHub Copilot by default). Type instructions in the input box; the Agent will run tasks in the current directory.
+Click the **Copilot / Agent** icon in the top-right corner to open the AI Assistant (GitHub Copilot by default). After entering a command in the input field, the Agent will perform the relevant task in the current directory.
 
 ![](./images/Pasted%20image%2020260305190648.png)
 
 ---
 
-### Command Palette
+### Command Panel
 
-Use the **Command Palette** to search for commands, settings, extensions, and more. Many features that aren’t on the main UI can be found quickly here.
+The **Command Palette** can be used to access commands, settings, extensions, and other features. Many functions not directly displayed on the main interface can be quickly found here.
 
 ![](./images/Pasted%20image%2020260305191241.png)
 
 ---
 
-## Part 3: Document Management
+## Part 3: File Management
 
-### Open a Workspace
+### Basic File Management Guidelines
 
-After opening VS Code, choose **File → Open Folder** and switch to the folder where you work with files.
+For many beginners, the biggest challenge when starting with VS Code isn’t learning how to use it, but rather **files becoming disorganized, hard to find, or even placed in the wrong locations**. The following simple rules can help you avoid most of this confusion:
+
+**1. One project, one folder**  
+Place each task or project in its own separate folder. Do not mix files from different projects together, as this will make it difficult to organize them later.
+
+**2. Use Clear File and Folder Names**  
+Try to use meaningful names, such as `report.md` or `data_analysis.docx`, and avoid arbitrary names like `test1` or `aaa`.  
+
+**3. Don’t Mix Different Types of Content**  
+For example:
+- Keep documents in one place
+- Store images or data in separate folders
+
+This will make searching and maintenance much easier later on.
+
+**4. Establish a simple directory structure**  
+You can use the following basic structure as a reference:
+
+```
+your-project/  
+├── data/        (Data files)  
+├── docs/        (Documentation)  
+├── src/         (Code)  
+└── README.md    (Project description)
+```
+
+It doesn’t need to be complicated from the start, but **having a structure is definitely better than having none**.
+
+> [!TIP]
+> 
+> Remember: VS Code is just a tool to help you “manage files”; the actual files are always in your computer’s folders. A clear file structure will save you a lot of time in the future.
+
+---
+### Open the Workspace
+
+After opening VS Code, click **File → Open Folder** to navigate to the directory containing the files you want to work on.
 
 ![](./images/Pasted%20image%2020260309111111.png)
 
@@ -192,67 +220,67 @@ After opening VS Code, choose **File → Open Folder** and switch to the folder 
 
 ---
 
-### Create Folders and Files
+### Creating Folders and Files
 
-#### Create a New Folder
+#### Creating a New Folder
 
-Use the toolbar next to a folder to create a new folder.
+You can create a new folder using the button in the toolbar to the right of the folder.
 
 ![](images/Pasted%20image%2020260317181528.png)
 
-Type the folder name and press Enter.
+Enter a folder name and press Enter.
 
 ![](images/Pasted%20image%2020260317181612.png)
 
-#### Create a Subfolder
+#### Creating a Subfolder
 
-To create a subfolder inside a folder, select that folder first, then click **New Folder**.
+To create a subfolder within an existing folder, first select that folder, then click **New Folder**.
 
 ![](images/Pasted%20image%2020260317181655.png)
 
-#### Create a New File
+#### Creating a New File
 
-You can also use the toolbar to create a new file directly inside a folder.
+You can also create a new file directly within a folder using the toolbar.
 
 ![](images/Pasted%20image%2020260317181733.png)
 
-New files are empty by default; you need to type the extension yourself, e.g. `test.md`.
+The new file is empty by default; you must manually enter a file extension, such as `test.md`.
 
 ![](images/Pasted%20image%2020260317181755.png)
 
-After creating, click the file in the sidebar to view or edit it.
+Once created, click the file in the sidebar to view or edit its contents.
 
 ![](images/Pasted%20image%2020260317181848.png)
 
 >[!TIP]
 >
-> VS Code can create plain text files like `.txt`, `.md`, `.json` directly. For Word, Excel, PowerPoint, it’s usually better to create those in their own apps.
+> VS Code can directly create plain text files such as `.txt`, `.md`, and `.json`; for files like Word, Excel, and PPT, it is generally recommended to create them in their respective applications.
 
 ---
 
-### Rename and Delete
+### Renaming and Deleting
 
-#### Rename a File
+#### Renaming a File
 
-Right-click the file and choose **Rename**, then enter the new name.
+Right-click the file and select **Rename**, then enter the new filename.
 
 >[!TIP]
 >
-> On Mac, you can also select the file and press Enter to rename it quickly.
+> On Mac, you can also select the file first and then press Enter to rename it quickly.
 
 ![](images/Pasted%20image%2020260317181926.png)
 
 ![](images/Pasted%20image%2020260317181938.png)
 
-#### Rename a Folder
+#### Renaming Folders
 
-Same idea for folders: right-click to rename, or select and press Enter.
+The process for folders is the same: right-click to rename, or select the folder and press Enter.
 
 ![](images/Pasted%20image%2020260317182048.png)
 
-#### Delete a File or Folder
+#### Deleting Files or Folders
 
-Right-click the file or folder and choose **Delete** to remove it.
+Right-click the file or folder and select **Delete** to remove it.
 
 ![](images/Pasted%20image%2020260317182150.png)
 
@@ -260,130 +288,130 @@ Right-click the file or folder and choose **Delete** to remove it.
 
 ---
 
-### Find Files Quickly
+### Quickly Find Files
 
-When you have many files, use **Search** to find content by keyword.
+When there are many project files, you can use **Search** to quickly locate content by keyword.
 
 ![](./images/Pasted%20image%2020260306115131.png)
 
-The file path appears at the top of the editor.
+The file path is displayed above the editor.
 
 ![](./images/Pasted%20image%2020260306115255.png)
 
-Click any level in the path to browse files under that folder.
+Click any directory level in the path to quickly browse the files within that directory.
 
 ![](./images/Pasted%20image%2020260306115349.png)
 
 >[!TIP]
 >
-> With extensions for PDF, Office, and other formats, you can view or edit more file types inside VS Code and switch apps less often.
+> After installing plugins for formats like PDF and Office, you can view or edit more file types directly within VS Code, reducing the need to switch between applications.
 
 ![](./images/Pasted%20image%2020260306115638.png)
 
-Search for “claude” in the Extensions search bar to find and install the Claude Code for VS Code extension.
+Type “claude” in the extension search bar to find and install the Claude Code for VS Code plugin.
 
 ![](images/Pasted%20image%2020260317182540.png)
 
-Click the icon in the top-right to open the Claude Code chat window for easier use.
+Click the icon in the top-right corner to open the Claude Code dialog window for more convenient use.
 
 ![](images/Pasted%20image%2020260317182749.png)
 
 
 ---
 
-## Part 4: Skills and MCP in Practice
+## Part 4: Hands-On with Skills and MCP
 
 > [!TIP]
 > 
-> We recommend reading [Skills Introduction](../../../Extensions/01-skills) and [MCP Introduction](../../../Extensions/02-mcp) (optional) before this section.
+> We recommend reading the [Skills Introduction](../../../Extensions/01-skills) and [MCP Introduction](../../../Extensions/02-mcp) (optional) before continuing with this chapter.
 
-### Why Skills and MCP?
+### Why Do We Need Skills and MCP?
 
-Agents are built on general-purpose models with limited knowledge and tools; support for images, audio, and other media is also limited. So we usually extend them with **Skills** and **MCP**.
+Agents are based on general-purpose large language models, which have limited knowledge bases and tool capabilities, and offer relatively limited support for multimedia tasks such as images and audio. Therefore, we typically use Skills and MCP to “extend their capabilities.”
 
-| Extension type | What it is | How to use it |
-|----------------|------------|---------------|
-| **Skills** | Text-based prompt files | Tell the Agent how to do a certain kind of task |
-| **MCP** | Ready-made tools / APIs | Let the Agent call them directly, no need to write code from scratch |
+| Extension Type | What It Is | How to Use |
+|------|------|------|
+| **Skills** | Text-based prompt files | Tell the Agent how to perform a specific type of task |
+| **MCP** | Off-the-shelf tools/APIs | Allow the Agent to call them directly without writing code from scratch |
 
-If you’ve already installed **Agent Manager** (via `agent_manager-main.zip`) using the [GLM Configuration Guide](../../../Agents/01-GLM-configuration#method-1-visual-setup-tool-recommended-) or [KIMI Configuration Guide](../../../Agents/02-KIMI-configuration#method-1-visual-setup-tool-recommended-), you can use it to install Skills and MCP as well. This section explains what they are and how to use them in VS Code. Whether you install via the app or the command line, usage is similar.
+If you have already followed the [GLM Configuration Tutorial](../../../Agents/01-GLM-configuration#Method-1-Recommended-Visual-Configuration-Tools-) or the [KIMI Configuration Tutorial](../../../Agents/02-KIMI-configuration# Method 1 - Recommended Visual Configuration Tools-) and installed **Agent Manager** (via `agent_manager-main.zip`), you can also use it to install Skills and MCPs. This section explains what they are and how to use them in VS Code. The usage is similar whether you install via the application or the command line.
 
 ---
 
-### Skills: Your Task Guide
+### Skills: Your Task Wizard
 
-Open VS Code, choose **File → Open Folder**, and switch to your target folder.
+Open VS Code, click **File → Open Folder**, and navigate to the target folder.
 
 ![](./images/Pasted%20image%2020260309111111.png)
 
 ![](./images/Pasted%20image%2020260309111611.png)
 
-Click the shortcut in the top-right to open the Claude Code extension chat window.
+Click the shortcut button in the top-right corner to open the Claude Code plugin dialog.
 
 ![](images/Pasted%20image%2020260317183955.png)
 
-Type **`/file-conversion`** (the Skill’s folder name) to invoke it.
+Enter **`/file-conversion`** (the folder name for this Skill) to invoke it.
 
 ![](images/Pasted%20image%2020260317184133.png)
 
-For example, type **please convert this pdf file to md and place this md file in the current folder**, drag in a PDF, and press Enter.
+For example, enter **please convert this PDF file to MD and place this MD file in the current folder**, then drag and drop the PDF and press Enter.
 
 >[!WARNING]
 >
-> `file-conversion` requires a paid Alibaba Cloud service and API key. Try another Skill first for a demo.
+> `file-conversion` requires a paid Alibaba Cloud service and an API key. We recommend testing with other Skills first.
 
 ![](images/Pasted%20image%2020260317184235.png)
 
-When the task finishes, you’ll see the converted Markdown file in your workspace.
+Once the task is complete, you will see the converted Markdown file in your workspace.
 
 ![](images/Pasted%20image%2020260317185208.png)
 
 ---
 
-### MCP: Your Pre-built Toolbox
+### MCP: Your Pre-built Toolkit
 
-Unlike Skills, which rely mainly on text prompts, **MCP** is usually a separate program or service. The Agent can call it directly, so you do less coding from scratch.
+Unlike Skills, which primarily rely on text prompts, **MCPs** are typically standalone programs or services. Agents can call them directly, reducing the workload of writing code from scratch.
 
-Once you’ve installed and configured an MCP following its provider’s instructions, you can see and use it in Claude Code.
+Simply follow the MCP provider’s instructions to complete installation and configuration, and you’ll be able to view and use it in Claude Code.
 
 #### Using MCP in VS Code
 
-Open VS Code, choose **File → Open Folder**, and switch to your target folder.
+Open VS Code, click **File → Open Folder**, and navigate to the target folder.
 
 ![](./images/Pasted%20image%2020260309111111.png)
 
 ![](./images/Pasted%20image%2020260309115212.png)
 
-Click the Claude Code icon in the top-right to open the extension panel.
+Click the Claude Code icon in the top-right corner to open the extensions panel.
 
-![](./images/Pasted%20image%2020260317194356.png)
+![](images/Pasted%20image%2020260317194356.png)
 
-Type **`/mcp`** to see the currently available MCP services.
+Type **`/mcp`** to view the currently available MCP services.
 
-![](./images/Pasted%20image%2020260317194423.png)
+![](images/Pasted%20image%2020260317194423.png)
 
-![](./images/Pasted%20image%2020260317194437.png)
+![](images/Pasted%20image%2020260317194437.png)
 
-Click any MCP to see its details.
+Click any MCP to view detailed information.
 
-![](./images/Pasted%20image%2020260317194559.png)
+![](images/Pasted%20image%2020260317194559.png)
 
 Click **View tools** to see all tools provided by that MCP.
 
-For example, the **qwen-ai** MCP supports text output, translation, image text recognition, image understanding, web image search, web scraping, audio-to-text, and video understanding—greatly extending what the Agent can do.
+For example, the **qwen-ai** MCP supports text output, translation, OCR, image understanding, web image search, web scraping, audio-to-text conversion, video understanding, and other capabilities, significantly expanding the Agent’s scope of work.
 
-![](./images/Pasted%20image%2020260317194620.png)
+![](images/Pasted%20image%2020260317194620.png)
 
-![](./images/Pasted%20image%2020260317194714.png)
+![](images/Pasted%20image%2020260317194714.png)
 
-For example, in Claude Code type **please convert this audio file to txt and save it to output folder**, then drag in an audio file.
+For example, in Claude Code, enter **please convert this audio file to txt and save it to output folder**, then drag and drop the audio file.
 
-![](./images/Pasted%20image%2020260317195139.png)
+![](images/Pasted%20image%2020260317195139.png)
 
-After a short wait, the audio is converted to text.
+Wait a moment, and the audio content will be converted to text.
 
-![](./images/Pasted%20image%2020260317195424.png)
+![](images/Pasted%20image%2020260317195424.png)
 
 ---
 
-*If you run into issues, don’t worry: the VS Code community has plenty of resources, and you can always ask your AI assistant—it’s there when you need it.*
+*Don’t worry if you run into issues: the VS Code community has plenty of resources; of course, you can also ask your AI assistant directly—it’s always there.*

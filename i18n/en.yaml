@@ -9,3 +9,8 @@ footer_made_by: made by Hugo
 lang_en: English
 lang_zh: 中文
 lang_switch: Language
+note: Note
+tip: Tip
+warning: Warning
+important: Important
+caution: Caution

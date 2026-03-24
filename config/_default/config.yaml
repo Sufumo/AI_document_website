@@ -50,6 +50,10 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
   highlight:
     style: github
     noClasses: false
