@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian Usage Guide | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Obsidian Usage Guide | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Obsidian Usage Guide" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Obsidian Usage Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Obsidian Usage Guide","url":"http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 class="doc-nav-current">
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> and <a href="../../../Basic-tools/05-homebrew-install/en/">Homebrew Installation</a> first. Trust me, it's worth the 5-minute investment.</p>
+</blockquote>
+
+<h1 id="obsidian-usage-guide">Obsidian Usage Guide</h1>
+
+<h2 id="the-big-picture-why-obsidian">The Big Picture: Why Obsidian?</h2>
+
+<p>Here's the deal: Obsidian is your personal knowledge base that stores everything in plain Markdown files. Think of it as a "second brain" that you fully control:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>What You Get</th>
+      <th>Why It Matters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Local-First</strong></td>
+      <td>All notes stored on your device</td>
+      <td>Your data, your rules</td>
+    </tr>
+    <tr>
+      <td><strong>Markdown-Based</strong></td>
+      <td>Universal, future-proof format</td>
+      <td>Works with any text editor</td>
+    </tr>
+    <tr>
+      <td><strong>Linking System</strong></td>
+      <td>Connect ideas like neurons</td>
+      <td>Build your knowledge network</td>
+    </tr>
+    <tr>
+      <td><strong>Extensible</strong></td>
+      <td>Rich plugin ecosystem</td>
+      <td>Customize to your workflow</td>
+    </tr>
+    <tr>
+      <td><strong>Free for Personal Use</strong></td>
+      <td>Core features are free</td>
+      <td>No subscription required</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="part-1-installing-obsidian">Part 1: Installing Obsidian</h2>
+
+<h3 id="windows-installation">Windows Installation</h3>
+
+<p>Press the <code class="language-plaintext highlighter-rouge">Win</code> key to search for PowerShell and open it.</p>
+
+<p>⚠️ <strong>Note</strong>: To avoid issues with insufficient permissions, it is recommended to select <code class="language-plaintext highlighter-rouge">Run as Administrator</code> to open PowerShell.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854509.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">winget search obsidian</code> in the PowerShell and press Enter.<br />
+在 PowerShell 输入 <code class="language-plaintext highlighter-rouge">winget search obsidian</code> 并按下回车。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854501%201.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">winget install Obsidian.Obsidian</code> in the command line and press Enter to install Obsidian.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854501.png" alt="" /></p>
+
+<p>Wait for the installation to finish.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854507%201.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854507.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mac-installation">Mac Installation</h3>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code> to search <strong>Terminal</strong> and open it.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854500.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854503.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">brew install obsidian</code> in the terminal and press Enter.</p>
+
+<p>Wait for the installation to finish.</p>
+
+<h2><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854502.png" alt="" /></h2>
+
+<h2 id="part-2-understanding-markdown">Part 2: Understanding Markdown</h2>
+
+<h3 id="why-ai-uses-markdown">Why AI Uses Markdown</h3>
+
+<p>Here's the deal: Markdown is a lightweight markup language with plain-text-formatting syntax. AI assistants like Claude use it because:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reason</th>
+      <th>What It Means</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Clear Structure</strong></td>
+      <td>Simple symbols define headers, lists, and bold text — easy for both humans and machines to read</td>
+    </tr>
+    <tr>
+      <td><strong>Standard Format</strong></td>
+      <td>Universal standard that can be easily converted to PDF, Word, or HTML</td>
+    </tr>
+    <tr>
+      <td><strong>Rich Content</strong></td>
+      <td>Supports images, tables, and even checkboxes — perfect for structured reports</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="why-you-need-to-understand-markdown">Why You Need to Understand Markdown</h3>
+
+<p>You don't need to know how to write it, but understanding its basic syntax will help you:</p>
+
+<ul>
+  <li>✅ <strong>Read AI Outputs</strong>: Better understand the structure of the reports generated by Claude Code</li>
+  <li>✅ <strong>Navigate Obsidian</strong>: Know how your notes are organized and displayed</li>
+</ul>
+
+<hr />
+
+<h3 id="basic-markdown-examples">Basic Markdown Examples</h3>
+
+<p>Here is the content of the example file <code class="language-plaintext highlighter-rouge">Untitled.md</code> in its raw Markdown format, followed by an explanation of its elements:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Ghana</span>
+<span class="gu">## Ghana</span>
+<span class="gu">### Ghana</span>
+<span class="ge">*Ghana*</span>
+<span class="gs">**Ghana**</span> Ghana
+<span class="p">-</span> Ghana
+<span class="p">![](</span><span class="sx">./images/Untitled/file-20260114094822829.png</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="element-explanation">Element Explanation</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>What It Creates</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">#</code></td>
+      <td>Level 1 header</td>
+      <td><code class="language-plaintext highlighter-rouge"># Title</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">##</code></td>
+      <td>Level 2 header</td>
+      <td><code class="language-plaintext highlighter-rouge">## Section</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">###</code></td>
+      <td>Level 3 header</td>
+      <td><code class="language-plaintext highlighter-rouge">### Subsection</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*text*</code></td>
+      <td>Italic text</td>
+      <td><em>Ghana</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">**text**</code></td>
+      <td>Bold text</td>
+      <td><strong>Ghana</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>Bullet list item</td>
+      <td><code class="language-plaintext highlighter-rouge">- Item</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">- [ ]</code></td>
+      <td>Unchecked checkbox</td>
+      <td><code class="language-plaintext highlighter-rouge">- [ ] Todo</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">- [x]</code></td>
+      <td>Checked checkbox</td>
+      <td><code class="language-plaintext highlighter-rouge">- [x] Done</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">![](path)</code></td>
+      <td>Image</td>
+      <td><code class="language-plaintext highlighter-rouge">![](./image.png)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="part-3-setting-up-your-vault">Part 3: Setting Up Your Vault</h2>
+
+<h3 id="choosing-a-vault-option">Choosing a Vault Option</h3>
+
+<p>Open Obsidian, and you'll find <strong>3 options</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854493.png" alt="file-20260113152854493" /></p>
+
+<p><strong>What is a Vault?</strong> Simply put, a <strong>Vault</strong> is your note library, which corresponds to <strong>a local folder</strong> where all Markdown (.md) files are stored. You can choose the appropriate usage method based on the following three scenarios:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Best For</th>
+      <th>What Happens</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Create new vault</strong></td>
+      <td>Starting from scratch</td>
+      <td>Creates a new folder for all your notes</td>
+    </tr>
+    <tr>
+      <td><strong>Open folder as vault</strong></td>
+      <td>Already have Markdown files</td>
+      <td>Uses existing folder as your note library</td>
+    </tr>
+    <tr>
+      <td><strong>Open vault from Obsidian Sync</strong></td>
+      <td>Paid sync users</td>
+      <td>Pulls synced library from Obsidian's cloud</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Quick decision guide:</strong></p>
+<ul>
+  <li>✅ Want to start fresh? → <strong>Create new vault</strong></li>
+  <li>✅ Already have notes in a folder? → **Open folder as vault"</li>
+  <li>✅ Using Obsidian Sync on another device? → <strong>Open vault from Obsidian Sync</strong></li>
+</ul>
+
+<p>⚠️ <strong>Note</strong>: Although Obsidian allows you to switch vaults via <strong>File → Open Vault</strong>, it's better to use a single vault to take full advantage of its note-management capabilities. Also, Obsidian cannot open a single .md file by right-clicking, unlike the Office suite.</p>
+
+<p>In this document, we'll use <strong>Create new vault</strong> as an example.</p>
+
+<hr />
+
+<h3 id="creating-a-new-vault">Creating a New Vault</h3>
+
+<p>Enter a <strong>Vault name</strong> (e.g., "Obsidian"), click <strong>Browse</strong> to select a folder, and then click <strong>Create</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854517.png" alt="file-20260113152854517" /></p>
+
+<hr />
+
+<h3 id="viewing-the-empty-vault">Viewing the Empty Vault</h3>
+
+<p>An empty vault will be created, as shown above.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854513.png" alt="file-20260113152854513" /></p>
+
+<hr />
+
+<h2 id="part-4-creating-your-first-note">Part 4: Creating Your First Note</h2>
+
+<h3 id="step-1-click-new-note">Step 1: Click "New Note"</h3>
+
+<p>Click the <strong>New Note</strong> button at the top of the left sidebar (it shows "New note" when hovered).</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854490.png" alt="new note" /></p>
+
+<hr />
+
+<h3 id="step-2-enter-the-note-name">Step 2: Enter the Note Name</h3>
+
+<p>The system will automatically fill in a file name, such as <strong>"Untitled"</strong>. You can change it to, for example, <strong>"My First Note"</strong>, and press Enter to confirm.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854496.png" alt="first note" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: In Obsidian, the file you create is a <strong>Markdown file</strong> by default. As you type, Obsidian will automatically render the Markdown syntax to display a live preview of the formatted text.</p>
+
+<hr />
+
+<h2 id="part-5-importing-notes">Part 5: Importing Notes</h2>
+
+<h3 id="step-1-import-notes">Step 1: Import Notes</h3>
+
+<p>You can import a folder of notes into Obsidian by copying it into your designated vault folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854492.png" alt="file-20260113152854492" /></p>
+
+<hr />
+
+<h3 id="step-2-find-the-imported-notes">Step 2: Find the Imported Notes</h3>
+
+<p>You can then find it in Obsidian.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854510.png" alt="file-20260113152854510" /></p>
+
+<hr />
+
+<h2 id="part-6-quick-access">Part 6: Quick Access</h2>
+
+<h3 id="pin-vault-to-the-taskbar">Pin Vault to the Taskbar</h3>
+
+<p>You can pin the Obsidian vault to the taskbar for quick access.</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854499.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854498.png" alt="" /></p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>You're now ready to use Obsidian as your personal knowledge management tool:</p>
+
+<ol>
+  <li><strong>Install</strong> Obsidian on your preferred platform</li>
+  <li><strong>Understand</strong> basic Markdown syntax</li>
+  <li><strong>Create</strong> your first vault and note</li>
+  <li><strong>Import</strong> existing notes if you have them</li>
+  <li><strong>Pin</strong> Obsidian for quick access</li>
+</ol>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? The Obsidian community is incredibly helpful. Or just explore the app — half the fun is discovering features yourself.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

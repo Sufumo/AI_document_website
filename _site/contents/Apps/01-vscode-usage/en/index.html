@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Usage Guide | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>VS Code Usage Guide | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="VS Code Usage Guide" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Apps/01-vscode-usage/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Apps/01-vscode-usage/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VS Code Usage Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"VS Code Usage Guide","url":"http://localhost:4000/AI_document_website/contents/Apps/01-vscode-usage/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 class="doc-nav-current">
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>This guide assumes you basic terminal and command line knowledge. If that sounds intimidating, take a quick detour to <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> and <a href="../../../Basic-tools/05-homebrew-install/en/">Homebrew Installation</a> first. Trust me, it's worth the 5-minute investment.</p>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260310143657.png" alt="" /></p>
+
+<hr />
+
+<h1 id="vs-code-usage-guide">VS Code Usage Guide</h1>
+
+<h2 id="the-big-picture-why-vs-code">The Big Picture: Why VS Code?</h2>
+
+<p>Here's the deal: VS Code is your all-in-one code editor and document management tool. Think of it as a supercharged text editor with superpowers:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>What You Get</th>
+      <th>Why It Matters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Multi-language Support</strong></td>
+      <td>Syntax highlighting for 100+ languages</td>
+      <td>Write code or docs in any format</td>
+    </tr>
+    <tr>
+      <td><strong>Integrated Terminal</strong></td>
+      <td>Terminal inside the editor</td>
+      <td>No more window switching</td>
+    </tr>
+    <tr>
+      <td><strong>Extension Ecosystem</strong></td>
+      <td>Thousands of free extensions</td>
+      <td>Customize to your heart's content</td>
+    </tr>
+    <tr>
+      <td><strong>Git Integration</strong></td>
+      <td>Visual version control</td>
+      <td>See changes at a glance</td>
+    </tr>
+    <tr>
+      <td><strong>AI Assistant</strong></td>
+      <td>Copilot and agent support</td>
+      <td>AI-powered coding partner</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="part-1-installing-vs-code">Part 1: Installing VS Code</h2>
+
+<h3 id="the-quick-way-recommended-">The Quick Way (Recommended ✨)</h3>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Option + Space</code> to open the search bar, type <strong>Terminal</strong>, and press Enter.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260303190946.png" alt="" /></p>
+
+<p>Copy-paste this magic spell into Terminal and hit Enter:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install</span> <span class="nt">--cask</span> visual-studio-code
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305170644.png" alt="" /></p>
+
+<blockquote>
+  <p><strong>Command Explanation:</strong></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">brew</code>: The main command for Homebrew, used to install software on Mac</li>
+    <li><code class="language-plaintext highlighter-rouge">install</code>: Tells Homebrew to install a package</li>
+    <li><code class="language-plaintext highlighter-rouge">--cask</code>: Tells Homebrew to install a graphical application (GUI), not a command-line-only tool</li>
+    <li><code class="language-plaintext highlighter-rouge">visual-studio-code</code>: The official package name for VS Code</li>
+  </ul>
+</blockquote>
+
+<p>⚠️ <strong>Note</strong>: If Homebrew is not installed yet, please install <a href="../../../Basic-tools/05-homebrew-install/en/">Homebrew</a> first.</p>
+
+<p>Wait until the terminal prompt returns; the installation is then complete.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305171011.png" alt="" /></p>
+
+<hr />
+
+<h2 id="part-2-vs-code-interface-tour">Part 2: VS Code Interface Tour</h2>
+
+<p>Here's what you're looking at when you first open VS Code:</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305171659.png" alt="" /></p>
+
+<h3 id="the-left-sidebar-activity-bar">The Left Sidebar (Activity Bar)</h3>
+
+<p><strong>Why it matters</strong>: This is your command center for navigating projects.</p>
+
+<p>The left sidebar is the <strong>Activity Bar</strong>. You can show or hide it with the top-left button. It includes:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Tool</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>📁</td>
+      <td><strong>File Explorer</strong></td>
+      <td>Browse and manage files (similar to Finder)</td>
+    </tr>
+    <tr>
+      <td>🔍</td>
+      <td><strong>Search</strong></td>
+      <td>Find text across all files in your project</td>
+    </tr>
+    <tr>
+      <td>🔀</td>
+      <td><strong>Source Control (Git)</strong></td>
+      <td>Track changes and manage versions</td>
+    </tr>
+    <tr>
+      <td>🧩</td>
+      <td><strong>Extensions</strong></td>
+      <td>Install add-ons to enhance VS Code</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="opening-your-first-folder">Opening Your First Folder</h3>
+
+<p>Click <strong>File → Open Folder</strong> in the top menu and select a folder to open.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305172317.png" alt="" /></p>
+
+<p>The File Explorer shows the opened folder. You can:</p>
+
+<ul>
+  <li>✅ Click folders to expand or collapse them</li>
+  <li>✅ Use the toolbar to create files, create folders, or refresh</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305173132.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: By default, VS Code is best suited for plain-text files (e.g. <code class="language-plaintext highlighter-rouge">.txt</code>, <code class="language-plaintext highlighter-rouge">.md</code>, <code class="language-plaintext highlighter-rouge">.html</code>). Formats such as <code class="language-plaintext highlighter-rouge">.docx</code>, <code class="language-plaintext highlighter-rouge">.xlsx</code>, and <code class="language-plaintext highlighter-rouge">.ppt</code> usually require dedicated extensions or external applications.</p>
+
+<hr />
+
+<h3 id="the-search-panel">The Search Panel</h3>
+
+<p>The <strong>Search</strong> panel finds text across all files in the opened folder and subfolders. Matches are highlighted; you can click a result to jump to that file.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305173548.png" alt="" /></p>
+
+<hr />
+
+<h3 id="git-source-control">Git Source Control</h3>
+
+<p>The <strong>Source Control</strong> (Git) view provides a graphical interface for Git commands and helps you track changes.</p>
+
+<p>Click <strong>Initialize Repository</strong> to turn the current folder into a Git repository.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305173743.png" alt="" /></p>
+
+<p>⚠️ <strong>Note</strong>: Only folders that have been initialized as a Git repository will show Git status and history.</p>
+
+<h4 id="understanding-git-workflow">Understanding Git Workflow</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>What Happens</th>
+      <th>How to Do It</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Changes</strong></td>
+      <td>Files modified but not yet staged</td>
+      <td>Edit your files</td>
+    </tr>
+    <tr>
+      <td><strong>Staged Changes</strong></td>
+      <td>Files ready to be committed</td>
+      <td>Click the <strong>+</strong> next to a file</td>
+    </tr>
+    <tr>
+      <td><strong>Committed</strong></td>
+      <td>Changes saved to Git history</td>
+      <td>Click the blue <strong>Commit</strong> button</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305175821.png" alt="" /></p>
+
+<hr />
+
+<h3 id="extensions-marketplace">Extensions Marketplace</h3>
+
+<p>The <strong>Extensions</strong> view gives access to the extension marketplace. You can install extensions here to add new features to VS Code.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305182927.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: For example, Markdown extensions such as <strong>Markdown All in One</strong> or <strong>Md Editor</strong> can render Markdown and provide a convenient preview.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305183558.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305184231.png" alt="" /></p>
+
+<hr />
+
+<h3 id="integrated-terminal">Integrated Terminal</h3>
+
+<p>Click the <strong>Terminal</strong> icon (near the top-right) to open the integrated terminal. This terminal starts in the current workspace folder, unlike a standalone Terminal app.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305184535.png" alt="" /></p>
+
+<p>Use the <strong>+</strong> in the terminal panel to open additional terminal instances. The terminal dropdown at the bottom-right lets you switch between or manage running terminals.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305184747.png" alt="" /></p>
+
+<hr />
+
+<h3 id="ai-assistant-panel">AI Assistant Panel</h3>
+
+<p>Click the <strong>Copilot / Agent</strong> icon (right side of the top bar) to open the AI assistant panel. The default is GitHub Copilot; you can type instructions for the agent to work in the current folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305190648.png" alt="" /></p>
+
+<hr />
+
+<h3 id="command-palette">Command Palette</h3>
+
+<p>The <strong>Command Palette</strong> lets you search for commands, settings, and extensions. It is especially useful for features that are not directly visible in the main UI.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260305191241.png" alt="" /></p>
+
+<hr />
+
+<h2 id="part-3-managing-documents">Part 3: Managing Documents</h2>
+
+<h3 id="opening-a-workspace">Opening a Workspace</h3>
+
+<p>Open VS Code, then click <strong>File → Open Folder</strong> to switch to the folder you want to work on.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111111.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309120523.png" alt="" /></p>
+
+<hr />
+
+<h3 id="creating-folders-and-files">Creating Folders and Files</h3>
+
+<h4 id="create-a-new-folder">Create a New Folder</h4>
+
+<p>Use the toolbar on the right side of the folder name to create a new folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309120646.png" alt="" /></p>
+
+<p>Type the folder name and press Enter.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309120817.png" alt="" /></p>
+
+<h4 id="create-a-subfolder">Create a Subfolder</h4>
+
+<p>To create a subfolder inside an existing folder, select that folder first and then click the <strong>New Folder</strong> button.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121009.png" alt="" /></p>
+
+<h4 id="create-a-new-file">Create a New File</h4>
+
+<p>You can also create a new file from the same toolbar inside an existing folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121036.png" alt="" /></p>
+
+<p>New files are empty by default, so you need to type the file extension yourself, such as <code class="language-plaintext highlighter-rouge">test.md</code>.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121215.png" alt="" /></p>
+
+<p>The empty file is now created successfully. Click the file in the sidebar to view or edit its contents.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121254.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: VS Code can directly create plain-text files such as <code class="language-plaintext highlighter-rouge">.txt</code>, <code class="language-plaintext highlighter-rouge">.md</code>, and <code class="language-plaintext highlighter-rouge">.json</code>. Files like <code class="language-plaintext highlighter-rouge">.docx</code>, <code class="language-plaintext highlighter-rouge">.xlsx</code>, and <code class="language-plaintext highlighter-rouge">.ppt</code> should still be created with their corresponding applications.</p>
+
+<hr />
+
+<h3 id="renaming-and-deleting">Renaming and Deleting</h3>
+
+<h4 id="rename-a-file">Rename a File</h4>
+
+<p>To rename a file, right-click it and choose <strong>Rename</strong>. VS Code will then let you enter a new file name.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121543.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121646.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: On Mac, you can also select a file and press Enter to rename it quickly.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121736.png" alt="" /></p>
+
+<h4 id="rename-a-folder">Rename a Folder</h4>
+
+<p>Folders can be renamed in the same way, either by right-clicking or by pressing Enter after selecting them.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121827.png" alt="" /></p>
+
+<h4 id="delete-files-or-folders">Delete Files or Folders</h4>
+
+<p>Right-click a file or folder and choose <strong>Delete</strong> to remove it.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309121920.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309122005.png" alt="" /></p>
+
+<hr />
+
+<h3 id="finding-files-quickly">Finding Files Quickly</h3>
+
+<p>For large projects, use the <strong>Search</strong> feature to quickly find files by keyword. Type a keyword in the Search panel to see matching results across the project.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306115131.png" alt="" /></p>
+
+<p>The path to the file is shown above the editor.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306115255.png" alt="" /></p>
+
+<p>Click a path segment to browse files in that folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306115349.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: You can also install extensions for specific file types (e.g. PDF, Office) to view or edit them inside VS Code. With the right extensions, VS Code can act as a versatile document viewer.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306115638.png" alt="" /></p>
+
+<hr />
+
+<h2 id="part-4-skills-and-mcp">Part 4: Skills and MCP</h2>
+
+<h3 id="the-big-picture-why-skills-and-mcp">The Big Picture: Why Skills and MCP?</h3>
+
+<p>Here's the deal: Agents are built on general-purpose language models and do not ship with large knowledge bases or many built-in tools; their ability to handle images, audio, and other multimedia is limited. <strong>Skills</strong> and <strong>MCP</strong> (Model Context Protocol) extend the agent's capabilities.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension Type</th>
+      <th>What It Is</th>
+      <th>How It Works</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Skills</strong></td>
+      <td>Text-based prompt files</td>
+      <td>Guide the agent through specific tasks</td>
+    </tr>
+    <tr>
+      <td><strong>MCP</strong></td>
+      <td>Pre-built tools and APIs</td>
+      <td>Provide direct tool access to the agent</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you followed the <a href="../../../Agents/01-GLM-configuration/en/#method-1-visual-setup-tool-recommended-">GLM Configuration Guide</a> or <a href="../../../Agents/02-KIMI-configuration/en/#method-1-visual-setup-tool-recommended-">KIMI Configuration Guide</a> earlier and installed the visual <strong>Agent Manager</strong> app (the one set up via the <code class="language-plaintext highlighter-rouge">agent_manager-main.zip</code> script), that same app can also install and manage many Skills and MCP integrations for you with a few clicks. The rest of this section focuses on what Skills and MCP are and how they appear in VS Code, whether you install them through that app or by using the command line directly.</p>
+
+<hr />
+
+<h3 id="skills-your-task-specific-guides">Skills: Your Task-Specific Guides</h3>
+
+<p>In general, a <strong>Skill</strong> is made up of one or more prompt files that describe how to perform a specific task. After you describe what you need, the agent can find and use the right skill, or you can call a skill directly with <strong><code class="language-plaintext highlighter-rouge">/skill-name</code></strong>.</p>
+
+<h4 id="finding-your-skills">Finding Your Skills</h4>
+
+<p>Claude Code looks for skills in the <strong>.claude/skills</strong> folder. Go to <strong>Go → Home</strong> to open your Home directory.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> to show hidden files, then open the <strong>.claude</strong> folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002212.png" alt="" /></p>
+
+<p>If you have installed skills before, you will see a <strong>skills</strong> folder inside <strong>.claude</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002332.png" alt="" /></p>
+
+<p>Open the <strong>skills</strong> folder to see the list of installed skills.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002359.png" alt="" /></p>
+
+<p>Each skill folder usually contains a <strong>SKILL.md</strong> file, which is the prompt file that guides the agent for that skill.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002437.png" alt="" /></p>
+
+<p>Opening <strong>SKILL.md</strong> shows the instructions. The example below is a skill that uses the Docmind MCP and Pandoc for file conversion.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002959.png" alt="" /></p>
+
+<h4 id="using-a-skill">Using a Skill</h4>
+
+<p>Open VS Code, then click <strong>File → Open Folder</strong> to switch to the folder you want to work on.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111111.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111611.png" alt="" /></p>
+
+<p>Click the shortcut button in the top-right corner to open a new terminal.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111728.png" alt="" /></p>
+
+<p>Run the command that launches Claude Code.</p>
+
+<p>⚠️ <strong>Note</strong>: This tutorial uses the <code class="language-plaintext highlighter-rouge">glm</code> command to launch Claude Code. You can replace it with the command that is available in your own environment.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111952.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309112012.png" alt="" /></p>
+
+<p>Type <strong><code class="language-plaintext highlighter-rouge">/file-conversion</code></strong> (the skill folder name from above) to invoke that skill.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306002745.png" alt="" /></p>
+
+<p>For example, type <strong>please convert this pdf file to md</strong>, drag in a PDF file, and press Enter.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309112124.png" alt="" /></p>
+
+<p>When the task finishes, the converted Markdown file will appear in the workspace.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309114546.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309114609.png" alt="" /></p>
+
+<p>Drag the generated file into the current folder.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309114711.png" alt="" /></p>
+
+<p>You will then see that <code class="language-plaintext highlighter-rouge">test.md</code> appears in the workspace.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309114736.png" alt="" /></p>
+
+<hr />
+
+<h3 id="finding-and-installing-new-skills">Finding and Installing New Skills</h3>
+
+<p>You can use the <strong>find-skills</strong> skill to search for and install new skills with Claude Code.</p>
+
+<p>Open a new terminal and run the following commands to install <strong>find-skills</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> skills@1.4.3
+skills add https://github.com/vercel-labs/skills <span class="nt">--skill</span> find-skills <span class="nt">-y</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309112648.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309112756.png" alt="" /></p>
+
+<p>Wait for the commands to finish; <strong>find-skills</strong> is then installed.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306101931.png" alt="" /></p>
+
+<p>Return to Claude Code and type <strong><code class="language-plaintext highlighter-rouge">/find-skills</code></strong> to search for skills. For example: <strong>find a skill that extracts the most crucial information structure and key sentences from a speech.</strong></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309112909.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306102616.png" alt="" /></p>
+
+<p>When the run finishes, Claude Code will list suggested skills.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306102519.png" alt="" /></p>
+
+<p>Choose one (e.g. the most downloaded) and ask Claude Code to install it, e.g.: <strong>please install this skill: jwynia/agent-skills@summarization</strong></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306102840.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Newly installed skills may not appear until you restart Claude Code.</p>
+
+<p>After installation, open a new terminal session, close the old one if needed, and launch Claude Code again in the new terminal.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309113352.png" alt="" /></p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">/skills</code>, and you should see that the <code class="language-plaintext highlighter-rouge">summarization</code> skill has been installed successfully.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309113605.png" alt="" /></p>
+
+<p>Press <strong>ESC</strong> to return to the chat. For example, type <strong>please extract the most crucial information structure and key sentences from this speech</strong> and drag in your file.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309114300.png" alt="" /></p>
+
+<p>When the run completes, you will see the extracted structure and key sentences.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306104112.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mcp-your-pre-built-tools">MCP: Your Pre-Built Tools</h3>
+
+<p>Unlike Skills (which are mostly text prompts), <strong>MCP</strong> (Model Context Protocol) exposes pre-built tools that the agent can call. This reduces the need for the agent to write code from scratch and makes behavior more predictable.</p>
+
+<p>As a user, you only need to install an MCP according to its developer's instructions, then use Claude Code to view and call it.</p>
+
+<h4 id="using-mcp-in-claude-code">Using MCP in Claude Code</h4>
+
+<p>Open VS Code, then click <strong>File → Open Folder</strong> to switch to the folder you want to work on.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309111111.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115212.png" alt="" /></p>
+
+<p>Click the shortcut button in the top-right corner to open a new terminal.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115227.png" alt="" /></p>
+
+<p>Run the command that launches Claude Code.</p>
+
+<p>⚠️ <strong>Note</strong>: This tutorial uses the <code class="language-plaintext highlighter-rouge">glm</code> command to launch Claude Code. You can replace it with the command that is available in your own environment.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115250.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115308.png" alt="" /></p>
+
+<p>Type <strong><code class="language-plaintext highlighter-rouge">/mcp</code></strong> to see the list of available MCP servers.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306004713.png" alt="" /></p>
+
+<p>Press <strong>Enter</strong> on an MCP (e.g. <strong>docmind</strong>) to see its details.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306004748.png" alt="" /></p>
+
+<p>Click <strong>View tools</strong> to see all tools provided by that MCP.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306004911.png" alt="" /></p>
+
+<p>Opening the first <strong>convert</strong> tool shows that it converts PDF to Markdown.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306005027.png" alt="" /></p>
+
+<p>Once an MCP is installed correctly, its tools are available to Claude Code. The agent will choose the right tool for the task; you can also ask it to use a specific tool.</p>
+
+<p>The following example shows <strong>qwen-ai</strong> MCP, which provides several tools: text output, translation, image OCR, image understanding, web search for images, image search, web scraping, audio transcription, and video understanding, extending the default agent.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306005358.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260306005704.png" alt="" /></p>
+
+<p>For example, in Claude Code type <strong>please convert this audio file to txt</strong> and drag in an audio file.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115436.png" alt="" /></p>
+
+<p>After a short wait, the transcribed text will appear.</p>
+
+<p><img src="/AI_document_website/contents/Apps/01-vscode-usage/images/Pasted%20image%2020260309115655.png" alt="" /></p>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? The VS Code community is huge. Or just ask your favorite AI assistant — it's literally right there.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

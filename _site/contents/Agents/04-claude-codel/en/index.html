@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Usage Guide | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Claude Code Usage Guide | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Claude Code Usage Guide" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Claude Code Usage Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Claude Code Usage Guide","url":"http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 class="doc-nav-current">
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> first. Trust me, it's worth the 5-minute investment.</p>
+</blockquote>
+
+<h1 id="claude-code-usage-guide">Claude Code Usage Guide</h1>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="install-claude-code-on-windows">Install Claude Code on Windows</h3>
+
+<p>⚠️ <strong>Note</strong>: Before installing Claude Code, please follow the <a href="../../../Basic-tools/04-winget-basics/en/">winget Basics</a> guide to learn how to use winget.</p>
+
+<p>Press the <code class="language-plaintext highlighter-rouge">Win</code> key to search for PowerShell and open it.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908875.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">winget install Anthropic.ClaudeCode</code> in the command line and press Enter to install Claude Code.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908873.png" alt="" /></p>
+
+<p>Wait for the installation to finish.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908869.png" alt="" /></p>
+
+<hr />
+
+<h3 id="install-claude-code-on-mac">Install Claude Code on Mac</h3>
+
+<p>⚠️ <strong>Note</strong>: Before installing Claude Code, please follow the <a href="../../../Basic-tools/05-homebrew-install/en/">Homebrew</a> guide to install Homebrew.</p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code> to search <strong>Terminal</strong> and open it.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908876%201.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">brew install --cask claude-code</code> in the window and press <code class="language-plaintext highlighter-rouge">Enter</code>. When the process finishes, Claude Code will be installed.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260120130522281.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260120130739744.png" alt="" /></p>
+
+<blockquote>
+  <p><strong>Command Explanation:</strong></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">brew</code>: The main command for the "Homebrew" tool, which helps install software on Mac.</li>
+    <li><code class="language-plaintext highlighter-rouge">install</code>: Tells Homebrew to install something.</li>
+    <li><code class="language-plaintext highlighter-rouge">--cask</code>: Tells Homebrew that the software being installed is a graphical application (GUI), not just a command-line tool.</li>
+    <li><code class="language-plaintext highlighter-rouge">claude-code</code>: The name of the software to install.</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="interface-overview">Interface Overview</h2>
+
+<p>Type <code class="language-plaintext highlighter-rouge">claude</code> in the terminal and you can open the Claude Code window.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image36.png" alt="" /></p>
+
+<p>Here's a simple introduction to the Claude Code window's elements. In the following sections, we'll introduce them in detail.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908866.png" alt="" /></p>
+
+<hr />
+
+<h2 id="four-modes">Four Modes</h2>
+
+<p>Here's the deal: Claude Code offers four different modes to match your workflow. Think of them as different "gears" for different situations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mode</th>
+      <th>What It Does</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Bypass Permissions</strong></td>
+      <td>Auto-execute without confirmation</td>
+      <td>Repetitive tasks, trusted workflows</td>
+    </tr>
+    <tr>
+      <td><strong>Plan Mode</strong></td>
+      <td>Plan first, execute after approval</td>
+      <td>Complex projects, high-risk tasks</td>
+    </tr>
+    <tr>
+      <td><strong>Accept Edits On</strong></td>
+      <td>Auto-apply file modifications</td>
+      <td>Fast iteration, trusted changes</td>
+    </tr>
+    <tr>
+      <td><strong>? for Shortcuts</strong></td>
+      <td>Show all commands and shortcuts</td>
+      <td>First-time users, exploring features</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1-bypass-permissions-on">1. Bypass Permissions On</h3>
+
+<p>Allows Claude to execute commands directly without confirmation each time. It breaks the traditional AI assistant cycle of <strong>"request - confirmation - execution"</strong>, completely handing over the decision-making power to the model.</p>
+
+<p><strong>Use Cases:</strong></p>
+
+<ul>
+  <li>✅ Handling many repetitive operations</li>
+  <li>✅ Trust Claude's actions and want to improve efficiency</li>
+  <li>✅ Automated workflows</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image38.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2-plan-mode">2. Plan Mode</h3>
+
+<p>Claude creates a complete plan first, then executes after your approval. It offers an <strong>"alignment moment"</strong>. Users can point out logical loopholes in the plan before execution to avoid wasting <strong>tokens</strong> on the wrong path.</p>
+
+<p><strong>Use Cases:</strong></p>
+
+<ul>
+  <li>✅ Complex projects requiring a global perspective</li>
+  <li>✅ Review the overall approach before execution</li>
+  <li>✅ Important or high-risk tasks</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image39.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3-accept-edits-on">3. Accept Edits On</h3>
+
+<p>Claude's file modifications are automatically applied without individual confirmation. This mode assumes that the local modifications made by the AI are correct. The changes can be viewed uniformly after Claude has completed a series of modifications, rather than being constantly interrupted by pop-up Windows during the modification process.</p>
+
+<p><strong>Use Cases:</strong></p>
+
+<ul>
+  <li>✅ Rapid iterative development</li>
+  <li>✅ Trust Claude's code changes</li>
+  <li>✅ Reducing interaction interruptions</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image40.png" alt="" /></p>
+
+<hr />
+
+<h3 id="4--for-shortcuts">4. ? for Shortcuts</h3>
+
+<p>Displays help menu for all available commands and shortcuts. The interactive feedback through the command line has reduced the need for users to switch to the browser to consult the official documentation.</p>
+
+<p><strong>Use Cases:</strong></p>
+
+<ul>
+  <li>✅ First-time using Claude Code</li>
+  <li>✅ Forget specific commands</li>
+  <li>✅ Exploring features and improving efficiency</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image41.png" alt="" /></p>
+
+<hr />
+
+<h2 id="set-default-mode-to-bypass-permissions">Set Default Mode to Bypass Permissions</h2>
+
+<h3 id="windows">Windows</h3>
+
+<p>Open <code class="language-plaintext highlighter-rouge">This PC → C: → Users → **Your user name** → .claude → settings.json</code>.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: <strong>Your user name</strong> is the login name of your computer and can be viewed by pressing the <code class="language-plaintext highlighter-rouge">win</code> key.</p>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919863.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919861.png" alt="" /></p>
+
+<p>Add the following fields to the settings.json file:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"defaultMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bypassPermissions"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>Field Explanation</strong>:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">"permissions"</code>: Configuration of the permission control system</li>
+    <li><code class="language-plaintext highlighter-rouge">"defaultMode"</code>: Default mode setting</li>
+    <li><code class="language-plaintext highlighter-rouge">"bypassPermissions"</code>: Set bypass permissions mode as default</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919858.png" alt="" /></p>
+
+<p>Restart Claude Code and you will find that the <code class="language-plaintext highlighter-rouge">bypass permissions</code> mode has been turned on.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919854.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mac">Mac</h3>
+
+<p>Open <code class="language-plaintext highlighter-rouge">Home → .claude → settings.json</code>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919853.png" alt="" /></p>
+
+<p>Add the following fields to the settings.json file:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"defaultMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bypassPermissions"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>Field Explanation</strong>:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">"permissions"</code>: Configuration of the permission control system</li>
+    <li><code class="language-plaintext highlighter-rouge">"defaultMode"</code>: Default mode setting</li>
+    <li><code class="language-plaintext highlighter-rouge">"bypassPermissions"</code>: Set bypass permissions mode as default</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919858.png" alt="" /></p>
+
+<p>Restart Claude Code and you will find that the <code class="language-plaintext highlighter-rouge">bypass permissions</code> mode has been turned on.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919854.png" alt="" /></p>
+
+<hr />
+
+<h2 id="common-commands">Common Commands</h2>
+
+<p>Beyond standard web-based LLM interactions, Claude Code provides specialized commands to efficiently manage the dialogue lifecycle and context flow.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>What It Does</th>
+      <th>When to Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/compact</code></td>
+      <td>Compress context</td>
+      <td>When 20% space remains</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/export</code></td>
+      <td>Export chat records</td>
+      <td>For reference or sharing</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/config</code></td>
+      <td>Open configuration</td>
+      <td>Modify default settings</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/model</code></td>
+      <td>Switch AI model</td>
+      <td>Change model capabilities</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/context</code></td>
+      <td>Show token usage</td>
+      <td>Monitor context usage</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/clear</code></td>
+      <td>Reset session</td>
+      <td>Start fresh</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/mcp</code></td>
+      <td>Manage MCP extensions</td>
+      <td>View installed tools</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/agents</code></td>
+      <td>Manage sub-agents</td>
+      <td>Independent context tasks</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/usage</code></td>
+      <td>View usage stats</td>
+      <td>Account-level consumption</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1-compact">1. <code class="language-plaintext highlighter-rouge">/compact</code></h3>
+
+<p>Compress the context; When 20% of the space is left, it is recommended to use it proactively to enhance the efficiency of context utilization.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image42.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Generally speaking, Claude Code automatically compresses the context, so there's no need to actively compress it.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image43.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2-export">2. <code class="language-plaintext highlighter-rouge">/export</code></h3>
+
+<p>Export chat records; The records can be sent back to the AI for reference.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image44.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image45.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3-config">3. <code class="language-plaintext highlighter-rouge">/config</code></h3>
+
+<p>This command can bring up the configuration window of Claude Code and modify the default configuration.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image46.png" alt="" /></p>
+
+<hr />
+
+<h3 id="4-model">4. <code class="language-plaintext highlighter-rouge">/model</code></h3>
+
+<p>This command can switch the large language model used by Claude Code.</p>
+
+<p><strong>Model Options:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Capabilities</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sonnet 4.5</strong></td>
+      <td>Mid-tier model balancing performance and speed</td>
+      <td>Most coding tasks, refactoring, bug fixes</td>
+    </tr>
+    <tr>
+      <td><strong>Opus 4.5</strong></td>
+      <td>Most capable model for complex work</td>
+      <td>System design, complex algorithms, critical projects</td>
+    </tr>
+    <tr>
+      <td><strong>Haiku 4.5</strong></td>
+      <td>Fastest model for quick answers</td>
+      <td>Quick queries, simple scripts, syntax checks</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image47.png" alt="" /></p>
+
+<hr />
+
+<h3 id="5-context">5. <code class="language-plaintext highlighter-rouge">/context</code></h3>
+
+<p>This command displays the <strong>token</strong> usage for the current session.</p>
+
+<p>💡 <strong>Pro Tip</strong>: Think of the <strong>context window</strong> as a sliding window: once the <strong>token</strong> limit is reached, the model automatically "pushes out" the earliest memories to make room. If Claude starts forgetting instructions or repeating issues that have already been addressed, it usually means the critical context has fallen out of range. In such cases, use <strong>/compact</strong> to streamline your context.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image48.png" alt="" /></p>
+
+<hr />
+
+<h3 id="6-clear">6. <code class="language-plaintext highlighter-rouge">/clear</code></h3>
+
+<p>Reset session and clear context.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image49.png" alt="" /></p>
+
+<hr />
+
+<h3 id="7-mcp">7. <code class="language-plaintext highlighter-rouge">/mcp</code></h3>
+
+<p>Manage <strong>MCP</strong> Extensions: View installed tools and enable cross-platform integration.</p>
+
+<p>💡 <strong>Pro Tip</strong>: <strong>MCP (Model Context Protocol)</strong> serves as a unified bridge between AI models and external resources. It empowers Claude to interact directly with tools like <strong>Context 7</strong> (fetching latest docs), <strong>Firecrawl</strong> (web scraping), and <strong>Playwright</strong> (browser automation), providing seamless access to databases, local files, and GitHub repositories.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image50.png" alt="" /></p>
+
+<hr />
+
+<h3 id="8-agents">8. <code class="language-plaintext highlighter-rouge">/agents</code></h3>
+
+<p>Different sub-<strong>agents</strong> that can be set up handle different tasks, and each sub-<strong>agent</strong> has an independent context.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image51.png" alt="" /></p>
+
+<hr />
+
+<h3 id="9-usage">9. <code class="language-plaintext highlighter-rouge">/usage</code></h3>
+
+<p>View your <strong>token</strong> usage statistics and account-level consumption information.</p>
+
+<p>💡 <strong>Pro Tip</strong>: Unlike <strong>/context</strong>, which shows token usage for the current session, <strong>/usage</strong> displays your overall account usage, including historical data and consumption across all sessions.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908868.png" alt="" /></p>
+
+<hr />
+
+<h2 id="special-input-modes">Special Input Modes</h2>
+
+<p>Here's the deal: Beyond standard commands, Claude Code offers three special input prefixes for different use cases.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prefix</th>
+      <th>What It Does</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>!</strong></td>
+      <td>Execute system commands directly</td>
+      <td>File operations, Git, package management</td>
+    </tr>
+    <tr>
+      <td><strong>/</strong></td>
+      <td>Call Claude's built-in functions</td>
+      <td>Core tool operations</td>
+    </tr>
+    <tr>
+      <td><strong>@</strong></td>
+      <td>Reference files/directories</td>
+      <td>Code analysis or modification</td>
+    </tr>
+    <tr>
+      <td><strong>&amp;</strong></td>
+      <td>Background execution</td>
+      <td>Long-running operations</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1--bash-mode">1. <strong>!</strong> (Bash Mode)</h3>
+
+<p><strong>Bash mode</strong>: Directly executes system commands (such as <code class="language-plaintext highlighter-rouge">!pwd</code>), does not consume AI <strong>tokens</strong>, is fast, and is suitable for file operations, Git management, package installation, etc.</p>
+
+<p>💡 <strong>Pro Tip</strong>: <code class="language-plaintext highlighter-rouge">pwd</code> is a Bash command that prints the full path of the current directory.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image52.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2--command-mode">2. <strong>/</strong> (Command Mode)</h3>
+
+<p><strong>Command mode</strong>: Calls Claude's built-in functions (such as <code class="language-plaintext highlighter-rouge">/clear</code> to clear context, <code class="language-plaintext highlighter-rouge">/model</code> to switch AI models, <code class="language-plaintext highlighter-rouge">/cost</code> to view <strong>token</strong> consumption). This is the core entry point for operating the tool.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image53.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3--file-path-mode">3. <strong>@</strong> (File Path Mode)</h3>
+
+<p><strong>File path mode</strong>: Quickly reference files/directories in the project (such as <code class="language-plaintext highlighter-rouge">@.zshrc</code>), helping the AI locate code files for analysis or modification.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image54.png" alt="Graphical user interface, text AI-generated content may be ncorrect." /></p>
+
+<hr />
+
+<h3 id="4--background-mode">4. <strong>&amp;</strong> (Background Mode)</h3>
+
+<p><strong>Background mode</strong>: Execute tasks in the background, suitable for long-running operations. However, to use this mode, you need to access <a href="https://claude.ai/code">https://claude.ai/code</a> to set up Claude Code and configure the remote execution environment so that Claude Code can run code in the cloud. Otherwise, the following error will be reported:</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image55.png" alt="" /></p>
+
+<hr />
+
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shortcut</th>
+      <th>English Explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Input Shortcuts</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">double esc</code></td>
+      <td>Restore the code or conversation to the point before</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">shift + tab</code></td>
+      <td>Apply AI's code modification suggestions with one click</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + o</code></td>
+      <td>Let AI return more detailed execution logs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + t</code></td>
+      <td>View AI's current task plan</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">shift + ↵</code></td>
+      <td>Support multi-line input (unavailable now)</td>
+    </tr>
+    <tr>
+      <td><strong>General Shortcuts</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + _</code></td>
+      <td>Delete all current inputs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + z</code></td>
+      <td>Temporarily pause Claude</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + v</code></td>
+      <td>Paste the picture to AI</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">option + p</code></td>
+      <td>Switch between Claude versions (unavailable now)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + s</code></td>
+      <td>Temporarily save the current prompt and reappear after next submit</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="custom-commands">Custom Commands</h2>
+
+<p>Here's the deal: Claude Code lets you create reusable custom commands. Think of them as your personal shortcuts for repetitive tasks.</p>
+
+<h3 id="method-1-create-markdown-files">Method 1: Create Markdown Files</h3>
+
+<p>Create a reusable Markdown file as a prompt in the <strong><code class="language-plaintext highlighter-rouge">~/.claude/commands</code></strong> folder. The file name is the command name, and then it can be quickly invoked in Claude Code. This command will reuse the prompt text in the Markdown file and complete the task in the current working directory. The usage is consistent with Section 3.4.1 and is invoked using the <strong><code class="language-plaintext highlighter-rouge">/ + command</code></strong> syntax.</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image56.png" alt="" /></p>
+
+<hr />
+
+<h3 id="method-2-ask-claude-to-create-commands">Method 2: Ask Claude to Create Commands</h3>
+
+<p>Alternatively, commands can also be added by directly asking Claude Code to generate custom commands. However, commands added in this way may require restarting Claude Code before the new commands become visible. Here is an example prompt:</p>
+
+<p><strong>Example Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Create a slash command for me and name it `/memo`. The function of this command is to create a memo for the current project to record the progress and results, so that when restarting the conversation, it can continue at the point where the task was disconnected. The output is a `memo.md`.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image57.png" alt="" /></p>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? Check out the official documentation. Or just ask Claude — it's literally right there.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

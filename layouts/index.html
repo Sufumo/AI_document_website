@@ -1,27 +1,121 @@
 {{ define "main" }}
+{{ $currentLang := .Site.Language.Lang }}
 <div class="home">
-  <header class="home-header">
-    <h1>{{ .Title }}</h1>
-    <p class="tagline">{{ .Site.Params.description | default .Description }}</p>
-  </header>
-  <nav class="doc-index">
-    {{ $currentLang := .Site.Language.Lang }}
-    {{ range .Site.Sections }}
-    {{ $pages := .RegularPages }}
-    {{ if $pages }}
-    <section class="doc-category">
-      {{ $groupLabel := index $.Site.Params (printf "nav_group_%s" .Section) | default .Title }}
-      <h2 class="category-title">{{ $groupLabel }}</h2>
-      <ul class="doc-list">
-        {{ range $pages }}
-        {{ $p := . }}
-        {{ if .IsTranslated }}{{ range .Translations }}{{ if eq .Lang $currentLang }}{{ $p = . }}{{ end }}{{ end }}{{ end }}
-        <li><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></li>
+  <header class="home-hero">
+    <div class="home-hero-inner">
+      <h1 class="home-hero-title">{{ .Title }}</h1>
+      <br>
+      <div class="home-search-wrap">
+        <label class="visually-hidden" for="home-doc-filter">{{ i18n "home_search_label" }}</label>
+        <input
+          type="search"
+          id="home-doc-filter"
+          class="home-search-input"
+          placeholder="{{ i18n "home_search_placeholder" }}"
+          autocomplete="off"
+          spellcheck="false"
+          aria-describedby="home-search-hint"
+        >
+        <span id="home-search-hint" class="visually-hidden">{{ i18n "home_search_hint" }}</span>
+      </div>
+      {{ with .Site.Params.home_modules }}
+      <nav class="home-quick-nav" aria-label="{{ i18n "home_quick_nav_label" }}">
+        {{ range . }}
+        <a class="home-quick-nav-link" href="#module-{{ .id }}">{{ i18n .i18n_key }}</a>
         {{ end }}
-      </ul>
+      </nav>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="home-modules" id="home-modules">
+    {{ range .Site.Params.home_modules }}
+    {{ $mod := . }}
+    <section class="home-module home-module--{{ .id }}" id="module-{{ .id }}" data-module="{{ .id }}">
+      <div class="home-module-head">
+        <h2 class="home-module-title">{{ i18n .i18n_key }}</h2>
+        <span class="home-module-accent" aria-hidden="true"></span>
+      </div>
+      <div class="home-module-grid">
+        {{ range .sections }}
+        {{ $slug := . }}
+        {{ range where $.Site.Sections "Section" $slug }}
+        {{ $sec := . }}
+        {{ $pages := .RegularPages }}
+        {{ if $pages }}
+        {{ $n := len $pages }}
+        <div class="home-section-block" data-section="{{ $slug }}">
+          <h3 class="home-section-title">
+            <span class="home-section-title-text">
+              {{ index $.Site.Params (printf "nav_group_%s" $sec.Section) | default $sec.Title }}
+            </span>
+            <span class="home-section-count" aria-label="{{ i18n "home_section_count_label" }}">{{ $n }} {{ i18n "home_section_unit" }}</span>
+          </h3>
+          <div class="home-section-scroll" tabindex="0" aria-label="{{ i18n "home_section_scroll_label" }}">
+            <ul class="home-doc-card-list">
+            {{ range $pages }}
+            {{ $p := . }}
+            {{ if .IsTranslated }}{{ range .Translations }}{{ if eq .Lang $currentLang }}{{ $p = . }}{{ end }}{{ end }}{{ end }}
+            <li>
+              <a
+                class="home-doc-card"
+                href="{{ $p.Permalink }}"
+                data-search="{{ lower $p.Title }}"
+              >
+                <span class="home-doc-card-title">{{ $p.Title }}</span>
+              </a>
+            </li>
+            {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </div>
     </section>
     {{ end }}
-    {{ end }}
-  </nav>
+  </div>
+
+  <p class="home-empty-state" id="home-no-results" hidden role="status">{{ i18n "home_no_results" }}</p>
 </div>
+<script>
+(function() {
+  var input = document.getElementById('home-doc-filter');
+  var cards = document.querySelectorAll('.home-doc-card');
+  var sections = document.querySelectorAll('.home-section-block');
+  var modules = document.querySelectorAll('.home-module');
+  var emptyMsg = document.getElementById('home-no-results');
+  if (!input || !cards.length) return;
+
+  function norm(s) {
+    return (s || '').toLowerCase().trim();
+  }
+
+  function apply() {
+    var q = norm(input.value);
+    var anyVisible = false;
+    cards.forEach(function(card) {
+      var hay = norm(card.getAttribute('data-search'));
+      var match = !q || hay.indexOf(q) !== -1;
+      card.closest('li').hidden = !match;
+      if (match) anyVisible = true;
+    });
+    sections.forEach(function(sec) {
+      var visible = sec.querySelector('.home-doc-card-list li:not([hidden])');
+      sec.hidden = !visible;
+    });
+    modules.forEach(function(mod) {
+      var visible = mod.querySelector('.home-section-block:not([hidden])');
+      mod.hidden = !visible;
+    });
+    if (emptyMsg) {
+      emptyMsg.hidden = anyVisible || !q;
+    }
+  }
+
+  input.addEventListener('input', apply);
+  input.addEventListener('search', apply);
+})();
+</script>
 {{ end }}

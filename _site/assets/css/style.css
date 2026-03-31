@@ -1,0 +1,626 @@
+/* Typora 风格 - 现代优雅文档样式 */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --text-primary: #24292f;
+  --text-secondary: #57606a;
+  --accent: #0969da;
+  --accent-hover: #0550ae;
+  --border: #d0d7de;
+  --code-bg: #f6f8fa;
+  --blockquote-border: #0969da;
+  --blockquote-bg: #ddf4ff;
+  --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  --content-width: 1152px;
+  --sidebar-width: 288px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --accent: #58a6ff;
+    --accent-hover: #79b8ff;
+    --border: #30363d;
+    --code-bg: #161b22;
+    --blockquote-border: #58a6ff;
+    --blockquote-bg: #0d419d;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.nav.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.nav-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 0 !important;
+  border: None;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.nav-icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+/* 语言切换：图标按钮 + 下拉 */
+.lang-switcher {
+  position: relative;
+}
+
+.language-change-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: None;
+  border-radius: 8px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.language-change-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.language-change-btn[aria-expanded="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--bg-secondary);
+}
+
+.icon-language {
+  flex-shrink: 0;
+}
+
+.language-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  margin: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  z-index: 200;
+}
+
+.language-list[hidden] {
+  display: none;
+}
+
+.language-list-item {
+  margin: 0;
+}
+
+.language-list-link {
+  display: block;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.language-list-link:hover {
+  background: var(--bg-secondary);
+  color: var(--accent);
+}
+
+.language-list-link.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 2rem;
+  max-width: calc(var(--content-width) + var(--sidebar-width) + 4rem);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Home page */
+.home {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.doc-index {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.doc-category {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--border);
+}
+
+.category-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-list li {
+  margin: 0.5rem 0;
+}
+
+.doc-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0.25rem 0;
+  transition: color 0.15s;
+}
+
+.doc-list a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Doc article - Typora 风格 */
+.doc-article {
+  display: grid;
+  grid-template-columns: 220px minmax(0, var(--content-width)) var(--sidebar-width);
+  gap: 2.75rem;
+  align-items: flex-start;
+}
+
+.doc-nav {
+  position: sticky;
+  top: 5rem;
+  align-self: flex-start;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.doc-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-nav-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.doc-nav-section {
+  border-left: 1px solid rgba(140, 149, 159, 0.4);
+  margin-bottom: 0.5rem;
+  padding-left: 0.35rem;
+}
+
+.doc-nav-summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.15rem 0.1rem;
+}
+
+.doc-nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+.doc-nav-summary::before {
+  content: '▸';
+  display: inline-block;
+  font-size: 0.65rem;
+  margin-right: 0.25rem;
+  transform: translateY(-0.5px);
+  transition: transform 0.15s ease;
+}
+
+.doc-nav-section[open] .doc-nav-summary::before {
+  transform: rotate(90deg) translateX(-1px);
+}
+
+.doc-nav-list {
+  list-style: none;
+  padding: 0 0 0.15rem 0.7rem;
+  margin: 0.1rem 0 0.1rem;
+}
+
+.doc-nav-list li {
+  margin: 0.25rem 0;
+}
+
+.doc-nav-list a {
+  display: block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  margin-left: -0.35rem;
+  margin-right: -0.35rem;
+  padding-left: calc(0.4rem + 2px);
+  border-left: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.doc-nav-list a:hover {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* 当前文章高亮：与项目 accent / blockquote 风格一致 */
+.doc-nav-list a.doc-nav-current {
+  color: var(--accent);
+  font-weight: 600;
+  background: var(--blockquote-bg);
+}
+
+.doc-content {
+  min-width: 0;
+  max-width: var(--content-width);
+}
+
+.doc-content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* 连续中英文标题：上下紧凑显示 */
+.doc-content h1 + h1,
+.doc-content h2 + h2,
+.doc-content h3 + h3 {
+  margin-top: 0.1rem;
+}
+
+.doc-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+}
+
+.doc-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 0.75rem;
+}
+
+.doc-content h4, .doc-content h5, .doc-content h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doc-content p {
+  margin: 0 0 1rem;
+}
+
+.doc-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.doc-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.doc-content a:hover {
+  text-decoration: underline;
+}
+
+/* Code - Typora 风格；内联 code 不换行，避免快捷键如 Option + Space 被断开 */
+.doc-content code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  background: var(--code-bg);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.doc-content pre {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--code-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.doc-content pre code {
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  white-space: pre;
+}
+
+/* Rouge / highlight 代码块，修复多层嵌套与行号布局 */
+.highlight {
+  margin: 1rem 0;
+  background: var(--code-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: auto;
+  padding: 0.75rem 1rem;
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.highlight table.rouge-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.highlight .rouge-gutter {
+  padding-right: 0.75rem;
+  border-right: 1px solid var(--border);
+  text-align: right;
+  user-select: none;
+  color: var(--text-secondary);
+}
+
+.highlight .rouge-gutter .lineno {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.highlight .rouge-code {
+  padding-left: 0.75rem;
+}
+
+.highlight .rouge-code pre {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* Blockquote */
+.doc-content blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid var(--blockquote-border);
+  background: var(--blockquote-bg);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-secondary);
+}
+
+.doc-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.doc-content ul, .doc-content ol {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.doc-content li {
+  margin: 0.25rem 0;
+}
+
+/* Tables */
+.doc-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.doc-content th, .doc-content td {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.doc-content th {
+  background: var(--code-bg);
+  font-weight: 600;
+}
+
+/* Horizontal rule */
+.doc-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Sidebar TOC */
+.doc-sidebar {
+  position: sticky;
+  top: 5rem;
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.doc-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.doc-toc {
+  font-size: 0.875rem;
+}
+
+.doc-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-toc li {
+  margin: 0.25rem 0;
+}
+
+.doc-toc a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0;
+  border-left: 2px solid transparent;
+  padding-left: 0.5rem;
+}
+
+.doc-toc a:hover {
+  color: var(--accent);
+}
+
+.doc-toc .active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .doc-article {
+    display: block;
+  }
+
+  .doc-nav {
+    display: none;
+  }
+
+  .doc-sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 1.25rem 1.25rem 2rem;
+  }
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+}
+
+.site-footer p {
+  margin: 0;
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obsidian 使用指南 | AI 培训文档中心</title>
+  <meta name="description" content="AI 培训文档中心">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Obsidian 使用指南 | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Obsidian 使用指南" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/zh/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/zh/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Obsidian 使用指南" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Obsidian 使用指南","url":"http://localhost:4000/AI_document_website/contents/Apps/03-obsidian-notes/zh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/zh/" class="logo">AI 培训文档中心</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="语言" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/" role="menuitem" class="language-list-link">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/" role="menuitem" class="language-list-link active">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">文档索引</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">智能体</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/"
+                 >
+                GLM 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"
+                 >
+                KIMI 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/"
+                 >
+                Claude Code 使用教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/"
+                 >
+                Claude Code 实践任务
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">应用</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/"
+                 >
+                VSCode 使用指南
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/"
+                 class="doc-nav-current">
+                Obsidian 使用指南
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">基础工具</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"
+                 >
+                Terminal 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/"
+                 >
+                Windows 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/"
+                 >
+                Mac 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/"
+                 >
+                winget 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"
+                 >
+                Homebrew 安装与基础使用
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>阅前说明</strong></p>
+
+  <p>本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 <a href="../../../Basic-tools/01-terminal-basics/zh">Terminal 基础</a> 和 <a href="../../../Basic-tools/05-homebrew-install/zh">Homebrew 安装</a>，绝对物超所值。</p>
+</blockquote>
+
+<h1 id="obsidian-使用指南">Obsidian 使用指南</h1>
+
+<p><strong>大局观：为什么选 Obsidian？</strong></p>
+
+<p><strong>Obsidian 是你的个人知识库，所有内容都以纯 Markdown 文件存储在你的设备上。相当于一个你完全掌控的「第二大脑」：</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>功能</th>
+      <th>你能得到什么</th>
+      <th>为什么重要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>本地优先</strong></td>
+      <td>所有笔记存储在你的设备上</td>
+      <td>你的数据，你做主</td>
+    </tr>
+    <tr>
+      <td><strong>基于 Markdown</strong></td>
+      <td>通用、面向未来的格式</td>
+      <td>任何文本编辑器都能用</td>
+    </tr>
+    <tr>
+      <td><strong>链接系统</strong></td>
+      <td>像神经元一样连接想法</td>
+      <td>构建你的知识网络</td>
+    </tr>
+    <tr>
+      <td><strong>可扩展</strong></td>
+      <td>丰富的插件生态</td>
+      <td>自定义你的工作流</td>
+    </tr>
+    <tr>
+      <td><strong>个人使用免费</strong></td>
+      <td>核心功能免费</td>
+      <td>无需订阅</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="第一部分obsidian-安装">第一部分：Obsidian 安装</h2>
+
+<p><strong>Windows 安装</strong></p>
+
+<p>按下 <code class="language-plaintext highlighter-rouge">Win</code> 键搜索 PowerShell 并打开。</p>
+
+<p>⚠️ <strong>注</strong>：为避免权限不足的问题，建议选择 <code class="language-plaintext highlighter-rouge">Run as Administrator</code> 打开 PowerShell。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854509.png" alt="" /></p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">winget search obsidian</code> in the PowerShell and press Enter.<br />
+在 PowerShell 输入 <code class="language-plaintext highlighter-rouge">winget search obsidian</code> 并按下回车。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854501%201.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854501.png" alt="" /></p>
+
+<p>在命令行输入 <code class="language-plaintext highlighter-rouge">winget install Obsidian.Obsidian</code> 并按下回车安装 Obsidian。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854507%201.png" alt="" /></p>
+
+<p>等待安装完成。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854507.png" alt="" /></p>
+
+<hr />
+
+<p><strong>Mac 安装</strong></p>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + 空格</code> 搜索 <strong>Terminal</strong> 并打开。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854500.png" alt="" /></p>
+
+<p>在终端输入 <code class="language-plaintext highlighter-rouge">brew install obsidian</code> 并按下回车。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854503.png" alt="" /></p>
+
+<p>等待安装完成。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854502.png" alt="" /></p>
+
+<hr />
+
+<h2 id="第二部分理解-markdown">第二部分：理解 Markdown</h2>
+
+<p><strong>为什么 AI 使用 Markdown？</strong><br />
+Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。像 Claude 这样的 AI 助手使用它是因为：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>原因</th>
+      <th>意味着什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>结构清晰</strong></td>
+      <td>使用简单的符号来定义标题、列表和加粗文本，使内容对人类和机器都易于阅读</td>
+    </tr>
+    <tr>
+      <td><strong>标准格式</strong></td>
+      <td>通用标准，可以轻松转换为 PDF、Word 或 HTML 等其他格式</td>
+    </tr>
+    <tr>
+      <td><strong>内容丰富</strong></td>
+      <td>支持图片、表格甚至复选框，非常适合结构化的研究报告</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><strong>为什么你需要理解 Markdown</strong><br />
+你不需要学会如何编写它，但了解其基本语法将帮助你：</p>
+
+<ul>
+  <li>✅ <strong>阅读 AI 输出</strong>：更好地理解 Claude Code 生成的报告结构</li>
+  <li>✅ <strong>在 Obsidian 中导航</strong>：了解你的笔记是如何组织和显示的</li>
+</ul>
+
+<hr />
+
+<p><strong>Markdown 基础示例</strong></p>
+
+<p>下面是示例文件 <code class="language-plaintext highlighter-rouge">Untitled.md</code> 的原始 Markdown 格式内容，以及对其元素的说明：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Ghana</span>
+<span class="gu">## Ghana</span>
+<span class="gu">### Ghana</span>
+<span class="ge">*Ghana*</span>
+<span class="gs">**Ghana**</span> Ghana
+<span class="p">-</span> Ghana
+<span class="p">-</span> [ ] 待办事项1
+<span class="p">-</span> [x] 已完成事项1
+<span class="p">-</span> [ ] 待办事项2
+<span class="p">-</span> [ ]
+<span class="p">![](</span><span class="sx">./images/Untitled/file-20260114094822829.png</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>元素说明</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>符号</th>
+      <th>创建什么</th>
+      <th>示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">#</code></td>
+      <td>一级标题</td>
+      <td><code class="language-plaintext highlighter-rouge"># 标题</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">##</code></td>
+      <td>二级标题</td>
+      <td><code class="language-plaintext highlighter-rouge">## 章节</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">###</code></td>
+      <td>三级标题</td>
+      <td><code class="language-plaintext highlighter-rouge">### 小节</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">*文本*</code></td>
+      <td>斜体文本</td>
+      <td><em>加纳</em></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">**文本**</code></td>
+      <td>加粗文本</td>
+      <td><strong>加纳</strong></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td>无序列表项</td>
+      <td><code class="language-plaintext highlighter-rouge">- 项目</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">- [ ]</code></td>
+      <td>未完成的复选框</td>
+      <td><code class="language-plaintext highlighter-rouge">- [ ] 待办</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">- [x]</code></td>
+      <td>已完成的复选框</td>
+      <td><code class="language-plaintext highlighter-rouge">- [x] 完成</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">![](路径)</code></td>
+      <td>图片</td>
+      <td><code class="language-plaintext highlighter-rouge">![](./图片.png)</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="第三部分设置你的库">第三部分：设置你的库</h2>
+
+<p><strong>选择库选项</strong></p>
+
+<p>打开 Obsidian，你会看到 <strong>3 个选项</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854493.png" alt="file-20260113152854493" /></p>
+
+<p><strong>什么是库？</strong> 简单来说，<strong>Vault（库）</strong> 是你的笔记仓库，对应于 <strong>一个本地文件夹</strong>，其中存放着所有的 Markdown (.md) 文件。你可以根据以下三种情况选择合适的启动模式：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>选项</th>
+      <th>适合谁</th>
+      <th>会发生什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>创建新库</strong></td>
+      <td>从零开始</td>
+      <td>创建一个新文件夹来存放所有笔记</td>
+    </tr>
+    <tr>
+      <td><strong>将文件夹作为库打开</strong></td>
+      <td>已有 Markdown 文件</td>
+      <td>使用现有文件夹作为笔记库</td>
+    </tr>
+    <tr>
+      <td><strong>从 Obsidian Sync 打开库</strong></td>
+      <td>付费同步用户</td>
+      <td>从 Obsidian 云端拉取同步的库</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>快速决策指南：</strong></p>
+<ul>
+  <li>✅ 想从零开始？→ <strong>创建新库</strong></li>
+  <li>✅ 已有笔记在文件夹里？→ <strong>将文件夹作为库打开</strong></li>
+  <li>✅ 在其他设备上使用 Obsidian Sync？→ <strong>从 Obsidian Sync 打开库</strong></li>
+</ul>
+
+<p>⚠️ <strong>注意</strong>：虽然 Obsidian 允许你通过 <strong>File → Open Vault</strong> 切换库，但通常建议使用单一库，以便更好地利用其笔记管理功能。此外，Obsidian 无法和 Office 系列一样通过右键打开单一 .md 文件。</p>
+
+<p>在本文档中，我们将以 <strong>Create new vault（创建新库）</strong> 为例。</p>
+
+<hr />
+
+<p><strong>创建新库</strong></p>
+
+<p>输入一个 <strong>Vault 名称</strong>（例如 "Obsidian"），点击 <strong>Browse</strong> 选择文件夹，然后点击 <strong>Create</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854517.png" alt="file-20260113152854517" /></p>
+
+<hr />
+
+<p><strong>查看空白库</strong></p>
+
+<p>一个空白的库就会被创建，如上所示。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854513.png" alt="file-20260113152854513" /></p>
+
+<hr />
+
+<h2 id="第四部分创建你的第一篇笔记">第四部分：创建你的第一篇笔记</h2>
+
+<p><strong>第一步：点击「New Note」</strong></p>
+
+<p>点击左侧边栏顶部的 <strong>New Note（新建笔记）</strong> 按钮（鼠标悬停时会显示 "New note"）。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854490.png" alt="new note" /></p>
+
+<hr />
+
+<p><strong>第二步：输入笔记名称</strong></p>
+
+<p>系统会自动生成一个文件名，例如 <strong>"Untitled"</strong>。你可以修改这个标题，如 <strong>"My First Note"</strong>，然后按回车键确认。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854496.png" alt="first note" /></p>
+
+<p>💡 <strong>小贴士</strong>：在 Obsidian 中，你创建的文件默认是 <strong>Markdown 文件</strong>。当你输入内容时，Obsidian 会实时渲染 Markdown 语法并显示格式化的预览效果。</p>
+
+<hr />
+
+<h2 id="第五部分导入笔记">第五部分：导入笔记</h2>
+
+<p><strong>第一步：导入笔记</strong></p>
+
+<p>你可以通过将笔记文件夹复制到指定的 Vault 文件夹中，将其导入 Obsidian。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854492.png" alt="file-20260113152854492" /></p>
+
+<hr />
+
+<p><strong>第二步：查找导入的笔记</strong></p>
+
+<p>然后你可以在 Obsidian 中找到它。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854510.png" alt="file-20260113152854510" /></p>
+
+<hr />
+
+<h2 id="第六部分快速访问">第六部分：快速访问</h2>
+
+<p><strong>将库固定到任务栏</strong></p>
+
+<p>你可以将 Obsidian 的 vault 固定到任务栏以便快速访问。</p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854499.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Apps/03-obsidian-notes/images/3.Obsidian/file-20260113152854498.png" alt="" /></p>
+
+<hr />
+
+<h2 id="总结">总结</h2>
+
+<p>现在你已经准备好使用 Obsidian 作为你的个人知识管理工具了：</p>
+
+<ol>
+  <li>在你喜欢的平台上<strong>安装</strong> Obsidian</li>
+  <li><strong>理解</strong>基本的 Markdown 语法</li>
+  <li><strong>创建</strong>你的第一个库和笔记</li>
+  <li>如果有现有笔记，可以<strong>导入</strong></li>
+  <li><strong>固定</strong> Obsidian 以便快速访问</li>
+</ol>
+
+<hr />
+
+<p><em>有问题？卡住了？Obsidian 社区非常有帮助。或者直接探索这个应用——一半的乐趣在于自己发现新功能。</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI 培训文档中心. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

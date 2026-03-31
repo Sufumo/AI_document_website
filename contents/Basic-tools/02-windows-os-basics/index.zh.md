@@ -7,7 +7,7 @@ draft: false
 
 ## 为什么要配置 Windows？
 
-开箱即用的 Windows 是为普通用户设计的 —— 不是为开发者。隐藏文件看不见，文件扩展名被遮蔽，内置搜索……只能说不怎么快。这篇指南能在几分钟内把 Windows 变成对开发者友好的环境。
+开箱即用的 Windows 是为普通用户设计的，不是为开发者。隐藏文件看不见，文件扩展名被遮蔽，内置搜索……只能说不怎么快。这篇指南能在几分钟内把 Windows 变成对开发者友好的环境。
 
 ---
 
@@ -40,7 +40,7 @@ winget install voidtools.Everything
 
 ![](images/02-windows-os-basics-20260111122844126.jpg)
 
-在搜索框输入任何内容 —— 文件名、部分名称，甚至文件内容（如果启用内容搜索）。结果立刻出现。
+在搜索框输入任何内容，文件名、部分名称，甚至文件内容（如果启用内容搜索）。结果立刻出现。
 
 ![](images/02-windows-os-basics-20260111123112848.jpg)
 
@@ -139,7 +139,7 @@ Windows 使用**文件资源管理器**进行文件管理。快速访问：按 `
 ![](images/02-windows-os-basics-20260113152828142.jpg)
 
 Now press `Win` again — you'll see your pinned apps ready to launch.
-再按一次 `Win` —— 你会看到固定的应用随时可以启动。
+再按一次 `Win`，你会看到固定的应用随时可以启动。
 
 ![](images/02-windows-os-basics-20260111123743239.jpg)
 
@@ -147,7 +147,7 @@ Now press `Win` again — you'll see your pinned apps ready to launch.
 |------|--------|
 | **任务栏** | 每日必用（终端、VS Code、浏览器）|
 | **开始菜单** | 偶尔使用的应用（设置、特定工具）|
-| **桌面** | 仅限临时文件 —— 保持干净！|
+| **桌面** | 仅限临时文件，保持干净！|
 
 ---
 
@@ -158,6 +158,6 @@ Now press `Win` again — you'll see your pinned apps ready to launch.
 3. **显示文件扩展名** 在文件资源管理器选项中（开发者必做！）
 4. **显示隐藏文件** 以看到 `.gitignore` 等配置文件
 5. **使用路径栏** 快速导航和打开终端
-6. **固定应用** 到开始菜单或任务栏 —— 保持桌面干净
+6. **固定应用** 到开始菜单或任务栏，保持桌面干净
 
 *你的 Windows 机器现在对开发者友好了。这些小调整会在未来为你节省无数小时的沮丧。*

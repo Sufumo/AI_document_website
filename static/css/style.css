@@ -174,14 +174,372 @@ body {
   width: 100%;
 }
 
-.home {
-  max-width: 40rem;
-  margin: 0 auto;
+.main--home {
+  padding: 0;
+  max-width: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- 首页：模块化布局 ---------- */
+.home {
+  max-width: min(72rem, 100%);
+  margin: 0 auto;
+  padding-bottom: 3.5rem;
+}
+
+.home-hero {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding: 2.75rem 1.5rem 2.25rem;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(53, 120, 229, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(13, 148, 136, 0.08), transparent 45%),
+    var(--bg-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-hero {
+    background:
+      radial-gradient(ellipse 120% 80% at 50% -20%, rgba(88, 166, 255, 0.12), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 100% 0%, rgba(63, 184, 154, 0.08), transparent 45%),
+      var(--bg-primary);
+  }
+}
+
+.home-hero-inner {
+  max-width: min(40rem, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-hero-title {
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.home-hero-tagline {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem;
+  line-height: 1.55;
+}
+
+.home-hero-hint {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  opacity: 0.92;
+  margin: 0 0 1.35rem;
+  line-height: 1.5;
+}
+
+.home-search-wrap {
+  max-width: 22rem;
+  margin: 0 auto 1.25rem;
+}
+
+.home-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.65rem;
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-secondary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23525860' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat 0.85rem center;
+  color: var(--text-primary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.home-search-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.85;
+}
+
+.home-search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--toc-active-bg);
+}
+
+.home-quick-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-quick-nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.home-quick-nav-link:hover {
+  color: var(--accent);
+  border-color: rgba(53, 120, 229, 0.35);
+  background: var(--toc-active-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-quick-nav-link:hover {
+    border-color: rgba(88, 166, 255, 0.35);
+  }
+}
+
+.home-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .home-modules {
+    padding: 0 1.75rem;
+  }
+}
+
+.home-module {
+  scroll-margin-top: 5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg-secondary);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-module {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.home-module-head {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.35rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--code-bg) 0%, var(--bg-secondary) 100%);
+}
+
+.home-module-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.home-module-accent {
+  width: 4px;
+  height: 1.75rem;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* GSI：独立项目色条（靛紫） */
+.home-module--gsi .home-module-accent {
+  background: linear-gradient(180deg, #6366f1, #4f46e5);
+}
+
+/* 综合教程：主课程色条（蓝青） */
+.home-module--combined .home-module-accent {
+  background: linear-gradient(180deg, var(--accent), #0d9488);
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-module--gsi .home-module-accent {
+    background: linear-gradient(180deg, #818cf8, #6366f1);
+  }
+}
+
+.home-module-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 0.5rem 0 0.25rem;
+}
+
+@media (min-width: 52rem) {
+  .home-module-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 1.5rem;
+    padding: 1rem 1.35rem 1.15rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-module-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* 首页栏目：标题常显，列表固定约 5 条高度内滚动查看全部 */
+.home-section-block {
+  padding: 0 1.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 52rem) {
+  .home-section-block {
+    border-bottom: none;
+    padding: 0.65rem 0 1rem;
+  }
+}
+
+.home-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0 0 0.65rem;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.home-section-title-text {
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.home-section-count {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+/* 约 5 篇卡片高度：单卡约 2.65rem + 间距 0.45rem */
+.home-section-scroll {
+  max-height: calc(5 * 2.65rem + 4 * 0.45rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.35rem;
+  scrollbar-gutter: stable;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-primary);
+  outline: none;
+}
+
+.home-section-scroll:focus-visible {
+  box-shadow: 0 0 0 2px var(--toc-active-bg);
+  border-color: var(--accent);
+}
+
+.home-doc-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.home-doc-card-list > li {
+  margin: 0;
+  border-radius: 0.375rem;
+}
+
+/* 高亮与列表同宽，避免相对外层滚动框再套一层「卡片框」 */
+.home-doc-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.6rem 0.65rem;
+  border-radius: 0.375rem;
+  border: none;
+  text-decoration: none;
+  color: var(--text-primary);
+  background: transparent;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.home-doc-card:hover {
+  background: var(--toc-active-bg);
+}
+
+.home-doc-card:focus {
+  outline: none;
+}
+
+.home-doc-card:focus-visible {
+  background: var(--toc-active-bg);
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.home-doc-card:hover .home-doc-card-arrow,
+.home-doc-card:focus-visible .home-doc-card-arrow {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
+.home-doc-card-title {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.home-doc-card-arrow {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  opacity: 0.65;
+  transition: color 0.15s, transform 0.15s, opacity 0.15s;
+}
+
+.home-empty-state {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+}
+
+/* 分区列表页（list.html）沿用 */
 .home-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .home-header h1 {
@@ -201,6 +559,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 .doc-category {
@@ -894,6 +1254,9 @@ body {
   }
   .main {
     padding: 1.25rem;
+  }
+  .main--home {
+    padding: 0;
   }
 }
 

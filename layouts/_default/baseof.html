@@ -42,7 +42,7 @@
       </nav>
     </header>
     {{ block "mobile_drawer" . }}{{ end }}
-    <main class="main">
+    <main class="main{{ if .IsHome }} main--home{{ end }}">
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="site-footer">

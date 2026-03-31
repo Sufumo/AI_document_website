@@ -1,0 +1,41 @@
+# UI 文案字典，支持多语言切换
+# 默认英文，可扩展 pt、es 等
+en:
+  nav_home: Home
+  nav_doc_index: Document Index
+  site_title: AI Tutorial Documentation
+  site_description: AI training documentation center
+  footer_made_by: made by Jekyll
+  lang_en: English
+  lang_zh: 中文
+  lang_switch: Language
+  nav_group_Agents: Agents
+  nav_group_Apps: Apps
+  nav_group_AI-tools: AI Tools
+  nav_group_Extensions: Extensions
+  nav_group_gsi: GSI Tutorial Series
+  nav_group_Basic-tools: Basic Tools
+
+zh:
+  nav_home: 首页
+  nav_doc_index: 文档索引
+  site_title: AI 培训文档中心
+  site_description: AI 培训文档中心
+  footer_made_by: made by Jekyll
+  lang_en: English
+  lang_zh: 中文
+  lang_switch: 语言
+  nav_group_Agents: 智能体
+  nav_group_Apps: 应用
+  nav_group_AI-tools: AI工具
+  nav_group_Extensions: 扩展
+  nav_group_gsi: GSI 系列教程
+  nav_group_Basic-tools: 基础工具
+
+# 预留扩展
+# pt:
+#   nav_home: Início
+#   ...
+# es:
+#   nav_home: Inicio
+#   ...

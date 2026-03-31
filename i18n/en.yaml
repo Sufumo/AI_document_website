@@ -1,3 +1,20 @@
+nav_group_agents: Agents
+nav_group_apps: Apps
+nav_group_ai-tools: AI Tools
+nav_group_basic-tools: Basic Tools
+nav_group_extensions: Extensions
+nav_group_gsi: GSI Tutorial Series
+home_module_gsi: GSI Tutorial Series
+home_module_combined: Integrated Curriculum
+home_hero_hint: Two tracks below—GSI (standalone) and the integrated curriculum. Search works across both.
+home_search_placeholder: Search by title…
+home_search_label: Search tutorials
+home_search_hint: Results filter as you type.
+home_quick_nav_label: On-page modules
+home_no_results: No tutorials match. Try another keyword.
+home_section_unit: articles
+home_section_count_label: Number of tutorials in this group
+home_section_scroll_label: Tutorial list — scroll to see all
 nav_home: Home
 nav_doc_index: Document Index
 nav_close: Close

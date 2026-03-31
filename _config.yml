@@ -1,0 +1,56 @@
+# Jekyll 配置文件 - AI 文档网站
+title: AI Tutorial Documentation
+description: AI 培训文档中心
+# GitHub Pages 部署在子路径，必须设置 baseurl
+baseurl: "/AI_document_website"
+url: "https://sufumo.github.io"
+lang: zh-CN
+
+# 构建配置
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: true
+  syntax_highlighter: rouge
+  smart_quotes: apos,apos,quot,quot
+
+# 插件 (GitHub Pages 支持)
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# 排除（根目录 images 为误建，样式应使用 assets）
+exclude:
+  - .git
+  - .gitignore
+  - README.md
+  - Gemfile.lock
+  - node_modules
+  - images
+
+# 默认 front matter (新文档可继承)
+defaults:
+  - scope:
+      path: "contents"
+      type: pages
+    values:
+      layout: doc
+
+# 文档目录数据 (用于主页导航)
+doc_categories:
+  - name: Agent 配置
+    slug: 01-agents-configuration
+    docs:
+      - title: GLM 配置教程
+        file: 01-GLM-configuration
+      - title: KIMI 配置教程
+        file: 02-KIMI-configuration
+  - name: 应用使用
+    slug: 02-apps-usage
+    docs:
+      - title: VS Code 使用指南
+        file: 01-vscode-usage

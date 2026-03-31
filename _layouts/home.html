@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.i18n[lang] | default: site.data.i18n.en -%}
+{%- assign content_pages = site.pages
+    | where_exp: "p", "p.path contains 'contents/'"
+    | where_exp: "p", "p.path contains '.md'"
+-%}
+{%- if lang == 'zh' -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_cn.md'" -%}
+{%- else -%}
+  {%- assign content_pages = content_pages | where_exp: "p", "p.path contains '_en.md'" -%}
+{%- endif -%}
+{%- assign content_pages = content_pages | sort: "path" -%}
+
+<div class="home">
+  <header class="home-header">
+    <h1>{{ t.site_title | default: site.title }}</h1>
+    <p class="tagline">{{ t.site_description | default: site.description }}</p>
+  </header>
+  <nav class="doc-index">
+    {%- comment -%}
+      动态从 contents 目录生成文档目录，按当前语言过滤 _en / _cn
+    {%- endcomment -%}
+    {%- assign groups = content_pages
+        | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first"
+    -%}
+
+    {%- for group in groups -%}
+      {%- if group.name contains '.' -%}
+        {%- continue -%}
+      {%- endif -%}
+      <section class="doc-category">
+        {%- assign cat_key = 'nav_group_' | append: group.name -%}
+        {%- assign cat_label = t[cat_key] | default: group.name -%}
+        <h2 class="category-title">{{ cat_label }}</h2>
+        <ul class="doc-list">
+          {%- assign pages = group.items | sort: "path" -%}
+          {%- for page in pages -%}
+            {%- if page.path contains '/.' -%}
+              {%- continue -%}
+            {%- endif -%}
+            <li>
+              <a href="{{ page.url | relative_url }}">
+                {{ page.title | default: page.name | split: '.' | first }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    {%- endfor -%}
+  </nav>
+</div>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mac OS Basics | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mac OS Basics | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Mac OS Basics" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mac OS Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Mac OS Basics","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 class="doc-nav-current">
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="mac-os-basics">Mac OS Basics</h1>
+
+<h2 id="the-big-picture-why-configure-macos">The Big Picture: Why Configure macOS?</h2>
+
+<p>macOS is already pretty developer-friendly out of the box, but there are a few hidden settings that can make your life significantly easier. From finding files to managing your workspace, this guide covers the essentials every developer should know.</p>
+
+<hr />
+
+<h2 id="quick-search-spotlight">Quick Search: Spotlight</h2>
+
+<h3 id="the-built-in-superpower">The Built-in Superpower</h3>
+
+<p>macOS comes with <strong>Spotlight Search</strong> — and it's actually good. No need to install anything extra.</p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code> and start typing. Spotlight searches apps, files, emails, contacts, even does calculations and currency conversions.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107123351255.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107123528095.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Spotlight learns from your usage. The more you use it, the smarter it gets at predicting what you're looking for.</p>
+
+<hr />
+
+<h2 id="system-language-settings">System Language Settings</h2>
+
+<p>Want to switch between English and Chinese? Here's how:</p>
+
+<h3 id="step-1-open-language-settings">Step 1: Open Language Settings</h3>
+
+<p>Go to <strong>System Settings</strong> → <strong>General</strong> → <strong>Language &amp; Region</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106175129911.png" alt="" /></p>
+
+<h3 id="step-2-add-and-prioritize-your-language">Step 2: Add and Prioritize Your Language</h3>
+
+<p>Add <strong>English</strong> (or your preferred language) to "Preferred Languages" and drag it to the top. macOS will update after a restart or logout.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106175220146.png" alt="" /></p>
+
+<hr />
+
+<h2 id="file-management-essentials">File Management Essentials</h2>
+
+<h3 id="finder-your-file-command-center">Finder: Your File Command Center</h3>
+
+<p><strong>Finder</strong> is the heart of file management on macOS. Click the smiley face icon in your Dock (bottom left by default) to open it.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106180402157.png" alt="" /></p>
+
+<hr />
+
+<h3 id="show-file-extensions--hidden-files">Show File Extensions &amp; Hidden Files</h3>
+
+<p>⚠️ <strong>Critical for Developers</strong>: By default, macOS hides file extensions and system files. When you're working with <code class="language-plaintext highlighter-rouge">.gitignore</code>, <code class="language-plaintext highlighter-rouge">.env</code>, <code class="language-plaintext highlighter-rouge">.zshrc</code>, you need to see these.</p>
+
+<p><strong>Show File Extensions:</strong></p>
+
+<ol>
+  <li>
+    <p>Open <strong>Finder</strong> → <strong>Settings</strong> (or press <code class="language-plaintext highlighter-rouge">Command + ,</code>)</p>
+  </li>
+  <li>
+    <p>Click <strong>Advanced</strong> → Check <strong>Show all filename extensions</strong></p>
+  </li>
+</ol>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106180156222.png" alt="" /></p>
+
+<p><strong>Show Hidden Files:</strong></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> to toggle hidden files visibility. Press it again to hide them.</p>
+
+<p>💡 <strong>Pro Tip</strong>: Files starting with a dot (like <code class="language-plaintext highlighter-rouge">.gitignore</code>) are hidden by default on Unix-based systems. This shortcut is your best friend.</p>
+
+<hr />
+
+<h3 id="the-path-bar">The Path Bar</h3>
+
+<p>Knowing where you are in the file system is crucial. Let's enable the path bar:</p>
+
+<p><strong>Step 1</strong>: In Finder, go to <strong>View</strong> → <strong>Show Path Bar</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107163525369.png" alt="" /></p>
+
+<p>Now you'll see your current location at the bottom of every Finder window.</p>
+
+<p><strong>Step 2</strong>: Right-click anywhere in the path bar to open a terminal at that location</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260109145541008.png" alt="" /></p>
+
+<p>Select <strong>Open in Terminal</strong> and you're ready to run commands.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260109145641593.png" alt="" /></p>
+
+<hr />
+
+<h3 id="file-compression-made-easy">File Compression Made Easy</h3>
+
+<p><strong>Compress</strong>: Right-click any file or folder → Select <strong>Compress "…"</strong> → Creates a <code class="language-plaintext highlighter-rouge">.zip</code> file</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106180748623.png" alt="" /></p>
+
+<p><strong>Extract</strong>: Just double-click any <code class="language-plaintext highlighter-rouge">.zip</code> file — macOS handles it natively</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107121928478.png" alt="" /></p>
+
+<p>No extra software needed. It just works.</p>
+
+<hr />
+
+<h2 id="keep-your-dock-clean">Keep Your Dock Clean</h2>
+
+<p>The Dock is prime real estate. A cluttered Dock means a cluttered workflow. Here's how to keep it organized:</p>
+
+<p><strong>Remove Unused Apps:</strong></p>
+
+<p>Right-click (or two-finger click) any Dock icon → <strong>Options</strong> → <strong>Remove from Dock</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106175556075.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>What to Keep</th>
+      <th>What to Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Daily apps (Terminal, VS Code, Browser)</td>
+      <td>Apps you rarely use</td>
+    </tr>
+    <tr>
+      <td>Apps you're learning</td>
+      <td>Duplicates or alternatives</td>
+    </tr>
+    <tr>
+      <td>Communication tools</td>
+      <td>Installers, one-time tools</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="trackpad-optimization">Trackpad Optimization</h2>
+
+<p>The Mac trackpad is best-in-class. Let's make it even better.</p>
+
+<h3 id="enable-tap-to-click">Enable Tap to Click</h3>
+
+<p>No more physically pressing down. A light tap is all you need.</p>
+
+<p>Go to <strong>System Settings</strong> → <strong>Trackpad</strong> → Enable <strong>Tap to click</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107122542163.png" alt="" /></p>
+
+<p>You can also customize other trackpad behaviors to match your preferences.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107124740080.png" alt="" /></p>
+
+<h3 id="customize-gestures">Customize Gestures</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>What It Does</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Look up &amp; data detectors</strong></td>
+      <td>Quick dictionary lookup</td>
+      <td>Three-finger tap on a word</td>
+    </tr>
+    <tr>
+      <td><strong>Secondary click</strong></td>
+      <td>Right-click functionality</td>
+      <td>Two-finger tap or click in corner</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107180059440.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107180237427.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Spend 5 minutes in System Settings → Trackpad exploring all the gestures. Muscle memory will thank you later.</p>
+
+<hr />
+
+<h2 id="file-sharing-with-airdrop">File Sharing with AirDrop</h2>
+
+<h3 id="the-apple-ecosystem-superpower">The Apple Ecosystem Superpower</h3>
+
+<p><strong>AirDrop</strong> lets you instantly share files between Mac, iPhone, and iPad — no internet required, no file size limits, no hassle.</p>
+
+<h3 id="how-to-use-airdrop">How to Use AirDrop</h3>
+
+<p><strong>Step 1</strong>: Open AirDrop from the Control Center (top-right corner of your screen)</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107175549496.png" alt="" /></p>
+
+<p><strong>Step 2</strong>: In any app, click the <strong>Share</strong> button and select <strong>AirDrop</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260106180901363.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107171018286.png" alt="" /></p>
+
+<p><strong>Step 3</strong>: Select the recipient from the list of nearby devices</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107171354103.png" alt="" /></p>
+
+<h3 id="find-your-macs-name">Find Your Mac's Name</h3>
+
+<p>To make sure people can find you, check your Mac's name:</p>
+
+<p>Click the <strong>Apple menu</strong> → <strong>About This Mac</strong> → <strong>More Info</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107175634492.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/03-mac-os-basics/images/Mac/file-20260107175752932.png" alt="" /></p>
+
+<p>Your Mac's name appears here. This is what others will see when they try to AirDrop to you.</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Spotlight Search</strong>: <code class="language-plaintext highlighter-rouge">Command + Space</code> for instant search</li>
+  <li><strong>Language Settings</strong>: System Settings → General → Language &amp; Region</li>
+  <li><strong>Show file extensions</strong>: Finder Settings → Advanced → Show all filename extensions</li>
+  <li><strong>Show hidden files</strong>: <code class="language-plaintext highlighter-rouge">Command + Shift + .</code></li>
+  <li><strong>Path bar</strong>: View → Show Path Bar (right-click to open Terminal)</li>
+  <li><strong>Clean Dock</strong>: Remove unused apps, keep only essentials</li>
+  <li><strong>Trackpad</strong>: Enable "Tap to click" for efficiency</li>
+  <li><strong>AirDrop</strong>: Instant file sharing across Apple devices</li>
+</ol>
+
+<hr />
+
+<p><em>Your Mac is now dialed in for developer productivity. These aren't just tips — they're the foundation of an efficient workflow.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

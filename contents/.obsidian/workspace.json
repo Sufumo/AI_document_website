@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "index.en"
             }
+          },
+          {
+            "id": "b636e6d1f637b205",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "gsi/01-ai-workplace-windows/index.zh.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index.zh"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -113,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Agents/01-GLM-configuration/index.zh.md",
+                "file": "gsi/03-alternative-apis-windows/index.zh.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Agents/01-GLM-configuration/index.zh.md",
+                "file": "gsi/01-ai-workplace-windows/index.zh.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -171,19 +186,18 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Basic-tools/01-terminal-basics/index.en.md"
+                "file": "gsi/03-alternative-apis-windows/index.zh.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for index.en"
+              "title": "File properties for index.zh"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,45 +210,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "81a1de641a676858",
+  "active": "0ac69439e5276128",
   "lastOpenFiles": [
-    "Basic-tools/01-terminal-basics/index.zh.md",
+    "gsi/03-alternative-apis-windows/index.en.md",
+    "gsi/03-alternative-apis-macos/index.en.md",
+    "gsi/02-claude-code-vscode/index.en.md",
+    "gsi/01-ai-workplace-windows/index.en.md",
+    "gsi/01-ai-workplace-macos/index.en.md",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330174600.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330173734.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330172747.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330172051.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171954.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171934.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171756.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171735.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171713.png",
+    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171538.png",
+    "gsi/01-ai-workplace-macos/index.zh.md",
+    "gsi/03-alternative-apis-windows/index.zh.md",
+    "gsi/03-alternative-apis-macos/index.zh.md",
+    "gsi/03-alternative-apis-windows/images",
+    "gsi/03-alternative-apis-windows",
     "Basic-tools/01-terminal-basics/index.en.md",
-    "Extensions/01-skills/images/tmpi74gachi.jpg",
-    "Extensions/01-skills/images/tmpd_g1xm0v.jpg",
-    "Extensions/01-skills/images/tmpxlmkoy14.jpg",
-    "Extensions/01-skills/images/tmpgjbtudnm.jpg",
-    "Extensions/01-skills/images/tmpl1u3i190.jpg",
-    "Extensions/01-skills/images/tmplpjimcf1.jpg",
-    "Basic-tools/06-git-basis/images/tmpl2i64stq.jpg",
-    "Basic-tools/06-git-basis/images/tmp42tn_f87.jpg",
-    "Basic-tools/06-git-basis/images/tmpbyh9de5y.jpg",
-    "Basic-tools/06-git-basis/images/tmp6qu3ez63.jpg",
+    "Agents/02-KIMI-configuration/index.zh.md",
+    "Agents/01-GLM-configuration/index.zh.md",
+    "gsi/03-alternative-apis-macos/images",
+    "Agents/01-GLM-configuration/images 1",
+    "gsi/02-claude-code-vscode/index.zh.md",
+    "gsi/02-claude-code-vscode/images",
+    "gsi/01-ai-workplace-windows/index.zh.md",
+    "Basic-tools/02-windows-os-basics/index.zh.md",
     "Apps/01-vscode-usage/index.zh.md",
-    "Apps/01-vscode-usage/index.en.md",
+    "gsi/01-ai-workplace-windows/images",
+    "gsi/01-ai-workplace-windows",
+    "gsi/01-ai-workplace-macos copy/index.zh.md",
+    "gsi/01-ai-workplace-macos copy/index.en.md",
+    "gsi/01-ai-workplace-macos copy/images",
+    "gsi/01-ai-workplace-macos copy",
     "Basic-tools/05-homebrew-install/images/Toolkit",
-    "Basic-tools/04-winget-basics/images/Windows",
-    "Basic-tools/03-mac-os-basics/images/Mac",
-    "Basic-tools/02-windows-os-basics/images/Windows",
-    "Basic-tools/02-windows-os-basics/images/1.OS",
-    "Basic-tools/01-terminal-basics/images/Windows",
-    "Basic-tools/01-terminal-basics/images/Toolkit",
-    "Basic-tools/01-terminal-basics/images/Terminal",
-    "Basic-tools/01-terminal-basics/images/1.OS",
-    "Apps/03-obsidian-notes/images/3.Obsidian",
-    "Basic-tools/06-git-basis/index.zh.md",
-    "Basic-tools/06-git-basis/index.en.md",
-    "_index.en.md",
-    "_index.zh.md",
-    "Basic-tools/03-mac-os-basics/index.zh.md",
-    "Basic-tools/03-mac-os-basics/index.en.md",
+    "Extensions/03-plugin/index.zh.md",
+    "AI-tools/01-docling/index.en.md 14-51-07-863.md",
+    "Apps/04-iflyrec-usage/index.en.md",
+    "AI-tools/01-docling/index.zh.md",
+    "Apps/04-iflyrec-usage/index.zh.md",
     "Extensions/02-mcp/index.zh.md",
     "Extensions/01-skills/index.zh.md",
-    "Agents/01-GLM-configuration/index.zh.md",
-    "Extensions/MCP.md",
-    "Extensions/01-skills/index.en.md",
-    "Extensions/01-skills/skills.md",
-    "Extensions/01-skills/Skills.md",
-    "Extensions/Skills.md"
+    "AI-tools/01-docling/index.en.md",
+    "Extensions/03-docling/index.zh.md"
   ]
 }

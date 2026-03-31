@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
-按 Markdown 中引用的本地图片路径，将对应文件转为 1000×667 白底画布 JPG，
+按 Markdown 中引用的本地图片路径，将对应文件嵌入白底画布并输出为 JPG，
 更新 .md 链接为新的 .jpg 路径，并删除已替换的源文件。
 
 - 遍历方式与 flatten-apps-images.py 一致：默认 contents 下各「文章」目录（含 images/）。
+- 可用 --root / --folder 指定任意子树（例如 contents/gsi），只处理其下含 images/ 的文章目录。
 - 仅处理 ![](images/...) 形式的本地链接；http(s) 跳过。
 - 输出文件名：与源文件同主文件名、扩展名为 .jpg（如 foo.png → foo.jpg）。
 - 若源已是 foo.jpg 且输出仍为 foo.jpg，先写入临时文件再 os.replace，避免误删新文件。
 - 若源为 foo.png 与 foo.jpg 均被引用，优先用 png 作源，链接统一改为 images/foo.jpg。
+
+画质：默认 JPEG quality=95、subsampling=0（4:4:4，减轻截图文字发糊）；缩放使用 LANCZOS。
+      需要更小体积可调低 --quality 或改用 --subsampling 2（4:2:0）。
 
 依赖：pip install Pillow
 
@@ -15,6 +19,7 @@
   python3 scripts/images-to-canvas-jpg.py
   python3 scripts/images-to-canvas-jpg.py --apply
   python3 scripts/images-to-canvas-jpg.py --root contents/Apps --apply
+  python3 scripts/images-to-canvas-jpg.py --folder contents/gsi --canvas-w 1000 --canvas-h 667 --apply
 """
 
 from __future__ import annotations
@@ -144,7 +149,11 @@ def fit_and_center_on_canvas(img, canvas_w: int, canvas_h: int):
     scale = min(canvas_w / w, canvas_h / h)
     new_w = max(1, int(round(w * scale)))
     new_h = max(1, int(round(h * scale)))
-    resized = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    try:
+        resample = Image.Resampling.LANCZOS
+    except AttributeError:
+        resample = Image.LANCZOS  # Pillow < 9.1
+    resized = img.resize((new_w, new_h), resample)
 
     canvas = Image.new("RGB", (canvas_w, canvas_h), WHITE)
     x = (canvas_w - new_w) // 2
@@ -258,14 +267,26 @@ def save_jpeg_replace(
     pil_canvas,
     final_path: Path,
     quality: int,
+    subsampling: int,
 ) -> None:
-    """写入 final_path；若需覆盖已存在文件，先写临时文件再 os.replace。"""
+    """写入 final_path；若需覆盖已存在文件，先写临时文件再 os.replace。
+
+    subsampling: Pillow JPEG 色度子采样。0 = 4:4:4（画质最好、体积大），
+    2 = 4:2:0（默认相机式，体积小、文字边缘易糊）。
+    """
     final_path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(suffix=".jpg", dir=final_path.parent)
     os.close(fd)
     tmp_path = Path(tmp)
     try:
-        pil_canvas.save(tmp_path, "JPEG", quality=quality, optimize=True)
+        save_kw: dict = {
+            "format": "JPEG",
+            "quality": quality,
+            "optimize": True,
+            "subsampling": subsampling,
+        }
+        # Pillow 10+：可关闭渐进式以略减编码差异；保持默认渐进关闭
+        pil_canvas.save(tmp_path, **save_kw)
         os.replace(tmp_path, final_path)
     except BaseException:
         if tmp_path.exists():
@@ -282,6 +303,7 @@ def process_article(
     canvas_w: int,
     canvas_h: int,
     quality: int,
+    subsampling: int,
     apply: bool,
 ) -> tuple[int, int]:
     """返回 (成功转换数, 涉及 md 映射数)。"""
@@ -326,7 +348,7 @@ def process_article(
                 continue
             try:
                 out = fit_and_center_on_canvas(img, canvas_w, canvas_h)
-                save_jpeg_replace(out, dest_jpg, quality)
+                save_jpeg_replace(out, dest_jpg, quality, subsampling)
             except OSError as e:
                 print(f"  [失败] {label}: {rel_src} → {rel_new}: {e}", file=sys.stderr)
                 continue
@@ -377,14 +399,28 @@ def main() -> int:
     )
     ap.add_argument(
         "--root",
+        "--folder",
         type=Path,
         default=None,
-        help="与 flatten-apps 一致：contents 或 contents/Apps 等",
+        metavar="PATH",
+        help="要扫描的根目录（与 flatten-apps 一致）：如 contents、contents/Apps、contents/gsi",
     )
     ap.add_argument("--contents", type=Path, default=None, help="仓库 contents 路径（默认：仓库下 contents）")
     ap.add_argument("--canvas-w", type=int, default=CANVAS_W_DEFAULT)
     ap.add_argument("--canvas-h", type=int, default=CANVAS_H_DEFAULT)
-    ap.add_argument("--quality", type=int, default=90, help="JPEG 质量 1-95")
+    ap.add_argument(
+        "--quality",
+        type=int,
+        default=95,
+        help="JPEG 质量 1–100（默认 95，兼顾体积；要更小文件可调低）",
+    )
+    ap.add_argument(
+        "--subsampling",
+        type=int,
+        choices=(0, 1, 2),
+        default=0,
+        help="JPEG 色度子采样：0=4:4:4 画质最好（默认）；1=4:2:2；2=4:2:0 体积最小",
+    )
     ap.add_argument("--apply", action="store_true", help="写入图片与 Markdown")
     args = ap.parse_args()
 
@@ -407,7 +443,12 @@ def main() -> int:
         print("错误：画布宽高须为正数", file=sys.stderr)
         return 1
 
-    print(f"画布: {cw}×{ch}，按 .md 中 images/ 引用转换 → JPG，更新链接并删除旧源（非同一路径）")
+    q = max(1, min(100, args.quality))
+
+    print(
+        f"画布: {cw}×{ch}，JPEG quality={q} subsampling={args.subsampling}，"
+        f"按 .md 中 images/ 引用转换 → JPG，更新链接并删除旧源（非同一路径）"
+    )
     print(f"文章目录数: {len(article_dirs)}")
     if not args.apply:
         print("当前为预览，不加 --apply 不会写入。\n")
@@ -415,7 +456,7 @@ def main() -> int:
     total_ok = 0
     total_map = 0
     for ad in article_dirs:
-        o, m = process_article(ad, repo, cw, ch, args.quality, args.apply)
+        o, m = process_article(ad, repo, cw, ch, q, args.subsampling, args.apply)
         total_ok += o
         total_map += m
 

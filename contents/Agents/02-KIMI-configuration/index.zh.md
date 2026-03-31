@@ -107,7 +107,7 @@ KIMI k2.5 在 [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2) 复
 
 ---
 
-## 步骤三：实际配置（选择你的路线）
+## 步骤三：实际配置
 
 你有两条路可以选，按你的需求来决定：
 
@@ -280,4 +280,4 @@ alias kimi="claude --settings ~/.claude/kimi-settings.json"
 
 ---
 
-*有问题？卡住了？KIMI 社区挺活跃的。或者直接问 Claude —— 它就在那。*
+*有问题？卡住了？KIMI 社区挺活跃的。或者直接问 Claude，它就在那。*

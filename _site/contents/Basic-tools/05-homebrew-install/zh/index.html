@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homebrew 安装与基础使用 | AI 培训文档中心</title>
+  <meta name="description" content="AI 培训文档中心">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Homebrew 安装与基础使用 | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Homebrew 安装与基础使用" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Homebrew 安装与基础使用" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Homebrew 安装与基础使用","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/zh/" class="logo">AI 培训文档中心</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="语言" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/" role="menuitem" class="language-list-link">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/" role="menuitem" class="language-list-link active">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">文档索引</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">智能体</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/"
+                 >
+                GLM 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"
+                 >
+                KIMI 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/"
+                 >
+                Claude Code 使用教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/"
+                 >
+                Claude Code 实践任务
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">应用</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/"
+                 >
+                VSCode 使用指南
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/"
+                 >
+                Obsidian 使用指南
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">基础工具</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"
+                 >
+                Terminal 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/"
+                 >
+                Windows 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/"
+                 >
+                Mac 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/"
+                 >
+                winget 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"
+                 class="doc-nav-current">
+                Homebrew 安装与基础使用
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="homebrew-安装与基础使用">Homebrew 安装与基础使用</h1>
+
+<p><strong>大局观：Homebrew 是什么？</strong></p>
+
+<p>想象一下如果 Mac App Store 住在你的终端里，不用点击，不用把应用拖到文件夹，只需输入一条命令，软件就安装好了。这就是 <strong>Homebrew</strong>（简称 <code class="language-plaintext highlighter-rouge">brew</code>）。它是 macOS 缺失的包管理器，对于任何开发工作流来说都是绝对必备的。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>它能做什么</th>
+      <th>为什么你需要在</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>通过命令行安装软件</td>
+      <td>再也不需要 DMG 文件和拖到应用程序文件夹</td>
+    </tr>
+    <tr>
+      <td>自动管理依赖关系</td>
+      <td>一切都能正常工作</td>
+    </tr>
+    <tr>
+      <td>保持软件更新</td>
+      <td>一条命令更新所有东西</td>
+    </tr>
+    <tr>
+      <td>干净地卸载</td>
+      <td>不会有残留文件到处散落</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="步骤一获取安装命令">步骤一：获取安装命令</h2>
+
+<p>打开 Homebrew 官网：<a href="https://brew.sh/">https://brew.sh</a></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image25.png" alt="" /></p>
+
+<p>首页上有一个醒目的安装命令。这是你的入场券。点击复制按钮把它复制下来。</p>
+
+<hr />
+
+<h2 id="步骤二打开终端">步骤二：打开终端</h2>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + 空格</code>，输入 "Terminal"，然后按回车。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image26.png" alt="" /></p>
+
+<p>如果你需要复习终端基础知识，先看看 <a href="../../../Basic-tools/01-terminal-basics/zh">Terminal 基础</a>。</p>
+
+<hr />
+
+<h2 id="步骤三运行魔法咒语">步骤三：运行魔法咒语</h2>
+
+<p>把这一整条命令复制粘贴到你的终端：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>命令解释</strong>：</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">curl -fsSL</code>：从网上下载脚本（静默、安全地）</li>
+    <li><code class="language-plaintext highlighter-rouge">/bin/bash -c</code>：用 Bash 运行那个脚本</li>
+    <li>脚本会处理剩下的一切，下载、安装、配置</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image27.png" alt="" /></p>
+
+<p>按下回车，让魔法开始。</p>
+
+<hr />
+
+<h2 id="步骤四输入密码">步骤四：输入密码</h2>
+
+<p>当提示时，输入你的 Mac 登录密码。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image320.png" alt="" /></p>
+
+<p>⚠️ <strong>重要</strong>：当你输入密码时，<strong>屏幕上什么都不会显示</strong>，没有星号，没有圆点，什么都没有。这是安全特性，不是 bug。只管输入密码然后按回车。</p>
+
+<p>输完后按回车。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image330.png" alt="" /></p>
+
+<hr />
+
+<h2 id="步骤五耐心等待">步骤五：耐心等待</h2>
+
+<p>Homebrew 现在会下载和安装一堆东西。这可能需要几分钟到更长时间，取决于你的网络连接。去倒杯咖啡，活动活动腿脚，或者思考一下人生的意义。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image340.png" alt="" /></p>
+
+<p>💡 <strong>小贴士</strong>：如果安装看起来卡住了，别慌。它可能只是在下载大文件。给它点时间。</p>
+
+<hr />
+
+<h2 id="步骤六验证安装">步骤六：验证安装</h2>
+
+<p>安装完成后，运行以下命令验证一切正常：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>你应该看到类似这样的输出：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Homebrew 4.x.x
+</code></pre></div></div>
+
+<p>如果看到版本号，恭喜，Homebrew 已经准备好为你服务了！</p>
+
+<hr />
+
+<h2 id="常用-homebrew-命令">常用 Homebrew 命令</h2>
+
+<p>Homebrew 安装好了，下面是你最常用的命令：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>作用</th>
+      <th>示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew search &lt;名称&gt;</code></td>
+      <td>搜索软件包</td>
+      <td><code class="language-plaintext highlighter-rouge">brew search node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew install &lt;名称&gt;</code></td>
+      <td>安装软件包</td>
+      <td><code class="language-plaintext highlighter-rouge">brew install node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew list</code></td>
+      <td>显示已安装的软件包</td>
+      <td><code class="language-plaintext highlighter-rouge">brew list</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew upgrade</code></td>
+      <td>更新所有软件包</td>
+      <td><code class="language-plaintext highlighter-rouge">brew upgrade</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew update</code></td>
+      <td>更新 Homebrew 本身</td>
+      <td><code class="language-plaintext highlighter-rouge">brew update</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew uninstall &lt;名称&gt;</code></td>
+      <td>卸载软件包</td>
+      <td><code class="language-plaintext highlighter-rouge">brew uninstall node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew info &lt;名称&gt;</code></td>
+      <td>显示软件包详情</td>
+      <td><code class="language-plaintext highlighter-rouge">brew info node</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="总结">总结</h2>
+
+<ol>
+  <li><strong>Homebrew</strong> = macOS 缺失的包管理器</li>
+  <li><strong>获取命令</strong> 从 <a href="https://brew.sh">brew.sh</a></li>
+  <li><strong>粘贴到终端</strong> 并运行</li>
+  <li><strong>输入密码</strong>（屏幕上不会显示，这是正常的）</li>
+  <li><strong>等待</strong> 安装完成</li>
+  <li><strong>验证</strong> 用 <code class="language-plaintext highlighter-rouge">brew --version</code></li>
+  <li><strong>开始安装</strong> 软件用 <code class="language-plaintext highlighter-rouge">brew install &lt;名称&gt;</code></li>
+</ol>
+
+<hr />
+
+<p><em>你的 Mac 刚刚变得强大了许多。欢迎来到命令行生活方式，回不去了。</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI 培训文档中心. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

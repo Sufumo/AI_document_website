@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal Basics | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Terminal Basics | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Terminal Basics" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Terminal Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Terminal Basics","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 class="doc-nav-current">
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="terminal-basics">Terminal Basics</h1>
+
+<h2 id="what-even-is-a-terminal">What Even Is a Terminal?</h2>
+
+<p>Think of a terminal as a direct hotline to your computer's brain. While you're used to clicking icons and dragging windows, the terminal lets you type commands that your computer executes immediately. No clicking, no menus — just you and your machine, having a conversation.</p>
+
+<p>Why does this matter? Because tools like Claude Code live in the terminal. If you want to use AI to help you code, you'll need to make friends with this black (or white) window first.</p>
+
+<hr />
+
+<h2 id="the-anatomy-of-your-terminal-window">The Anatomy of Your Terminal Window</h2>
+
+<p>Before you start typing commands, let's understand what you're looking at. The terminal might look intimidating at first — all that text, no buttons — but it's actually quite logical once you know the pieces.</p>
+
+<h3 id="title-bar-whats-this-window-up-to">Title Bar: What's This Window Up To?</h3>
+
+<h4 id="windows">Windows</h4>
+
+<p><strong>Windows PowerShell Example</strong>: The title bar shows "Windows PowerShell" or "Administrator: Windows PowerShell".</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/1.OS/file-20260113152828141.png" alt="" /></p>
+
+<h4 id="mac">Mac</h4>
+
+<p><strong>Mac Terminal Example</strong>: <strong>ruby – 01-complete-macos-setup.sh</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image3.png" alt="" /></p>
+
+<p>This title bar tells you:</p>
+
+<ul>
+  <li><strong>ruby</strong>: The name of your current terminal session</li>
+  <li><strong>01-complete-macos-setup.sh</strong>: The script file associated with the session</li>
+  <li><strong>.sh</strong> means it's a shell script — something the terminal can execute</li>
+</ul>
+
+<p>💡 <strong>Pro Tip</strong>: The title doesn't mean the script is running — it just tells you what's associated with this window. Think of it like a file tab name.</p>
+
+<hr />
+
+<h3 id="the-command-prompt-your-ready-set-go-signal">The Command Prompt: Your "Ready, Set, Go" Signal</h3>
+
+<p>This line is <strong>critical</strong>. It tells you the system is ready for your command. Let's break it down by operating system.</p>
+
+<h4 id="windows-command-prompt">Windows Command Prompt</h4>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/1.OS/file-20260113152828140.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>What It Means</th>
+      <th>Why Care</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PS</strong></td>
+      <td>You're in PowerShell</td>
+      <td>Different from old-school CMD</td>
+    </tr>
+    <tr>
+      <td><strong>C:\Windows\System32</strong></td>
+      <td>Your current folder</td>
+      <td>Commands happen here</td>
+    </tr>
+    <tr>
+      <td><strong>&gt;</strong></td>
+      <td>System is ready</td>
+      <td>Go ahead, type something</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Putting It All Together:</strong></p>
+
+<ul>
+  <li>Where am I working? → <code class="language-plaintext highlighter-rouge">C:\Windows\System32</code></li>
+  <li>Is the system ready? → <code class="language-plaintext highlighter-rouge">&gt;</code> (yes!)</li>
+  <li>Where will my typing appear? → Right after <code class="language-plaintext highlighter-rouge">&gt;</code>, at the blinking cursor</li>
+</ul>
+
+<hr />
+
+<h4 id="mac-command-prompt">Mac Command Prompt</h4>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image5.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>What It Means</th>
+      <th>Why Care</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>selenagupSelena</strong></td>
+      <td>Your username</td>
+      <td>Who's logged in</td>
+    </tr>
+    <tr>
+      <td><strong>~</strong></td>
+      <td>Home directory</td>
+      <td>Your personal folder</td>
+    </tr>
+    <tr>
+      <td><strong>%</strong></td>
+      <td>Ready for input</td>
+      <td>Type away!</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>The <code class="language-plaintext highlighter-rouge">~</code> Symbol Explained:</strong></p>
+
+<p>The tilde <code class="language-plaintext highlighter-rouge">~</code> is a shortcut for your home directory. Instead of typing <code class="language-plaintext highlighter-rouge">/Users/yourname</code>, you just see <code class="language-plaintext highlighter-rouge">~</code>. Clean and simple.</p>
+
+<p>Other paths you might encounter:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>What It Is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/Desktop</code></td>
+      <td>Your desktop</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/Documents</code></td>
+      <td>Your documents</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/usr/local/bin</code></td>
+      <td>System programs</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>The Prompt Symbol:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Shell Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>zsh (default on modern macOS)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$</code></td>
+      <td>bash</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">#</code></td>
+      <td>root/administrator</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⚠️ <strong>Warning</strong>: If you ever see <code class="language-plaintext highlighter-rouge">#</code> as your prompt symbol, proceed with caution. You have full system access, which means you can accidentally break things.</p>
+
+<p><strong>Putting It All Together:</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image6.png" alt="" /></p>
+
+<ul>
+  <li>Who's operating? → <code class="language-plaintext highlighter-rouge">selenagupSelena</code> (that's you!)</li>
+  <li>Where am I? → <code class="language-plaintext highlighter-rouge">~</code> (home sweet home)</li>
+  <li>Is the system ready? → <code class="language-plaintext highlighter-rouge">%</code></li>
+  <li>Where do I type? → Blinking cursor, right here</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image7.png" alt="" /></p>
+
+<hr />
+
+<h2 id="how-to-open-terminal">How to Open Terminal</h2>
+
+<p>Now that you know what you're looking at, let's actually open one.</p>
+
+<h3 id="windows-getting-powershell">Windows: Getting PowerShell</h3>
+
+<p>Press the <code class="language-plaintext highlighter-rouge">Windows key</code> (or <code class="language-plaintext highlighter-rouge">Win</code>), type "PowerShell", and hit Enter.</p>
+
+<p>⚠️ <strong>Important</strong>: To avoid permission headaches later, I recommend selecting <strong>Run as Administrator</strong>. Future you will thank present you.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Windows/file-20260109160736263.png" alt="" /></p>
+
+<p>Wait for the window to appear. You'll know you're in admin mode when you see "Administrator" in the title bar.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Windows/file-20260109161032035.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mac-summoning-terminal">Mac: Summoning Terminal</h3>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code>, type "Terminal", and hit Enter.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Toolkit/image260.png" alt="" /></p>
+
+<p>That's it. You're in.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Toolkit/image270.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Terminal</strong> = direct text-based communication with your computer</li>
+  <li><strong>Command prompt</strong> = the "I'm ready" signal (look for <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">%</code>, or <code class="language-plaintext highlighter-rouge">$</code>)</li>
+  <li><strong>Windows</strong>: Open PowerShell as Administrator</li>
+  <li><strong>Mac</strong>: <code class="language-plaintext highlighter-rouge">Command + Space</code> → "Terminal"</li>
+  <li><strong>You're ready</strong> to use command-line tools like Claude Code!</li>
+</ol>
+
+<hr />
+
+<p><em>Still nervous? Don't worry. The best way to learn the terminal is to use it. Every command you run makes you a little more comfortable. You've got this.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

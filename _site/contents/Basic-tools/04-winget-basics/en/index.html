@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>winget Basics | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>winget Basics | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="winget Basics" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/04-winget-basics/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/04-winget-basics/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="winget Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"winget Basics","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/04-winget-basics/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 class="doc-nav-current">
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="winget-basics">winget Basics</h1>
+
+<h2 id="the-big-picture-why-use-a-package-manager">The Big Picture: Why Use a Package Manager?</h2>
+
+<p>Remember how you used to install software? Go to a website, find the download button, run the installer, click "Next" seventeen times, uncheck some toolbar you didn't ask for, and hope nothing breaks. Fun times.</p>
+
+<p><strong>Package managers</strong> are here to save you from that nightmare. Think of them as an "App Store" for your terminal. One command, and software installs automatically — no clicking, no toolbars, no drama.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Traditional Way</th>
+      <th>Package Manager Way</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Download installer</td>
+      <td><code class="language-plaintext highlighter-rouge">winget install python</code></td>
+    </tr>
+    <tr>
+      <td>Run installer</td>
+      <td>Done.</td>
+    </tr>
+    <tr>
+      <td>Click through wizard</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Uncheck bloatware</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Reboot sometimes</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="what-is-winget">What is winget?</h2>
+
+<p><strong>winget</strong> (Windows Package Manager) is Microsoft's official package manager for Windows. It's like Homebrew for Mac, but built right into Windows. The software ecosystem is surprisingly rich — most popular programs are available.</p>
+
+<p>💡 <strong>Pro Tip</strong>: winget comes pre-installed on Windows 10 (version 1809+) and Windows 11. If you're on an older version, you might need to install it from the Microsoft Store first.</p>
+
+<p>⚠️ <strong>Note</strong>: All programs installed via winget go to the default system location. If you need to install something to a specific drive (like D:), you'll need to use the traditional installer method for that program.</p>
+
+<hr />
+
+<h2 id="step-1-find-what-you-want-search">Step 1: Find What You Want (Search)</h2>
+
+<p>Before installing, let's find the exact package name. Why? Because one program might have multiple versions, and you want the right one.</p>
+
+<p>In your terminal, type:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">winget</span><span class="w"> </span><span class="nx">search</span><span class="w"> </span><span class="nx">python</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>What this does</strong>:</p>
+  <ul>
+    <li>Searches the winget repository for anything matching "python"</li>
+    <li>Returns a list with names, IDs, versions, and sources</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Basic-tools/04-winget-basics/images/Windows/file-20260109161753557.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Use the <strong>ID</strong> column for installation instead of the name. It's more precise and avoids confusion when multiple versions exist.</p>
+
+<hr />
+
+<h2 id="step-2-install-it-one-command">Step 2: Install It (One Command)</h2>
+
+<p>Found what you need? Now install it with the ID you got from the search:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">winget</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">Python.Python.3.12</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>What this does</strong>:</p>
+  <ul>
+    <li>Downloads the installer automatically</li>
+    <li>Runs the installation silently (no clicking through wizards)</li>
+    <li>Handles dependencies if needed</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Basic-tools/04-winget-basics/images/Windows/file-20260109162641973.png" alt="" /></p>
+
+<p>That's it. Python is now installed on your system.</p>
+
+<hr />
+
+<h2 id="common-winget-commands-cheat-sheet">Common winget Commands Cheat Sheet</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>What It Does</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget search &lt;name&gt;</code></td>
+      <td>Find a package</td>
+      <td><code class="language-plaintext highlighter-rouge">winget search node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget install &lt;id&gt;</code></td>
+      <td>Install a package</td>
+      <td><code class="language-plaintext highlighter-rouge">winget install OpenJS.NodeJS.LTS</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget list</code></td>
+      <td>Show installed packages</td>
+      <td><code class="language-plaintext highlighter-rouge">winget list</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget upgrade &lt;id&gt;</code></td>
+      <td>Update a package</td>
+      <td><code class="language-plaintext highlighter-rouge">winget upgrade Python.Python.3.12</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget upgrade --all</code></td>
+      <td>Update everything</td>
+      <td><code class="language-plaintext highlighter-rouge">winget upgrade --all</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">winget uninstall &lt;id&gt;</code></td>
+      <td>Remove a package</td>
+      <td><code class="language-plaintext highlighter-rouge">winget uninstall Python.Python.3.12</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Package managers</strong> = terminal-based app stores (no clicking, no bloatware)</li>
+  <li><strong>winget</strong> = Microsoft's official package manager for Windows</li>
+  <li><strong>Search first</strong>: <code class="language-plaintext highlighter-rouge">winget search &lt;name&gt;</code> → find the ID</li>
+  <li><strong>Install with ID</strong>: <code class="language-plaintext highlighter-rouge">winget install &lt;id&gt;</code> → done!</li>
+  <li><strong>Upgrade easily</strong>: <code class="language-plaintext highlighter-rouge">winget upgrade --all</code> keeps everything current</li>
+</ol>
+
+<hr />
+
+<p><em>Welcome to the future of software installation. Your mouse-clicking finger will thank you.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

@@ -3,6 +3,22 @@ baseURL: "https://sufumo.github.io/AI_document_website/"
 title: "AI Tutorial Documentation"
 description: "AI training documentation center"
 
+# 首页两大项目：GSI 独立系列 + 综合教程（其余 section 一并归入）
+params:
+  home_modules:
+    - id: gsi
+      i18n_key: home_module_gsi
+      sections:
+        - gsi
+    - id: combined
+      i18n_key: home_module_combined
+      sections:
+        - basic-tools
+        - apps
+        - agents
+        - extensions
+        - ai-tools
+
 # 多语言配置
 defaultContentLanguage: zh
 languages:
@@ -10,18 +26,24 @@ languages:
     languageName: 中文
     weight: 1
     params:
+      tagline: GSI 系列教程（独立项目）与综合教程（基础工具、应用、智能体、扩展等）分区呈现，可按需选学。
       nav_group_agents: 智能体
       nav_group_apps: 应用
+      nav_group_ai-tools: AI工具
       nav_group_basic-tools: 基础工具
       nav_group_extensions: 扩展
+      nav_group_gsi: GSI 系列教程
   en:
     languageName: English
     weight: 2
     params:
+      tagline: The GSI series is a standalone track; everything else is the main integrated curriculum.
       nav_group_agents: Agents
       nav_group_apps: Apps
+      nav_group_ai-tools: AI Tools
       nav_group_basic-tools: Basic Tools
       nav_group_extensions: Extensions
+      nav_group_gsi: GSI Tutorial Series
 
 contentDir: contents
 publishDir: public

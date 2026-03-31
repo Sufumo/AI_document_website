@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AI Tutorial Documentation | AI 培训文档中心</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="AI Tutorial Documentation" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/5.Claude%20Code%20Workshop.html" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/5.Claude%20Code%20Workshop.html" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AI Tutorial Documentation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"AI Tutorial Documentation","url":"http://localhost:4000/AI_document_website/contents/Agents/5.Claude%20Code%20Workshop.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/5.Claude%20Code%20Workshop.html" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/5.Claude%20Code%20Workshop.html" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="claude-code-workshop-solutions-claude-code-工作坊参考答案">Claude Code Workshop Solutions (Claude Code 工作坊参考答案)</h1>
+
+<h2 id="prerequisites-前置要求">Prerequisites (前置要求)</h2>
+
+<p>Before starting, ensure you have:<br />
+在开始之前，请确保您已具备：</p>
+
+<ul>
+  <li>Claude Code installed (see <a href="4.Claude%20code.md">4.Claude code.md</a> for installation instructions)</li>
+  <li>Claude Code 已安装（安装说明请参见 <a href="4.Claude%20code.md">4.Claude code.md</a>）</li>
+  <li>Basic understanding of how to use Claude Code (you can simply describe what you want in natural language)</li>
+  <li>基本了解如何使用 Claude Code（只需用自然语言描述您想要完成的任务即可）</li>
+</ul>
+
+<hr />
+
+<h2 id="tips-小贴士">Tips (小贴士)</h2>
+
+<h3 id="copy-as-path">Copy as path</h3>
+<h3 id="复制路径">复制路径</h3>
+
+<p><strong>Windows</strong></p>
+
+<p>Right click to copy path.<br />
+右键复制文件路径</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919865.png" alt="" /></p>
+
+<p><strong>Mac</strong></p>
+
+<p>Right click the file, press and hold option to copy the path.<br />
+右键并按住 option 以复制路径。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919864.png" alt="" /></p>
+<h3 id="open-in-terminal">Open in Terminal</h3>
+<h3 id="在终端打开">在终端打开</h3>
+
+<p><strong>Windows</strong></p>
+
+<p>Open the work folder in Terminal through right click.<br />
+通过右键在 Terminal 中打开工作文件夹。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919867.png" alt="" /></p>
+
+<p><strong>Mac</strong></p>
+
+<p>Open the work folder in Terminal through right click the path bar.<br />
+通过右键路径栏在 Terminal 中打开工作文件夹。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919866.png" alt="" /></p>
+
+<h3 id="usage-specifications">Usage Specifications</h3>
+<h3 id="使用规范">使用规范</h3>
+
+<p>We strongly recommend not making modifications directly at the source file location to prevent Claude code errors. Instead, a new folder (such as Output) should be created to save the results.<br />
+我们强烈建议不要在源文件位置直接进行修改，防止 Claude code 出错，应新建一个文件夹（如 Output）保存结果。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919850.png" alt="" /></p>
+
+<p>In addition, the results output by Claude code should be carefully reviewed manually instead of fully accepting the results output or modified by Claude code.<br />
+除此之外，应仔细人工审核 Claude code 输出的结果，而非完全接受 Claude code 输出或修改的结果。</p>
+
+<h2 id="exercise-1-batch-renaming-练习1批量重命名">Exercise 1: Batch Renaming (练习1：批量重命名)</h2>
+
+<h3 id="objective-目标">Objective (目标)</h3>
+
+<p>Rename folders from Chinese names to a standardized format: <code class="language-plaintext highlighter-rouge">DOC-NSE-XXXX-ChineseName</code>, where XXXX is a zero-padded 4-digit number.<br />
+将文件夹从中文名称重命名为标准化格式：<code class="language-plaintext highlighter-rouge">DOC-NSE-XXXX-中文名称</code>，其中 XXXX 是补零的4位数字。</p>
+
+<h3 id="input-structure-输入结构">Input Structure (输入结构)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">01_Batch_Renaming/sample_pdfs/</code></li>
+  <li><strong>Content</strong>: Multiple folders with Chinese names</li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">01_Batch_Renaming/sample_pdfs/</code></li>
+  <li><strong>内容</strong>：包含多个中文命名的文件夹</li>
+</ul>
+
+<h3 id="expected-output-预期输出">Expected Output (预期输出)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">01_Batch_Renaming/expected_results/</code></li>
+  <li><strong>Format</strong>: <code class="language-plaintext highlighter-rouge">DOC-NSE-0001-从70年发展看经济学理论创新/</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0002-中国70年发展是理论创新的"金矿"...</code></li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">01_Batch_Renaming/expected_results/</code></li>
+  <li><strong>格式</strong>：<code class="language-plaintext highlighter-rouge">DOC-NSE-0001-从70年发展看经济学理论创新/</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0002-中国70年发展是理论创新的"金矿"...</code></li>
+</ul>
+
+<h3 id="solution-steps-解题步骤">Solution Steps (解题步骤)</h3>
+
+<h4 id="step-1-open-claude-code-and-navigate-to-the-directory-步骤1打开-claude-code-并导航到目录">Step 1: Open Claude Code and Navigate to the Directory (步骤1：打开 Claude Code 并导航到目录)</h4>
+
+<p>Open Claude Code and tell it where you want to work.<br />
+打开 Claude Code 并告诉它您要在哪里工作。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919894.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919893.png" alt="" /></p>
+
+<h4 id="step-2-prompt-步骤2提词">Step 2: Prompt (步骤2：提词)</h4>
+
+<p>Tell Claude Code what you want to do in simple language.<br />
+用简单的语言告诉 Claude Code 您想要做什么。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+I have a folder called <code class="language-plaintext highlighter-rouge">sample_pdfs</code> that contains many folders with Chinese names. I want to rename all these folders to a new format. The new name should be: DOC-NSE followed by a 4-digit number (like 0001, 0002, 0003…), then a dash, then the original Chinese name. For example, if the original folder is called "新结构经济学", the new name should be "DOC-NSE-0001-新结构经济学". Please copy all folders from <code class="language-plaintext highlighter-rouge">sample_pdfs</code> to a new folder called <code class="language-plaintext highlighter-rouge">expected_results</code> with the new names, sorted alphabetically by the original Chinese names.<br />
+我有一个名为 <code class="language-plaintext highlighter-rouge">sample_pdfs</code> 的文件夹，里面包含许多中文名称的文件夹。我想将所有文件夹重命名为新格式。新名称应该是：DOC-NSE 后跟4位数字（如 0001、0002、0003…），然后是短横线，然后是原来的中文名称。例如，如果原来的文件夹叫"新结构经济学"，新名称应该是"DOC-NSE-0001-新结构经济学"。请将所有文件夹从 <code class="language-plaintext highlighter-rouge">sample_pdfs</code> 复制到名为 <code class="language-plaintext highlighter-rouge">expected_results</code> 的新文件夹中，使用新名称，按原来的中文名称字母顺序排序。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919892.png" alt="" /></p>
+
+<h4 id="step-3-let-claude-code-complete-the-task-步骤3让-claude-code-完成任务">Step 3: Let Claude Code Complete the Task (步骤3：让 Claude Code 完成任务)</h4>
+
+<p>Claude Code will create a script and execute it automatically. You just need to wait.<br />
+Claude Code 会自动创建脚本并执行。您只需等待。</p>
+
+<p>If Claude Code asks for confirmation, simply say "yes" or "proceed".<br />
+如果 Claude Code 请求确认，只需说"yes"或"继续"即可。</p>
+<h4 id="step-4-verify-the-results-步骤4验证结果">Step 4: Verify the Results (步骤4：验证结果)</h4>
+
+<p>Ask Claude Code to show you the results to make sure everything worked correctly.<br />
+请 Claude Code 显示结果，以确保一切正常工作。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+Please show me the first 5 folders in the <code class="language-plaintext highlighter-rouge">expected_results</code> folder to verify that the renaming worked correctly.<br />
+请向我展示 <code class="language-plaintext highlighter-rouge">expected_results</code> 文件夹中的前5个文件夹，以验证重命名是否正确。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919890%201.png" alt="" /></p>
+
+<hr />
+
+<h2 id="exercise-2-extract-pdf-data-练习2提取pdf数据">Exercise 2: Extract PDF Data (练习2：提取PDF数据)</h2>
+
+<h3 id="objective-目标-1">Objective (目标)</h3>
+
+<p>Extract text content from a PDF file and save it as a Markdown file.<br />
+从 PDF 文件中提取文本内容并保存为 Markdown 文件。</p>
+
+<h3 id="input-structure-输入结构-1">Input Structure (输入结构)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/sample_pdf/</code></li>
+  <li><strong>File</strong>: <code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/sample_pdf/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></li>
+</ul>
+
+<h3 id="expected-output-预期输出-1">Expected Output (预期输出)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/expected_result/</code></li>
+  <li><strong>File</strong>: <code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.md</code></li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/expected_result/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.md</code></li>
+</ul>
+
+<h3 id="solution-steps-解题步骤-1">Solution Steps (解题步骤)</h3>
+
+<h4 id="step-1-navigate-to-the-directory-步骤1导航到目录">Step 1: Navigate to the Directory (步骤1：导航到目录)</h4>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919890.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919889.png" alt="" /></p>
+<h4 id="step-2-prompt-步骤2提词-1">Step 2: Prompt (步骤2：提词)</h4>
+
+<p>Tell Claude Code what you want to do with the PDF file.<br />
+告诉 Claude Code 您想对 PDF 文件做什么。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+I have a PDF file in the <code class="language-plaintext highlighter-rouge">sample_pdf</code> folder. The file name is "0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf". I want to extract all the text content from this PDF file and save it as a Markdown file (with .md extension). The new file should have the same name as the PDF but with .md extension instead of .pdf. Please save it in a folder called <code class="language-plaintext highlighter-rouge">expected_result</code>. Extract all the text from all pages of the PDF.<br />
+我在 <code class="language-plaintext highlighter-rouge">sample_pdf</code> 文件夹中有一个 PDF 文件。文件名是"0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf"。我想从这个 PDF 文件中提取所有文本内容，并将其保存为 Markdown 文件（扩展名为 .md）。新文件应与 PDF 同名，但扩展名是 .md 而不是 .pdf。请将其保存在名为 <code class="language-plaintext highlighter-rouge">expected_result</code> 的文件夹中。从 PDF 的所有页面中提取所有文本。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919888.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-步骤3等待完成">Step 3: Wait for Completion (步骤3：等待完成)</h4>
+
+<p>Claude Code will automatically install any necessary tools and extract the text from the PDF. Just wait for it to finish.<br />
+Claude Code 会自动安装任何必要的工具并从 PDF 中提取文本。只需等待它完成。</p>
+
+<h2 id="exercise-3-format-conversion-练习3格式转换">Exercise 3: Format Conversion (练习3：格式转换)</h2>
+
+<h3 id="objective-目标-2">Objective (目标)</h3>
+
+<p>Convert PDF to Markdown, then convert Markdown to DOCX format.<br />
+将 PDF 转换为 Markdown，然后将 Markdown 转换为 DOCX 格式。</p>
+
+<h3 id="input-structure-输入结构-2">Input Structure (输入结构)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">03_Format_Conversion/sample_pdfs/</code></li>
+  <li><strong>File</strong>: <code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">03_Format_Conversion/sample_pdfs/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></li>
+</ul>
+
+<h3 id="expected-output-预期输出-2">Expected Output (预期输出)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">03_Format_Conversion/expected_result/</code></li>
+  <li><strong>Files</strong>: Both <code class="language-plaintext highlighter-rouge">.md</code> and <code class="language-plaintext highlighter-rouge">.docx</code> versions</li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">03_Format_Conversion/expected_result/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">.md</code> 和 <code class="language-plaintext highlighter-rouge">.docx</code> 两个版本</li>
+</ul>
+
+<h3 id="solution-steps-解题步骤-2">Solution Steps (解题步骤)</h3>
+
+<h4 id="step-1-navigate-to-the-directory-步骤1导航到目录-1">Step 1: Navigate to the Directory (步骤1：导航到目录)</h4>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919887.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919886%201.png" alt="" /></p>
+<h4 id="step-2-prompt-步骤2提词-2">Step 2: Prompt (步骤2：提词)</h4>
+
+<p>Tell Claude Code you want to convert the PDF to both Markdown and DOCX formats.<br />
+告诉 Claude Code 您想将 PDF 转换为 Markdown 和 DOCX 两种格式。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+I have a PDF file in the <code class="language-plaintext highlighter-rouge">sample_pdfs</code> folder. The file name is "0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf". I want to:</p>
+<ol>
+  <li>First, convert this PDF file to a Markdown file (.md format)</li>
+  <li>Then, convert that Markdown file to a DOCX file (.docx format)</li>
+  <li>Save both files in a folder called <code class="language-plaintext highlighter-rouge">expected_result</code><br />
+Both files should have the same name as the original PDF, but with different extensions (.md and .docx).<br />
+我在 <code class="language-plaintext highlighter-rouge">sample_pdfs</code> 文件夹中有一个 PDF 文件。文件名是"0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf"。我想要：</li>
+  <li>首先，将这个 PDF 文件转换为 Markdown 文件（.md 格式）</li>
+  <li>然后，将该 Markdown 文件转换为 DOCX 文件（.docx 格式）</li>
+  <li>将两个文件都保存在名为 <code class="language-plaintext highlighter-rouge">expected_result</code> 的文件夹中<br />
+两个文件应与原始 PDF 同名，但扩展名不同（.md 和 .docx）。</li>
+</ol>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919886.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-步骤3等待完成-1">Step 3: Wait for Completion (步骤3：等待完成)</h4>
+
+<p>Claude Code will handle all the conversions automatically. Just wait for it to finish.<br />
+Claude Code 会自动处理所有转换。只需等待它完成。</p>
+
+<hr />
+
+<h2 id="exercise-4-web-scraping-练习4网页抓取">Exercise 4: Web Scraping (练习4：网页抓取)</h2>
+
+<h3 id="objective-目标-3">Objective (目标)</h3>
+
+<p>Extract content from HTML files and convert to Markdown format.<br />
+从 HTML 文件中提取内容并转换为 Markdown 格式。</p>
+
+<h3 id="input-structure-输入结构-3">Input Structure (输入结构)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></li>
+  <li><strong>Files</strong>: Multiple HTML files (e.g., <code class="language-plaintext highlighter-rouge">01_Protests_erupt_in_Tanzania...html</code>)</li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></li>
+  <li><strong>文件</strong>：多个 HTML 文件（例如 <code class="language-plaintext highlighter-rouge">01_Protests_erupt_in_Tanzania...html</code>）</li>
+</ul>
+
+<h3 id="expected-output-预期输出-3">Expected Output (预期输出)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></li>
+  <li><strong>Files</strong>: Corresponding <code class="language-plaintext highlighter-rouge">.md</code> files for each HTML file</li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></li>
+  <li><strong>文件</strong>：每个 HTML 文件对应的 <code class="language-plaintext highlighter-rouge">.md</code> 文件</li>
+</ul>
+
+<h3 id="solution-steps-解题步骤-3">Solution Steps (解题步骤)</h3>
+
+<h4 id="step-1-navigate-to-the-directory-步骤1导航到目录-2">Step 1: Navigate to the Directory (步骤1：导航到目录)</h4>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919885.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919884.png" alt="" /></p>
+<h4 id="step-2-prompt-步骤2提词-3">Step 2: Prompt (步骤2：提词)</h4>
+
+<p>Tell Claude Code you want to convert HTML files to Markdown files.<br />
+告诉 Claude Code 您想将 HTML 文件转换为 Markdown 文件。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+I have several HTML files in this folder (files ending with .html). I want to convert each HTML file to a Markdown file (.md format). For each HTML file, create a new Markdown file with the same name but with .md extension instead of .html. Extract the main content from each HTML file and convert it to Markdown format. Save the Markdown files in the same folder as the HTML files.<br />
+这个文件夹中有几个 HTML 文件（以 .html 结尾的文件）。我想将每个 HTML 文件转换为 Markdown 文件（.md 格式）。对于每个 HTML 文件，创建一个新的 Markdown 文件，名称相同，但扩展名是 .md 而不是 .html。从每个 HTML 文件中提取主要内容并转换为 Markdown 格式。将 Markdown 文件保存在与 HTML 文件相同的文件夹中。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919879.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-步骤3等待完成-2">Step 3: Wait for Completion (步骤3：等待完成)</h4>
+
+<p>Claude Code will process all HTML files and convert them to Markdown automatically.<br />
+Claude Code 会自动处理所有 HTML 文件并将它们转换为 Markdown。</p>
+
+<hr />
+
+<h2 id="exercise-5-split-files-练习5分割文件">Exercise 5: Split Files (练习5：分割文件)</h2>
+
+<h3 id="objective-目标-4">Objective (目标)</h3>
+
+<p>Split a large PDF file into multiple smaller PDF files with a specified number of pages per file.<br />
+将大型 PDF 文件分割为多个较小的 PDF 文件，每个文件包含指定页数。</p>
+
+<h3 id="input-structure-输入结构-4">Input Structure (输入结构)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">05_Split_Files/sample_pdfs/</code></li>
+  <li><strong>File</strong>: <code class="language-plaintext highlighter-rouge">DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf</code></li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">05_Split_Files/sample_pdfs/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf</code></li>
+</ul>
+
+<h3 id="expected-output-预期输出-4">Expected Output (预期输出)</h3>
+
+<ul>
+  <li><strong>Location</strong>: <code class="language-plaintext highlighter-rouge">05_Split_Files/expected_result/</code></li>
+  <li><strong>Files</strong>: <code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part1.pdf</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part2.pdf</code>, etc.</li>
+  <li><strong>位置</strong>：<code class="language-plaintext highlighter-rouge">05_Split_Files/expected_result/</code></li>
+  <li><strong>文件</strong>：<code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part1.pdf</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part2.pdf</code> 等</li>
+</ul>
+
+<h3 id="solution-steps-解题步骤-4">Solution Steps (解题步骤)</h3>
+
+<h4 id="step-1-navigate-to-the-directory-步骤1导航到目录-3">Step 1: Navigate to the Directory (步骤1：导航到目录)</h4>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919883.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919881.png" alt="" /></p>
+<h4 id="step-2-prompt-步骤2提词-4">Step 2: Prompt (步骤2：提词)</h4>
+
+<p>Tell Claude Code you want to split the PDF into smaller files.<br />
+告诉 Claude Code 您想将 PDF 分割为较小的文件。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+I have a large PDF file in the <code class="language-plaintext highlighter-rouge">sample_pdfs</code> folder. The file name is "DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf". I want to split this PDF file into multiple smaller PDF files. Each smaller file should contain 50 pages. Name the split files by adding "_part1", "_part2", "_part3", etc. to the original file name (before the .pdf extension). For example, the first part should be named "DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy_part1.pdf". Save all the split files in a folder called <code class="language-plaintext highlighter-rouge">expected_result</code>.<br />
+我在 <code class="language-plaintext highlighter-rouge">sample_pdfs</code> 文件夹中有一个大型 PDF 文件。文件名是"DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf"。我想将这个 PDF 文件分割为多个较小的 PDF 文件。每个较小的文件应包含 50 页。通过在原文件名（.pdf 扩展名之前）添加"_part1"、"_part2"、"_part3"等来命名分割的文件。例如，第一部分应命名为"DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy_part1.pdf"。将所有分割的文件保存在名为 <code class="language-plaintext highlighter-rouge">expected_result</code> 的文件夹中。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919874.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-步骤3等待完成-3">Step 3: Wait for Completion (步骤3：等待完成)</h4>
+
+<p>Claude Code will split the PDF file automatically. Just wait for it to finish.<br />
+Claude Code 会自动分割 PDF 文件。只需等待它完成。</p>
+
+<h4 id="step-4-verify-the-results-步骤4验证结果-1">Step 4: Verify the Results (步骤4：验证结果)</h4>
+
+<p>Ask Claude Code to show you the split files to make sure everything worked correctly.<br />
+请 Claude Code 显示分割的文件，以确保一切正常工作。</p>
+
+<p><strong>Prompt (提词):</strong><br />
+Please show me all the split PDF files in the <code class="language-plaintext highlighter-rouge">expected_result</code> folder to verify that the splitting worked correctly.<br />
+请向我展示 <code class="language-plaintext highlighter-rouge">expected_result</code> 文件夹中的所有分割 PDF 文件，以验证分割是否正确。</p>
+
+<p><img src="/AI_document_website/contents/Agents/images/5.Claude%20Code%20Workshop/file-20260113152919871.png" alt="" /></p>
+
+<hr />
+
+<h2 id="summary-总结">Summary (总结)</h2>
+
+<p>These 5 exercises demonstrate how to use Claude Code with simple natural language prompts:<br />
+这5道练习展示了如何使用简单的自然语言提词来使用 Claude Code：</p>
+
+<ol>
+  <li><strong>Batch Operations</strong>: Describe what you want to rename, and Claude Code will handle it<br />
+<strong>批量操作</strong>：描述您想要重命名的内容，Claude Code 会处理它</li>
+  <li><strong>Data Extraction</strong>: Describe what you want to extract, and Claude Code will do it<br />
+<strong>数据提取</strong>：描述您想要提取的内容，Claude Code 会完成它</li>
+  <li><strong>Format Conversion</strong>: Describe the conversion you need, and Claude Code will convert it<br />
+<strong>格式转换</strong>：描述您需要的转换，Claude Code 会转换它</li>
+  <li><strong>Web Scraping</strong>: Describe what content you want, and Claude Code will extract it<br />
+<strong>网页抓取</strong>：描述您想要的内容，Claude Code 会提取它</li>
+  <li><strong>File Manipulation</strong>: Describe how you want to split files, and Claude Code will split them<br />
+<strong>文件操作</strong>：描述您想要如何分割文件，Claude Code 会分割它们</li>
+</ol>
+
+<p>By completing these exercises, you'll learn that you don't need to write code yourself—you can simply describe what you want in natural language, and Claude Code will do the work for you.<br />
+通过完成这些练习，您将了解到您不需要自己编写代码——只需用自然语言描述您想要的内容，Claude Code 就会为您完成工作。</p>
+
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

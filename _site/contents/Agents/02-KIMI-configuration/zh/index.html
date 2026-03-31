@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIMI 配置教程 | AI 培训文档中心</title>
+  <meta name="description" content="AI 培训文档中心">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KIMI 配置教程 | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="KIMI 配置教程" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/zh/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/zh/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KIMI 配置教程" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"KIMI 配置教程","url":"http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/zh/" class="logo">AI 培训文档中心</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="语言" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/" role="menuitem" class="language-list-link">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/" role="menuitem" class="language-list-link active">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">文档索引</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">智能体</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/"
+                 >
+                GLM 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"
+                 class="doc-nav-current">
+                KIMI 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/"
+                 >
+                Claude Code 使用教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/"
+                 >
+                Claude Code 实践任务
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">应用</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/"
+                 >
+                VSCode 使用指南
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/"
+                 >
+                Obsidian 使用指南
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">基础工具</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"
+                 >
+                Terminal 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/"
+                 >
+                Windows 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/"
+                 >
+                Mac 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/"
+                 >
+                winget 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"
+                 >
+                Homebrew 安装与基础使用
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>阅前说明</strong></p>
+
+  <p>本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 <a href="../../../Basic-tools/01-terminal-basics/zh">Terminal 基础</a>，绝对物超所值。</p>
+</blockquote>
+
+<h1 id="kimi-配置教程">KIMI 配置教程</h1>
+
+<h2 id="大局观为什么在-claude-code-里用-kimi">大局观：为什么在 Claude Code 里用 KIMI？</h2>
+
+<p><strong>想象一下这样的场景：</strong></p>
+
+<p>你下载了 Claude Code，兴奋地准备让 AI 帮你写代码。结果打开后发现——需要 Claude API 才能用。去官网一看，订阅要国际信用卡，还得担心账号风控。一盆冷水浇下来，热情瞬间凉了半截。</p>
+
+<p><strong>别慌，这正是 KIMI 登场的时候。</strong></p>
+
+<h3 id="先搞清楚一件事claude-code--claude">先搞清楚一件事：Claude Code ≠ Claude</h3>
+
+<p>这里有个关键概念：</p>
+
+<p><strong>Claude Code 是「手」，Claude/KIMI 是「大脑」。</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>代表</th>
+      <th>干什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>大脑</strong></td>
+      <td>Claude、KIMI</td>
+      <td>理解你、思考方案、做决策</td>
+    </tr>
+    <tr>
+      <td><strong>手</strong></td>
+      <td>Claude Code</td>
+      <td>写代码、改文件、跑命令</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Claude Code 这双「手」很灵活，但它<strong>不会自己思考</strong>。它需要一个「大脑」告诉它该干什么。</p>
+
+<p><strong>重点来了：这个大脑，可以是 Claude，也可以是 KIMI。</strong></p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260316125916.png" alt="" /></p>
+
+<h3 id="为什么选-kimi">为什么选 KIMI？</h3>
+
+<p>三个字：<strong>省心、省力、省钱</strong>。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>你的困扰</th>
+      <th>Claude 方案</th>
+      <th>KIMI 方案</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>没有国际信用卡</td>
+      <td>订阅困难</td>
+      <td>多种支付方式直接充</td>
+    </tr>
+    <tr>
+      <td>担心封号</td>
+      <td>高频调用有风险</td>
+      <td>中国服务商，稳得很</td>
+    </tr>
+    <tr>
+      <td>性能够不够用</td>
+      <td>顶级</td>
+      <td>开源前三，日常开发绰绰有余</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>一句话总结：</strong> 没有 Claude 账号？KIMI 就是很能打的 Plan B。</p>
+
+<h3 id="kimi-实力如何">KIMI 实力如何？</h3>
+
+<p>KIMI k2.5 在 <a href="https://andonlabs.com/evals/vending-bench-2">Vending-Bench 2</a> 复杂决策能力测试中（2026年3月），<strong>开源模型排名第三</strong>。作为「大脑」，智能完全在线。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260316130945.png" alt="" /></p>
+
+<h3 id="ai-工作流长这样">AI 工作流长这样</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>你提需求 → 大脑思考 → 手写代码 → 搞定
+</code></pre></div></div>
+
+<p>就是这么简单。</p>
+
+<hr />
+
+<p><strong>快速决策：</strong></p>
+<ul>
+  <li>✅ 已有稳定 Claude 账号 → 继续用，本篇选读</li>
+  <li>✅ 没有 Claude / 想试试 KIMI → 往下看，开始配置</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310143951.png" alt="" /></p>
+
+<hr />
+
+<h2 id="步骤一获取你的入场券">步骤一：获取你的「入场券」</h2>
+
+<p>一切从一个 API Key 开始。获取方式如下：</p>
+
+<p>🔗 打开 <a href="https://platform.moonshot.cn/console/api-keys">https://platform.moonshot.cn/console/api-keys</a> 并登录。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303194555.png" alt="" /></p>
+
+<p>点击 <strong>新建 API Key</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303194920.png" alt="" /></p>
+
+<p>起个能记住的名字，项目选择 <strong>default</strong>，然后点击 <strong>确定</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303195050.png" alt="" /></p>
+
+<p>点击 <strong>复制</strong>，找个安全的地方存起来。<strong>重要提示</strong>：这是你唯一一次能看到它的机会！</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303195345.png" alt="" /></p>
+
+<hr />
+
+<h2 id="步骤二给账户充点燃料">步骤二：给账户充点「燃料」</h2>
+
+<p><strong>KIMI 的 API Key 需要账户有余额才能用。没钱就没法干活。</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>操作路径</th>
+      <th>要做什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>财务管理</strong> → <strong>账户充值</strong></td>
+      <td>选择金额并完成支付，搞定</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114112.png" alt="" /></p>
+
+<hr />
+
+<h2 id="步骤三实际配置选择你的路线">步骤三：实际配置</h2>
+
+<p>你有两条路可以选，按你的需求来决定：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>方法</th>
+      <th>优点</th>
+      <th>缺点</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>可视化配置工具</strong>（推荐）</td>
+      <td>方便切换服务商，易用</td>
+      <td>多一步配置</td>
+    </tr>
+    <tr>
+      <td><strong>环境变量</strong></td>
+      <td>一条命令搞定</td>
+      <td>后续切换服务商较麻烦</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="方法一可视化配置工具推荐-">方法一：可视化配置工具（推荐 ✨）</h3>
+
+<p><strong>为什么推荐这一种</strong>：后续可以在 KIMI 和其他服务商之间自由切换，灵活性最高。</p>
+
+<p>找个文件夹，右键 → <strong>Terminal</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260311005958.png" alt="" /></p>
+
+<p>复制这段「魔法咒语」到终端，按下 Enter：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip &amp;&amp; \
+unzip agent_manager-main.zip &amp;&amp; \
+cd agent_manager-main &amp;&amp; \
+chmod +x install.sh &amp;&amp; \
+./install.sh
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260311010117.png" alt="" /></p>
+
+<p>安装完成后，找到 <strong>AGENT_MANAGER.command</strong> 文件，双击运行。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306111847.png" alt="" /></p>
+
+<p>关键时刻到了：</p>
+<ol>
+  <li>点击 <strong>KIMI</strong> 选项卡</li>
+  <li>粘贴你的 API Key</li>
+  <li>点击 <strong>Install &amp; configure</strong></li>
+</ol>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114430.png" alt="" /></p>
+
+<p>成功长这样：</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114556.png" alt="" /></p>
+
+<p>现在终端输入 <code class="language-plaintext highlighter-rouge">kimi</code> 就能用 KIMI 启动 Claude Code 了。搞定。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114634.png" alt="" /></p>
+
+<p>💡 <strong>小贴士</strong>：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/fcb0a0365799f8680cbf2116e80f73ce.png" alt="" /></p>
+
+<hr />
+
+<h3 id="方法二环境变量配置">方法二：环境变量配置</h3>
+
+<p><strong>取舍</strong>：配置更快，但后续切换服务商较麻烦。适合确定只用 KIMI 的用户。</p>
+
+<p><strong>访达</strong> → <strong>前往</strong> → <strong>个人</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> 显示隐藏文件，打开 <strong>.zshrc</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200006.png" alt="" /></p>
+
+<p>在文件末尾粘贴，把 <code class="language-plaintext highlighter-rouge">your API KEY</code> 换成你真正的 API Key：</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANTHROPIC_BASE_URL</span><span class="o">=</span><span class="s2">"https://api.moonshot.cn/anthropic/"</span>
+<span class="nb">export </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s2">"your API KEY"</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200243.png" alt="" /></p>
+
+<p>保存文件。按 <code class="language-plaintext highlighter-rouge">Option + Space</code> → 输入 <strong>Terminal</strong> → 回车。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303190946.png" alt="" /></p>
+
+<p>在终端输入 <code class="language-plaintext highlighter-rouge">source .zshrc</code> 使环境变量生效：</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200438.png" alt="" /></p>
+
+<p>输入 <code class="language-plaintext highlighter-rouge">claude</code> 并按下 Enter；当 Claude Code 提示 <strong>Detected a custom API Key in your environment</strong> 时，点击 <strong>Yes</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200736.png" alt="" /></p>
+
+<p>之后即可正常使用 Claude Code（KIMI）。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200846.png" alt="" /></p>
+
+<p>💡 <strong>小贴士</strong>：直接问也行，AI 会告诉你它用的是 kimi-k2.5 模型。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/fcb0a0365799f8680cbf2116e80f73ce.png" alt="" /></p>
+
+<hr />
+
+<h3 id="进阶创建-kimi-启动命令">进阶：创建 <code class="language-plaintext highlighter-rouge">kimi</code> 启动命令</h3>
+
+<p>想用 <code class="language-plaintext highlighter-rouge">kimi</code> 命令快速启动？操作如下：</p>
+
+<p><strong>访达</strong> → <strong>前往</strong> → <strong>个人</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> 显示隐藏文件，打开 <strong>.claude</strong> 文件夹。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192303.png" alt="" /></p>
+
+<p>复制 <strong>settings.json</strong> → 重命名为 <strong>kimi-settings.json</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234238.png" alt="" /></p>
+
+<p>打开 <strong>kimi-settings.json</strong>，填入以下内容（把 <code class="language-plaintext highlighter-rouge">replace with your api key</code> 换成你的 API Key）：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_BASE_URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.moonshot.cn/anthropic/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_AUTH_TOKEN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace with your api key"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"hasCompletedOnboarding"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234351.png" alt="" /></p>
+
+<p>返回 Home 目录，打开 <strong>.zshrc</strong>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234055.png" alt="" /></p>
+
+<p>在文件末尾添加：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">kimi</span><span class="o">=</span><span class="s2">"claude --settings ~/.claude/kimi-settings.json"</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233841.png" alt="" /></p>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + 空格</code> → 搜索 <strong>Terminal</strong> → 回车。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/4.Claude%20code/file-20260113152908876%201.png" alt="" /></p>
+
+<p>在终端输入 <code class="language-plaintext highlighter-rouge">source .zshrc</code>。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233106.png" alt="" /></p>
+
+<p>待终端恢复可输入状态即表示配置完成。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233154.png" alt="" /></p>
+
+<p>输入 <code class="language-plaintext highlighter-rouge">kimi</code> 即可启动 Claude Code。</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234456.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233250.png" alt="" /></p>
+
+<hr />
+
+<h2 id="总结">总结</h2>
+
+<ol>
+  <li><strong>获取 API Key</strong>：去 <a href="https://platform.moonshot.cn/console/api-keys">platform.moonshot.cn</a></li>
+  <li><strong>充值</strong>：账户需要有余额才能使用</li>
+  <li><strong>配置</strong>：可视化工具（<code class="language-plaintext highlighter-rouge">kimi</code> 命令）或环境变量（<code class="language-plaintext highlighter-rouge">claude</code> 命令）</li>
+  <li><strong>验证</strong>：直接问 AI 用的是什么模型</li>
+  <li><strong>完成！</strong> 开始和你的 AI 结对编程吧</li>
+</ol>
+
+<hr />
+
+<p><em>有问题？卡住了？KIMI 社区挺活跃的。或者直接问 Claude，它就在那。</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI 培训文档中心. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLM Configuration Guide | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>GLM Configuration Guide | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="GLM Configuration Guide" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/01-GLM-configuration/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/01-GLM-configuration/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="GLM Configuration Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"GLM Configuration Guide","url":"http://localhost:4000/AI_document_website/contents/Agents/01-GLM-configuration/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 class="doc-nav-current">
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> first. Trust me, it's worth the 5-minute investment.</p>
+</blockquote>
+
+<h1 id="glm-configuration-guide">GLM Configuration Guide</h1>
+
+<h2 id="the-big-picture-why-glm-in-claude-code">The Big Picture: Why GLM in Claude Code?</h2>
+
+<p><strong>Picture this:</strong></p>
+
+<p>You download Claude Code, excited to have AI help you write code. You open it and discover — you need a Claude API to use it. You check the official site: subscription requires an international credit card, and there's the worry of account restrictions. Your enthusiasm takes a hit.</p>
+
+<p><strong>Don't panic. This is exactly when GLM steps in.</strong></p>
+
+<h3 id="first-get-one-thing-straight-claude-code--claude">First, Get One Thing Straight: Claude Code ≠ Claude</h3>
+
+<p>Here's the key idea:</p>
+
+<p><strong>Claude Code is the "hands"; Claude/GLM is the "brain".</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Represents</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Brain</strong></td>
+      <td>Claude, GLM</td>
+      <td>Understands you, thinks through solutions, makes decisions</td>
+    </tr>
+    <tr>
+      <td><strong>Hands</strong></td>
+      <td>Claude Code</td>
+      <td>Writes code, edits files, runs commands</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Claude Code's "hands" are flexible, but they <strong>don't think on their own</strong>. They need a "brain" to tell them what to do.</p>
+
+<p><strong>The key point: That brain can be Claude, or it can be GLM.</strong></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260316125916.png" alt="" /></p>
+
+<h3 id="why-choose-glm">Why Choose GLM?</h3>
+
+<p>Three words: <strong>Easy, efficient, affordable.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Your Concern</th>
+      <th>Claude Option</th>
+      <th>GLM Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No international credit card</td>
+      <td>Subscription is hard</td>
+      <td>Multiple payment methods, top up directly</td>
+    </tr>
+    <tr>
+      <td>Worried about account bans</td>
+      <td>High-frequency use carries risk</td>
+      <td>Chinese provider, stable</td>
+    </tr>
+    <tr>
+      <td>Is performance enough?</td>
+      <td>Top-tier</td>
+      <td>Open-source #1, more than enough for daily dev</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>In a nutshell:</strong> No Claude account? GLM is a solid Plan B.</p>
+
+<h3 id="how-capable-is-glm">How Capable Is GLM?</h3>
+
+<p>GLM-5 ranks <strong>#1 among open-source models</strong> in the <a href="https://andonlabs.com/evals/vending-bench-2">Vending-Bench 2</a> complex decision-making benchmark (March 2026). GLM-4.7 comes in second.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260316120220.png" alt="" /></p>
+
+<p>Even compared to top closed-source models, GLM-5 ranks 6th globally — right behind Claude, GPT, Gemini, and Grok. As a "brain," its intelligence is fully up to the task.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260316120041.png" alt="" /></p>
+
+<h3 id="the-ai-workflow-looks-like-this">The AI Workflow Looks Like This</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You describe what you need → Brain thinks → Hands write code → Done
+</code></pre></div></div>
+
+<p>That simple.</p>
+
+<hr />
+
+<p><strong>Quick decision guide:</strong></p>
+<ul>
+  <li>✅ Already have a stable Claude account → Keep using it, this guide is optional</li>
+  <li>✅ No Claude / Want to try GLM → Keep reading and start configuring</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310154428.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-1-get-your-golden-ticket-api-key">Step 1: Get Your Golden Ticket (API Key)</h2>
+
+<p>Every journey begins with a key. Here's how to get yours:</p>
+
+<p>🔗 Head to <a href="https://bigmodel.cn/usercenter/proj-mgmt/apikeys">https://bigmodel.cn/usercenter/proj-mgmt/apikeys</a></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303185459.png" alt="" /></p>
+
+<p>Click <strong>Create a new API Key</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303185651.png" alt="" /></p>
+
+<p>Give it a memorable name (like "claude-code-key" — future you will thank present you), then click <strong>Yes</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303185744.png" alt="" /></p>
+
+<p>Click <strong>Copy</strong> and save this somewhere safe. <strong>Important</strong>: You won't be able to see it again!</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303185954.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-2-to-subscribe-or-not-to-subscribe">Step 2: To Subscribe or Not to Subscribe?</h2>
+
+<p>Here's where you make a choice:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>What You Get</th>
+      <th>Who It's For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>No Subscription</strong></td>
+      <td>Free quota + GLM-4.7 access</td>
+      <td>Casual users, testing the waters</td>
+    </tr>
+    <tr>
+      <td><strong>GLM Coding Plan</strong></td>
+      <td>GLM-5 access + higher quotas</td>
+      <td>Power users, heavy daily usage</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>My recommendation</strong>: Start with the free tier. Upgrade later if you hit the limits. No pressure. <a href="#-glm-coding-plan-subscription-details">You can click here to subscribe</a></p>
+
+<hr />
+
+<h2 id="step-3-the-actual-setup-pick-your-adventure">Step 3: The Actual Setup (Pick Your Adventure)</h2>
+
+<p>You have two paths forward. Choose wisely:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Visual App</strong> (Recommended)</td>
+      <td>Easy switching between providers, user-friendly</td>
+      <td>One extra setup step</td>
+    </tr>
+    <tr>
+      <td><strong>Official Script</strong></td>
+      <td>One command, done</td>
+      <td>Harder to switch providers later</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="method-1-visual-setup-tool-recommended-">Method 1: Visual setup tool (recommended ✨)</h3>
+
+<p><strong>Why I recommend this</strong>: You can easily switch between GLM and other providers later. Flexibility = freedom.</p>
+
+<p>Right-click in any folder → <strong>Terminal</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260311005958.png" alt="" /></p>
+
+<p>Copy-paste this magic spell into Terminal and hit Enter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip &amp;&amp; \
+unzip agent_manager-main.zip &amp;&amp; \
+cd agent_manager-main &amp;&amp; \
+chmod +x install.sh &amp;&amp; \
+./install.sh
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260311010117.png" alt="" /></p>
+
+<p>Once installed, find <strong>AGENT_MANAGER.command</strong> in the folder and double-click it.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306111847.png" alt="" /></p>
+
+<p>Now for the moment of truth:</p>
+<ol>
+  <li>Paste your API Key</li>
+  <li>Select your model</li>
+  <li>Click <strong>Install &amp; configure</strong></li>
+</ol>
+
+<p>⚠️ <strong>Critical Warning</strong>: Don't select <code class="language-plaintext highlighter-rouge">glm-5</code> unless you've subscribed! Your code will break and you'll be confused.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306113120.png" alt="" /></p>
+
+<p>Success looks like this:</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306113321.png" alt="" /></p>
+
+<p>Now just type <code class="language-plaintext highlighter-rouge">glm</code> in terminal to launch Claude Code with GLM. That's it. You're done.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303152714.png" alt="" /></p>
+
+<p><strong>Verification time</strong>: Restart Claude Code, type <code class="language-plaintext highlighter-rouge">/model</code>. You should see <strong>GLM-5</strong> in the list.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303193201.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303193234.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: GLM-5 is like Claude Opus — powerful but expensive. Use it for complex tasks. For everyday stuff, GLM-4.7 is your friend. Also, peak hours (14:00-18:00 UTC+8) might feel slower.</p>
+
+<p>You can also just ask the AI what model it's using:</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310101707.png" alt="" /></p>
+
+<hr />
+
+<h3 id="method-2-official-one-click-script">Method 2: Official one-click script</h3>
+
+<p><strong>The tradeoff</strong>: Faster setup, but harder to switch providers later. Choose this if you're committed to GLM.</p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Option + Space</code> → type <strong>Terminal</strong> → Enter.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303190946.png" alt="" /></p>
+
+<p>Copy-paste and run:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-O</span> <span class="s2">"https://cdn.bigmodel.cn/install/claude_code_env.sh"</span> <span class="o">&amp;&amp;</span> bash ./claude_code_env.sh
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>What this does</strong>:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">curl -O</code>: Downloads a file from the internet</li>
+    <li><code class="language-plaintext highlighter-rouge">bash</code>: Runs the downloaded script</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303191656.png" alt="" /></p>
+
+<p>When prompted, paste your API Key and press Enter.</p>
+
+<p>⚠️ <strong>Note</strong>: The terminal might not show anything when you paste. That's normal. Don't paste twice.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303191343.png" alt="" /></p>
+
+<p>When the prompt returns, you're done. Type <code class="language-plaintext highlighter-rouge">claude</code> to start.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303191816.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303191919.png" alt="" /></p>
+
+<hr />
+
+<h3 id="unlocking-glm-5-subscribers-only-">Unlocking GLM-5 (Subscribers Only 🔓)</h3>
+
+<p>If you subscribed to GLM Coding Plan, here's how to unlock the big guns:</p>
+
+<p><strong>Finder</strong> → <strong>Go</strong> → <strong>Home</strong></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> to reveal hidden files, then open <strong>.claude</strong> folder.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303192303.png" alt="" /></p>
+
+<p>Open <strong>settings.json</strong> in your favorite text editor.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303192828.png" alt="" /></p>
+
+<p><strong>The default mapping looks like this:</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_OPUS_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GLM-4.7"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_SONNET_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GLM-4.7"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_HAIKU_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GLM-4.5-Air"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>To use GLM-5 everywhere</strong>, replace the contents with:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_BASE_URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://open.bigmodel.cn/api/anthropic"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_AUTH_TOKEN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your api key"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glm-5"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_HAIKU_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glm-5"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_OPUS_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glm-5"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_DEFAULT_SONNET_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"glm-5"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"hasCompletedOnboarding"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>⚠️ Replace <code class="language-plaintext highlighter-rouge">"your api key"</code> with your actual API key!</p>
+
+<p>Save the file, restart Claude Code, run <code class="language-plaintext highlighter-rouge">/model</code> to verify.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260303192957.png" alt="" /></p>
+
+<hr />
+
+<h3 id="bonus-create-glm-and-glm5-commands">Bonus: Create <code class="language-plaintext highlighter-rouge">glm</code> and <code class="language-plaintext highlighter-rouge">glm5</code> Commands</h3>
+
+<p>Want quick-launch commands? Here's how:</p>
+
+<p>Copy <strong>settings.json</strong> → rename to <strong>glm-settings.json</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310232459.png" alt="" /></p>
+
+<p>Go back to Home, open <strong>.zshrc</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310234055.png" alt="" /></p>
+
+<p>Add this line at the end:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">glm</span><span class="o">=</span><span class="s2">"claude --settings ~/.claude/glm-settings.json"</span>
+</code></pre></div></div>
+
+<p>Or for <code class="language-plaintext highlighter-rouge">glm5</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">glm5</span><span class="o">=</span><span class="s2">"claude --settings ~/.claude/glm-settings.json"</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310232746.png" alt="" /></p>
+
+<p>Open a fresh Terminal and run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> .zshrc
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310233106.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310233154.png" alt="" /></p>
+
+<p>Now type <code class="language-plaintext highlighter-rouge">glm</code> (or <code class="language-plaintext highlighter-rouge">glm5</code>) and boom — Claude Code launches with GLM.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310233233.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260310233250.png" alt="" /></p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<ol>
+  <li><strong>Get API Key</strong> from <a href="https://bigmodel.cn/usercenter/proj-mgmt/apikeys">bigmodel.cn</a></li>
+  <li><strong>Choose</strong>: Free tier (GLM-4.7) or subscribe (GLM-5)</li>
+  <li><strong>Setup</strong>: Use visual app (<code class="language-plaintext highlighter-rouge">glm</code> command) or official script (<code class="language-plaintext highlighter-rouge">claude</code> command)</li>
+  <li><strong>Verify</strong>: Run <code class="language-plaintext highlighter-rouge">/model</code> in Claude Code</li>
+  <li><strong>Done!</strong> Start coding with your new AI pair programmer</li>
+</ol>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? The GLM community is pretty helpful. Or just ask Claude — it's literally right there.</em></p>
+
+<h3 id="-glm-coding-plan-subscription-details">📖 GLM Coding Plan subscription details</h3>
+
+<p>Click <strong>My Plan</strong> to open the subscription page.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306112528.png" alt="" /></p>
+
+<p>Click <strong>GLM Coding plan</strong> to see your options.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306112619.png" alt="" /></p>
+
+<p>Subscribe here. Without subscription, you get free quota but <strong>no GLM-5</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/01-GLM-configuration/images/Pasted%20image%2020260306112719.png" alt="" /></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

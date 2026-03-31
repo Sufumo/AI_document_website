@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIMI Configuration Guide | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>KIMI Configuration Guide | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="KIMI Configuration Guide" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="KIMI Configuration Guide" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"KIMI Configuration Guide","url":"http://localhost:4000/AI_document_website/contents/Agents/02-KIMI-configuration/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 class="doc-nav-current">
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>This guide assumes you know how to open a terminal and run basic commands. If that sounds intimidating, take a quick detour to <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> first. Trust me, it's worth the 5-minute investment.</p>
+</blockquote>
+
+<h1 id="kimi-configuration-guide">KIMI Configuration Guide</h1>
+
+<h2 id="the-big-picture-why-kimi-in-claude-code">The Big Picture: Why KIMI in Claude Code?</h2>
+
+<p><strong>Picture this:</strong></p>
+
+<p>You download Claude Code, excited to have AI help you write code. You open it and discover — you need a Claude API to use it. You check the official site: subscription requires an international credit card, and there's the worry of account restrictions. Your enthusiasm takes a hit.</p>
+
+<p><strong>Don't panic. This is exactly when KIMI steps in.</strong></p>
+
+<h3 id="first-get-one-thing-straight-claude-code--claude">First, Get One Thing Straight: Claude Code ≠ Claude</h3>
+
+<p>Here's the key idea:</p>
+
+<p><strong>Claude Code is the "hands"; Claude/KIMI is the "brain".</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Represents</th>
+      <th>What It Does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Brain</strong></td>
+      <td>Claude, KIMI</td>
+      <td>Understands you, thinks through solutions, makes decisions</td>
+    </tr>
+    <tr>
+      <td><strong>Hands</strong></td>
+      <td>Claude Code</td>
+      <td>Writes code, edits files, runs commands</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Claude Code's "hands" are flexible, but they <strong>don't think on their own</strong>. They need a "brain" to tell them what to do.</p>
+
+<p><strong>The key point: That brain can be Claude, or it can be KIMI.</strong></p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260316125916.png" alt="" /></p>
+
+<h3 id="why-choose-kimi">Why Choose KIMI?</h3>
+
+<p>Three words: <strong>Easy, efficient, affordable.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Your Concern</th>
+      <th>Claude Option</th>
+      <th>KIMI Option</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>No international credit card</td>
+      <td>Subscription is hard</td>
+      <td>Multiple payment methods, top up directly</td>
+    </tr>
+    <tr>
+      <td>Worried about account bans</td>
+      <td>High-frequency use carries risk</td>
+      <td>Chinese provider, stable</td>
+    </tr>
+    <tr>
+      <td>Is performance enough?</td>
+      <td>Top-tier</td>
+      <td>Top 3 open-source, more than enough for daily dev</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>In a nutshell:</strong> No Claude account? KIMI is a solid Plan B.</p>
+
+<h3 id="how-capable-is-kimi">How Capable Is KIMI?</h3>
+
+<p>KIMI k2.5 ranks <strong>#3 among open-source models</strong> in the <a href="https://andonlabs.com/evals/vending-bench-2">Vending-Bench 2</a> complex decision-making benchmark (March 2026). As a "brain," its intelligence is fully up to the task.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260316130945.png" alt="" /></p>
+
+<h3 id="the-ai-workflow-looks-like-this">The AI Workflow Looks Like This</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You describe what you need → Brain thinks → Hands write code → Done
+</code></pre></div></div>
+
+<p>That simple.</p>
+
+<hr />
+
+<p><strong>Quick decision guide:</strong></p>
+<ul>
+  <li>✅ Already have a stable Claude account → Keep using it, this guide is optional</li>
+  <li>✅ No Claude / Want to try KIMI → Keep reading and start configuring</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310143951.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-1-get-your-golden-ticket-api-key">Step 1: Get Your Golden Ticket (API Key)</h2>
+
+<p>Every journey begins with a key. Here's how to get yours:</p>
+
+<p>🔗 Head to <a href="https://platform.moonshot.cn/console/api-keys">https://platform.moonshot.cn/console/api-keys</a></p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303194555.png" alt="" /></p>
+
+<p>Click <strong>Create API Key</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303194920.png" alt="" /></p>
+
+<p>Give it a memorable name, select <strong>default</strong> for the project, then click <strong>Confirm</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303195050.png" alt="" /></p>
+
+<p>Click <strong>Copy</strong> and save this somewhere safe. <strong>Important</strong>: You won't be able to see it again!</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303195345.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-2-fuel-up-your-account">Step 2: Fuel Up Your Account</h2>
+
+<p>Here's the thing: KIMI API keys need a paid balance to work. No balance, no magic.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sidebar Path</th>
+      <th>What to Do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Financial</strong> → <strong>Account Top-up</strong></td>
+      <td>Choose an amount, complete payment, and you're ready to go</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114112.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-3-the-actual-setup-pick-your-adventure">Step 3: The Actual Setup (Pick Your Adventure)</h2>
+
+<p>You have two paths forward. Choose wisely:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Pros</th>
+      <th>Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Visual App</strong> (Recommended)</td>
+      <td>Easy switching between providers, user-friendly</td>
+      <td>One extra setup step</td>
+    </tr>
+    <tr>
+      <td><strong>Environment Variables</strong></td>
+      <td>One command, done</td>
+      <td>Harder to switch providers later</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="method-1-visual-setup-tool-recommended-">Method 1: Visual setup tool (recommended ✨)</h3>
+
+<p><strong>Why I recommend this</strong>: You can easily switch between KIMI and other providers later. Flexibility = freedom.</p>
+
+<p>Right-click in any folder → <strong>Terminal</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260311005958.png" alt="" /></p>
+
+<p>Copy-paste this magic spell into Terminal and hit Enter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip &amp;&amp; \
+unzip agent_manager-main.zip &amp;&amp; \
+cd agent_manager-main &amp;&amp; \
+chmod +x install.sh &amp;&amp; \
+./install.sh
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260311010117.png" alt="" /></p>
+
+<p>Once installed, find <strong>AGENT_MANAGER.command</strong> in the folder and double-click it.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306111847.png" alt="" /></p>
+
+<p>Now for the moment of truth:</p>
+<ol>
+  <li>Click the <strong>KIMI</strong> tab</li>
+  <li>Paste your API Key</li>
+  <li>Click <strong>Install &amp; configure</strong></li>
+</ol>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114430.png" alt="" /></p>
+
+<p>Success looks like this:</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114556.png" alt="" /></p>
+
+<p>Now just type <code class="language-plaintext highlighter-rouge">kimi</code> in terminal to launch Claude Code with KIMI. That's it. You're done.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260306114634.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/fcb0a0365799f8680cbf2116e80f73ce.png" alt="" /></p>
+
+<hr />
+
+<h3 id="method-2-environment-variables-setup">Method 2: Environment variables setup</h3>
+
+<p><strong>The tradeoff</strong>: Faster setup, but harder to switch providers later. Choose this if you're committed to KIMI.</p>
+
+<p>Go to <strong>Finder</strong> → <strong>Go</strong> → <strong>Home</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> to reveal hidden files, then open <strong>.zshrc</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200006.png" alt="" /></p>
+
+<p>Paste this at the end of <strong>.zshrc</strong>, and replace <code class="language-plaintext highlighter-rouge">your API KEY</code> with your actual KIMI API key:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ANTHROPIC_BASE_URL</span><span class="o">=</span><span class="s2">"https://api.moonshot.cn/anthropic/"</span>
+<span class="nb">export </span><span class="nv">ANTHROPIC_API_KEY</span><span class="o">=</span><span class="s2">"your API KEY"</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200243.png" alt="" /></p>
+
+<p>Save the file. Press <code class="language-plaintext highlighter-rouge">Option + Space</code> → type <strong>Terminal</strong> → Enter.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303190946.png" alt="" /></p>
+
+<p>In Terminal, run <code class="language-plaintext highlighter-rouge">source .zshrc</code> to activate the new environment variables:</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200438.png" alt="" /></p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">claude</code> and press Enter. When Claude Code shows <strong>Detected a custom API Key in your environment</strong>, click <strong>Yes</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200736.png" alt="" /></p>
+
+<p>You can then use Claude Code as usual with KIMI.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303200846.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: You can directly ask the AI what model it's using. As shown below, it's the kimi-k2.5 model.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/fcb0a0365799f8680cbf2116e80f73ce.png" alt="" /></p>
+
+<hr />
+
+<h3 id="bonus-create-a-kimi-launch-command">Bonus: Create a <code class="language-plaintext highlighter-rouge">kimi</code> Launch Command</h3>
+
+<p>Want a quick-launch command? Here's how:</p>
+
+<p>Go to <strong>Finder</strong> → <strong>Go</strong> → <strong>Home</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192106.png" alt="" /></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Shift + .</code> to reveal hidden files, then open <strong>.claude</strong> folder.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260303192303.png" alt="" /></p>
+
+<p>Copy <strong>settings.json</strong> → rename to <strong>kimi-settings.json</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234238.png" alt="" /></p>
+
+<p>Open <strong>kimi-settings.json</strong> and paste this content (replace the placeholder with your API key):</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_BASE_URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.moonshot.cn/anthropic/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ANTHROPIC_AUTH_TOKEN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace with your api key"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"hasCompletedOnboarding"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234351.png" alt="" /></p>
+
+<p>Go back to Home, open <strong>.zshrc</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234055.png" alt="" /></p>
+
+<p>Add this line at the end:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias </span><span class="nv">kimi</span><span class="o">=</span><span class="s2">"claude --settings ~/.claude/kimi-settings.json"</span>
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233841.png" alt="" /></p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code> → search <strong>Terminal</strong> → Enter.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/4.Claude%20code/file-20260113152908876%201.png" alt="" /></p>
+
+<p>In Terminal, run <code class="language-plaintext highlighter-rouge">source .zshrc</code>.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233106.png" alt="" /></p>
+
+<p>When the terminal prompt returns, the configuration is complete.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233154.png" alt="" /></p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">kimi</code> to launch Claude Code.</p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310234456.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/02-KIMI-configuration/images/Pasted%20image%2020260310233250.png" alt="" /></p>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<ol>
+  <li><strong>Get API Key</strong> from <a href="https://platform.moonshot.cn/console/api-keys">platform.moonshot.cn</a></li>
+  <li><strong>Top up</strong> your account (KIMI requires a paid balance)</li>
+  <li><strong>Setup</strong>: Use visual app (<code class="language-plaintext highlighter-rouge">kimi</code> command) or environment variables (<code class="language-plaintext highlighter-rouge">claude</code> command)</li>
+  <li><strong>Verify</strong>: Ask the AI what model it's using</li>
+  <li><strong>Done!</strong> Start coding with your new AI pair programmer</li>
+</ol>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? The KIMI community is pretty helpful. Or just ask Claude — it's literally right there.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

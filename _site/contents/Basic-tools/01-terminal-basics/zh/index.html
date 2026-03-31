@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal 基础 | AI 培训文档中心</title>
+  <meta name="description" content="AI 培训文档中心">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Terminal 基础 | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Terminal 基础" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Terminal 基础" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Terminal 基础","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/zh/" class="logo">AI 培训文档中心</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="语言" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/" role="menuitem" class="language-list-link">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/" role="menuitem" class="language-list-link active">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">文档索引</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">智能体</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/"
+                 >
+                GLM 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"
+                 >
+                KIMI 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/"
+                 >
+                Claude Code 使用教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/"
+                 >
+                Claude Code 实践任务
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">应用</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/"
+                 >
+                VSCode 使用指南
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/"
+                 >
+                Obsidian 使用指南
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">基础工具</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"
+                 class="doc-nav-current">
+                Terminal 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/"
+                 >
+                Windows 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/"
+                 >
+                Mac 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/"
+                 >
+                winget 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"
+                 >
+                Homebrew 安装与基础使用
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="terminal-基础">Terminal 基础</h1>
+
+<p><strong>终端到底是什么？</strong></p>
+
+<p>终端就是你电脑的「直通热线」。平时你习惯点击图标、拖动窗口，但终端让你直接输入命令，电脑立刻执行。没有点击，没有菜单，只有你和你的电脑，直接对话。</p>
+
+<p>为什么这很重要？因为像 Claude Code 这样的工具就住在终端里。如果你想用 AI 帮你写代码，你得先和这个黑色（或白色）窗口搞好关系。</p>
+
+<hr />
+
+<h2 id="终端窗口解剖学">终端窗口解剖学</h2>
+
+<p>在开始输入命令之前，让我们先搞清楚你在看什么。终端乍一看可能有点吓人，全是文字，没有按钮，但一旦你了解了各个部分，它其实很有逻辑。</p>
+
+<h3 id="标题栏这个窗口在干什么">标题栏：这个窗口在干什么？</h3>
+
+<h4 id="windows">Windows</h4>
+
+<p><strong>Windows PowerShell 示例</strong>：标题栏显示 "Windows PowerShell" 或 "Administrator: Windows PowerShell"。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/1.OS/file-20260113152828141.png" alt="" /></p>
+
+<h4 id="mac">Mac</h4>
+
+<p><strong>Mac 终端示例</strong>：<strong>ruby – 01-complete-macos-setup.sh</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image3.png" alt="" /></p>
+
+<p>标题栏告诉你：</p>
+
+<ul>
+  <li><strong>ruby</strong>：当前终端会话的名字</li>
+  <li><strong>01-complete-macos-setup.sh</strong>：当前关联的脚本文件名</li>
+  <li><strong>.sh</strong> 表示这是一个 shell 脚本，终端可以执行它</li>
+</ul>
+
+<p>💡 <strong>小贴士</strong>：标题不代表脚本正在运行，它只是告诉你这个窗口关联了什么。把它想象成文件标签名。</p>
+
+<hr />
+
+<h3 id="命令提示符你的各就各位信号">命令提示符：你的「各就各位」信号</h3>
+
+<p>这一行<strong>非常关键</strong>。它告诉你系统已经准备好接收你的命令了。让我们按操作系统逐一拆解。</p>
+
+<h4 id="windows-命令提示符">Windows 命令提示符</h4>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/1.OS/file-20260113152828140.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>符号</th>
+      <th>含义</th>
+      <th>为什么重要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PS</strong></td>
+      <td>你在 PowerShell 里</td>
+      <td>和老式 CMD 不同</td>
+    </tr>
+    <tr>
+      <td><strong>C:\Windows\System32</strong></td>
+      <td>你当前所在的文件夹</td>
+      <td>命令会在这里执行</td>
+    </tr>
+    <tr>
+      <td><strong>&gt;</strong></td>
+      <td>系统准备好了</td>
+      <td>来吧，输入点什么</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>组合起来理解：</strong></p>
+
+<ul>
+  <li>我现在在哪？ → <code class="language-plaintext highlighter-rouge">C:\Windows\System32</code></li>
+  <li>系统准备好了吗？ → <code class="language-plaintext highlighter-rouge">&gt;</code>（是的！）</li>
+  <li>我输入的内容会出现在哪里？ → <code class="language-plaintext highlighter-rouge">&gt;</code> 后面，闪烁的光标处</li>
+</ul>
+
+<hr />
+
+<h4 id="mac-命令提示符">Mac 命令提示符</h4>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image5.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>符号</th>
+      <th>含义</th>
+      <th>为什么重要</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>selenagupSelena</strong></td>
+      <td>你的用户名</td>
+      <td>当前登录的是谁</td>
+    </tr>
+    <tr>
+      <td><strong>~</strong></td>
+      <td>家目录</td>
+      <td>你的个人文件夹</td>
+    </tr>
+    <tr>
+      <td><strong>%</strong></td>
+      <td>准备接受输入</td>
+      <td>输吧！</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong><code class="language-plaintext highlighter-rouge">~</code> 符号解释：</strong></p>
+
+<p>波浪号 <code class="language-plaintext highlighter-rouge">~</code> 是你家目录的快捷方式。不用输入 <code class="language-plaintext highlighter-rouge">/Users/你的名字</code>，你只需要看到 <code class="language-plaintext highlighter-rouge">~</code>。干净利落。</p>
+
+<p>其他你可能遇到的路径：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>What It Is</th>
+      <th>Chinese</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/Desktop</code></td>
+      <td>Your desktop</td>
+      <td>桌面</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">~/Documents</code></td>
+      <td>Your documents</td>
+      <td>文档</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/usr/local/bin</code></td>
+      <td>System programs</td>
+      <td>系统程序目录</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>提示符符号：</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Shell Type</th>
+      <th>Translation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">%</code></td>
+      <td>zsh (default on modern macOS)</td>
+      <td>zsh（新版 macOS 默认）</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$</code></td>
+      <td>bash</td>
+      <td>bash</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">#</code></td>
+      <td>root/administrator</td>
+      <td>超级管理员</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⚠️ <strong>警告</strong>：如果你看到 <code class="language-plaintext highlighter-rouge">#</code> 作为提示符，请格外小心。你拥有完整的系统权限，意味着你可能不小心搞坏东西。</p>
+
+<p><strong>组合起来理解：</strong></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image6.png" alt="" /></p>
+
+<ul>
+  <li>是谁在操作？ → <code class="language-plaintext highlighter-rouge">selenagupSelena</code>（就是你自己！）</li>
+  <li>我现在在哪？ → <code class="language-plaintext highlighter-rouge">~</code>（家，甜蜜的家）</li>
+  <li>系统准备好了吗？ → <code class="language-plaintext highlighter-rouge">%</code></li>
+  <li>我在哪输入？ → 闪烁的光标，就在这儿</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Terminal/image7.png" alt="" /></p>
+
+<hr />
+
+<h2 id="如何打开终端">如何打开终端</h2>
+
+<p>既然你知道了你在看什么，让我们来打开一个终端。</p>
+
+<h3 id="windows打开-powershell">Windows：打开 PowerShell</h3>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Windows 键</code>（或 <code class="language-plaintext highlighter-rouge">Win</code>），输入 "PowerShell"，然后按回车。</p>
+
+<p>⚠️ <strong>重要</strong>：为了避免之后的权限问题，我建议选择 <strong>以管理员身份运行</strong>。未来的你会感谢现在的你。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Windows/file-20260109160736263.png" alt="" /></p>
+
+<p>等待窗口出现。当你在标题栏看到 "Administrator" 时，你就知道你处于管理员模式了。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Windows/file-20260109161032035.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mac召唤终端">Mac：召唤终端</h3>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + 空格</code>，输入 "Terminal"，然后按回车。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Toolkit/image260.png" alt="" /></p>
+
+<p>就这么简单。你进来了。</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/01-terminal-basics/images/Toolkit/image270.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: On Mac, you can also right-click any folder and select "New Terminal at Folder" to open a terminal already navigated to that location. Super handy.<br />
+💡 <strong>小贴士</strong>：在 Mac 上，你也可以右键点击任意文件夹，选择「在文件夹中新建终端」，这样打开的终端就已经在那个位置了。超级方便。</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Terminal</strong> = direct text-based communication with your computer</li>
+  <li><strong>Command prompt</strong> = the "I'm ready" signal (look for <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">%</code>, or <code class="language-plaintext highlighter-rouge">$</code>)</li>
+  <li><strong>Windows</strong>: Open PowerShell as Administrator</li>
+  <li><strong>Mac</strong>: <code class="language-plaintext highlighter-rouge">Command + Space</code> → "Terminal"</li>
+  <li><strong>You're ready</strong> to use command-line tools like Claude Code!</li>
+</ol>
+
+<p><strong>总结</strong></p>
+
+<ol>
+  <li><strong>终端</strong> = 与电脑直接进行基于文字的交流</li>
+  <li><strong>命令提示符</strong> = 「我准备好了」的信号（找 <code class="language-plaintext highlighter-rouge">&gt;</code>、<code class="language-plaintext highlighter-rouge">%</code> 或 <code class="language-plaintext highlighter-rouge">$</code>）</li>
+  <li><strong>Windows</strong>：以管理员身份打开 PowerShell</li>
+  <li><strong>Mac</strong>：<code class="language-plaintext highlighter-rouge">Command + 空格</code> → "Terminal"</li>
+  <li><strong>你准备好了</strong> 使用像 Claude Code 这样的命令行工具！</li>
+</ol>
+
+<hr />
+
+<p><em>Still nervous? Don't worry. The best way to learn the terminal is to use it. Every command you run makes you a little more comfortable. You've got this.</em><br />
+<em>还是很紧张？别担心。学习终端最好的方式就是使用它。每运行一个命令，你就会更自在一点。你可以的。</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI 培训文档中心. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windows OS Basics | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Windows OS Basics | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Windows OS Basics" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Windows OS Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Windows OS Basics","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 class="doc-nav-current">
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="windows-os-basics">Windows OS Basics</h1>
+
+<h2 id="the-big-picture-why-configure-windows">The Big Picture: Why Configure Windows?</h2>
+
+<p>Out of the box, Windows is designed for general users — not developers. Hidden files are invisible, file extensions are masked, and the built-in search is… let's just say it's not winning any speed awards. This guide will transform Windows into a developer-friendly environment in just a few minutes.</p>
+
+<hr />
+
+<h2 id="quick-search-meet-everything">Quick Search: Meet Everything</h2>
+
+<h3 id="the-problem-with-windows-search">The Problem with Windows Search</h3>
+
+<p>Let's be honest: Windows' built-in search is slow, resource-heavy, and honestly kind of useless for finding actual files. It's fine for launching apps, but try finding a specific <code class="language-plaintext highlighter-rouge">.json</code> file somewhere on your drive? Good luck.</p>
+
+<p><strong>Everything</strong> is the solution. It's a lightning-fast search tool that indexes your entire drive by filename. We're talking <em>milliseconds</em> to find any file.</p>
+
+<h3 id="step-1-install-everything">Step 1: Install Everything</h3>
+
+<p>Open PowerShell and run:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">winget</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">voidtools.Everything</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>What this does</strong>:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">winget</code>: Windows' built-in package manager</li>
+    <li><code class="language-plaintext highlighter-rouge">install</code>: The action to perform</li>
+    <li><code class="language-plaintext highlighter-rouge">voidtools.Everything</code>: The unique ID for Everything (found via <code class="language-plaintext highlighter-rouge">winget search everything</code>)</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/Windows/file-20260111122150310.png" alt="" /></p>
+
+<h3 id="step-2-launch-and-search">Step 2: Launch and Search</h3>
+
+<p>After installation, you'll find an <strong>Everything</strong> shortcut on your desktop. Double-click to open it.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/Windows/file-20260111122844126.png" alt="" /></p>
+
+<p>Type anything in the search box — a filename, a partial name, even content inside files (if you enable content search). Results appear instantly.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/Windows/file-20260111123112848.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Press <code class="language-plaintext highlighter-rouge">Ctrl + Space</code> (or your custom shortcut) to bring up Everything from anywhere. It's like having a search superpower.</p>
+
+<hr />
+
+<h2 id="system-language-settings">System Language Settings</h2>
+
+<p>If your Windows is in Chinese and you want to switch to English (or vice versa), here's how:</p>
+
+<h3 id="step-1-open-settings">Step 1: Open Settings</h3>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Win</code>, type "settings", and hit Enter.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828153.png" alt="" /></p>
+
+<h3 id="step-2-navigate-to-language-settings">Step 2: Navigate to Language Settings</h3>
+
+<p>Go to <strong>Time &amp; language</strong> → <strong>Language &amp; region</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828152.png" alt="" /></p>
+
+<h3 id="step-3-add-or-change-language">Step 3: Add or Change Language</h3>
+
+<p>Here you can add new languages and set your preferred one as default. Windows will download the language pack and apply it after you sign out and back in.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828151.png" alt="" /></p>
+
+<hr />
+
+<h2 id="file-management-essentials">File Management Essentials</h2>
+
+<h3 id="file-explorer-your-file-command-center">File Explorer: Your File Command Center</h3>
+
+<p>Windows uses <strong>File Explorer</strong> for file management. Quick access: press <code class="language-plaintext highlighter-rouge">Win + E</code> or click the folder icon in your taskbar.</p>
+
+<hr />
+
+<h3 id="show-file-extensions--hidden-files">Show File Extensions &amp; Hidden Files</h3>
+
+<p>⚠️ <strong>Critical for Developers</strong>: By default, Windows hides file extensions (so <code class="language-plaintext highlighter-rouge">script.sh</code> appears as just <code class="language-plaintext highlighter-rouge">script</code>) and hides system files. This is a nightmare when you're working with config files like <code class="language-plaintext highlighter-rouge">.gitignore</code>, <code class="language-plaintext highlighter-rouge">.env</code>, or trying to distinguish <code class="language-plaintext highlighter-rouge">.json</code> from <code class="language-plaintext highlighter-rouge">.js</code>.</p>
+
+<p>Let's fix this:</p>
+
+<p><strong>Step 1</strong>: Open File Explorer, click the <strong>…</strong> icon in the top-right corner, and select <strong>Options</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828149.png" alt="" /></p>
+
+<p><strong>Step 2</strong>: Switch to the <strong>View</strong> tab. Make these changes:</p>
+
+<ul>
+  <li>✅ Check <strong>Show hidden files, folders, and drives</strong></li>
+  <li>❌ Uncheck <strong>Hide extensions for known file types</strong></li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828148.png" alt="" /></p>
+
+<p><strong>Step 3</strong>: Click <strong>Apply</strong> → <strong>OK</strong>.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828147.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Now you'll see files like <code class="language-plaintext highlighter-rouge">.gitignore</code>, <code class="language-plaintext highlighter-rouge">.env</code>, and every file will show its true extension. Much better.</p>
+
+<hr />
+
+<h3 id="the-file-path-bar">The File Path Bar</h3>
+
+<p>At the top of File Explorer, you'll see the path bar showing your current location. Click any folder in the path to jump there instantly.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828144.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Right-click any folder in File Explorer and select <strong>Open in Terminal</strong> to launch a terminal already navigated to that location. Super handy for running scripts.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828146.png" alt="" /></p>
+
+<hr />
+
+<h2 id="keep-your-desktop-clean">Keep Your Desktop Clean</h2>
+
+<p>A cluttered desktop is a cluttered mind. Let's organize your apps properly.</p>
+
+<h3 id="pin-apps-to-start-menu-or-taskbar">Pin Apps to Start Menu or Taskbar</h3>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Win</code>, search for an app (like Everything), then:</p>
+
+<ul>
+  <li><strong>Pin to Start</strong> → Adds it to your Start menu tiles</li>
+  <li><strong>Pin to taskbar</strong> → Adds it to your bottom taskbar for one-click access</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/1.OS/file-20260113152828142.png" alt="" /></p>
+
+<p>Now press <code class="language-plaintext highlighter-rouge">Win</code> again — you'll see your pinned apps ready to launch.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/02-windows-os-basics/images/Windows/file-20260111123743239.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Location</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Taskbar</strong></td>
+      <td>Daily essentials (Terminal, VS Code, Browser)</td>
+    </tr>
+    <tr>
+      <td><strong>Start Menu</strong></td>
+      <td>Occasional apps (Settings, specific tools)</td>
+    </tr>
+    <tr>
+      <td><strong>Desktop</strong></td>
+      <td>Temporary files only — keep it clean!</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Install Everything</strong> for lightning-fast file search</li>
+  <li><strong>Change system language</strong> in Settings → Time &amp; language → Language &amp; region</li>
+  <li><strong>Show file extensions</strong> in File Explorer options (critical for developers!)</li>
+  <li><strong>Show hidden files</strong> to see config files like <code class="language-plaintext highlighter-rouge">.gitignore</code></li>
+  <li><strong>Use the path bar</strong> to navigate and open terminals quickly</li>
+  <li><strong>Pin apps</strong> to Start or taskbar — keep your desktop clean</li>
+</ol>
+
+<hr />
+
+<p><em>Your Windows machine is now developer-ready. These small tweaks will save you hours of frustration down the road.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

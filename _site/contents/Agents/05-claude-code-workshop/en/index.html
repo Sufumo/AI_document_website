@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Workshop | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Claude Code Workshop | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Claude Code Workshop" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/05-claude-code-workshop/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/05-claude-code-workshop/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Claude Code Workshop" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Claude Code Workshop","url":"http://localhost:4000/AI_document_website/contents/Agents/05-claude-code-workshop/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 class="doc-nav-current">
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 >
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>Before You Dive In</strong></p>
+
+  <p>To complete all exercises in this Claude Code workshop smoothly, it is recommended that you:</p>
+
+  <ul>
+    <li>Read <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> so you are comfortable changing directories and running commands in a terminal on macOS/Windows.</li>
+    <li>Make sure Claude Code has already been installed and configured according to the installation guides.</li>
+  </ul>
+
+  <p>With these preparations, you can focus on the practice tasks themselves instead of basic environment issues.</p>
+</blockquote>
+
+<h1 id="claude-code-workshop">Claude Code Workshop</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Before starting, ensure you have:</p>
+
+<ul>
+  <li>✅ Claude Code installed (see <a href="../../../Agents/04-claude-codel/en/">Claude Code Usage Guide</a> for installation instructions)</li>
+  <li>✅ Basic understanding of how to use Claude Code (you can simply describe what you want in natural language)</li>
+</ul>
+
+<hr />
+
+<h2 id="tips--best-practices">Tips &amp; Best Practices</h2>
+
+<h3 id="copy-as-path">Copy as Path</h3>
+
+<p><strong>Windows</strong></p>
+
+<p>Right-click to copy the path.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919865.png" alt="" /></p>
+
+<p><strong>Mac</strong></p>
+
+<p>Right-click the file, then press and hold the Option key to copy the path.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919864.png" alt="" /></p>
+
+<hr />
+
+<h3 id="open-in-terminal">Open in Terminal</h3>
+
+<p><strong>Windows</strong></p>
+
+<p>Open the work folder in Terminal through right click.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919867.png" alt="" /></p>
+
+<p><strong>Mac</strong></p>
+
+<p>Open the work folder in Terminal through right click the path bar.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919866.png" alt="" /></p>
+
+<hr />
+
+<h3 id="usage-specifications">Usage Specifications</h3>
+
+<p>⚠️ <strong>Critical Warning</strong>: We strongly recommend not making modifications directly in the source file location to prevent Claude Code errors. Instead, create a new folder (such as <code class="language-plaintext highlighter-rouge">Output</code>) to save the results.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919850.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: Always carefully review the results produced by Claude Code manually, rather than fully accepting everything it outputs or modifies.</p>
+
+<hr />
+
+<h2 id="exercise-1-batch-renaming">Exercise 1: Batch Renaming</h2>
+
+<h3 id="objective">Objective</h3>
+
+<p>Rename folders from Chinese names to a standardized format: <code class="language-plaintext highlighter-rouge">DOC-NSE-XXXX-ChineseName</code>, where XXXX is a zero-padded 4-digit number.</p>
+
+<h3 id="input-structure">Input Structure</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">01_Batch_Renaming/sample_pdfs/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Content</strong></td>
+      <td>Multiple folders with Chinese names</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expected-output">Expected Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">01_Batch_Renaming/expected_results/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Format</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">DOC-NSE-0001-从70年发展看经济学理论创新/</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0002-中国70年发展是理论创新的"金矿"...</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution-steps">Solution Steps</h3>
+
+<h4 id="step-1-open-claude-code-and-navigate-to-the-directory">Step 1: Open Claude Code and Navigate to the Directory</h4>
+
+<p>Open Claude Code and tell it where you want to work.</p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919894.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919893.png" alt="" /></p>
+
+<h4 id="step-2-prompt">Step 2: Prompt</h4>
+
+<p>Tell Claude Code what you want to do in simple language.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I have a folder called `sample_pdfs` that contains many folders with Chinese names. I want to rename all these folders to a new format. The new name should be: DOC-NSE followed by a 4-digit number (like 0001, 0002, 0003...), then a dash, then the original Chinese name. For example, if the original folder is called "新结构经济学", the new name should be "DOC-NSE-0001-新结构经济学". Please copy all folders from `sample_pdfs` to a new folder called `expected_results` with the new names, sorted alphabetically by the original Chinese names.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919892.png" alt="" /></p>
+
+<h4 id="step-3-let-claude-code-complete-the-task">Step 3: Let Claude Code Complete the Task</h4>
+
+<p>Claude Code will create a script and execute it automatically. You just need to wait.</p>
+
+<p>💡 <strong>Pro Tip</strong>: If Claude Code asks for confirmation, simply say "yes" or "proceed".</p>
+
+<h4 id="step-4-verify-the-results">Step 4: Verify the Results</h4>
+
+<p>Ask Claude Code to show you the results to make sure everything worked correctly.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please show me the first 5 folders in the `expected_results` folder to verify that the renaming worked correctly.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919890%201.png" alt="" /></p>
+
+<hr />
+
+<h2 id="exercise-2-extract-pdf-data">Exercise 2: Extract PDF Data</h2>
+
+<h3 id="objective-1">Objective</h3>
+
+<p>Extract text content from a PDF file and save it as a Markdown file.</p>
+
+<h3 id="input-structure-1">Input Structure</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/sample_pdf/</code></td>
+    </tr>
+    <tr>
+      <td><strong>File</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expected-output-1">Expected Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">02_Extract_PDF_Data/expected_result/</code></td>
+    </tr>
+    <tr>
+      <td><strong>File</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.md</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution-steps-1">Solution Steps</h3>
+
+<h4 id="step-1-navigate-to-the-directory">Step 1: Navigate to the Directory</h4>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919890.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919889.png" alt="" /></p>
+
+<h4 id="step-2-prompt-1">Step 2: Prompt</h4>
+
+<p>Tell Claude Code what you want to do with the PDF file.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I have a PDF file in the `sample_pdf` folder. The file name is "0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf". I want to extract all the text content from this PDF file and save it as a Markdown file (with .md extension). The new file should have the same name as the PDF but with .md extension instead of .pdf. Please save it in a folder called `expected_result`. Extract all the text from all pages of the PDF.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919888.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion">Step 3: Wait for Completion</h4>
+
+<p>Claude Code will automatically install any necessary tools and extract the text from the PDF. Just wait for it to finish.</p>
+
+<hr />
+
+<h2 id="exercise-3-format-conversion">Exercise 3: Format Conversion</h2>
+
+<h3 id="objective-2">Objective</h3>
+
+<p>Convert PDF to Markdown, then convert Markdown to DOCX format.</p>
+
+<h3 id="input-structure-2">Input Structure</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">03_Format_Conversion/sample_pdfs/</code></td>
+    </tr>
+    <tr>
+      <td><strong>File</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expected-output-2">Expected Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">03_Format_Conversion/expected_result/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Files</strong></td>
+      <td>Both <code class="language-plaintext highlighter-rouge">.md</code> and <code class="language-plaintext highlighter-rouge">.docx</code> versions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution-steps-2">Solution Steps</h3>
+
+<h4 id="step-1-navigate-to-the-directory-1">Step 1: Navigate to the Directory</h4>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919887.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919886%201.png" alt="" /></p>
+
+<h4 id="step-2-prompt-2">Step 2: Prompt</h4>
+
+<p>Tell Claude Code you want to convert the PDF to both Markdown and DOCX formats.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I have a PDF file in the `sample_pdfs` folder. The file name is "0007_Glantz and House - 2015 - X052 - When Titans Clashed - pp. 369_X052,X082.pdf". I want to:
+1. First, convert this PDF file to a Markdown file (.md format)
+2. Then, convert that Markdown file to a DOCX file (.docx format)
+3. Save both files in a folder called `expected_result`
+Both files should have the same name as the original PDF, but with different extensions (.md and .docx).
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919886.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-1">Step 3: Wait for Completion</h4>
+
+<p>Claude Code will handle all the conversions automatically. Just wait for it to finish.</p>
+
+<hr />
+
+<h2 id="exercise-4-web-scraping">Exercise 4: Web Scraping</h2>
+
+<h3 id="objective-3">Objective</h3>
+
+<p>Extract content from HTML files and convert to Markdown format.</p>
+
+<h3 id="input-structure-3">Input Structure</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Files</strong></td>
+      <td>Multiple HTML files (e.g., <code class="language-plaintext highlighter-rouge">01_Protests_erupt_in_Tanzania...html</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expected-output-3">Expected Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">04_Web_Scraping/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Files</strong></td>
+      <td>Corresponding <code class="language-plaintext highlighter-rouge">.md</code> files for each HTML file</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution-steps-3">Solution Steps</h3>
+
+<h4 id="step-1-navigate-to-the-directory-2">Step 1: Navigate to the Directory</h4>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919885.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919884.png" alt="" /></p>
+
+<h4 id="step-2-prompt-3">Step 2: Prompt</h4>
+
+<p>Tell Claude Code you want to convert HTML files to Markdown files.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I have several HTML files in this folder (files ending with .html). I want to convert each HTML file to a Markdown file (.md format). For each HTML file, create a new Markdown file with the same name but with .md extension instead of .html. Extract the main content from each HTML file and convert it to Markdown format. Save the Markdown files in the same folder as the HTML files.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919879.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-2">Step 3: Wait for Completion</h4>
+
+<p>Claude Code will process all HTML files and convert them to Markdown automatically.</p>
+
+<hr />
+
+<h2 id="exercise-5-split-files">Exercise 5: Split Files</h2>
+
+<h3 id="objective-4">Objective</h3>
+
+<p>Split a large PDF file into multiple smaller PDF files with a specified number of pages per file.</p>
+
+<h3 id="input-structure-4">Input Structure</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">05_Split_Files/sample_pdfs/</code></td>
+    </tr>
+    <tr>
+      <td><strong>File</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="expected-output-4">Expected Output</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Location</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">05_Split_Files/expected_result/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Files</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part1.pdf</code>, <code class="language-plaintext highlighter-rouge">DOC-NSE-0827-..._part2.pdf</code>, etc.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution-steps-4">Solution Steps</h3>
+
+<h4 id="step-1-navigate-to-the-directory-3">Step 1: Navigate to the Directory</h4>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919883.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919881.png" alt="" /></p>
+
+<h4 id="step-2-prompt-4">Step 2: Prompt</h4>
+
+<p>Tell Claude Code you want to split the PDF into smaller files.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I have a large PDF file in the `sample_pdfs` folder. The file name is "DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy.pdf". I want to split this PDF file into multiple smaller PDF files. Each smaller file should contain 50 pages. Name the split files by adding "_part1", "_part2", "_part3", etc. to the original file name (before the .pdf extension). For example, the first part should be named "DOC-NSE-0827-New Structural Economics： A Framework for Rethinking Development and Policy_part1.pdf". Save all the split files in a folder called `expected_result`.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919874.png" alt="" /></p>
+
+<h4 id="step-3-wait-for-completion-3">Step 3: Wait for Completion</h4>
+
+<p>Claude Code will split the PDF file automatically. Just wait for it to finish.</p>
+
+<h4 id="step-4-verify-the-results-1">Step 4: Verify the Results</h4>
+
+<p>Ask Claude Code to show you the split files to make sure everything worked correctly.</p>
+
+<p><strong>Prompt:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please show me all the split PDF files in the `expected_result` folder to verify that the splitting worked correctly.
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/05-claude-code-workshop/images/5.Claude%20Code%20Workshop/file-20260113152919871.png" alt="" /></p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>Here's the deal: These 5 exercises demonstrate how to use Claude Code with simple natural language prompts:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>What You'll Learn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Batch Renaming</strong></td>
+      <td>Describe what you want to rename, and Claude Code will handle it</td>
+    </tr>
+    <tr>
+      <td><strong>2. Data Extraction</strong></td>
+      <td>Describe what you want to extract, and Claude Code will do it</td>
+    </tr>
+    <tr>
+      <td><strong>3. Format Conversion</strong></td>
+      <td>Describe the conversion you need, and Claude Code will convert it</td>
+    </tr>
+    <tr>
+      <td><strong>4. Web Scraping</strong></td>
+      <td>Describe what content you want, and Claude Code will extract it</td>
+    </tr>
+    <tr>
+      <td><strong>5. File Manipulation</strong></td>
+      <td>Describe how you want to split files, and Claude Code will split them</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>💡 <strong>Key Takeaway</strong>: By completing these exercises, you'll learn that you don't need to write code yourself — you can simply describe what you want in natural language, and Claude Code will do the work for you.</p>
+
+<hr />
+
+<p><em>Questions? Stuck somewhere? Check out the official documentation. Or just ask Claude — it's literally right there.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homebrew Installation & Basics | AI Tutorial Documentation</title>
+  <meta name="description" content="AI training documentation center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Homebrew Installation &amp; Basics | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Homebrew Installation &amp; Basics" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/en/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/en/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Homebrew Installation &amp; Basics" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Homebrew Installation &amp; Basics","url":"http://localhost:4000/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/" class="logo">AI Tutorial Documentation</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="Language" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/" role="menuitem" class="language-list-link active">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/" role="menuitem" class="language-list-link">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">Document Index</div><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Agents</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/en/"
+                 >
+                GLM Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/en/"
+                 >
+                KIMI Configuration Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/"
+                 >
+                Claude Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/en/"
+                 >
+                Claude Code Workshop
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">Apps</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/en/"
+                 >
+                VS Code Usage Guide
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/en/"
+                 >
+                Obsidian Usage Guide
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">Basic Tools</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/en/"
+                 >
+                Terminal Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/en/"
+                 >
+                Windows OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/en/"
+                 >
+                Mac OS Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/en/"
+                 >
+                winget Basics
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/en/"
+                 class="doc-nav-current">
+                Homebrew Installation & Basics
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <h1 id="homebrew-installation--basics">Homebrew Installation &amp; Basics</h1>
+
+<h2 id="the-big-picture-what-is-homebrew">The Big Picture: What is Homebrew?</h2>
+
+<p>Imagine if the Mac App Store lived in your terminal — no clicking, no dragging apps to folders, just type a command and boom, software installed. That's <strong>Homebrew</strong> (or just <code class="language-plaintext highlighter-rouge">brew</code> for short). It's the missing package manager for macOS, and it's absolutely essential for any developer workflow.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>What It Does</th>
+      <th>Why You Care</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Installs software via command line</td>
+      <td>No more DMG files and drag-to-Applications</td>
+    </tr>
+    <tr>
+      <td>Manages dependencies automatically</td>
+      <td>Things just work</td>
+    </tr>
+    <tr>
+      <td>Keeps software updated</td>
+      <td>One command to update everything</td>
+    </tr>
+    <tr>
+      <td>Uninstalls cleanly</td>
+      <td>No leftover files scattered around</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="step-1-get-the-installation-command">Step 1: Get the Installation Command</h2>
+
+<p>Head over to the official Homebrew website: <a href="https://brew.sh/">https://brew.sh</a></p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image25.png" alt="" /></p>
+
+<p>You'll see a prominent installation command on the homepage. This is your golden ticket. Click the copy button to grab it.</p>
+
+<hr />
+
+<h2 id="step-2-open-your-terminal">Step 2: Open Your Terminal</h2>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Command + Space</code>, type "Terminal", and hit Enter.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image26.png" alt="" /></p>
+
+<p>If you need a refresher on terminal basics, check out <a href="../../../Basic-tools/01-terminal-basics/en/">Terminal Basics</a> first.</p>
+
+<hr />
+
+<h2 id="step-3-run-the-magic-spell">Step 3: Run the Magic Spell</h2>
+
+<p>Copy and paste this entire command into your terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>What this does</strong>:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">curl -fsSL</code>: Downloads a script from the internet (silently, securely)</li>
+    <li><code class="language-plaintext highlighter-rouge">/bin/bash -c</code>: Runs that script using Bash</li>
+    <li>The script handles everything else — downloading, installing, configuring</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image27.png" alt="" /></p>
+
+<p>Press Enter and let the magic happen.</p>
+
+<hr />
+
+<h2 id="step-4-enter-your-password">Step 4: Enter Your Password</h2>
+
+<p>When prompted, enter your Mac login password.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image320.png" alt="" /></p>
+
+<p>⚠️ <strong>Important</strong>: As you type your password, <strong>nothing will appear on screen</strong> — no asterisks, no dots, nothing. This is a security feature, not a bug. Just type your password and press Enter.</p>
+
+<p>Press Enter when done.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image330.png" alt="" /></p>
+
+<hr />
+
+<h2 id="step-5-wait-patiently">Step 5: Wait Patiently</h2>
+
+<p>Homebrew will now download and install a bunch of stuff. This can take anywhere from a few minutes to longer depending on your internet connection. Go grab a coffee, stretch your legs, or contemplate the meaning of life.</p>
+
+<p><img src="/AI_document_website/contents/Basic-tools/05-homebrew-install/images/Toolkit/image340.png" alt="" /></p>
+
+<p>💡 <strong>Pro Tip</strong>: If the installation seems stuck, don't panic. It's probably just downloading something large. Give it time.</p>
+
+<hr />
+
+<h2 id="step-6-verify-installation">Step 6: Verify Installation</h2>
+
+<p>Once the installation completes, verify everything worked by running:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>You should see something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Homebrew 4.x.x
+</code></pre></div></div>
+
+<p>If you see a version number, congratulations — Homebrew is ready to serve!</p>
+
+<hr />
+
+<h2 id="common-homebrew-commands">Common Homebrew Commands</h2>
+
+<p>Now that Homebrew is installed, here are the commands you'll use most often:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>What It Does</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew search &lt;name&gt;</code></td>
+      <td>Find a package</td>
+      <td><code class="language-plaintext highlighter-rouge">brew search node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew install &lt;name&gt;</code></td>
+      <td>Install a package</td>
+      <td><code class="language-plaintext highlighter-rouge">brew install node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew list</code></td>
+      <td>Show installed packages</td>
+      <td><code class="language-plaintext highlighter-rouge">brew list</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew upgrade</code></td>
+      <td>Update all packages</td>
+      <td><code class="language-plaintext highlighter-rouge">brew upgrade</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew update</code></td>
+      <td>Update Homebrew itself</td>
+      <td><code class="language-plaintext highlighter-rouge">brew update</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew uninstall &lt;name&gt;</code></td>
+      <td>Remove a package</td>
+      <td><code class="language-plaintext highlighter-rouge">brew uninstall node</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew info &lt;name&gt;</code></td>
+      <td>Show package details</td>
+      <td><code class="language-plaintext highlighter-rouge">brew info node</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<ol>
+  <li><strong>Homebrew</strong> = the missing package manager for macOS</li>
+  <li><strong>Get the command</strong> from <a href="https://brew.sh">brew.sh</a></li>
+  <li><strong>Paste into terminal</strong> and run</li>
+  <li><strong>Enter password</strong> (it won't show on screen — that's normal)</li>
+  <li><strong>Wait</strong> for installation to complete</li>
+  <li><strong>Verify</strong> with <code class="language-plaintext highlighter-rouge">brew --version</code></li>
+  <li><strong>Start installing</strong> software with <code class="language-plaintext highlighter-rouge">brew install &lt;name&gt;</code></li>
+</ol>
+
+<hr />
+
+<p><em>Your Mac just got a whole lot more powerful. Welcome to the command-line lifestyle — there's no going back.</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI Tutorial Documentation. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>

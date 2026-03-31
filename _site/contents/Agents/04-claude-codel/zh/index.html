@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code 使用教程 | AI 培训文档中心</title>
+  <meta name="description" content="AI 培训文档中心">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:4000/AI_document_website/assets/css/style.css">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Claude Code 使用教程 | AI Tutorial Documentation</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Claude Code 使用教程" />
+<meta property="og:locale" content="zh" />
+<meta name="description" content="AI 培训文档中心" />
+<meta property="og:description" content="AI 培训文档中心" />
+<link rel="canonical" href="http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/zh/" />
+<meta property="og:url" content="http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/zh/" />
+<meta property="og:site_name" content="AI Tutorial Documentation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Claude Code 使用教程" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI 培训文档中心","headline":"Claude Code 使用教程","url":"http://localhost:4000/AI_document_website/contents/Agents/04-claude-codel/zh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <a href="/AI_document_website/zh/" class="logo">AI 培训文档中心</a>
+      <nav class="nav nav-icons">
+        <div class="lang-switcher">
+          <button type="button" class="language-change-btn" aria-label="语言" aria-expanded="false" aria-haspopup="true" id="lang-dropdown-trigger">
+            <svg class="icon-language" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </button>
+          <ul class="language-list" id="lang-dropdown" role="menu" aria-labelledby="lang-dropdown-trigger" hidden>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/en/" role="menuitem" class="language-list-link">English</a>
+            </li>
+            <li class="language-list-item" role="none">
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/" role="menuitem" class="language-list-link active">中文</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <article class="doc-article">
+  <aside class="doc-nav">
+    <div class="doc-nav-title">文档索引</div><details class="doc-nav-section"
+               open>
+        <summary class="doc-nav-summary">智能体</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Agents/01-GLM-configuration/zh/"
+                 >
+                GLM 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/02-KIMI-configuration/zh/"
+                 >
+                KIMI 配置教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/04-claude-codel/zh/"
+                 class="doc-nav-current">
+                Claude Code 使用教程
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Agents/05-claude-code-workshop/zh/"
+                 >
+                Claude Code 实践任务
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">应用</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Apps/01-vscode-usage/zh/"
+                 >
+                VSCode 使用指南
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Apps/03-obsidian-notes/zh/"
+                 >
+                Obsidian 使用指南
+              </a>
+            </li></ul>
+      </details><details class="doc-nav-section"
+               >
+        <summary class="doc-nav-summary">基础工具</summary>
+        <ul class="doc-nav-list"><li>
+              <a href="/AI_document_website/contents/Basic-tools/01-terminal-basics/zh/"
+                 >
+                Terminal 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/02-windows-os-basics/zh/"
+                 >
+                Windows 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/03-mac-os-basics/zh/"
+                 >
+                Mac 操作系统基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/04-winget-basics/zh/"
+                 >
+                winget 基础
+              </a>
+            </li><li>
+              <a href="/AI_document_website/contents/Basic-tools/05-homebrew-install/zh/"
+                 >
+                Homebrew 安装与基础使用
+              </a>
+            </li></ul>
+      </details></aside>
+  <div class="doc-content">
+    <blockquote>
+  <p><strong>阅前说明</strong></p>
+
+  <p>本教程假设你知道怎么打开终端、运行基本命令。如果听起来有点慌，先花5分钟看看 <a href="../../../Basic-tools/01-terminal-basics/zh">Terminal 基础</a>，绝对物超所值。</p>
+</blockquote>
+
+<h1 id="claude-code-使用教程">Claude Code 使用教程</h1>
+
+<h2 id="安装">安装</h2>
+
+<h3 id="在-windows-上安装-claude-code">在 Windows 上安装 Claude Code</h3>
+
+<p>⚠️ <strong>注</strong>：在安装 Claude Code 前请参照 <a href="../../../Basic-tools/04-winget-basics/zh">winget 基础</a> 教程了解 winget 的使用方法。</p>
+
+<p>按下 <code class="language-plaintext highlighter-rouge">Win</code> 键搜索 PowerShell 并打开。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908875.png" alt="" /></p>
+
+<p>在命令行输入 <code class="language-plaintext highlighter-rouge">winget install Anthropic.ClaudeCode</code> 并按下回车安装 Claude Code。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908873.png" alt="" /></p>
+
+<p>等待安装完成。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908869.png" alt="" /></p>
+
+<hr />
+
+<h3 id="在-mac-上安装-claude-code">在 Mac 上安装 Claude Code</h3>
+
+<p>⚠️ <strong>注</strong>：在安装 Claude Code 前请参照 <a href="../../../Basic-tools/05-homebrew-install/zh">Homebrew</a> 教程安装 Homebrew。</p>
+
+<p>按 <code class="language-plaintext highlighter-rouge">Command + 空格</code> 搜索 <strong>Terminal</strong> 并打开。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908876%201.png" alt="" /></p>
+
+<p>在打开的窗口中输入 <code class="language-plaintext highlighter-rouge">brew install --cask claude-code</code> 并按下 <code class="language-plaintext highlighter-rouge">Enter</code>，等待安装完成即可成功安装 Claude Code。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260120130522281.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260120130739744.png" alt="" /></p>
+
+<blockquote>
+  <p><strong>命令解释：</strong></p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">brew</code>：安装程序。用于 Mac 的"Homebrew"工具的主命令，用来帮助您安装其他软件。</li>
+    <li><code class="language-plaintext highlighter-rouge">install</code>：安装。告诉 Homebrew 开始安装。</li>
+    <li><code class="language-plaintext highlighter-rouge">--cask</code>：告诉 Homebrew 安装的是图形界面程序（GUI），而非仅仅是命令行工具。</li>
+    <li><code class="language-plaintext highlighter-rouge">claude-code</code>：要安装的软件名称。</li>
+  </ul>
+</blockquote>
+
+<hr />
+
+<h2 id="界面概览">界面概览</h2>
+
+<p>在终端输入 <code class="language-plaintext highlighter-rouge">claude</code> 即可打开 Claude Code 的窗口。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image36.png" alt="" /></p>
+
+<p>下面是对 Claude Code 窗口元素的简单介绍。在后续章节中，我们会详细介绍它们。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908866.png" alt="" /></p>
+
+<hr />
+
+<h2 id="四个模式">四个模式</h2>
+
+<p><strong>一张图看懂四种模式：</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>模式</th>
+      <th>作用</th>
+      <th>适用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>绕过权限模式</strong></td>
+      <td>无需确认自动执行</td>
+      <td>重复性任务、信任的工作流</td>
+    </tr>
+    <tr>
+      <td><strong>规划模式</strong></td>
+      <td>先规划后执行</td>
+      <td>复杂项目、高风险任务</td>
+    </tr>
+    <tr>
+      <td><strong>自动接受编辑</strong></td>
+      <td>自动应用文件修改</td>
+      <td>快速迭代、信任的修改</td>
+    </tr>
+    <tr>
+      <td><strong>快捷键帮助</strong></td>
+      <td>显示所有命令和快捷键</td>
+      <td>新手用户、探索功能</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1-绕过权限模式">1. 绕过权限模式</h3>
+
+<p>允许Claude直接执行命令而无需每次确认。它打破了传统 AI 助手<strong>"请求-确认-执行"</strong>的循环，将决策权完全交给模型。</p>
+
+<p><strong>适用情况：</strong></p>
+
+<ul>
+  <li>✅ 处理大量重复性操作时</li>
+  <li>✅ 信任Claude的操作且希望提高效率</li>
+  <li>✅ 自动化工作流程</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image38.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2-规划模式">2. 规划模式</h3>
+
+<p>Claude 会先制定完整计划，经你批准后再执行。它提供了一个 <strong>「对齐时刻」</strong>。用户可以在执行前指出计划中的逻辑漏洞，避免在错误的路径上浪费 <strong>Token</strong>。</p>
+
+<p><strong>适用情况：</strong></p>
+
+<ul>
+  <li>✅ 复杂项目需要全局视角</li>
+  <li>✅ 希望在执行前审查整体方案</li>
+  <li>✅ 重要或风险较高的任务</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image39.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3-自动接受编辑">3. 自动接受编辑</h3>
+
+<p>Claude的文件修改自动应用，无需逐个确认。该模式假设 <strong>AI</strong> 的局部修改是正确的, 可以在 Claude 完成一系列修改后，统一查看变更，而不是在修改过程中被不断的弹窗打断。</p>
+
+<p><strong>适用情况：</strong></p>
+
+<ul>
+  <li>✅ 快速迭代开发</li>
+  <li>✅ 信任Claude的代码修改</li>
+  <li>✅ 减少交互中断</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image40.png" alt="" /></p>
+
+<hr />
+
+<h3 id="4-快捷键帮助">4. 快捷键帮助</h3>
+
+<p>显示所有可用命令和快捷键的帮助菜单。通过命令行的交互式反馈，减少了用户切换到浏览器查阅官方文档的需求。</p>
+
+<p><strong>适用情况：</strong></p>
+
+<ul>
+  <li>✅ 初次使用Claude Code</li>
+  <li>✅ 忘记特定命令时</li>
+  <li>✅ 探索功能和提高效率</li>
+</ul>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image41.png" alt="" /></p>
+
+<hr />
+
+<h2 id="更换默认模式为绕过权限模式">更换默认模式为绕过权限模式</h2>
+
+<h3 id="windows">Windows</h3>
+
+<p>打开 <code class="language-plaintext highlighter-rouge">This PC → C: → Users → **Your user name** → .claude → settings.json</code> 的路径。</p>
+
+<blockquote>
+  <p><strong>注</strong>：<strong>Your user name</strong> 是您电脑的登录名，可通过 <code class="language-plaintext highlighter-rouge">win</code> 键查看。</p>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919863.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919861.png" alt="" /></p>
+
+<p>添加以下字段到 settings.json 文件中：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"defaultMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bypassPermissions"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>字段解释</strong>：</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">"permissions"</code>：权限控制系统配置</li>
+    <li><code class="language-plaintext highlighter-rouge">"defaultMode"</code>：默认模式</li>
+    <li><code class="language-plaintext highlighter-rouge">"bypassPermissions"</code>：将该模式添加为 Claude Code 启动默认模式</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919858.png" alt="" /></p>
+
+<p>重新启动 Claude Code, 可以发现 <code class="language-plaintext highlighter-rouge">bypass permissions</code> 模式已被打开。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919854.png" alt="" /></p>
+
+<hr />
+
+<h3 id="mac">Mac</h3>
+
+<p>打开 <code class="language-plaintext highlighter-rouge">Home → .claude → settings.json</code> 的路径。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919853.png" alt="" /></p>
+
+<p>添加以下字段到 settings.json 文件中：</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"defaultMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bypassPermissions"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p><strong>字段解释</strong>：</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">"permissions"</code>：权限控制系统配置</li>
+    <li><code class="language-plaintext highlighter-rouge">"defaultMode"</code>：默认模式</li>
+    <li><code class="language-plaintext highlighter-rouge">"bypassPermissions"</code>：将该模式添加为 Claude Code 启动默认模式</li>
+  </ul>
+</blockquote>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919858.png" alt="" /></p>
+
+<p>重新启动 Claude Code, 可以发现 <code class="language-plaintext highlighter-rouge">bypass permissions</code> 模式已被打开。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/5.Claude%20Code%20Workshop/file-20260113152919854.png" alt="" /></p>
+
+<hr />
+
+<h2 id="常用命令">常用命令</h2>
+
+<p>除了网页端的 LLM 问答功能外，Claude Code 还提供了一系列指令，能够高效地管理对话生命周期与上下文进程。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>作用</th>
+      <th>使用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/compact</code></td>
+      <td>压缩上下文</td>
+      <td>剩20%空间时使用</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/export</code></td>
+      <td>导出聊天记录</td>
+      <td>参考或分享</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/config</code></td>
+      <td>打开配置</td>
+      <td>修改默认设置</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/model</code></td>
+      <td>切换AI模型</td>
+      <td>改变模型能力</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/context</code></td>
+      <td>显示Token使用</td>
+      <td>监控上下文使用</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/clear</code></td>
+      <td>重置会话</td>
+      <td>重新开始</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/mcp</code></td>
+      <td>管理MCP扩展</td>
+      <td>查看已安装工具</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/agents</code></td>
+      <td>管理子Agent</td>
+      <td>独立上下文任务</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/usage</code></td>
+      <td>查看使用统计</td>
+      <td>账户级别消费</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1-compact">1. <code class="language-plaintext highlighter-rouge">/compact</code></h3>
+
+<p>压缩上下文；当空间剩 20% 时建议主动使用，提升上下文利用效率。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image42.png" alt="" /></p>
+
+<p>💡 <strong>小贴士</strong>：一般而言，Claude Code会自动压缩上下文，因而不必要主动压缩上下文。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image43.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2-export">2. <code class="language-plaintext highlighter-rouge">/export</code></h3>
+
+<p>导出聊天记录；可将记录再发给 AI 参考。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image44.png" alt="" /></p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image45.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3-config">3. <code class="language-plaintext highlighter-rouge">/config</code></h3>
+
+<p>该命令能调出Claude Code的配置窗口，修改默认配置。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image46.png" alt="" /></p>
+
+<hr />
+
+<h3 id="4-model">4. <code class="language-plaintext highlighter-rouge">/model</code></h3>
+
+<p>该命令能切换Claude Code使用的大语言模型。</p>
+
+<p><strong>模型选项：</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>模型</th>
+      <th>能力</th>
+      <th>适用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Sonnet 4.5</strong></td>
+      <td>平衡性能和速度的中级模型</td>
+      <td>大多数编程任务、代码重构、bug修复</td>
+    </tr>
+    <tr>
+      <td><strong>Opus 4.5</strong></td>
+      <td>最强大的模型，处理复杂工作</td>
+      <td>系统设计、复杂算法、关键项目</td>
+    </tr>
+    <tr>
+      <td><strong>Haiku 4.5</strong></td>
+      <td>最快速的模型，快速响应</td>
+      <td>快速查询、简单脚本、语法检查</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image47.png" alt="" /></p>
+
+<hr />
+
+<h3 id="5-context">5. <code class="language-plaintext highlighter-rouge">/context</code></h3>
+
+<p>该命令用于查看当前会话的 <strong>Token</strong> 统计。</p>
+
+<p>💡 <strong>小贴士</strong>：可以将 <strong>上下文 Token 数</strong>理解为一个滑动窗口：一旦达到上限，模型会挤掉最早的记忆来腾出空间。如果你发现 Claude 开始遗忘指令或重复已解决的问题，通常是因为关键上下文已超出窗口范围。此时，建议使用 <strong>/compact</strong> 命令来精简并压缩上下文。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image48.png" alt="" /></p>
+
+<hr />
+
+<h3 id="6-clear">6. <code class="language-plaintext highlighter-rouge">/clear</code></h3>
+
+<p>重置会话并清空上下文。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image49.png" alt="" /></p>
+
+<hr />
+
+<h3 id="7-mcp">7. <code class="language-plaintext highlighter-rouge">/mcp</code></h3>
+
+<p>管理 <strong>MCP</strong> 扩展工具；可查看已安装工具，使用格式为 "用 XX mcp 做 XX"。</p>
+
+<p>💡 <strong>小贴士</strong>：<strong>MCP</strong>为 AI 模型与外部数据、工具（如数据库、本地文件或 GitHub）之间搭建统一的连接桥梁。含 <strong>Context 7</strong>（取最新文档）、<strong>Firecrawl</strong>（网页内容抓取）、<strong>Playwright</strong>（浏览器自动化）等。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image50.png" alt="" /></p>
+
+<hr />
+
+<h3 id="8-agents">8. <code class="language-plaintext highlighter-rouge">/agents</code></h3>
+
+<p>可设置的不同子 <strong>Agent</strong>，处理不同任务，每个子 <strong>Agent</strong> 有独立上下文。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image51.png" alt="" /></p>
+
+<hr />
+
+<h3 id="9-usage">9. <code class="language-plaintext highlighter-rouge">/usage</code></h3>
+
+<p>查看您的 <strong>Token</strong> 使用统计和账户级别的消费信息。</p>
+
+<p>💡 <strong>小贴士</strong>：与 <strong>/context</strong>（显示当前会话的 Token 使用）不同，<strong>/usage</strong> 显示您的整体账户使用情况，包括历史数据和所有会话的消费统计。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/4.Claude%20code/file-20260113152908868.png" alt="" /></p>
+
+<hr />
+
+<h2 id="特殊输入模式">特殊输入模式</h2>
+
+<p><strong>三种特殊输入模式：</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>前缀</th>
+      <th>作用</th>
+      <th>适用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>!</strong></td>
+      <td>直接执行系统命令</td>
+      <td>文件操作、Git管理、包安装</td>
+    </tr>
+    <tr>
+      <td><strong>/</strong></td>
+      <td>调用Claude内置功能</td>
+      <td>工具核心操作入口</td>
+    </tr>
+    <tr>
+      <td><strong>@</strong></td>
+      <td>引用文件/目录</td>
+      <td>代码分析或修改</td>
+    </tr>
+    <tr>
+      <td><strong>&amp;</strong></td>
+      <td>后台执行</td>
+      <td>长时间运行的操作</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="1-bash-模式">1. <strong>!</strong>（Bash 模式）</h3>
+
+<p><strong>Bash 模式</strong>：直接执行系统命令（如 <code class="language-plaintext highlighter-rouge">!pwd</code>），不消耗 AI <strong>Token</strong>，速度快，适合文件操作、Git 管理、包安装等。</p>
+
+<p>💡 <strong>小贴士</strong>：<code class="language-plaintext highlighter-rouge">pwd</code> 为 Bash 命令，会打印当前目录的完整路径。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image52.png" alt="" /></p>
+
+<hr />
+
+<h3 id="2-命令模式">2. <strong>/</strong>（命令模式）</h3>
+
+<p><strong>命令模式</strong>：用于调用 Claude 内置功能（如 <code class="language-plaintext highlighter-rouge">/clear</code> 清空上下文、<code class="language-plaintext highlighter-rouge">/model</code> 切换 AI 模型、<code class="language-plaintext highlighter-rouge">/cost</code> 查看 <strong>Token</strong> 消耗），是工具的核心操作入口。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image53.png" alt="" /></p>
+
+<hr />
+
+<h3 id="3-文件路径模式">3. <strong>@</strong>（文件路径模式）</h3>
+
+<p><strong>文件路径模式</strong>：用于快速引用项目中的文件或目录（如 <code class="language-plaintext highlighter-rouge">@.zshrc</code>），方便 AI 定位代码文件进行分析或修改。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image54.png" alt="Graphical user interface, text AI-generated content may be ncorrect." /></p>
+
+<hr />
+
+<h3 id="4-后台模式">4. <strong>&amp;</strong>（后台模式）</h3>
+
+<p><strong>后台模式</strong>：让任务在后台执行，适合长时间运行的操作。但该模式需要访问 <a href="https://claude.ai/code">https://claude.ai/code</a> 完成 Claude Code 的设置，并配置远程执行环境，让 Claude Code 能够在云端运行代码，才能使用该模式，否则会报以下的错误：</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image55.png" alt="" /></p>
+
+<hr />
+
+<h2 id="键盘快捷键">键盘快捷键</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>快捷键</th>
+      <th>中文解释</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>输入相关</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">double esc</code></td>
+      <td>将代码或对话恢复到之前的状态</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">shift + tab</code></td>
+      <td>接受编辑建议</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + o</code></td>
+      <td>显示详细输出</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + t</code></td>
+      <td>显示待办列表</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">shift + ↵</code></td>
+      <td>换行输入</td>
+    </tr>
+    <tr>
+      <td><strong>通用快捷键</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + _</code></td>
+      <td>删除当前的全部输入</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + z</code></td>
+      <td>挂起当前会话</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + v</code></td>
+      <td>粘贴图片给AI</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">option + p</code></td>
+      <td>切换 AI 模型</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Control + s</code></td>
+      <td>暂存提示词，下次提交后出现</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="自定义命令">自定义命令</h2>
+
+<p><strong>Claude Code 提供了自定义命令的方法，可以创建可复用的个人快捷方式。</strong></p>
+
+<h3 id="方法一创建-markdown-文件">方法一：创建 Markdown 文件</h3>
+
+<p>在家目录的 <strong><code class="language-plaintext highlighter-rouge">~/.claude/commands</code></strong> 文件夹中创建一个作为提词的可重复使用 Markdown 文件，文件名即为命令名称，然后即可在 Claude Code 中快速调用。该命令会复用 Markdown 中的提词，在当前工作目录完成任务。使用方式与 3.4.1 节一致，使用 <strong><code class="language-plaintext highlighter-rouge">/ + 命令</code></strong> 的语法进行调用。</p>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image56.png" alt="" /></p>
+
+<hr />
+
+<h3 id="方法二让-claude-创建命令">方法二：让 Claude 创建命令</h3>
+
+<p>或者，也可以通过直接要求 Claude Code 生成自定义命令的方式添加命令。但是需要注意，通过这种方式添加的命令，可能需要重启 Claude Code 才能看到新添加的命令。</p>
+
+<p><strong>提词示例：</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>给我创建一个slash command，命名为`/memo`，这个command的作用是为当前项目创建一个memo记录进度和成果，便于重新开启对话时能在任务断开的地方继续进行。产出物是一个`memo.md`。
+</code></pre></div></div>
+
+<p><img src="/AI_document_website/contents/Agents/04-claude-codel/images/Toolkit/image57.png" alt="" /></p>
+
+<hr />
+
+<p><em>有问题？卡住了？查阅官方文档。或者直接问 Claude，它就在那。</em></p>
+
+  </div>
+  <aside class="doc-sidebar">
+    <nav class="doc-toc" id="toc"></nav>
+  </aside>
+</article>
+<script src="/AI_document_website/assets/js/toc.js" defer></script>
+
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 AI 培训文档中心. made by Jekyll</p>
+    </footer>
+  </div>
+  <script>
+    (function() {
+      var trigger = document.getElementById('lang-dropdown-trigger');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (!trigger || !dropdown) return;
+      function open() {
+        dropdown.removeAttribute('hidden');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function close() {
+        dropdown.setAttribute('hidden', '');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      function toggle() {
+        if (dropdown.hasAttribute('hidden')) open(); else close();
+      }
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggle();
+      });
+      document.addEventListener('click', function() { close(); });
+      dropdown.addEventListener('click', function(e) { e.stopPropagation(); });
+    })();
+  </script>
+</body>
+</html>
