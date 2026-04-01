@@ -85,7 +85,9 @@ Enable **Allow Dangerously Skip Permissions** (exact label may vary by version).
 
 ![](images/Pasted%20image%2020260331115902.png)
 
-In the side panel you can use a mode such as **Bypass permissions** to reduce step-by-step approvals. **Warning:** the assistant may run terminal and file operations more aggressively within the granted boundary—risk of mistakes or abuse. Use only on trusted projects and personal machines, and turn it off when done.
+In the side panel you can use a mode such as **Bypass permissions** to reduce step-by-step approvals. 
+
+**Warning:** the assistant may run terminal and file operations more aggressively within the granted boundary—risk of mistakes or abuse. Use only on trusted projects and personal machines, and turn it off when done.
 
 ![](images/Pasted%20image%2020260331120023.png)
 

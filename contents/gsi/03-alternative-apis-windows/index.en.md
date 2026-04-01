@@ -174,7 +174,7 @@ Open [https://platform.kimi.ai/console/api-keys](https://platform.kimi.ai/consol
 
 Click **Create API Key**.
 
-![](images/Pasted%20image%2020260401132607.png)
+![](images/Pasted%20image%2020260401184816.png)
 
 Choose a memorable name, select project **default**, then **OK**.
 

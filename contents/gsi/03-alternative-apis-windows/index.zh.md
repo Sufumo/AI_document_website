@@ -175,7 +175,7 @@ claude --settings $HOME/.claude/glm-settings.json $args
 
 点击 **Create API Key**。
 
-![](images/Pasted%20image%2020260401132607.png)
+![](images/Pasted%20image%2020260401184807.png)
 
 起个能记住的名字，项目选择 **default**，然后点击 **确定**。
 
