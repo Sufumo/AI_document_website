@@ -8,7 +8,7 @@ next: gsi/03-alternative-apis-macos
 
 ## 第一部分：Claude Code 授权登录
 
-初次在 VS Code 中打开该扩展时，一般会看到授权页面。常见入口可以粗分三类，便于你对照自己手头的账号类型：
+初次在 VS Code 中打开该扩展时，一般会看到授权页面。常见入口大致可分三类，便于你对照自己手头的账号类型：
 - **Claude.ai Subscription**：面向个人、在官网按月或按年购买的会员订阅；
 - **Anthropic Console**：面向开发者、在官网控制台里按调用量计费、自己管额度的 API 账单；
 - **Bedrock, Foundry, or Vertex**：企业或学校已经采购的云服务里托管的官方接口。
@@ -69,7 +69,7 @@ Also briefly describe what you created.
 
 ## 第三部分：使用小贴士
 
-### 强制授权模式
+### 减少权限确认
 
 默认情况下，扩展在执行部分操作前会反复请求确认，交互次数一多容易打断思路。
 
@@ -85,7 +85,7 @@ Also briefly describe what you created.
 
 ![](images/Pasted%20image%2020260331115902.png)
 
-回到侧边面板后，可选用 **Bypass permissions** 一类模式以减少逐项确认。注意：该模式会让助手在授权边界内更激进地执行终端与文件操作，存在误操作或安全风险，仅在可信项目与个人设备上按需开启，用毕可关回安全模式。
+回到侧边面板后，可选用 **Bypass permissions** 一类模式以减少逐项确认。注意：该模式会让助手在授权边界内更激进地执行终端与文件操作，存在误操作或安全风险，仅在可信项目与个人设备上按需开启，用毕可改回需逐项确认。
 
 ![](images/Pasted%20image%2020260331120023.png)
 

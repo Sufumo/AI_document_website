@@ -13,21 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basic-tools/01-terminal-basics/index.en.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index.en"
-            }
-          },
-          {
-            "id": "b636e6d1f637b205",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "gsi/01-ai-workplace-windows/index.zh.md",
+                "file": "gsi/03-alternative-apis-macos/index.zh.md",
                 "mode": "source",
                 "source": false
               },
@@ -35,8 +21,7 @@
               "title": "index.zh"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -171,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gsi/01-ai-workplace-windows/index.zh.md",
+                "file": "gsi/03-alternative-apis-macos/index.zh.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -197,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 372.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,36 +195,38 @@
       "bases:Create new base": false
     }
   },
-  "active": "0ac69439e5276128",
+  "active": "81a1de641a676858",
   "lastOpenFiles": [
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172252.png",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172158.png",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172104.png",
     "gsi/03-alternative-apis-windows/index.en.md",
     "gsi/03-alternative-apis-macos/index.en.md",
+    "gsi/03-alternative-apis-macos/index.zh.md",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172507.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172458.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172252.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172158.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172104.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172008.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401171924.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260401153046.png",
+    "gsi/02-claude-code-vscode/index.zh.md",
+    "gsi/01-ai-workplace-windows/index.zh.md",
+    "gsi/01-ai-workplace-macos/index.zh.md",
+    "Basic-tools/01-terminal-basics/index.en.md",
+    "gsi/01-ai-workplace-macos/index.en.md",
+    "gsi/03-alternative-apis-macos/images/Untitled",
+    "gsi/03-alternative-apis-windows/index.zh.md",
     "gsi/02-claude-code-vscode/index.en.md",
     "gsi/01-ai-workplace-windows/index.en.md",
-    "gsi/01-ai-workplace-macos/index.en.md",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330174600.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330173734.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330172747.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330172051.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171954.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171934.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171756.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171735.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171713.png",
-    "gsi/01-ai-workplace-windows/images/Pasted image 20260330171538.png",
-    "gsi/01-ai-workplace-macos/index.zh.md",
-    "gsi/03-alternative-apis-windows/index.zh.md",
-    "gsi/03-alternative-apis-macos/index.zh.md",
     "gsi/03-alternative-apis-windows/images",
     "gsi/03-alternative-apis-windows",
-    "Basic-tools/01-terminal-basics/index.en.md",
     "Agents/02-KIMI-configuration/index.zh.md",
     "Agents/01-GLM-configuration/index.zh.md",
     "gsi/03-alternative-apis-macos/images",
     "Agents/01-GLM-configuration/images 1",
-    "gsi/02-claude-code-vscode/index.zh.md",
     "gsi/02-claude-code-vscode/images",
-    "gsi/01-ai-workplace-windows/index.zh.md",
     "Basic-tools/02-windows-os-basics/index.zh.md",
     "Apps/01-vscode-usage/index.zh.md",
     "gsi/01-ai-workplace-windows/images",
@@ -248,7 +235,6 @@
     "gsi/01-ai-workplace-macos copy/index.en.md",
     "gsi/01-ai-workplace-macos copy/images",
     "gsi/01-ai-workplace-macos copy",
-    "Basic-tools/05-homebrew-install/images/Toolkit",
     "Extensions/03-plugin/index.zh.md",
     "AI-tools/01-docling/index.en.md 14-51-07-863.md",
     "Apps/04-iflyrec-usage/index.en.md",
@@ -256,7 +242,6 @@
     "Apps/04-iflyrec-usage/index.zh.md",
     "Extensions/02-mcp/index.zh.md",
     "Extensions/01-skills/index.zh.md",
-    "AI-tools/01-docling/index.en.md",
-    "Extensions/03-docling/index.zh.md"
+    "AI-tools/01-docling/index.en.md"
   ]
 }

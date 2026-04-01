@@ -107,7 +107,7 @@ When you return to the side panel it may show selected line count (e.g. **6 line
 
 ## Part 4: Remote control
 
-The extension can also accept messages from bots or HTTP callbacks (often labeled Telegram, Discord, Webhook, etc.). After setup you can send commands from a phone or tablet where you are signed in; the local client executes and replies—mobile use under your own controls. For supported channels and steps see [https://code.claude.com/docs/en/channels](https://code.claude.com/docs/en/channels).
+The extension can also accept messages from bots or HTTP callbacks (often labeled Telegram, Discord, Webhook, etc.). After setup you can send commands from a phone or tablet where you are signed in; the local client executes and replies—mobile use under your own control. For supported channels and steps see [https://code.claude.com/docs/en/channels](https://code.claude.com/docs/en/channels).
 
 ![](images/Untitled-1.png)
 

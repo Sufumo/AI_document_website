@@ -7,23 +7,21 @@ prev: gsi/02-claude-code-vscode
 
 ## 为什么要给客户端接 GLM / KIMI 备选线路？
 
-不少人在装好编程助手客户端之后才发现，要稳定使用往往离不开官方模型的订阅或按量账单，对支付方式和账号环境也有一定要求。若你暂时不便走官方主路径，或希望多一条国内可用的「模型后端」，智谱与月之暗面等厂商提供了与官方客户端约定相近的接口，可以把同一套界面接到另一套推理服务上，降低上手门槛。
+装好编程助手客户端之后，很多人会碰到同一件事：想长期稳定用下去，往往离不开官方模型的订阅或按量计费；而不同地区、不同团队对「哪条路更顺手」也不尽相同。若你在官方默认线路之外，还想多接一条兼容的推理服务，智谱 GLM、月之暗面 Kimi 等厂商提供了与常见客户端约定相近的接口，同一套界面可以指向另一套后端，换线路时不必从零换工具。
 
 ### 先搞清楚一件事：客户端 ≠ 模型
 
-可以粗略理解成两层：一层是在本机替你改文件、跑命令的「执行端」；另一层是在云端理解你的话、决定改哪些内容的「推理服务」。执行端不会凭空知道该写什么，必须把句子发给某个推理服务并得到回复；只要把服务地址和密钥配对正确，执行端可以连着不同的推理服务使用。因此承担思考角色的可以是官方模型，也可以换成智谱或月之暗面等兼容线路，视你的配置而定。
+可以粗略理解成两层：一层是在本机替你改文件、跑命令的「执行端」；另一层是在云端理解你的话、决定改哪些内容的「推理服务」。执行端不会凭空知道该写什么，必须把提示发给某个推理服务并得到回复；只要把服务地址和密钥配对正确，执行端可以连着不同的推理服务使用。因此承担思考角色的可以是官方模型，也可以换成智谱或月之暗面等兼容线路，视你的配置而定。
 
 ![](images/01-GLM-configuration-20260316125916.jpg)
 
 ### 为什么选 GLM 和 KIMI？
 
-在支付与账号环境上，对不少国内用户相对省心：常见银行卡或国内支付链路往往就能完成充值，不必反复折腾海外卡。若你担心高频调用触发平台风控，各家国内服务商的合规与限额规则以官方说明为准，与直接使用海外主站不是同一套体系。至于能力是否够用，公开排行榜里智谱、月之暗面的多款模型时常出现在靠前区间，日常写代码、改文档多数场景可以胜任，但仍建议用你自己的真实任务试几轮再下结论。
-
-若你已有稳定的官方订阅，可继续沿用原线路；若没有或想并行试用，可把智谱与月之暗面当作可选的备用线路。
+选哪一家模型，往往会碰到延迟、价格、服务条款等现实因素，很难一句话定对错。从公开资料与社区实践看，不少中国大模型在「能力够用」与「账单压力」之间往往比较均衡，日常写代码、改文档的场景里也有不少可参考的案例。
 
 ### GLM 和 KIMI 实力如何？
 
-在一份对外公开的、偏复杂决策场景的第三方评测里（详见 [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)），智谱与月之暗面旗下多款模型曾处于开源梯队靠前位置。排行会随时间与任务类型变化，是否满足你的工作仍建议亲自试跑后再定。
+在一份对外公开的、偏复杂决策场景的第三方评测里（详见 [Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)），智谱与月之暗面旗下多款模型曾处于开源梯队靠前位置。榜单会随时间与题型变化，这里只作参考：**是否真的适合你的工作，还请自己尝试一下。**
 
 ![](images/01-GLM-configuration-20260316120220.jpg)
 ### AI 工作流长这样
@@ -34,9 +32,7 @@ prev: gsi/02-claude-code-vscode
 
 配置好密钥与接口后，上述流程与使用官方默认后端时一致。
 
----
-
-已有稳定官方账号的读者可将本文当作选读；需要配置智谱或月之暗面线路的读者可直接进入下文「GLM 配置教程」「KIMI 配置教程」。
+已有稳定官方账号的读者可将本文当作选读；需要跟练配置示例的读者可直接进入下文「GLM 配置教程」「KIMI 配置教程」。
 
 ---
 
@@ -52,15 +48,15 @@ prev: gsi/02-claude-code-vscode
 
 点击 **Create a new API Key**。
 
-![](images/01-GLM-configuration-20260303185651.jpg)
+![](images/Pasted%20image%2020260401172104.png)
 
-起个能记住的名字（比如「claude-code-key」——未来的你会感谢现在的你），然后点击 **Yes**。
+起个能记住的名字（比如「AITraining」——未来的你会感谢现在的你），然后点击 **Yes**。
 
-![](images/01-GLM-configuration-20260303185744.jpg)
+![](images/Pasted%20image%2020260401172158.png)
 
 点击 **Copy**，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
 
-![](images/01-GLM-configuration-20260303185954.jpg)
+![](images/Pasted%20image%2020260401172252.png)
 
 ---
 
@@ -80,7 +76,7 @@ prev: gsi/02-claude-code-vscode
 
 找个文件夹，右键 → **Terminal**。
 
-![](images/01-GLM-configuration-20260311005958.jpg)
+![](images/Pasted%20image%2020260401172507.png)
 
 将下面整段命令粘贴到终端后按 **Enter** 执行（需已安装 `wget`/`unzip` 等，若缺失可用 Homebrew 补齐）：
 
@@ -224,11 +220,11 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 
 复制 **settings.json** → 重命名为 **glm-settings.json**。
 
-![](images/01-GLM-configuration-20260310232459.jpg)
+![](images/Pasted%20image%2020260401153046.png)
 
 返回 Home 目录，打开 **.zshrc**。
 
-![](images/01-GLM-configuration-20260310234055.jpg)
+![](images/Pasted%20image%2020260401152926.png)
 
 在文件末尾添加：
 
@@ -287,29 +283,29 @@ source .zshrc
 
 一切从一个 API Key 开始。获取方式如下：
 
-打开 [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys) 并登录。
+打开 [https://platform.kimi.ai/console/api-keys](https://platform.kimi.ai/console/api-keys) 并登录。
 
-![](images/02-KIMI-configuration-20260303194555.jpg)
+![](images/Pasted%20image%2020260401132502.png)
 
-点击 **新建 API Key**。
+点击 **Create API Key**。
 
-![](images/02-KIMI-configuration-20260303194920.jpg)
+![](images/Pasted%20image%2020260401132607.png)
 
 起个能记住的名字，项目选择 **default**，然后点击 **确定**。
 
-![](images/02-KIMI-configuration-20260303195050.jpg)
+![](images/Pasted%20image%2020260401132653.png)
 
-点击 **复制**，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
+点击下图所示的复制按钮复制你的 API Key，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
 
-![](images/02-KIMI-configuration-20260303195345.jpg)
+![](images/Pasted%20image%2020260401132817.png)
 
 ---
 
 ### 步骤二：给账户充点「燃料」
 
-**KIMI 的 API Key 需要账户有余额才能用；余额不足时调用会失败。** 在控制台依次打开 **财务管理**、**账户充值**，选择金额并完成支付即可。
+**KIMI 的 API Key 需要账户有余额才能用；余额不足时调用会失败。** 在控制台依次打开 **Billing**、**Recharge**，选择金额并完成支付即可。
 
-![](images/02-KIMI-configuration-20260306114112.jpg)
+![](images/Pasted%20image%2020260401132941.png)
 
 ---
 
@@ -323,7 +319,7 @@ source .zshrc
 
 找个文件夹，右键 → **Terminal**。
 
-![](images/02-KIMI-configuration-20260311005958.jpg)
+![](images/Pasted%20image%2020260401152540.png)
 
 同样将整段命令粘贴到终端并按 **Enter**：
 
@@ -394,15 +390,9 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 ![](images/02-KIMI-configuration-20260303200736.jpg)
 
-之后即可在月之暗面线路上正常使用。
+之后即可正常使用 Kimi 模型。
 
 ![](images/02-KIMI-configuration-20260303200846.jpg)
-
-> [!TIP]
->
-> 直接问也行，助手一般会回复当前实际连到的模型名称。
-
-![](images/fcb0a0365799f8680cbf2116e80f73ce.jpg)
 
 ---
 
@@ -420,7 +410,7 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 复制 **settings.json** → 重命名为 **kimi-settings.json**。
 
-![](images/02-KIMI-configuration-20260310234238.jpg)
+![](images/Pasted%20image%2020260401152835.png)
 
 打开 **kimi-settings.json**，填入以下内容（把 `replace with your api key` 换成你的 API Key）：
 
@@ -438,7 +428,7 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 返回 Home 目录，打开 **.zshrc**。
 
-![](images/02-KIMI-configuration-20260310234055.jpg)
+![](images/Pasted%20image%2020260401152907.png)
 
 在文件末尾添加：
 
@@ -470,4 +460,4 @@ alias kimi="claude --settings ~/.claude/kimi-settings.json"
 
 ### 小结
 
-在 [platform.moonshot.cn](https://platform.moonshot.cn/console/api-keys) 创建 Key 并保证账户有余额后，任选可视化安装（得到 `kimi` 启动）或环境变量方式（常用 `claude` 启动）；最后在对话里确认模型名称是否为预期的 KIMI 线路即可。
+在 [platform.kimi.ai](https://platform.kimi.ai/console/api-keys) 创建 Key 并保证账户有余额后，任选可视化安装（得到 `kimi` 启动）或环境变量方式（常用 `claude` 启动）；最后在对话里确认模型名称是否为预期的 KIMI 线路即可。

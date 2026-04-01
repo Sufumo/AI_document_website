@@ -172,11 +172,11 @@ Besides obvious files, hidden folders and config files often decide whether the 
 
 By default Finder shows common folders like Desktop, Documents, Downloads.
 
-![](images/Pasted%20image%2020260330173734.png)
+![](images/Pasted%20image%2020260330172747.png)
 
 Press `Command + Shift + .` to show hidden items. Coding assistants often store login state, preferences, shared instructions, and external tool wiring under hidden folders in your home directory; manifest-style files may register capabilities. Shell startup files or project `.env` files often hold aliases or secret references. Treat these as sensitive—do not post screenshots publicly or commit them to open repos.
 
-![](images/Pasted%20image%2020260330174600.png)
+![](images/Pasted%20image%2020260401152206.png)
 
 ---
 

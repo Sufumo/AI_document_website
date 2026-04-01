@@ -7,23 +7,21 @@ prev: gsi/02-claude-code-vscode
 
 ## Why wire the client to GLM / KIMI?
 
-Many people discover after installing the coding-assistant client that steady use often needs an official model subscription or usage-based billing, with constraints on payment and account region. If the primary path is awkward for you, or you want an extra **model backend** that is easier to use from China, vendors such as Zhipu (GLM) and Moonshot (KIMI) expose endpoints compatible with the same client conventions, so you can keep one UI while switching the inference service behind it.
+After you install the coding-assistant client, a familiar pattern appears: staying on it long term usually means an official subscription or usage-based billing, and different regions or teams will find different routes more convenient. If you want a **second** inference backend that speaks the same client protocol as the usual defaults, vendors such as Zhipu (GLM) and Moonshot (Kimi) offer compatible endpoints—you keep the same UI and point it at another service without swapping your whole toolchain.
 
 ### Client ≠ model
 
-Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own—it must send prompts to a service and get answers back. Point URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
+Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own—it must send prompts to an inference service and get answers back. Point the URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
 
 ![](images/01-GLM-configuration-20260316125916.jpg)
 
 ### Why GLM and KIMI?
 
-For many users in China, payments and account setup are simpler: common bank cards and domestic payment rails often work without juggling foreign cards. If you worry about rate limits or policy, each domestic vendor publishes its own compliance and quota rules—different from using the overseas site directly. On capability, public leaderboards often place multiple GLM and KIMI models near the top; they are usually fine for everyday coding and docs, but you should still try your own tasks before committing.
-
-If you already have a stable official subscription, you can keep it; otherwise GLM and KIMI are reasonable alternate routes to try in parallel.
+Choosing a vendor is messy in practice: latency, pricing, and terms all matter, and there is no single “right” answer. From public write-ups and community practice, many Chinese LLMs sit in a workable band between capability and cost, with plenty of examples for everyday coding and documentation.
 
 ### How capable are they?
 
-In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Rankings move with time and task type—validate on your own workload.
+In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Leaderboards shift with time and task shape—treat this as background only: **whether it truly fits your work is something you’ll have to try for yourself.**
 
 ![](images/01-GLM-configuration-20260316120220.jpg)
 ### What the workflow looks like
@@ -34,9 +32,7 @@ You ask → model thinks → writes code → done
 
 The flow is the same on every OS: after keys and service URL are set, the client still drives local files and the terminal the same way.
 
----
-
-If you already rely on an official account, treat this page as optional; if you need GLM or KIMI, jump to the matching sections below.
+If you already rely on an official account, treat this page as optional; if you want to follow the walkthrough, jump to **GLM setup** and **KIMI setup** below.
 
 ---
 
@@ -52,15 +48,15 @@ Open [https://bigmodel.cn/usercenter/proj-mgmt/apikeys](https://bigmodel.cn/user
 
 Click **Create a new API Key**.
 
-![](images/01-GLM-configuration-20260303185651.jpg)
+![](images/Pasted%20image%2020260401172104.png)
 
-Pick a memorable name (e.g. `claude-code-key`), then **Yes**.
+Pick a memorable name (e.g. **AITraining**—your future self will thank you), then **Yes**.
 
-![](images/01-GLM-configuration-20260303185744.jpg)
+![](images/Pasted%20image%2020260401172158.png)
 
 Click **Copy** and store it somewhere safe. **Important:** this is often the only time you see the full secret.
 
-![](images/01-GLM-configuration-20260303185954.jpg)
+![](images/Pasted%20image%2020260401172252.png)
 
 ---
 
@@ -172,29 +168,29 @@ Scroll to the plans and pick what fits.
 
 Everything starts with an API key.
 
-Open [https://platform.moonshot.cn/console/api-keys](https://platform.moonshot.cn/console/api-keys) and sign in.
+Open [https://platform.kimi.ai/console/api-keys](https://platform.kimi.ai/console/api-keys) and sign in.
 
-![](images/02-KIMI-configuration-20260303194555.jpg)
+![](images/Pasted%20image%2020260401132502.png)
 
-Click **新建 API Key** (New API key).
+Click **Create API Key**.
 
-![](images/02-KIMI-configuration-20260303194920.jpg)
+![](images/Pasted%20image%2020260401132607.png)
 
-Choose a name, project **default**, then **确定** (OK).
+Choose a memorable name, select project **default**, then **OK**.
 
-![](images/02-KIMI-configuration-20260303195050.jpg)
+![](images/Pasted%20image%2020260401132653.png)
 
-Click **复制** (Copy) and store it safely. **Important:** this is often the only time you see the full secret.
+Use the copy button shown below to copy your API key and store it somewhere safe. **Important:** this is often the only time you see the full secret.
 
-![](images/02-KIMI-configuration-20260303195345.jpg)
+![](images/Pasted%20image%2020260401132817.png)
 
 ---
 
 ### Step 2: Top up balance
 
-A KIMI API key needs account balance. In the console open **财务管理**, then **账户充值**, choose an amount, and pay.
+**A KIMI API key only works when the account has balance; calls fail if it is empty.** In the console open **Billing**, then **Recharge**, choose an amount, and complete payment.
 
-![](images/02-KIMI-configuration-20260306114112.jpg)
+![](images/Pasted%20image%2020260401132941.png)
 
 ---
 
