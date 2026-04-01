@@ -28,9 +28,9 @@ VS Code is a common entry point for this kind of workspace. After you install a 
 
 ### What is VS Code? Why VS Code?
 
-Visual Studio Code is a **workspace for viewing, editing, and managing files** on your computer—not where the files are actually stored. Think of the computer as a room: files sit in a filing cabinet. VS Code is more like a desk; when you open it, you lay out the files you need and work on them there. Edits, saves, and deletes on the desk change the originals in the cabinet.
+Visual Studio Code is a **workspace for viewing, editing, and managing files** on your computer, not where the files are actually stored. Think of the computer as a room: files sit in a filing cabinet. VS Code is more like a desk; when you open it, you lay out the files you need and work on them there. Edits, saves, and deletes on the desk change the originals in the cabinet.
 
-From that angle, VS Code bundles browsing, search, and editing so you hop between apps less. Extensions add capabilities—for example, the Claude coding assistant can run inside VS Code so coding and AI-assisted edits stay in one environment.
+From that angle, VS Code bundles browsing, search, and editing so you hop between apps less. Extensions add capabilities, for example, the Claude coding assistant can run inside VS Code so coding and AI-assisted edits stay in one environment.
 
 ---
 
@@ -66,7 +66,7 @@ When installation finishes, press **Win**, search for **Visual Studio Code** or 
 
 Many beginners struggle not with menus but with messy trees, forgotten paths, and mixing different projects. A few habits prevent most of that.
 
-Carve out a dedicated work area—for example a top folder called `Workspace` with two children: **global rules** vs **concrete projects**. Use `system` for conventions every project should follow (style guides, task workflows)—a long-lived “briefing” for your assistant. Use `project` for separate tasks, each in its own subfolder, with notes or config as needed. The tree might look like this; names are up to you as long as the layout is obvious.
+Carve out a dedicated work area, for example a top folder called `Workspace` with two children: **global rules** vs **concrete projects**. Use `system` for conventions every project should follow (style guides, task workflows), a long-lived “briefing” for your assistant. Use `project` for separate tasks, each in its own subfolder, with notes or config as needed. The tree might look like this; names are up to you as long as the layout is obvious.
 
 ```
 Workspace/  
@@ -169,11 +169,11 @@ To start a new session, use **New Session** in the panel or the Claude Code icon
 
 ## Part 3: Important hidden files and folders
 
-Besides obvious files, hidden folders and config files often decide whether the environment stays stable. Go to `C:\Users\` and open the folder that matches your Windows sign-in name—your profile root.
+Besides obvious files, hidden folders and config files often decide whether the environment stays stable. Go to `C:\Users\` and open the folder that matches your Windows sign-in name, your profile root.
 
 ![](images/Pasted%20image%2020260331101627.png)
 
-Besides Desktop, Documents, Downloads, you may see config entries related to dev tools. Coding assistants often store login state, preferences, shared instructions, and external tool wiring under hidden folders; manifest-style files may register capabilities. Environment files may hold secret references. Treat these as sensitive—do not post screenshots publicly or commit them to open repos.
+Besides Desktop, Documents, Downloads, you may see config entries related to dev tools. Coding assistants often store login state, preferences, shared instructions, and external tool wiring under hidden folders; manifest-style files may register capabilities. Environment files may hold secret references. Treat these as sensitive, do not post screenshots publicly or commit them to open repos.
 
 ![](images/Pasted%20image%2020260331102019.png)
 

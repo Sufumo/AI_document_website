@@ -7,11 +7,11 @@ prev: gsi/02-claude-code-vscode
 
 ## Why wire the client to GLM / KIMI?
 
-After you install the coding-assistant client, a familiar pattern appears: staying on it long term usually means an official subscription or usage-based billing, and different regions or teams will find different routes more convenient. If you want a **second** inference backend that speaks the same client protocol as the usual defaults, vendors such as Zhipu (GLM) and Moonshot (Kimi) offer compatible endpoints—you keep the same UI and point it at another service without swapping your whole toolchain.
+After you install the coding-assistant client, a familiar pattern appears: staying on it long term usually means an official subscription or usage-based billing, and different regions or teams will find different routes more convenient. If you want a **second** inference backend that speaks the same client protocol as the usual defaults, vendors such as Zhipu (GLM) and Moonshot (Kimi) offer compatible endpoints, you keep the same UI and point it at another service without swapping your whole toolchain.
 
 ### Client ≠ model
 
-Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own—it must send prompts to an inference service and get answers back. Point the URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
+Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own, it must send prompts to an inference service and get answers back. Point the URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
 
 ![](images/01-GLM-configuration-20260316125916.jpg)
 
@@ -21,7 +21,7 @@ Choosing a vendor is messy in practice: latency, pricing, and terms all matter, 
 
 ### How capable are they?
 
-In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Leaderboards shift with time and task shape—treat this as background only: **whether it truly fits your work is something you’ll have to try for yourself.**
+In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Leaderboards shift with time and task shape, treat this as background only: **whether it truly fits your work is something you’ll have to try for yourself.**
 
 ![](images/01-GLM-configuration-20260316120220.jpg)
 ### What the workflow looks like
@@ -50,7 +50,7 @@ Click **Create a new API Key**.
 
 ![](images/Pasted%20image%2020260401172104.png)
 
-Pick a memorable name (e.g. **AITraining**—your future self will thank you), then **Yes**.
+Pick a memorable name (e.g. **AITraining**, your future self will thank you), then **Yes**.
 
 ![](images/Pasted%20image%2020260401172158.png)
 
@@ -62,7 +62,19 @@ Click **Copy** and store it somewhere safe. **Important:** this is often the onl
 
 ### Step 2: Subscribe or not?
 
-Without a paid plan you still get free quota and a more basic model tier—enough to learn your usage. If you use it heavily every day and need higher limits or flagship models, consider the **GLM Coding Plan**. Start with free quota, then upgrade if needed; subscription UI is under **GLM Coding Plan details** below.
+Without a paid plan you still get free quota and a more basic model tier—enough to learn your usage. If you use it heavily every day and need higher limits or flagship models, consider the **GLM Coding Plan**.
+
+In the console, click **My Plan** to open “My plan”.
+
+![](images/01-GLM-configuration-20260306112528.jpg)
+
+Then click **GLM Coding plan** to open the subscription screen.
+
+![](images/01-GLM-configuration-20260306112619.jpg)
+
+Scroll down to the plans and pick what fits.
+
+![697](images/01-GLM-configuration-20260316113743.jpg)
 
 ---
 
@@ -72,7 +84,7 @@ Open `C:\Users\<YourUsername>\.claude` (replace with your Windows user name), th
 
 ![](images/Pasted%20image%2020260331132037.png)
 
-Replace `your_zhipu_api_key` with your key, merge the JSON into `settings.json`, and save (if other keys exist, merge the `env` block carefully—do not wipe unrelated settings).
+Replace `your_zhipu_api_key` with your key, merge the JSON into `settings.json`, and save (if other keys exist, merge the `env` block carefully, do not wipe unrelated settings).
 
 ```
 {
@@ -114,7 +126,7 @@ If you subscribe to GLM Coding Plan, replace `env` in `settings.json` with the s
 
 ---
 
-### Advanced: `glm` command
+#### Advanced: `glm` command
 
 To type `glm` and load a dedicated profile, copy `settings.json` to **glm-settings.json** in the same `.claude` folder.
 
@@ -147,19 +159,7 @@ In new PowerShell windows, `glm` starts the client with `glm-settings.json`.
 
 ![](images/Pasted%20image%2020260331133548.png)
 
-### GLM Coding Plan details
-
-Click **My Plan**.
-
-![](images/01-GLM-configuration-20260306112528.jpg)
-
-Click **GLM Coding plan** for the subscription screen.
-
-![](images/01-GLM-configuration-20260306112619.jpg)
-
-Scroll to the plans and pick what fits.
-
-![697](images/01-GLM-configuration-20260316113743.jpg)
+---
 
 ## KIMI setup
 
@@ -223,7 +223,7 @@ Run `claude` in PowerShell and confirm you want to use the custom key from the e
 
 ### Advanced: `kimi` command
 
-Save your KIMI `settings.json` as **kimi-settings.json** beside it—the same pattern as GLM for multiple routes.
+Save your KIMI `settings.json` as **kimi-settings.json** beside it, the same pattern as GLM for multiple routes.
 
 ![](images/Pasted%20image%2020260331134051.png)
 

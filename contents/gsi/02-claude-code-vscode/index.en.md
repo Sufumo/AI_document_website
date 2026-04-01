@@ -8,10 +8,10 @@ next: gsi/03-alternative-apis-macos
 
 ## Part 1: Sign-in and authorization
 
-The first time you open the extension in VS Code you usually see an authorization screen. Entry points fall into three broad buckets—pick what matches your account:
-- **Claude.ai Subscription** — personal monthly or annual membership bought on the consumer site;
-- **Anthropic Console** — developer pay-as-you-go API billing you manage in the console;
-- **Bedrock, Foundry, or Vertex** — organization-hosted official endpoints on a cloud you already use.
+The first time you open the extension in VS Code you usually see an authorization screen. Entry points fall into three broad buckets, pick what matches your account:
+- **Claude.ai Subscription** ,  personal monthly or annual membership bought on the consumer site;
+- **Anthropic Console** ,  developer pay-as-you-go API billing you manage in the console;
+- **Bedrock, Foundry, or Vertex** ,  organization-hosted official endpoints on a cloud you already use.
 
 Each path has different billing and compliance rules. Pay-as-you-go can get expensive under heavy use; third-party or mirror subscriptions are out of scope here. The walkthrough below uses **Claude.ai Subscription**: in the extension UI, click the matching button to start auth.
 
@@ -33,7 +33,7 @@ Back in VS Code the extension should show a signed-in state; use Claude Code fro
 
 ## Part 2: A simple example
 
-This English prompt asks the extension to create `news_task` under `project`, gather five recent news items (title, source, date, link) from roughly the last three days, and write `news.md`—without generating or running extra scripts, only built-in capabilities. Adapt paths and output rules for your own work.
+This English prompt asks the extension to create `news_task` under `project`, gather five recent news items (title, source, date, link) from roughly the last three days, and write `news.md`, without generating or running extra scripts, only built-in capabilities. Adapt paths and output rules for your own work.
 
 ```
 Create a new subfolder under the @project directory called "news_task".
@@ -87,7 +87,7 @@ Enable **Allow Dangerously Skip Permissions** (exact label may vary by version).
 
 In the side panel you can use a mode such as **Bypass permissions** to reduce step-by-step approvals. 
 
-**Warning:** the assistant may run terminal and file operations more aggressively within the granted boundary—risk of mistakes or abuse. Use only on trusted projects and personal machines, and turn it off when done.
+**Warning:** the assistant may run terminal and file operations more aggressively within the granted boundary, risk of mistakes or abuse. Use only on trusted projects and personal machines, and turn it off when done.
 
 ![](images/Pasted%20image%2020260331120023.png)
 
@@ -109,7 +109,7 @@ When you return to the side panel it may show selected line count (e.g. **6 line
 
 ## Part 4: Remote control
 
-The extension can also accept messages from bots or HTTP callbacks (often labeled Telegram, Discord, Webhook, etc.). After setup you can send commands from a phone or tablet where you are signed in; the local client executes and replies—mobile use under your own control. For supported channels and steps see [https://code.claude.com/docs/en/channels](https://code.claude.com/docs/en/channels).
+The extension can also accept messages from bots or HTTP callbacks (often labeled Telegram, Discord, Webhook, etc.). After setup you can send commands from a phone or tablet where you are signed in; the local client executes and replies, mobile use under your own control. For supported channels and steps see [https://code.claude.com/docs/en/channels](https://code.claude.com/docs/en/channels).
 
 ![](images/Untitled-1.png)
 

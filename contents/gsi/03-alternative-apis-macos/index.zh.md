@@ -50,7 +50,7 @@ prev: gsi/02-claude-code-vscode
 
 ![](images/Pasted%20image%2020260401172104.png)
 
-起个能记住的名字（比如「AITraining」——未来的你会感谢现在的你），然后点击 **Yes**。
+起个能记住的名字（比如「AITraining」，未来的你会感谢现在的你），然后点击 **Yes**。
 
 ![](images/Pasted%20image%2020260401172158.png)
 
@@ -62,7 +62,19 @@ prev: gsi/02-claude-code-vscode
 
 ### 步骤二：订阅还是不订阅？这是个问题
 
-不办付费套餐时，通常仍有一定免费额度，并可用到偏基础档的模型版本，适合先摸清自己的调用量。若你每天大量使用、需要更高配额或更新的旗舰档模型，可以再考虑官方的 **GLM Coding Plan** 付费方案。建议先用免费额度判断用量，再决定是否升级；订阅界面说明见下文「GLM Coding Plan 订阅详情」。
+不办付费套餐时，通常仍有一定免费额度，并可用到偏基础档的模型版本，适合先摸清自己的调用量。若你每天大量使用、需要更高配额或更新的旗舰档模型，可以再考虑官方的 **GLM Coding Plan** 付费方案；否则可先用免费额度，用量上去后再升级。
+
+在控制台点击 **My Plan** 进入「我的套餐」。
+
+![](images/01-GLM-configuration-20260306112528.jpg)
+
+再点击 **GLM Coding plan** 进入订阅界面。
+
+![](images/01-GLM-configuration-20260306112619.jpg)
+
+滑动到下方订阅区域，按需选择套餐。
+
+![697](images/01-GLM-configuration-20260316113743.jpg)
 
 ---
 
@@ -262,19 +274,7 @@ source .zshrc
 
 先到 [bigmodel.cn](https://bigmodel.cn/usercenter/proj-mgmt/apikeys) 取得密钥，再按用量在免费档与 GLM Coding Plan 之间做选择；接着用可视化工具（得到 `glm` 等启动方式）或官方脚本（常用 `claude` 启动）写入环境；最后在客户端内用 `/model` 或直接提问确认当前模型是否如预期。
 
-### GLM Coding Plan 订阅详情
-
-点击 **My Plan** 进入「我的套餐」。
-
-![](images/01-GLM-configuration-20260306112528.jpg)
-
-点击 **GLM Coding plan** 进入订阅界面。
-
-![](images/01-GLM-configuration-20260306112619.jpg)
-
-滑动到下方订阅界面，可看到不同的选项，可根据实际的需求进行选择。
-
-![697](images/01-GLM-configuration-20260316113743.jpg)
+---
 
 ## KIMI 配置教程
 

@@ -7,11 +7,11 @@ prev: gsi/02-claude-code-vscode
 
 ## Why wire the client to GLM / KIMI?
 
-After you install the coding-assistant client, a familiar pattern appears: staying on it long term usually means an official subscription or usage-based billing, and different regions or teams will find different routes more convenient. If you want a **second** inference backend that speaks the same client protocol as the usual defaults, vendors such as Zhipu (GLM) and Moonshot (Kimi) offer compatible endpoints—you keep the same UI and point it at another service without swapping your whole toolchain.
+After you install the coding-assistant client, a familiar pattern appears: staying on it long term usually means an official subscription or usage-based billing, and different regions or teams will find different routes more convenient. If you want a **second** inference backend that speaks the same client protocol as the usual defaults, vendors such as Zhipu (GLM) and Moonshot (Kimi) offer compatible endpoints, you keep the same UI and point it at another service without swapping your whole toolchain.
 
 ### Client ≠ model
 
-Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own—it must send prompts to an inference service and get answers back. Point the URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
+Think in two layers: a **local execution** side that edits files and runs commands, and a **remote inference** service that understands your words and decides what to change. The execution side does not invent patches on its own, it must send prompts to an inference service and get answers back. Point the URL and credentials at the right service and the same client can use different backends. The “thinking” role can be the official model, GLM, KIMI, or another compatible route, depending on how you configure it.
 
 ![](images/01-GLM-configuration-20260316125916.jpg)
 
@@ -21,7 +21,7 @@ Choosing a vendor is messy in practice: latency, pricing, and terms all matter, 
 
 ### How capable are they?
 
-In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Leaderboards shift with time and task shape—treat this as background only: **whether it truly fits your work is something you’ll have to try for yourself.**
+In one public, decision-heavy third-party benchmark ([Vending-Bench 2](https://andonlabs.com/evals/vending-bench-2)), several GLM and Moonshot models ranked strongly in the open-weight cohort. Leaderboards shift with time and task shape, treat this as background only: **whether it truly fits your work is something you’ll have to try for yourself.**
 
 ![](images/01-GLM-configuration-20260316120220.jpg)
 ### What the workflow looks like
@@ -50,7 +50,7 @@ Click **Create a new API Key**.
 
 ![](images/Pasted%20image%2020260401172104.png)
 
-Pick a memorable name (e.g. **AITraining**—your future self will thank you), then **Yes**.
+Pick a memorable name (e.g. **AITraining**, your future self will thank you), then **Yes**.
 
 ![](images/Pasted%20image%2020260401172158.png)
 
@@ -62,7 +62,19 @@ Click **Copy** and store it somewhere safe. **Important:** this is often the onl
 
 ### Step 2: Subscribe or not?
 
-Without a paid plan you still get free quota and a more basic model tier—enough to learn your usage. If you use it heavily every day and need higher limits or flagship models, consider the **GLM Coding Plan**. Start with free quota, then upgrade if needed; subscription UI is under **GLM Coding Plan details** below.
+Without a paid plan you still get free quota and a more basic model tier—enough to learn your usage. If you use it heavily every day and need higher limits or flagship models, consider the **GLM Coding Plan**.
+
+In the console, click **My Plan** to open “My plan”.
+
+![](images/01-GLM-configuration-20260306112528.jpg)
+
+Then click **GLM Coding plan** to open the subscription screen.
+
+![](images/01-GLM-configuration-20260306112619.jpg)
+
+Scroll down to the plans and pick what fits.
+
+![697](images/01-GLM-configuration-20260316113743.jpg)
 
 ---
 
@@ -72,7 +84,7 @@ Two styles: a **visual config tool** writes multiple profiles so switching betwe
 
 #### Method A: visual config tool
 
-Best when you want several backends side by side on one Mac—separate on-disk profiles and different launch commands.
+Best when you want several backends side by side on one Mac, separate on-disk profiles and different launch commands.
 
 In any folder, right-click → **Terminal**.
 
@@ -98,7 +110,7 @@ Paste your API key, pick a model, then **Install & configure**.
 
 > [!WARNING]
 >
-> If you are **not** subscribed, do **not** pick `glm-5`—that can break things. You have been warned.
+> If you are **not** subscribed, do **not** pick `glm-5`, that can break things. You have been warned.
 
 ![](images/01-GLM-configuration-20260306113120.jpg)
 
@@ -118,7 +130,7 @@ Restart the client, run `/model`, and you should see the configured model (wheth
 
 > [!TIP]
 >
-> GLM-5 is stronger and often burns quota faster—good for hard tasks; lighter work can stay on GLM-4.7 to save cost. Queues or latency on weekday afternoons are common.
+> GLM-5 is stronger and often burns quota faster, good for hard tasks; lighter work can stay on GLM-4.7 to save cost. Queues or latency on weekday afternoons are common.
 
 You can also ask in chat which model is active:
 
@@ -148,7 +160,7 @@ When prompted, paste the API key and press Enter.
 
 > [!NOTE]
 >
-> The terminal may show nothing while pasting—that is normal. Do not paste twice.
+> The terminal may show nothing while pasting, that is normal. Do not paste twice.
 
 ![](images/01-GLM-configuration-20260303191343.jpg)
 
@@ -160,7 +172,7 @@ When you get a prompt again, installation is done. Run `claude` to start.
 
 ---
 
-#### Enabling GLM-5 (subscribers only)
+##### Enabling GLM-5 (subscribers only)
 
 If you subscribe to GLM Coding Plan, follow these steps to point config at GLM-5-tier models (exact names depend on what the console lists):
 
@@ -214,7 +226,7 @@ Save, restart the client, run `/model` to verify.
 
 ---
 
-### Advanced: `glm` and `glm5` commands
+##### Advanced: `glm` and `glm5` commands
 
 To always launch with a dedicated GLM settings file, copy the profile and add shell aliases.
 
@@ -262,19 +274,7 @@ Now `glm` (or `glm5`) starts the client on the GLM profile.
 
 Get a key from [bigmodel.cn](https://bigmodel.cn/usercenter/proj-mgmt/apikeys), choose free tier vs GLM Coding Plan, then either the visual tool (for `glm`-style commands) or the official script (often `claude`). Confirm the active model with `/model` or by asking in chat.
 
-### GLM Coding Plan details
-
-Click **My Plan** for “My plan”.
-
-![](images/01-GLM-configuration-20260306112528.jpg)
-
-Click **GLM Coding plan** for the subscription screen.
-
-![](images/01-GLM-configuration-20260306112619.jpg)
-
-Scroll to the plans and pick what fits.
-
-![697](images/01-GLM-configuration-20260316113743.jpg)
+---
 
 ## KIMI setup
 
@@ -311,7 +311,7 @@ Use the copy button shown below to copy your API key and store it somewhere safe
 
 ### Step 3: Apply configuration
 
-Like GLM, KIMI supports the **visual tool** or **hand-written env vars**. The tool suits hopping between backends; env vars suit “Moonshot only for the long term”—quick to set, more edits when you change provider.
+Like GLM, KIMI supports the **visual tool** or **hand-written env vars**. The tool suits hopping between backends; env vars suit “Moonshot only for the long term”, quick to set, more edits when you change provider.
 
 #### Method A: visual config tool
 
