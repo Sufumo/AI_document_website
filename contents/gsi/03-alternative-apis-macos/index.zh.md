@@ -54,7 +54,7 @@ prev: gsi/02-claude-code-vscode
 
 ![](images/Pasted%20image%2020260401172158.png)
 
-点击 **Copy**，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
+点击 **Copy**，找个安全的地方存起来。
 
 ![](images/Pasted%20image%2020260401172252.png)
 
@@ -64,11 +64,11 @@ prev: gsi/02-claude-code-vscode
 
 不办付费套餐时，通常仍有一定免费额度，并可用到偏基础档的模型版本，适合先摸清自己的调用量。若你每天大量使用、需要更高配额或更新的旗舰档模型，可以再考虑官方的 **GLM Coding Plan** 付费方案；否则可先用免费额度，用量上去后再升级。
 
-在控制台点击 **My Plan** 进入「我的套餐」。
+在控制台点击 **My Plan** 打开「My plan」。
 
 ![](images/01-GLM-configuration-20260306112528.jpg)
 
-再点击 **GLM Coding plan** 进入订阅界面。
+然后点击 **GLM Coding plan** 打开订阅界面。
 
 ![](images/01-GLM-configuration-20260306112619.jpg)
 
@@ -128,11 +128,7 @@ chmod +x install.sh && \
 
 ![](images/01-GLM-configuration-20260303193234.jpg)
 
-> [!TIP]
->
-> GLM-5 能力更强、往往也更耗额度，复杂任务可优先；日常轻量任务可用 GLM-4.7 等档位控制成本。工作日午后时段有时会出现排队或延迟，属常见现象。
-
-也可在对话里直接询问当前所用模型，辅助确认是否切到你期望的后端：
+也可在对话里直接询问当前所用模型：
 
 ![](images/01-GLM-configuration-20260310101707.jpg)
 
@@ -353,12 +349,6 @@ chmod +x install.sh && \
 
 ![](images/02-KIMI-configuration-20260306114634.jpg)
 
-> [!TIP]
->
-> 直接问也行，助手一般会回复当前实际连到的模型名称。
-
-![](images/fcb0a0365799f8680cbf2116e80f73ce.jpg)
-
 ---
 
 #### 方法二：环境变量配置
@@ -456,9 +446,7 @@ alias kimi="claude --settings ~/.claude/kimi-settings.json"
 
 输入 `kimi` 即可启动客户端。
 
-![](images/02-KIMI-configuration-20260310234456.jpg)
-
-![](images/02-KIMI-configuration-20260310233250.jpg)
+![](images/Pasted%20image%2020260402101650.png)
 
 ---
 

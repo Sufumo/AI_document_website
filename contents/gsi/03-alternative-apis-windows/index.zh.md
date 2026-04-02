@@ -54,7 +54,7 @@ prev: gsi/02-claude-code-vscode
 
 ![](images/Pasted%20image%2020260401172158.png)
 
-点击 **Copy**，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
+点击 **Copy**，找个安全的地方存起来。
 
 ![](images/Pasted%20image%2020260401172252.png)
 
@@ -62,13 +62,13 @@ prev: gsi/02-claude-code-vscode
 
 ### 步骤二：订阅还是不订阅？这是个问题
 
-不办付费套餐时，通常仍有一定免费额度，并可用到偏基础档的模型版本，适合先摸清自己的调用量。若你每天大量使用、需要更高配额或更新的旗舰档模型，可以再考虑官方的 **GLM Coding Plan** 付费方案；否则可先用免费额度，用量上去后再升级。
+不办付费套餐时，仍有一定免费额度与偏基础的模型档，足以先摸清自己的用量。若你每天大量使用、需要更高限额或旗舰档模型，可考虑 **GLM Coding Plan**。
 
-在控制台点击 **My Plan** 进入「我的套餐」。
+在控制台点击 **My Plan** 打开「My plan」。
 
 ![](images/01-GLM-configuration-20260306112528.jpg)
 
-再点击 **GLM Coding plan** 进入订阅界面。
+然后点击 **GLM Coding plan** 打开订阅界面。
 
 ![](images/01-GLM-configuration-20260306112619.jpg)
 
@@ -127,7 +127,7 @@ prev: gsi/02-claude-code-vscode
 
 ---
 
-### 进阶：创建 `glm` 命令
+#### 进阶：创建 `glm` 命令
 
 若希望输入 `glm` 即加载专用配置，可将当前的 `settings.json` 复制一份为 **glm-settings.json**（仍放在同一 `.claude` 目录下）。
 
