@@ -54,7 +54,7 @@ Pick a memorable name (e.g. **AITraining**, your future self will thank you), th
 
 ![](images/Pasted%20image%2020260401172158.png)
 
-Click **Copy** and store it somewhere safe. **Important:** this is often the only time you see the full secret.
+Click **Copy** and store it somewhere safe. 
 
 ![](images/Pasted%20image%2020260401172252.png)
 
@@ -90,7 +90,7 @@ In any folder, right-click → **Terminal**.
 
 ![](images/Pasted%20image%2020260401172458.png)
 
-Paste the whole block into the terminal and press **Enter** (needs `wget` / `unzip`; install via Homebrew if missing):
+Paste the whole block into the terminal and press **Enter** :
 
 ```
 wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip && \
@@ -128,10 +128,6 @@ Restart the client, run `/model`, and you should see the configured model (wheth
 
 ![](images/01-GLM-configuration-20260303193234.jpg)
 
-> [!TIP]
->
-> GLM-5 is stronger and often burns quota faster, good for hard tasks; lighter work can stay on GLM-4.7 to save cost. Queues or latency on weekday afternoons are common.
-
 You can also ask in chat which model is active:
 
 ![](images/01-GLM-configuration-20260310101707.jpg)
@@ -164,9 +160,11 @@ When prompted, paste the API key and press Enter.
 
 ![](images/01-GLM-configuration-20260303191343.jpg)
 
-When you get a prompt again, installation is done. Run `claude` to start.
+When you get a prompt again, installation is done.
 
 ![](images/01-GLM-configuration-20260303191816.jpg)
+
+Run `claude` to start.
 
 ![](images/01-GLM-configuration-20260303191919.jpg)
 
@@ -216,13 +214,13 @@ Open **settings.json** in your editor.
 }
 ```
 
-> [!WARNING]
->
-> Replace `"your api key"` with your real API key.
+Replace `"your api key"` with your real API key.
+
+![](images/01-GLM-configuration-20260303192957.jpg)
 
 Save, restart the client, run `/model` to verify.
 
-![](images/01-GLM-configuration-20260303192957.jpg)
+![](images/Pasted%20image%2020260402095903.png)
 
 ---
 
@@ -295,7 +293,9 @@ Choose a memorable name, select project **default**, then **OK**.
 
 ![](images/Pasted%20image%2020260401132653.png)
 
-Use the copy button shown below to copy your API key and store it somewhere safe. **Important:** this is often the only time you see the full secret.
+Use the copy button shown below to copy your API key and store it somewhere safe. 
+
+**Important:** this is often the only time you see the full secret.
 
 ![](images/Pasted%20image%2020260401132817.png)
 
@@ -305,7 +305,7 @@ Use the copy button shown below to copy your API key and store it somewhere safe
 
 **A KIMI API key only works when the account has balance; calls fail if it is empty.** In the console open **Billing**, then **Recharge**, choose an amount, and complete payment.
 
-![](images/Pasted%20image%2020260401132941.png)
+![](images/Pasted%20image%2020260402102755.png)
 
 ---
 
@@ -390,7 +390,7 @@ You can then use the Kimi model normally.
 
 ---
 
-#### Advanced: `kimi` launch command
+##### Advanced: `kimi` launch command
 
 To avoid global env vars, use a dedicated `kimi-settings.json` and `alias kimi='claude --settings …'` in `.zshrc`.
 
@@ -446,9 +446,7 @@ When the prompt returns, config is loaded.
 
 Run `kimi` to start the client.
 
-![](images/02-KIMI-configuration-20260310234456.jpg)
-
-![](images/02-KIMI-configuration-20260310233250.jpg)
+![](images/Pasted%20image%2020260402101650.png)
 
 ---
 

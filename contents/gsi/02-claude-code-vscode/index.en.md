@@ -33,7 +33,7 @@ Back in VS Code the extension should show a signed-in state; use Claude Code fro
 
 ## Part 2: A simple example
 
-This English prompt asks the extension to create `news_task` under `project`, gather five recent news items (title, source, date, link) from roughly the last three days, and write `news.md`, without generating or running extra scripts, only built-in capabilities. Adapt paths and output rules for your own work.
+This prompt asks the extension to create `news_task` under `project`, gather five recent news items (title, source, date, link) from roughly the last three days, and write `news.md`, without generating or running extra scripts, only built-in capabilities. Adapt paths and output rules for your own work.
 
 ```
 Create a new subfolder under the @project directory called "news_task".

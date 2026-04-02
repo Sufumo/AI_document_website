@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "gsi/03-alternative-apis-windows/index.en.md",
+                "file": "gsi/01-ai-workplace-macos/index.zh.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index.en"
+              "title": "index.zh"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "gsi/03-alternative-apis-windows/index.en.md",
+                "file": "gsi/01-ai-workplace-macos/index.zh.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index.en"
+              "title": "Outline of index.zh"
             }
           },
           {
@@ -197,28 +197,27 @@
   },
   "active": "81a1de641a676858",
   "lastOpenFiles": [
-    "gsi/03-alternative-apis-windows/images/Pasted image 20260401184816.png",
-    "gsi/03-alternative-apis-windows/index.zh.md",
-    "gsi/03-alternative-apis-windows/images/Pasted image 20260401184807.png",
+    "gsi/01-ai-workplace-macos/index.en.md",
+    "gsi/01-ai-workplace-macos/images/Pasted image 20260402112911.png",
     "gsi/03-alternative-apis-macos/index.en.md",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401184707.png",
     "gsi/03-alternative-apis-macos/index.zh.md",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401184647.png",
-    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172252.png",
-    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172158.png",
-    "gsi/03-alternative-apis-windows/images/Pasted image 20260401172104.png",
     "gsi/03-alternative-apis-windows/index.en.md",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172507.png",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172458.png",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172252.png",
-    "gsi/03-alternative-apis-macos/images/Pasted image 20260401172158.png",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260402102755.png",
+    "gsi/03-alternative-apis-windows/index.zh.md",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260402102755.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260402101747.png",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260402101650.png",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260402095903.png",
+    "gsi/03-alternative-apis-windows/images/01-GLM-configuration-20260303192957.jpg",
+    "gsi/03-alternative-apis-macos/images/Pasted image 20260402095903.png",
+    "gsi/02-claude-code-vscode/index.en.md",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260401184816.png",
+    "gsi/03-alternative-apis-windows/images/Pasted image 20260401184807.png",
     "gsi/02-claude-code-vscode/index.zh.md",
     "gsi/01-ai-workplace-windows/index.zh.md",
     "gsi/01-ai-workplace-macos/index.zh.md",
     "Basic-tools/01-terminal-basics/index.en.md",
-    "gsi/01-ai-workplace-macos/index.en.md",
     "gsi/03-alternative-apis-macos/images/Untitled",
-    "gsi/02-claude-code-vscode/index.en.md",
     "gsi/01-ai-workplace-windows/index.en.md",
     "gsi/03-alternative-apis-windows/images",
     "gsi/03-alternative-apis-windows",

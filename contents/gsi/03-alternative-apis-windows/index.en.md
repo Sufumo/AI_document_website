@@ -54,7 +54,7 @@ Pick a memorable name (e.g. **AITraining**, your future self will thank you), th
 
 ![](images/Pasted%20image%2020260401172158.png)
 
-Click **Copy** and store it somewhere safe. **Important:** this is often the only time you see the full secret.
+Click **Copy** and store it somewhere safe. 
 
 ![](images/Pasted%20image%2020260401172252.png)
 
@@ -99,7 +99,7 @@ Replace `your_zhipu_api_key` with your key, merge the JSON into `settings.json`,
 
 ![](images/Pasted%20image%2020260331132401.png)
 
-In **PowerShell** or another terminal run `claude`; the client should start against the Zhipu backend (if the command is missing, add the install location to `PATH`).
+In **PowerShell** or another terminal run `claude`; the client should start against the Zhipu backend.
 
 ![](images/Pasted%20image%2020260331132529.png)
 
@@ -180,7 +180,9 @@ Choose a memorable name, select project **default**, then **OK**.
 
 ![](images/Pasted%20image%2020260401132653.png)
 
-Use the copy button shown below to copy your API key and store it somewhere safe. **Important:** this is often the only time you see the full secret.
+Use the copy button shown below to copy your API key and store it somewhere safe. 
+
+**Important:** this is often the only time you see the full secret.
 
 ![](images/Pasted%20image%2020260401132817.png)
 
@@ -190,7 +192,7 @@ Use the copy button shown below to copy your API key and store it somewhere safe
 
 **A KIMI API key only works when the account has balance; calls fail if it is empty.** In the console open **Billing**, then **Recharge**, choose an amount, and complete payment.
 
-![](images/Pasted%20image%2020260401132941.png)
+![](images/Pasted%20image%2020260402102755.png)
 
 ---
 

@@ -99,7 +99,7 @@ prev: gsi/02-claude-code-vscode
 
 ![](images/Pasted%20image%2020260331132401.png)
 
-在 **PowerShell** 或终端中执行 `claude`，应能启动已指向智谱后端的客户端（若命令未找到，请确认安装路径已加入 `PATH`）。
+在 **PowerShell** 或终端中执行 `claude`，应能启动已指向智谱后端的客户端。
 
 ![](images/Pasted%20image%2020260331132529.png)
 
@@ -181,7 +181,9 @@ claude --settings $HOME/.claude/glm-settings.json $args
 
 ![](images/Pasted%20image%2020260401132653.png)
 
-点击下图所示的复制按钮复制你的 API Key，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
+点击下图所示的复制按钮复制你的 API Key，找个安全的地方存起来。
+
+**重要提示**：这是你唯一一次能看到它的机会！
 
 ![](images/Pasted%20image%2020260401132817.png)
 
@@ -191,7 +193,7 @@ claude --settings $HOME/.claude/glm-settings.json $args
 
 **KIMI 的 API Key 需要账户有余额才能用；余额不足时调用会失败。** 在控制台依次打开 **Billing**、**Recharge**，选择金额并完成支付即可。
 
-![](images/Pasted%20image%2020260401132941.png)
+![](images/Pasted%20image%2020260402102755.png)
 
 ---
 

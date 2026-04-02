@@ -126,7 +126,7 @@ Right-click the file → **Rename**, type the new name.
 >
 > On Mac you can also select the file and press **Enter** to rename quickly.
 
-![](images/Pasted%20image%2020260330180417.png)
+![](images/Pasted%20image%2020260402112911.png)
 
 #### Rename a folder
 

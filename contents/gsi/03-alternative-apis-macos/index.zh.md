@@ -90,7 +90,7 @@ prev: gsi/02-claude-code-vscode
 
 ![](images/Pasted%20image%2020260401172507.png)
 
-将下面整段命令粘贴到终端后按 **Enter** 执行（需已安装 `wget`/`unzip` 等，若缺失可用 Homebrew 补齐）：
+将下面整段命令粘贴到终端后按 **Enter** 执行：
 
 ```
 wget "https://cm.maku.press/editor4/agent_manager/-/archive/main/agent_manager-main.zip?ref_type=heads" -O agent_manager-main.zip && \
@@ -164,15 +164,17 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 
 ![](images/01-GLM-configuration-20260303191343.jpg)
 
-终端恢复可输入状态就完成了。输入 `claude` 启动。
+终端恢复可输入状态就完成了。
 
 ![](images/01-GLM-configuration-20260303191816.jpg)
+
+输入 `claude` 启动。
 
 ![](images/01-GLM-configuration-20260303191919.jpg)
 
 ---
 
-#### GLM-5 解锁教程（仅订阅用户）
+##### GLM-5 解锁教程（仅订阅用户）
 
 若已订阅 GLM Coding Plan，可按下列步骤在配置中启用 GLM-5 等高档模型（具体以控制台当前可用模型名为准）：
 
@@ -216,17 +218,17 @@ curl -O "https://cdn.bigmodel.cn/install/claude_code_env.sh" && bash ./claude_co
 }
 ```
 
-> [!WARNING]
->
-> 把 `"your api key"` 换成你真正的 API Key！
-
-保存，重启客户端，运行 `/model` 验证。
+将 `"your api key"` 替换为你真实的 API Key。
 
 ![](images/01-GLM-configuration-20260303192957.jpg)
 
+保存，重启客户端，运行 `/model` 验证。
+
+![](images/Pasted%20image%2020260402095903.png)
+
 ---
 
-### 进阶：创建 `glm` 和 `glm5` 命令
+##### 进阶：创建 `glm` 和 `glm5` 命令
 
 若希望用固定命令（如 `glm` 或 `glm5`）启动带 GLM 配置的会话，可按下面步骤建立专用 `settings` 文件并在 shell 里加别名。
 
@@ -295,7 +297,9 @@ source .zshrc
 
 ![](images/Pasted%20image%2020260401132653.png)
 
-点击下图所示的复制按钮复制你的 API Key，找个安全的地方存起来。**重要提示**：这是你唯一一次能看到它的机会！
+点击下图所示的复制按钮复制你的 API Key，找个安全的地方存起来。
+
+**重要提示**：这是你唯一一次能看到它的机会！
 
 ![](images/Pasted%20image%2020260401132817.png)
 
@@ -305,7 +309,7 @@ source .zshrc
 
 **KIMI 的 API Key 需要账户有余额才能用；余额不足时调用会失败。** 在控制台依次打开 **Billing**、**Recharge**，选择金额并完成支付即可。
 
-![](images/Pasted%20image%2020260401132941.png)
+![](images/Pasted%20image%2020260402102755.png)
 
 ---
 
@@ -392,11 +396,11 @@ export ANTHROPIC_API_KEY="your API KEY"
 
 之后即可正常使用 Kimi 模型。
 
-![](images/02-KIMI-configuration-20260303200846.jpg)
+![](images/Pasted%20image%2020260402101650.png)
 
 ---
 
-#### 进阶：创建 `kimi` 启动命令
+##### 进阶：创建 `kimi` 启动命令
 
 若不想依赖环境变量全局生效，可为 KIMI 单独准备一份 `kimi-settings.json`，再在 `.zshrc` 里用 `alias kimi='claude --settings ...'` 指向该文件。
 

@@ -126,8 +126,7 @@ Workspace/
 >
 > 在 Mac 上也可先选中文件，再按 Enter 快速重命名。
 
-![](images/Pasted%20image%2020260330180417.png)
-
+![](images/Pasted%20image%2020260402112911.png)
 #### 重命名文件夹
 
 操作方式与文件相同：右键选择 **Rename**，或选中后按 Enter。
